@@ -19,6 +19,7 @@ const nextConfig = {
    * dynamic features with static exports.
    *
    * @see https://nextjs.org/docs/app/api-reference/components/image#unoptimized
+   * 
    */
 };
 images: {
