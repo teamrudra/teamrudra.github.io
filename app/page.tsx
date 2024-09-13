@@ -60,7 +60,7 @@ const Home = () => {
       <div
   className="relative min-h-screen bg-cover bg-center bg-no-repeat sm:bg-none"
   style={{
-    backgroundImage: `url('/background-image.png')`, // Default background for larger screens
+    backgroundImage: `url('rudraweb2/background-image.png')`, // Default background for larger screens
   }}
   id="home"
 >
