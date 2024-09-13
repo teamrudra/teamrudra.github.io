@@ -13,7 +13,7 @@ export const ModelViewer: React.FC = () => {
     dracoLoader.setDecoderPath('/draco/'); // Path to Draco decoder files
     gltfLoader.setDRACOLoader(dracoLoader);
 
-    const myModel = useLoader(GLTFLoader, `../../public/rover.gltf`, loader => {
+    const myModel = useLoader(GLTFLoader, `.https://github.com/Priyansh2116/rudraweb2/releases/download/v0.1/rover.gltf`, loader => {
         loader.setDRACOLoader(dracoLoader);
     });
 
