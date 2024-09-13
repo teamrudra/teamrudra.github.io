@@ -21,7 +21,7 @@ const nextConfig = {
    * @see https://nextjs.org/docs/app/api-reference/components/image#unoptimized
    * 
    */
-  staticPageGenerationTimeout: 60,
+  staticPageGenerationTimeout: 1000,
   publicRuntimeConfig: {
     basePath: "/rudraweb2", // expose basePath to the client
   },
