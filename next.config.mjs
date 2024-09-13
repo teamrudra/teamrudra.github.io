@@ -21,6 +21,9 @@ const nextConfig = {
    * @see https://nextjs.org/docs/app/api-reference/components/image#unoptimized
    * 
    */
+  publicRuntimeConfig: {
+    basePath: "/rudraweb2", // expose basePath to the client
+  },
 };
 images: {
     formats: ['image/webp']

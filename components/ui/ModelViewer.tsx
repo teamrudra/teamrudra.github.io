@@ -5,14 +5,15 @@ import { OrbitControls } from '@react-three/drei';
 import { useEffect, useRef } from 'react';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import * as THREE from 'three';
-
+import getConfig from 'next/config';
 export const ModelViewer: React.FC = () => {
     const gltfLoader = new GLTFLoader();
     const dracoLoader = new DRACOLoader();
+    const { publicRuntimeConfig } = getConfig();
     dracoLoader.setDecoderPath('/draco/'); // Path to Draco decoder files
     gltfLoader.setDRACOLoader(dracoLoader);
 
-    const myModel = useLoader(GLTFLoader, `${basePath}/rover.gltf`, loader => {
+    const myModel = useLoader(GLTFLoader, `${publicRuntimeConfig.basePath}/rover.gltf`, loader => {
         loader.setDRACOLoader(dracoLoader);
     });
 
