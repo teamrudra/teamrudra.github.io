@@ -164,7 +164,7 @@ const Home = () => {
           className="flex-shrink-0 w-24 h-24 object-cover rounded-lg cursor-pointer"
           onClick={() => {
             const galleryContainer = document.getElementById('gallery-container');
-            galleryContainer.scrollTo({ left: galleryContainer.clientWidth * index, behavior: 'smooth' });
+            if (galleryContainer !== null) galleryContainer.scrollTo({ left: galleryContainer.clientWidth * index, behavior: 'smooth' });
           }}
         />
       ))}
