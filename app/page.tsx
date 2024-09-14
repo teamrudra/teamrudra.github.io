@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ModelViewer } from '../components/ui/ModelViewer';
 import MechanicalDomainPage from './mechanical-domain/page';
-import './styles/globals.css'; 
+
 const Home = () => {
   const galleryImages = [
     'gallery-item1.png',
