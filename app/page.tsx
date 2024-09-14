@@ -40,7 +40,7 @@ const Home = () => {
     { src: './nvidia.png', alt: 'Nvidia' },
     { src: './altium.png', alt: 'Altium' },
     { src: './vartech.png', alt: 'Var Tech' },
-    { src: './protocase.png', alt: 'Protocase' },
+    { src: 'protocase.png', alt: 'Protocase' },
   ];
 
   return (
