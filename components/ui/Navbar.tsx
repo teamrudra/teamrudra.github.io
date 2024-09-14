@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Enable smooth scroll on component mount
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
   }, []);
 
+  // Handle page overflow when the mobile menu is open
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -17,14 +19,21 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className={`bg-gray-900 bg-opacity-60 text-white fixed w-full z-30 ${isMenuOpen ? 'overflow-hidden' : ''}`}>
+    <nav className="bg-gray-900 bg-opacity-60 text-white fixed w-full z-30">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+        {/* Logo */}
         <Link href="/" legacyBehavior>
           <a>
-            <img src="/rudraweb2/rudra-logo.png" alt="Rudra logo" width={100} height={50} />
+            <img
+              src="/rudraweb2/rudra-logo.png"
+              alt="Rudra logo"
+              className="h-10 w-auto"
+            />
           </a>
         </Link>
-        <div className="flex-1 flex justify-center space-x-4 hidden lg:flex">
+
+        {/* Desktop Menu (hidden on small screens) */}
+        <div className="hidden lg:flex justify-center space-x-4">
           <Link href="#home" scroll={true} legacyBehavior>
             <a className="hover:text-gray-300 transition duration-200">HOME</a>
           </Link>
@@ -47,18 +56,40 @@ const Navbar = () => {
             <a className="hover:text-gray-300 transition duration-200">CONTACT US</a>
           </Link>
         </div>
-        <button 
-          className="lg:hidden flex items-center ml-auto"  // Adjusted
+
+        {/* Mobile Menu Toggle Button (hidden on large screens) */}
+        <button
+          className="lg:hidden flex items-center"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="white"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d={
+                isMenuOpen
+                  ? 'M6 18L18 6M6 6l12 12'
+                  : 'M4 6h16M4 12h16M4 18h16'
+              }
+            />
           </svg>
         </button>
-        <div className={`lg:hidden fixed inset-0 bg-gray-900 bg-opacity-90 z-20 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
-          <button 
-            className="absolute top-4 right-4 text-white text-3xl" 
-            style={{ right: '1rem', top: '1rem' }}  // Adjusted close button position
+
+        {/* Mobile Menu (hidden on large screens) */}
+        <div
+          className={`lg:hidden fixed inset-0 bg-gray-900 bg-opacity-90 z-20 transform ${
+            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          } transition-transform duration-300 ease-in-out`}
+        >
+          <button
+            className="absolute top-4 right-4 text-white text-3xl"
             onClick={() => setIsMenuOpen(false)}
           >
             &times;
@@ -87,8 +118,19 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
-        <a href="https://www.srmist.edu.in/" target="_blank" rel="noopener noreferrer" className="hidden lg:block">
-          <img src="/rudraweb2/srm-logo.png" alt="SRM logo" width={100} height={50} />
+
+        {/* SRM Logo (visible only on large screens) */}
+        <a
+          href="https://www.srmist.edu.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden lg:block"
+        >
+          <img
+            src="/rudraweb2/srm-logo.png"
+            alt="SRM logo"
+            className="h-10 w-auto"
+          />
         </a>
       </div>
     </nav>
