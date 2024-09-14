@@ -1,7 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import rudraLogo from './../../public/rudra-logo.png'; // Adjust the path as needed
-import srmLogo from './../../public/srm-logo.png'; // Adjust the path as needed
 import { useState, useEffect } from 'react';
 
 const Navbar = () => {
@@ -24,7 +21,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <Link href="/" legacyBehavior>
           <a>
-            <img src={rudraLogo} alt="rudra logo" width={100} height={50} />
+            <img src="/rudraweb2/rudra-logo.png" alt="Rudra logo" width={100} height={50} />
           </a>
         </Link>
         <div className="flex-1 flex justify-center space-x-4 hidden lg:flex">
@@ -91,7 +88,7 @@ const Navbar = () => {
           </div>
         </div>
         <a href="https://www.srmist.edu.in/" target="_blank" rel="noopener noreferrer" className="hidden lg:block">
-          <img src={srmLogo} alt="SRM logo" width={100} height={50} />
+          <img src="/rudraweb2/srm-logo.png" alt="SRM logo" width={100} height={50} />
         </a>
       </div>
     </nav>
