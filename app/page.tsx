@@ -32,7 +32,7 @@ const Home = () => {
   };
 
   const sponsorshipImages = [
-    { src: './sukrit-infotech.png', alt: 'Sukrit Infotech' },
+    { src: '/rudraweb2/sukrit-infotech.png', alt: 'Sukrit Infotech' },
     { src: './solidworks.png', alt: 'Solidworks' },
     { src: './wheeleez.png', alt: 'Wheeleez' },
     { src: './nvidia.png', alt: 'Nvidia' },
