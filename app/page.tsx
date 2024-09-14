@@ -112,11 +112,11 @@ const Home = () => {
             { name: 'Team Lead - Shashwat Ganesh', img: 'team-lead.png', link: 'https://www.linkedin.com/in/sga0xc33d/' },
             { name: 'Team Co-Lead - Eeshan Nair', img: 'team-manager.png', link: 'https://www.linkedin.com/in/eeshan-nair-496800238/' },
             { name: 'Technical Director - Rajkumar', img: 'technical-director.png', link: 'https://www.linkedin.com/in/rajkumar-m13/' },
-            { name: 'Mechanical Domain', img: 'mechanical-domain.png', link: '/mechanical-domain' },
-            { name: 'Electronics Domain', img: 'electronics-domain.png', link: '/electronics-domain' },
-            { name: 'Coding Domain', img: 'coding-domain.png', link: '/coding-domain' },
-            { name: 'Life Science Domain', img: 'life-science-domain.png', link: '/life-science-domain' },
-            { name: 'Corporate Domain', img: 'corporate-domain.png', link: '/corporate-domain' },
+            { name: 'Mechanical Domain', img: 'mechanical-domain.png', link: '/rudraweb2/mechanical-domain' },
+            { name: 'Electronics Domain', img: 'electronics-domain.png', link: '/rudraweb2/electronics-domain' },
+            { name: 'Coding Domain', img: 'coding-domain.png', link: '/rudraweb2/coding-domain' },
+            { name: 'Life Science Domain', img: 'life-science-domain.png', link: '/rudraweb2/life-science-domain' },
+            { name: 'Corporate Domain', img: 'corporate-domain.png', link: '/rudraweb2/corporate-domain' },
           ].map((member, index) => (
             <a key={member.name} href={member.link} >
               <div className="bg-gray-800 p-4 sm:p-6 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
