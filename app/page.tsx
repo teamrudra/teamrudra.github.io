@@ -202,12 +202,12 @@ const Home = () => {
             date: "May 29, 2015"
           },
           {
-            src: "./achievement-image4.png",
+            src: "achievement-image4.png",
             title: "URC 2016 - Team RUDRA secured 7th place overall",
             date: "June 12, 2016"
           },
           {
-            src: "./achievement-image5.png",
+            src: "achievement-image5.png",
             title: "URC 2017 - Team RUDRA participated and ranked 8th globally",
             date: "June 10, 2017"
           }
