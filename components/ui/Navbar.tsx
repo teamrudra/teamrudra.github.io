@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import rudraLogo from '../../public/rudra-logo.png'; // Adjust the path as needed
-import srmLogo from '../../public/srm-logo.png'; // Adjust the path as needed
+import rudraLogo from './../../public/rudra-logo.png'; // Adjust the path as needed
+import srmLogo from './../../public/srm-logo.png'; // Adjust the path as needed
 import { useState, useEffect } from 'react';
 
 const Navbar = () => {
