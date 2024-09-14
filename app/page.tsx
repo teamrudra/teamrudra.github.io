@@ -290,7 +290,7 @@ const Home = () => {
   <div className="flex flex-wrap items-center justify-center z-20">
     {sponsorshipImages.map((sponsor, index) => (
       <div key={index} className="p-4 sm:p-6">
-        <Image
+        <img
           src={sponsor.src}
           alt={sponsor.alt}
           width={200}
