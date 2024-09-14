@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <Link href="/" legacyBehavior>
           <a>
-            <Image src={rudraLogo} alt="rudra logo" width={100} height={50} />
+            <img src={rudraLogo} alt="rudra logo" width={100} height={50} />
           </a>
         </Link>
         <div className="flex-1 flex justify-center space-x-4 hidden lg:flex">
@@ -91,7 +91,7 @@ const Navbar = () => {
           </div>
         </div>
         <a href="https://www.srmist.edu.in/" target="_blank" rel="noopener noreferrer" className="hidden lg:block">
-          <Image src={srmLogo} alt="SRM logo" width={100} height={50} />
+          <img src={srmLogo} alt="SRM logo" width={100} height={50} />
         </a>
       </div>
     </nav>
