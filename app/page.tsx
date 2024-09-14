@@ -242,7 +242,7 @@ const Home = () => {
             date: "June 18, 2018"
           },
           {
-            src: "./achievement-image7.png",
+            src: "/rudraweb2/achievement-image7.png",
             title: "URC 2019 - Team RUDRA achieved 10th as World Rank",
             date: "June 12, 2019"
           },
