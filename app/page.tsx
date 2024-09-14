@@ -214,7 +214,7 @@ const Home = () => {
         ].map((item, index) => (
           <div key={index} className="relative group overflow-hidden">
             <div className="w-full h-40 sm:h-48 md:h-56 lg:h-64 bg-white rounded-lg mb-4 transition-transform duration-300 transform group-hover:scale-105">
-              <Image
+              <img
                 src={item.src}
                 alt={`Achievement ${index + 1}`}
                 layout="fill"
@@ -259,7 +259,7 @@ const Home = () => {
         ].map((item, index) => (
           <div key={index} className="relative group overflow-hidden">
             <div className="w-full h-40 sm:h-48 md:h-56 lg:h-64 bg-white rounded-lg mb-4 transition-transform duration-300 transform group-hover:scale-105">
-              <Image
+              <img
                 src={item.src}
                 alt={`Achievement ${index + 6}`}
                 layout="fill"
