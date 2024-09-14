@@ -18,7 +18,7 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className={`bg-gray-900 bg-opacity-60 text-white fixed w-full z-30 ${isMenuOpen ? 'overflow-hidden' : ''}`}>
+    <nav className={`bg-black bg-opacity-60 text-white fixed w-full z-30 ${isMenuOpen ? 'overflow-hidden' : ''}`}>
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <Link href="/" legacyBehavior>
           <a>
