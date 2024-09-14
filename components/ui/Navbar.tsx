@@ -3,7 +3,7 @@ import Image from 'next/image';
 import rudraLogo from './../../public/rudra-logo.png'; // Adjust the path as needed
 import srmLogo from './../../public/srm-logo.png'; // Adjust the path as needed
 import { useState, useEffect } from 'react';
-
+import 'tailwindcss/tailwind.css'
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
