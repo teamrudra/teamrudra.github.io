@@ -1,7 +1,7 @@
 'use client';
 import { SparklesCore } from '@/components/ui/sparkles';
-import { useState } from 'react';
-import Navbar from '../components/ui/Navbar';
+// import { useState } from 'react';
+// import Navbar from '../components/ui/Navbar';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
