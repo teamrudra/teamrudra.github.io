@@ -104,7 +104,7 @@ const Home = () => {
 
         <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 sm:mb-12 font-serif flex items-center justify-center z-20">
           Our Team
-          <img src="/team-image.png" alt="Team Logo" className="w-6 sm:w-8 lg:w-10 h-6 sm:h-8 lg:h-10 ml-2 sm:ml-4" />
+          <img src="./team-image.png" alt="Team Logo" className="w-6 sm:w-8 lg:w-10 h-6 sm:h-8 lg:h-10 ml-2 sm:ml-4" />
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-10 text-center z-20">
           {/* Team Members */}
