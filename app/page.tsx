@@ -9,14 +9,14 @@ import MechanicalDomainPage from './mechanical-domain/page';
 
 const Home = () => {
   const galleryImages = [
-    'gallery-item1.png',
-    'gallery-item2.png',
-    'gallery-item3.png',
-    'gallery-item4.png',
-    'gallery-item5.png',
-    'gallery-item6.png',
-    'gallery-item7.png',
-    'gallery-item8.png',
+    './gallery-item1.png',
+    './gallery-item2.png',
+    './gallery-item3.png',
+    './gallery-item4.png',
+    './gallery-item5.png',
+    './gallery-item6.png',
+    './gallery-item7.png',
+    './gallery-item8.png',
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,13 +34,13 @@ const Home = () => {
   };
 
   const sponsorshipImages = [
-    { src: 'sukrit-infotech.png', alt: 'Sukrit Infotech' },
-    { src: 'solidworks.png', alt: 'Solidworks' },
-    { src: 'wheeleez.png', alt: 'Wheeleez' },
-    { src: 'nvidia.png', alt: 'Nvidia' },
-    { src: 'altium.png', alt: 'Altium' },
-    { src: 'vartech.png', alt: 'Var Tech' },
-    { src: 'protocase.png', alt: 'Protocase' },
+    { src: './sukrit-infotech.png', alt: 'Sukrit Infotech' },
+    { src: './solidworks.png', alt: 'Solidworks' },
+    { src: './wheeleez.png', alt: 'Wheeleez' },
+    { src: './nvidia.png', alt: 'Nvidia' },
+    { src: './altium.png', alt: 'Altium' },
+    { src: './vartech.png', alt: 'Var Tech' },
+    { src: './protocase.png', alt: 'Protocase' },
   ];
 
   return (
