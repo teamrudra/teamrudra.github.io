@@ -4,8 +4,8 @@ import { useState } from 'react';
 import Navbar from '../components/ui/Navbar';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ModelViewer } from '../components/ui/ModelViewer';
-import '../styles/globals.css';
+import './global.css'
+
 const Home = () => {
   const galleryImages = [
     './gallery-item1.png',
