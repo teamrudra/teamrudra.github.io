@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Navbar from '../components/ui/Navbar';
 import Link from 'next/link';
 import Image from 'next/image';
-import './global.css'
+import 'app/globals.css'
 
 const Home = () => {
   const galleryImages = [
