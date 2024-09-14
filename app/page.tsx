@@ -5,8 +5,6 @@ import Navbar from '../components/ui/Navbar';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ModelViewer } from '../components/ui/ModelViewer';
-import MechanicalDomainPage from './mechanical-domain/page';
-
 const Home = () => {
   const galleryImages = [
     './gallery-item1.png',
@@ -40,7 +38,7 @@ const Home = () => {
     { src: './nvidia.png', alt: 'Nvidia' },
     { src: './altium.png', alt: 'Altium' },
     { src: './vartech.png', alt: 'Var Tech' },
-    { src: 'protocase.png', alt: 'Protocase' },
+    { src: './protocase.png', alt: 'Protocase' },
   ];
 
   return (
@@ -189,27 +187,27 @@ const Home = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center mb-8 relative z-10">
         {[
           {
-            src: "achievement-image1.png",
+            src: "./achievement-image1.png",
             title: "URC 2013 - Team RUDRA achieved 5th as World Rank and 1st as Asia Rank",
             date: "May 28, 2013"
           },
           {
-            src: "achievement-image2.png",
+            src: "./achievement-image2.png",
             title: "URC 2014 - Team RUDRA participated and ranked 6th globally",
             date: "June 15, 2014"
           },
           {
-            src: "achievement-image3.png",
+            src: "./achievement-image3.png",
             title: "URC 2015 - 3rd in Science Cache Task",
             date: "May 29, 2015"
           },
           {
-            src: "achievement-image4.png",
+            src: "./achievement-image4.png",
             title: "URC 2016 - Team RUDRA secured 7th place overall",
             date: "June 12, 2016"
           },
           {
-            src: "achievement-image5.png",
+            src: "./achievement-image5.png",
             title: "URC 2017 - Team RUDRA participated and ranked 8th globally",
             date: "June 10, 2017"
           }
@@ -239,24 +237,24 @@ const Home = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center relative z-10">
         {[
           {
-            src: "achievement-image6.png",
+            src: "./achievement-image6.png",
             title: "URC 2018 - Team RUDRA secured 9th place overall",
             date: "June 18, 2018"
           },
           {
-            src: "achievement-image7.png",
+            src: "./achievement-image7.png",
             title: "URC 2019 - Team RUDRA achieved 10th as World Rank",
             date: "June 12, 2019"
           },
           {
-            src: "achievement-image8.png",
+            src: "./achievement-image8.png",
             title: "IRC 2023-Team RUDRA ranked 5th  globally",
-            date: "June 8, 2020"
+            date: "Jan  2023"
           },
           {
-            src: "achievement-image9.png",
+            src: "./achievement-image9.png",
             title: "IRC 2024-Team RUDRA ranked 3rd globally",
-            date: "June 15, 2021"
+            date: "Jan 2024"
           }
         ].map((item, index) => (
           <div key={index} className="relative group overflow-hidden">
