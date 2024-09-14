@@ -214,13 +214,10 @@ const Home = () => {
         ].map((item, index) => (
           <div key={index} className="relative group overflow-hidden">
             <div className="w-full h-40 sm:h-48 md:h-56 lg:h-64 bg-white rounded-lg mb-4 transition-transform duration-300 transform group-hover:scale-105">
-              <Image
+              <img
                 src={item.src}
                 alt={`Achievement ${index + 1}`}
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-                className="rounded-lg"
+                className="rounded-lg object-cover w-full h-full"
               />
             </div>
             <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white transition-opacity duration-300">
@@ -248,24 +245,21 @@ const Home = () => {
           },
           {
             src: "./achievement-image8.png",
-            title: "IRC 2023-Team RUDRA ranked 5th  globally",
-            date: "Jan  2023"
+            title: "IRC 2023 - Team RUDRA ranked 5th globally",
+            date: "Jan 2023"
           },
           {
             src: "./achievement-image9.png",
-            title: "IRC 2024-Team RUDRA ranked 3rd globally",
+            title: "IRC 2024 - Team RUDRA ranked 3rd globally",
             date: "Jan 2024"
           }
         ].map((item, index) => (
           <div key={index} className="relative group overflow-hidden">
             <div className="w-full h-40 sm:h-48 md:h-56 lg:h-64 bg-white rounded-lg mb-4 transition-transform duration-300 transform group-hover:scale-105">
-              <Image
+              <img
                 src={item.src}
                 alt={`Achievement ${index + 6}`}
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-                className="rounded-lg"
+                className="rounded-lg object-cover w-full h-full"
               />
             </div>
             <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white transition-opacity duration-300">
@@ -280,6 +274,7 @@ const Home = () => {
     </div>
   </div>
 </div>
+
 
 
 
