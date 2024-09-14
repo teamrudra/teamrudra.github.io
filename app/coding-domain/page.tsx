@@ -14,7 +14,7 @@ const CodingDomainPage = () => {
         {/* Coding Team Member 1 */}
         <Link href="/coding-team-member-1">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="/coding-member1.png" alt="Coding Team Member 1" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./coding-member1.png" alt="Coding Team Member 1" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Team Lead-Shashwat Ganesh</h3>
           </div>
         </Link>
@@ -22,7 +22,7 @@ const CodingDomainPage = () => {
         {/* Coding Team Member 2 */}
         <Link href="/coding-team-member-2">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="/coding-member2.png" alt="Coding Team Member 2" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./coding-member2.png" alt="Coding Team Member 2" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Developers Lead-Waseem Riaz</h3>
           </div>
         </Link>
@@ -30,7 +30,7 @@ const CodingDomainPage = () => {
         {/* Coding Team Member 3 */}
         <Link href="/coding-team-member-3">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="/coding-member3.png" alt="Coding Team Member 3" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./coding-member3.png" alt="Coding Team Member 3" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Simulation & Testing-Pritesh Agarwal</h3>
           </div>
         </Link>
@@ -38,7 +38,7 @@ const CodingDomainPage = () => {
         {/* Coding Team Member 4 */}
         <Link href="/coding-team-member-4">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="/coding-member4.png" alt="Coding Team Member 4" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./coding-member4.png" alt="Coding Team Member 4" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Yasharth Gupta</h3>
           </div>
         </Link>
@@ -46,7 +46,7 @@ const CodingDomainPage = () => {
         {/* Coding Team Member 5 */}
         <Link href="/coding-team-member-5">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="/coding-member5.png" alt="Coding Team Member 5" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./coding-member5.png" alt="Coding Team Member 5" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Ayush Daga</h3>
           </div>
         </Link>
