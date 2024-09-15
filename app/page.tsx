@@ -173,7 +173,7 @@ const Home = () => {
       {/* About Us Section */}
       <div className="min-h-screen bg-black flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8" id="about">
         {/* Left Side: 3D Model */}
-        <div className="w-full lg:w-5/5 flex justify-center items-center border-4 border-gray-300 box-border mb-8 lg:mb-0">
+        <div className="w-full lg:w-3/5 flex justify-center items-center border-4 border-gray-300 box-border mb-8 lg:mb-0">
         <img
       src="./your-image.png" // Update with the path to your image
       alt="Rover model" // Update with a description for accessibility
