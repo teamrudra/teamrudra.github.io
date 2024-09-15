@@ -173,9 +173,8 @@ const Home = () => {
       {/* About Us Section */}
       <div className="min-h-screen bg-black flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8" id="about">
         {/* Left Side: 3D Model */}
-        {/* <div className="w-full lg:w-3/5 flex justify-center items-center border-4 border-gray-300 box-border mb-8 lg:mb-0">
-        <ModelViewer />
-        </div> */}
+        <div className="w-full lg:w-3/5 flex justify-center items-center border-4 border-gray-300 box-border mb-8 lg:mb-0">
+        </div>
 
         {/* Right Side: Text */}
         <div className="w-full lg:w-3/5 bg-black bg-opacity-80 text-white p-4 sm:p-10 font-sans">
