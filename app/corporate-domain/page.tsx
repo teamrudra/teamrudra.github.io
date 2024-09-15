@@ -54,7 +54,7 @@ const CorporateDomainPage = () => {
         <Link href="/corporate-team-member-6">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
             <img src="./corporate-member6.png" alt="Corporate Team Member 6" className="w-32 h-32 mx-auto rounded-full" />
-            <h3 className="text-white text-xl mt-4">Nidhan S</h3>
+            <h3 className="text-white text-xl mt-4">Nidhan SKN</h3>
           </div>
         </Link>
         
