@@ -67,7 +67,7 @@ const Home = () => {
       }
     `}</style>
           {/* Navbar */}
-          <nav className="bg-black bg-opacity-60 text-white fixed w-full z-50 transition-transform duration-300">
+          <nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <Link href="/" legacyBehavior>
           <a>
@@ -153,7 +153,7 @@ const Home = () => {
 
  {/* Hero Section */}
  <div
-        className="relative min-h-screen bg-cover bg-center bg-no-repeat sm:bg-none z-60" // Adjusted z-index
+        className="relative min-h-screen bg-cover bg-center bg-no-repeat sm:bg-none z-20" // Adjusted z-index
         style={{
           backgroundImage: `url('background-image.png')`, // Default background for larger screens
         }}
@@ -207,7 +207,7 @@ const Home = () => {
           Our Team
           <img src="./team-image.png" alt="Team Logo" className="w-6 sm:w-8 lg:w-10 h-6 sm:h-8 lg:h-10 ml-2 sm:ml-4" />
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-10 text-center z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-10 text-center z-5">
           {/* Team Members */}
           {[
             { name: 'Team Lead - Shashwat Ganesh', img: 'team-lead.png', link: 'https://www.linkedin.com/in/sga0xc33d/' },
@@ -234,7 +234,7 @@ const Home = () => {
   <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
 
   <h2 className="text-white text-6xl mb-12 font-serif z-10">Gallery</h2>
-  <div className="relative w-full max-w-4xl flex items-center justify-center z-10">
+  <div className="relative w-full max-w-4xl flex items-center justify-center z-5">
     {/* Gallery Image Container */}
     <div
       id="gallery-container"
