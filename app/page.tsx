@@ -210,7 +210,7 @@ const Home = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-10 text-center z-5">
           {/* Team Members */}
           {[
-            { name: 'Dr.A.Rathinam', img: 'corporate-domain.png', link: '/rudraweb2/corporate-domain' },
+           
             { name: 'Team Lead - Shashwat Ganesh', img: 'team-lead.png', link: 'https://www.linkedin.com/in/sga0xc33d/' },
             { name: 'Team Co-Lead - Eeshan Nair', img: 'team-manager.png', link: 'https://www.linkedin.com/in/eeshan-nair-496800238/' },
             { name: 'Technical Director - Rajkumar', img: 'technical-director.png', link: 'https://www.linkedin.com/in/rajkumar-m13/' },
@@ -219,7 +219,8 @@ const Home = () => {
             { name: 'Coding Domain', img: 'coding-domain.png', link: '/rudraweb2/coding-domain' },
             { name: 'Life Science Domain', img: 'life-science-domain.png', link: '/rudraweb2/life-science-domain' },
             { name: 'Corporate Domain', img: 'corporate-domain.png', link: '/rudraweb2/corporate-domain' },
-            
+
+            { name: 'Dr. A. Rathinam', img: 'corporate-domain.png', link: '/rudraweb2/corporate-domain', colSpan: 2 },
           ].map((member, index) => (
             <a key={member.name} href={member.link} >
               <div className="bg-gray-800 p-4 sm:p-6 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
