@@ -238,7 +238,7 @@ const Home = () => {
     {/* Gallery Image Container */}
     <div
       id="gallery-container"
-      className="w-full h-[550px] flex overflow-x-auto scroll-smooth snap-x snap-mandatory relative z-10"
+      className="w-full h-[550px] flex overflow-x-auto scroll-smooth snap-x snap-mandatory relative z-5"
     >
       {galleryImages.map((image, index) => (
         <img
