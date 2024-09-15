@@ -383,7 +383,7 @@ const Home = () => {
 <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-4 mt-[-16px]" id="sponsors">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mb-12 sm:mb-16 z-20">Our Sponsors</h2>
-  <div className="flex flex-wrap items-center justify-center z-20">
+  <div className="flex flex-wrap items-center justify-center z-10">
     {sponsorshipImages.map((sponsor, index) => (
       <div key={index} className="p-4 sm:p-6">
         <img
