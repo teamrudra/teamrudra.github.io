@@ -236,7 +236,7 @@ const Home = () => {
       </div>
     </a>
   </div>
-</div>
+
 {/* Gallery Section */}
 <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-16" id="gallery">
   {/* Sparkles Effect */}
