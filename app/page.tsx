@@ -191,7 +191,7 @@ const Home = () => {
 
       {/* Team Members Section */}
       <div className="relative min-h-screen bg-black bg-cover bg-center flex flex-col items-center justify-center py-16" id="team">
-        <SparklesCore className="absolute inset-0 z-20" particleColor="#ffffff" particleDensity={30} />
+        {/* <SparklesCore className="absolute inset-0 z-20" particleColor="#ffffff" particleDensity={30} /> */}
         <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
           <source src="/starsvideo.mov" type="video/mov" />
           Your browser does not support the video tag.
