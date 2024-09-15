@@ -67,7 +67,7 @@ const Home = () => {
       }
     `}</style>
           {/* Navbar */}
-          <nav className="bg-black bg-opacity-60 text-white fixed w-full z-10 transition-transform duration-300">
+          <nav className="bg-black bg-opacity-60 text-white fixed w-full z-50 transition-transform duration-300">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <Link href="/" legacyBehavior>
           <a>
@@ -153,7 +153,7 @@ const Home = () => {
 
  {/* Hero Section */}
  <div
-        className="relative min-h-screen bg-cover bg-center bg-no-repeat sm:bg-none z-20" // Adjusted z-index
+        className="relative min-h-screen bg-cover bg-center bg-no-repeat sm:bg-none z-60" // Adjusted z-index
         style={{
           backgroundImage: `url('background-image.png')`, // Default background for larger screens
         }}
