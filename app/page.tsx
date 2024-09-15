@@ -67,7 +67,7 @@ const Home = () => {
       }
     `}</style>
           {/* Navbar */}
-          <nav className="bg-black bg-opacity-60 text-white fixed w-full z-50">
+          <nav className="bg-black bg-opacity-60 text-white fixed w-full z-100">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <Link href="/" legacyBehavior>
           <a>
@@ -143,11 +143,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* SRM logo */}
-        <a href="https://www.srmist.edu.in/" target="_blank" rel="noopener noreferrer" className="hidden lg:block">
-          <img src="/rudraweb2/srm-logo.png" alt="SRM logo" width={100} height={50} />
-        </a>
-      </div>
     </nav>
 
 
