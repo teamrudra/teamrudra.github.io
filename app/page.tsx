@@ -228,7 +228,28 @@ const Home = () => {
           ))}
         </div>
       </div>
+{/* Gallery Section */}
+<div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-16" id="gallery">
+  {/* Sparkles Effect */}
+  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
 
+  <h2 className="text-white text-6xl mb-12 font-serif z-10">Gallery</h2>
+  <div className="relative w-full max-w-4xl flex items-center justify-center z-10">
+    {/* Gallery Image Container */}
+    <div
+      id="gallery-container"
+      className="w-full h-[550px] flex overflow-x-auto scroll-smooth snap-x snap-mandatory relative z-5"
+    >
+      {galleryImages.map((image, index) => (
+        <img
+          key={index}
+          src={image}
+          alt={`Gallery Item ${index + 1}`}
+          className="flex-shrink-0 w-full h-full object-cover rounded-lg snap-center"
+        />
+      ))}
+    </div>
+  </div>
 
   {/* Horizontal Scroller */}
   <div className="w-full max-w-4xl overflow-x-auto mt-6 z-10">
@@ -247,6 +268,7 @@ const Home = () => {
       ))}
     </div>
   </div>
+</div>
 {/* Achievements Section */}
 <div className="relative min-h-screen bg-black py-4 mb-[-16px]" id="achievements">
   {/* Sparkles Effect */}
