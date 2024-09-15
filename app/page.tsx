@@ -1,6 +1,6 @@
 'use client';
 import { SparklesCore } from '@/components/ui/sparkles';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '../components/ui/Navbar';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -18,6 +18,20 @@ const Home = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'smooth';
+  }, []);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isMenuOpen]);
+
 
   const previousSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -52,6 +66,70 @@ const Home = () => {
         }
       }
     `}</style>
+          {/* Navbar */}
+          <nav className="bg-black bg-opacity-60 text-white fixed w-full z-50">
+        <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+          <Link href="/" legacyBehavior>
+            <a>
+              <img src="./rudra-logo.png" alt="Rudra logo" width={100} height={50} />
+            </a>
+          </Link>
+
+          {/* Hamburger Menu */}
+          <button
+            className="lg:hidden block text-white focus:outline-none"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? 'Close' : 'Menu'}
+          </button>
+
+          {/* Navbar Links */}
+          <div
+            className={`${
+              isMenuOpen ? 'block' : 'hidden'
+            } lg:flex lg:items-center lg:w-auto w-full`}
+          >
+            <ul className="lg:flex lg:space-x-8 text-sm">
+              <li>
+                <a href="#home" className="block py-2 text-white">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="block py-2 text-white">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#team" className="block py-2 text-white">
+                  Team
+                </a>
+              </li>
+              <li>
+                <a href="#gallery" className="block py-2 text-white">
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a href="#achievements" className="block py-2 text-white">
+                  Achievements
+                </a>
+              </li>
+              <li>
+                <a href="#sponsors" className="block py-2 text-white">
+                  Sponsors
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="block py-2 text-white">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
 
       {/* Hero Section */}
       <div
@@ -62,7 +140,7 @@ const Home = () => {
   id="home"
 >
   
-  <Navbar />
+  {/* <Navbar /> */}
   <div
     className="absolute inset-0 flex items-center justify-center sm:bg-cover sm:bg-center sm:bg-no-repeat"
     style={{
