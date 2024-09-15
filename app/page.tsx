@@ -189,7 +189,7 @@ const Home = () => {
             The annual competition is held at the Mars Desert Research Station (MDRS), Martian Analog Site, near Hanksville, Utah, USA. 
             The team has been successfully operational for the last 7 years and has maintained its consistency in the competition.
           </p>
-          <p className="mb-4 sm:mb-6 font-mono">
+          <p className="mb-4 sm:mb-6 font-sans">
             Our Team consists of 25-30 undergraduate students of every year from various engineering streams, working in different domains. 
             The fun part - RSD, is the soul and essence of Team RUDRA. Brainstorming discussions are always welcome for giving birth to new ideas.
           </p>
