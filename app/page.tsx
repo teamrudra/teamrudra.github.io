@@ -150,7 +150,7 @@ const Home = () => {
 
       {/* Hero Section */}
       <div
-  className="relative min-h-screen bg-cover bg-center bg-no-repeat sm:bg-none z-0"
+  className="relative min-h-screen bg-cover bg-center bg-no-repeat sm:bg-none"
   style={{
     backgroundImage: `url('background-image.png')`, // Default background for larger screens
   }}
