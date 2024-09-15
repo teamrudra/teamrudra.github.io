@@ -220,9 +220,9 @@ const Home = () => {
             { name: 'Life Science Domain', img: 'life-science-domain.png', link: '/rudraweb2/life-science-domain' },
             { name: 'Corporate Domain', img: 'corporate-domain.png', link: '/rudraweb2/corporate-domain' },
 
-            { name: 'Dr. A. Rathinam', img: 'corporate-domain.png', link: '/rudraweb2/corporate-domain', colSpan: 2 },
+            { name: 'Dr. A. Rathinam', img: 'corporate-domain.png', link: '/rudraweb2/corporate-domain' },
           ].map((member, index) => (
-            <a key={member.name} href={member.link} className={`col-span-1 ${index === 8 ? 'md:col-span-2 lg:col-span-2 justify-self-center' : ''}`}>
+            <a key={member.name} href={member.link} className={index === 8 ? 'justify-self-center' : ''}>
               <div className="bg-gray-800 p-4 sm:p-6 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
                 <img src={member.img} alt={member.name} className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
                 <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-mono">{member.name}</h3>
