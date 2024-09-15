@@ -191,7 +191,7 @@ const Home = () => {
 
       {/* Team Members Section */}
       <div className="relative min-h-screen bg-black bg-cover bg-center flex flex-col items-center justify-center py-16" id="team">
-        {/* <SparklesCore className="absolute inset-0 z-20" particleColor="#ffffff" particleDensity={30} /> */}
+        <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
         <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
           <source src="/starsvideo.mov" type="video/mov" />
           Your browser does not support the video tag.
@@ -225,7 +225,7 @@ const Home = () => {
 {/* Gallery Section */}
 <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-16" id="gallery">
   {/* Sparkles Effect */}
-  <SparklesCore className="absolute inset-0 z-20" particleColor="#ffffff" particleDensity={30} />
+  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
 
   <h2 className="text-white text-6xl mb-12 font-serif z-10">Gallery</h2>
   <div className="relative w-full max-w-4xl flex items-center justify-center z-10">
@@ -266,7 +266,7 @@ const Home = () => {
 {/* Achievements Section */}
 <div className="relative min-h-screen bg-black py-4 mb-[-16px]" id="achievements">
   {/* Sparkles Effect */}
-  <SparklesCore className="absolute inset-0 z-20" particleColor="#ffffff" particleDensity={30} />
+  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
 
   {/* Section Content */}
   <h2 className="text-white text-4xl md:text-5xl lg:text-6xl text-center mb-12 font-serif z-10 relative">
@@ -375,7 +375,7 @@ const Home = () => {
 
 {/* Sponsorship Section */}
 <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-4 mt-[-16px]" id="sponsors">
-  <SparklesCore className="absolute inset-0 z-20" particleColor="#ffffff" particleDensity={30} />
+  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mb-12 sm:mb-16 z-20">Our Sponsors</h2>
   <div className="flex flex-wrap items-center justify-center z-20">
     {sponsorshipImages.map((sponsor, index) => (
