@@ -285,7 +285,7 @@ const Home = () => {
       <div className="absolute left-0 w-full h-1 bg-gray-400 top-1/2 transform -translate-y-1/2 z-0"></div>
 
       {/* Achievement Cards - Top Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center mb-8 relative z-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center mb-8 relative z-0">
         {[
           {
             src: "./achievement-image1.png",
@@ -332,7 +332,7 @@ const Home = () => {
       </div>
 
       {/* Achievement Cards - Bottom Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center relative z-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center relative z-0">
         {[
           {
             src: "./achievement-image6.png",
