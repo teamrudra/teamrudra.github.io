@@ -219,18 +219,24 @@ const Home = () => {
             { name: 'Coding Domain', img: 'coding-domain.png', link: '/rudraweb2/coding-domain' },
             { name: 'Life Science Domain', img: 'life-science-domain.png', link: '/rudraweb2/life-science-domain' },
             { name: 'Corporate Domain', img: 'corporate-domain.png', link: '/rudraweb2/corporate-domain' },
-
-            { name: 'Dr. A. Rathinam', img: 'corporate-domain.png', link: '/rudraweb2/corporate-domain', className: 'lg:col-span-4 justify-self-center' },
           ].map((member, index) => (
-            <a key={member.name} href={member.link} className={index === 8 ? 'lg:col-span-2 justify-self-center' : ''}>
+            <a key={member.name} href={member.link}>
               <div className="bg-gray-800 p-4 sm:p-6 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
                 <img src={member.img} alt={member.name} className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
                 <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-mono">{member.name}</h3>
               </div>
             </a>
           ))}
-        </div>
+           {/* Center the last team member */}
+  <div className="col-span-full flex justify-center">
+    <a href="/rudraweb2/corporate-domain">
+      <div className="bg-gray-800 p-4 sm:p-6 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+        <img src="corporate-domain.png" alt="Dr. A. Rathinam" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
+        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-mono">Dr. A. Rathinam</h3>
       </div>
+    </a>
+  </div>
+</div>
 {/* Gallery Section */}
 <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-16" id="gallery">
   {/* Sparkles Effect */}
