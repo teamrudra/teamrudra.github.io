@@ -143,6 +143,8 @@ const Home = () => {
           </div>
         </div>
 
+
+      </div>
     </nav>
 
 
