@@ -220,7 +220,7 @@ const Home = () => {
             { name: 'Life Science Domain', img: 'life-science-domain.png', link: '/rudraweb2/life-science-domain' },
             { name: 'Corporate Domain', img: 'corporate-domain.png', link: '/rudraweb2/corporate-domain' },
 
-            { name: 'Dr. A. Rathinam', img: 'corporate-domain.png', link: '/rudraweb2/corporate-domain', className: 'lg:col-span-2 justify-self-center' },
+            { name: 'Dr. A. Rathinam', img: 'corporate-domain.png', link: '/rudraweb2/corporate-domain', className: 'lg:col-span-4 justify-self-center' },
           ].map((member, index) => (
             <a key={member.name} href={member.link} className={index === 8 ? 'lg:col-span-2 justify-self-center' : ''}>
               <div className="bg-gray-800 p-4 sm:p-6 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
