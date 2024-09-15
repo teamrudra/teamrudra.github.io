@@ -170,7 +170,7 @@ const Home = () => {
   </div>
 </div>
       {/* About Us Section */}
-      <div className="min-h-screen bg-black flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8" id="about">
+      <div className="min-h-screen bg-gray-900 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8" id="about">
         {/* Left Side: 3D Model */}
         <div className="w-full lg:w-3/5 flex justify-center items-center border-4 border-gray-300 box-border mb-8 lg:mb-0">
         <img
@@ -181,7 +181,7 @@ const Home = () => {
         </div>
 
         {/* Right Side: Text */}
-        <div className="w-full lg:w-3/5 bg-black bg-opacity-80 text-white p-4 sm:p-10 font-sans">
+        <div className="w-full lg:w-3/5 bg-gray-900 bg-opacity-80 text-white p-4 sm:p-10 font-sans">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 lg:mb-6 font-serif">About Us</h2>
           <p className="mb-4 sm:mb-6 font-sans">
             RUDRA is the official team of SRM IST taking part in the University Rover Challenge organized by the Mars Society since 2013. 
