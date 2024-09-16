@@ -64,7 +64,7 @@ const Home = () => {
         }
       }
     `}</style>
-          {/* Navbar */}
+        {/* Navbar */}
 <nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
   <div className="container mx-auto px-4 py-2 flex items-center">
     
@@ -75,8 +75,8 @@ const Home = () => {
       </a>
     </Link>
 
-    {/* Desktop Menu - Move to the right */}
-    <div className="hidden lg:flex flex-1 justify-end ml-auto space-x-4">
+    {/* Desktop Menu - Move to the complete right */}
+    <div className="hidden lg:flex ml-auto space-x-4">
       <Link href="#home" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">HOME</a>
       </Link>
