@@ -66,7 +66,7 @@ const Home = () => {
     `}</style>
        {/* Navbar */}
 <nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
-  <div className="container mx-auto px-4 py-2 flex justify-between items-center w-full">
+  <div className="px-4 py-2 flex justify-between items-center w-full">
     
     {/* Rudra Logo - Aligned to the left */}
     <Link href="/" legacyBehavior>
