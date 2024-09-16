@@ -64,19 +64,19 @@ const Home = () => {
         }
       }
     `}</style>
-        {/* Navbar */}
+       {/* Navbar */}
 <nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
   <div className="container mx-auto px-4 py-2 flex justify-between items-center w-full">
     
-    {/* Rudra Logo - Move to the left */}
+    {/* Rudra Logo - Aligned to the left */}
     <Link href="/" legacyBehavior>
       <a className="flex-shrink-0">
         <img src="./rudra-logo.png" alt="Rudra logo" width={100} height={50} />
       </a>
     </Link>
 
-    {/* Desktop Menu - Move to the complete right */}
-    <div className="hidden lg:flex space-x-4 ml-auto">
+    {/* Desktop Menu - Aligned to the right */}
+    <div className="hidden lg:flex space-x-4">
       <Link href="#home" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">HOME</a>
       </Link>
