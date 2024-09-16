@@ -1,9 +1,7 @@
 'use client';
 import { SparklesCore } from '@/components/ui/sparkles';
 import { useState, useEffect } from 'react';
-import Navbar from '../components/ui/Navbar';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Home = () => {
   const galleryImages = [
@@ -67,39 +65,40 @@ const Home = () => {
       }
     `}</style>
           {/* Navbar */}
-          <nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
-      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-        <Link href="/" legacyBehavior>
-          <a>
-            <img src="./rudra-logo.png" alt="Rudra logo" width={100} height={50} />
-          </a>
-        </Link>
-        
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex flex-1 justify-center space-x-4">
-          <Link href="#home" scroll={true} legacyBehavior>
-            <a className="hover:text-gray-300 transition duration-200">HOME</a>
-          </Link>
-          <Link href="#about" scroll={true} legacyBehavior>
-            <a className="hover:text-gray-300 transition duration-200">ABOUT US</a>
-          </Link>
-          <Link href="#team" scroll={true} legacyBehavior>
-            <a className="hover:text-gray-300 transition duration-200">TEAM</a>
-          </Link>
-          <Link href="#achievements" scroll={true} legacyBehavior>
-            <a className="hover:text-gray-300 transition duration-200">ACHIEVEMENTS</a>
-          </Link>
-          <Link href="#gallery" scroll={true} legacyBehavior>
-            <a className="hover:text-gray-300 transition duration-200">GALLERY</a>
-          </Link>
-          <Link href="#sponsors" scroll={true} legacyBehavior>
-            <a className="hover:text-gray-300 transition duration-200">SPONSORSHIP</a>
-          </Link>
-          <Link href="#contact" scroll={true} legacyBehavior>
-            <a className="hover:text-gray-300 transition duration-200">CONTACT US</a>
-          </Link>
-        </div>
+<nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
+  <div className="container mx-auto px-4 py-2 flex items-center">
+    
+    {/* Rudra Logo - Move to the left */}
+    <Link href="/" legacyBehavior>
+      <a className="flex-shrink-0">
+        <img src="./rudra-logo.png" alt="Rudra logo" width={100} height={50} />
+      </a>
+    </Link>
 
+    {/* Desktop Menu - Move to the right */}
+    <div className="hidden lg:flex flex-1 justify-end ml-auto space-x-4">
+      <Link href="#home" scroll={true} legacyBehavior>
+        <a className="hover:text-gray-300 transition duration-200">HOME</a>
+      </Link>
+      <Link href="#about" scroll={true} legacyBehavior>
+        <a className="hover:text-gray-300 transition duration-200">ABOUT US</a>
+      </Link>
+      <Link href="#team" scroll={true} legacyBehavior>
+        <a className="hover:text-gray-300 transition duration-200">TEAM</a>
+      </Link>
+      <Link href="#achievements" scroll={true} legacyBehavior>
+        <a className="hover:text-gray-300 transition duration-200">ACHIEVEMENTS</a>
+      </Link>
+      <Link href="#gallery" scroll={true} legacyBehavior>
+        <a className="hover:text-gray-300 transition duration-200">GALLERY</a>
+      </Link>
+      <Link href="#sponsors" scroll={true} legacyBehavior>
+        <a className="hover:text-gray-300 transition duration-200">SPONSORSHIP</a>
+      </Link>
+      <Link href="#contact" scroll={true} legacyBehavior>
+        <a className="hover:text-gray-300 transition duration-200">CONTACT US</a>
+      </Link>
+    </div>
         {/* Hamburger Menu for Mobile */}
         <button 
           className="lg:hidden flex items-center ml-auto"  
@@ -210,7 +209,6 @@ const Home = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-10 text-center z-5">
           {/* Team Members */}
           {[
-           
             { name: 'Team Lead - Shashwat Ganesh', img: 'team-lead.png', link: 'https://www.linkedin.com/in/sga0xc33d/' },
             { name: 'Team Co-Lead - Eeshan Nair', img: 'team-manager.png', link: 'https://www.linkedin.com/in/eeshan-nair-496800238/' },
             { name: 'Technical Director - Rajkumar', img: 'technical-director.png', link: 'https://www.linkedin.com/in/rajkumar-m13/' },
