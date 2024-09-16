@@ -66,7 +66,7 @@ const Home = () => {
     `}</style>
         {/* Navbar */}
 <nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
-  <div className="container mx-auto px-4 py-2 flex items-center">
+  <div className="container mx-auto px-4 py-2 flex justify-between items-center w-full">
     
     {/* Rudra Logo - Move to the left */}
     <Link href="/" legacyBehavior>
@@ -76,7 +76,7 @@ const Home = () => {
     </Link>
 
     {/* Desktop Menu - Move to the complete right */}
-    <div className="hidden lg:flex ml-auto space-x-4">
+    <div className="hidden lg:flex space-x-4 ml-auto">
       <Link href="#home" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">HOME</a>
       </Link>
@@ -110,7 +110,7 @@ const Home = () => {
         </button>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden fixed inset-0 bg-gray-900 bg-opacity-90 z-40 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
+        <div className={`lg:hidden fixed inset-0 bg-black bg-opacity-60 z-40 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
           <button 
             className="absolute top-4 right-4 text-white text-3xl" 
             onClick={() => setIsMenuOpen(false)}
