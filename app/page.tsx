@@ -303,22 +303,22 @@ const Home = () => {
           },
           {
             src: "./achievement-image2.png",
-            title: "URC 2014 - Team RUDRA participated and ranked 6th globally",
+            title: "URC 2014 - Team RUDRA participated and ranked 5th globally",
             date: "June 15, 2014"
           },
           {
             src: "./achievement-image3.png",
-            title: "URC 2015 - 3rd in Science Cache Task",
+            title: "URC 2015 - Achieved 12th rank in the World and 2nd among Asian Teams",
             date: "May 29, 2015"
           },
           {
             src: "./achievement-image4.png",
-            title: "URC 2016 - Team RUDRA secured 7th place overall",
+            title: "URC 2016 - Team RUDRA secured 9th place overall",
             date: "June 12, 2016"
           },
           {
             src: "./achievement-image5.png",
-            title: "URC 2017 - Team RUDRA participated and ranked 8th globally",
+            title: "URC 2017 - Team RUDRA participated and ranked 20th globally and 4th in Asia",
             date: "June 10, 2017"
           }
         ].map((item, index) => (
@@ -345,12 +345,12 @@ const Home = () => {
         {[
           {
             src: "./achievement-image6.png",
-            title: "URC 2018 - Team RUDRA secured 9th place overall",
+            title: "URC 2019 - Team RUDRA secured 11th place in the world",
             date: "June 18, 2018"
           },
           {
             src: "/rudraweb2/achievement-image7.png",
-            title: "URC 2019 - Team RUDRA achieved 10th as World Rank",
+            title: "IRDC - Team RUDRA achieved 3rd as World Rank",
             date: "June 12, 2019"
           },
           {
