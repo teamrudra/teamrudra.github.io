@@ -221,7 +221,7 @@ const Home = () => {
           <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
 
                 <img src={member.img} alt={member.name} className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-                <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-mono">{member.name}</h3>
+                <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans">{member.name}</h3>
               </div>
             </a>
           ))}
@@ -230,7 +230,7 @@ const Home = () => {
     <a href="https://www.srmist.edu.in/about-us/administrative-heads/director-alumni-relations/">
     <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
         <img src="./faculty.png" alt="Dr. A. Rathinam" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-mono">Faculty Advisor-Dr. A. Rathinam</h3>
+        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans">Faculty Advisor-Dr. A. Rathinam</h3>
       </div>
     </a>
   </div>
