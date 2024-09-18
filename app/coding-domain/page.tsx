@@ -48,7 +48,7 @@ const CodingDomainPage = () => {
         {/* Center the last team member */}
         <div className="col-span-full flex justify-center">
           <Link href="/coding-team-member-5">
-            <div className="bg-gray-800 p-6 w-100 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+            <div className="bg-gray-800 p-6 w-full rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
               <img src="./coding-member5.png" alt="Coding Team Member 5" className="w-32 h-32 mx-auto rounded-full" />
               <h3 className="text-white text-xl mt-4">Ayush Daga</h3>
             </div>
