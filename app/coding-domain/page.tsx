@@ -46,7 +46,7 @@ const CodingDomainPage = () => {
         {/* Coding Team Member 5 */}
         <div className="col-span-full flex justify-center">
         <Link href="/coding-team-member-5">
-          <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
+        <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10 w-full sm:w-auto">
             <img src="./coding-member5.png" alt="Coding Team Member 5" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Ayush Daga</h3>
           </div>
