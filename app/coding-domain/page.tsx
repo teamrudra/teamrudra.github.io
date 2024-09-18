@@ -44,17 +44,19 @@ const CodingDomainPage = () => {
             <h3 className="text-white text-xl mt-4">Yasharth Gupta</h3>
           </div>
         </Link>
-        
-        {/* Center the last team member */}
-        <div className="col-span-full flex justify-center">
-          <Link href="/coding-team-member-5">
-            <div className="bg-gray-800 p-6 w-full rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-              <img src="./coding-member5.png" alt="Coding Team Member 5" className="w-32 h-32 mx-auto rounded-full" />
-              <h3 className="text-white text-xl mt-4">Ayush Daga</h3>
-            </div>
-          </Link>
-        </div>
+
       </div>
+      
+      {/* Centered Last Team Member */}
+      <div className="flex justify-center mt-10">
+        <Link href="/coding-team-member-5">
+          <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300">
+            <img src="./coding-member5.png" alt="Coding Team Member 5" className="w-32 h-32 mx-auto rounded-full" />
+            <h3 className="text-white text-xl mt-4">Ayush Daga</h3>
+          </div>
+        </Link>
+      </div>
+
     </div>
   );
 };
