@@ -18,6 +18,31 @@ const MechanicalDomainPage = () => {
           </div>
         </Link>
 
+        {/* Mechanical Team Member 11 */}
+        <Link href="/team-member-11">
+          <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
+            <img src="./mechanical-member11.png" alt="Mechanical Team Member 11" className="w-32 h-32 mx-auto rounded-full" />
+            <h3 className="text-white text-xl mt-4">M.V. Aneesh</h3>
+          </div>
+        </Link>
+       
+
+               {/* Mechanical Team Member 3 */}
+               <Link href="/team-member-3">
+          <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
+            <img src="./mechanical-member3.png" alt="Mechanical Team Member 3" className="w-32 h-32 mx-auto rounded-full" />
+            <h3 className="text-white text-xl mt-4">Kethan Babu</h3>
+          </div>
+        </Link>
+       
+               {/* Mechanical Team Member 5 */}
+               <Link href="/team-member-5">
+          <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
+            <img src="./mechanical-member5.png" alt="Mechanical Team Member 5" className="w-32 h-32 mx-auto rounded-full" />
+            <h3 className="text-white text-xl mt-4">Ratnesh Mishra</h3>
+          </div>
+        </Link>
+       
         {/* Mechanical Team Member 2 */}
         <Link href="https://linkedin.com/in/aditya-raj-bhatia-279109252/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
@@ -26,13 +51,7 @@ const MechanicalDomainPage = () => {
           </div>
         </Link>
 
-        {/* Mechanical Team Member 3 */}
-        <Link href="/team-member-3">
-          <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./mechanical-member3.png" alt="Mechanical Team Member 3" className="w-32 h-32 mx-auto rounded-full" />
-            <h3 className="text-white text-xl mt-4">Kethan Babu</h3>
-          </div>
-        </Link>
+
 
         {/* Mechanical Team Member 4 */}
         <Link href="/team-member-4">
@@ -42,13 +61,7 @@ const MechanicalDomainPage = () => {
           </div>
         </Link>
 
-        {/* Mechanical Team Member 5 */}
-        <Link href="/team-member-5">
-          <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./mechanical-member5.png" alt="Mechanical Team Member 5" className="w-32 h-32 mx-auto rounded-full" />
-            <h3 className="text-white text-xl mt-4">Ratnesh Mishra</h3>
-          </div>
-        </Link>
+
 
         {/* Mechanical Team Member 6 */}
         <Link href="/team-member-6">
@@ -82,13 +95,7 @@ const MechanicalDomainPage = () => {
           </div>
         </Link>
 
-        {/* Mechanical Team Member 11 */}
-        <Link href="/team-member-11">
-          <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./mechanical-member11.png" alt="Mechanical Team Member 11" className="w-32 h-32 mx-auto rounded-full" />
-            <h3 className="text-white text-xl mt-4">M.V. Aneesh</h3>
-          </div>
-        </Link>
+
         
       </div>
     </div>
