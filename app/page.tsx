@@ -44,7 +44,7 @@ const Home = () => {
   };
 
   const sponsorshipImages = [
-    { src: '/rudraweb2/sukrit-infotech.png', alt: 'Sukrit Infotech' },
+    { src: './sukrit-infotech.png', alt: 'Sukrit Infotech' },
     { src: './solidworks.png', alt: 'Solidworks' },
     { src: './wheeleez.png', alt: 'Wheeleez' },
     { src: './nvidia.png', alt: 'Nvidia' },
@@ -211,11 +211,11 @@ const Home = () => {
             { name: 'Team Lead - Shashwat Ganesh', img: 'team-lead.png', link: 'https://www.linkedin.com/in/sga0xc33d/' },
             { name: 'Team Co-Lead - Eeshan Nair', img: 'team-manager.png', link: 'https://www.linkedin.com/in/eeshan-nair-496800238/' },
             { name: 'Technical Director - Rajkumar', img: 'technical-director.png', link: 'https://www.linkedin.com/in/rajkumar-m13/' },
-            { name: 'Mechanical Domain', img: 'mechanical-domain.png', link: '/rudraweb2/mechanical-domain' },
-            { name: 'Electronics Domain', img: 'electronics-domain.png', link: '/rudraweb2/electronics-domain' },
-            { name: 'Coding Domain', img: 'coding-domain.png', link: '/rudraweb2/coding-domain' },
-            { name: 'Life Science Domain', img: 'life-science-domain.png', link: '/rudraweb2/life-science-domain' },
-            { name: 'Corporate Domain', img: 'corporate-domain.png', link: '/rudraweb2/corporate-domain' },
+            { name: 'Mechanical Domain', img: 'mechanical-domain.png', link: './mechanical-domain' },
+            { name: 'Electronics Domain', img: 'electronics-domain.png', link: './electronics-domain' },
+            { name: 'Coding Domain', img: 'coding-domain.png', link: './coding-domain' },
+            { name: 'Life Science Domain', img: 'life-science-domain.png', link: './life-science-domain' },
+            { name: 'Corporate Domain', img: 'corporate-domain.png', link: './corporate-domain' },
           ].map((member, index) => (
             <a key={member.name} href={member.link}>
           <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
@@ -348,7 +348,7 @@ const Home = () => {
             date: "June 18, 2018"
           },
           {
-            src: "/rudraweb2/achievement-image7.png",
+            src: "./achievement-image7.png",
             title: "IRDC - Team RUDRA achieved 3rd as World Rank",
             date: "June 12, 2019"
           },
