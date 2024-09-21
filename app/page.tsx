@@ -428,8 +428,8 @@ const Home = () => {
 
       {/* Social Media Links */}
       <div className="flex flex-col space-y-4 mt-6">
-        <a href="https://www.linkedin.com/company/srmrudra/mycompany/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
-          <img src="linkedin-brands-solid.svg" alt="LinkedIn" className="w-10 h-10" />
+        <a href="https://www.youtube.com/@RUDRASRMMARSROVER" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
+          <img src="youtube.png" alt="LinkedIn" className="w-10 h-10" />
           <span className="text-white text-xl">Youtube</span>
         </a>
         <a href="https://www.linkedin.com/company/srmrudra/mycompany/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
