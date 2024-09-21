@@ -185,11 +185,11 @@ const Home = () => {
           <p className="mb-4 sm:mb-6 font-sans">
             RUDRA is the official team of SRM IST taking part in the University Rover Challenge organized by the Mars Society since 2013. 
             The annual competition is held at the Mars Desert Research Station (MDRS), Martian Analog Site, near Hanksville, Utah, USA. 
-            The team has been successfully operational for the last 7 years and has maintained its consistency in the competition.
+            The team has been successfully operational for the last 10 years and has maintained its consistency in the competition.
           </p>
           <p className="mb-4 sm:mb-6 font-sans">
             Our Team consists of 25-30 undergraduate students of every year from various engineering streams, working in different domains. 
-            The fun part - RSD, is the soul and essence of Team RUDRA. Brainstorming discussions are always welcome for giving birth to new ideas.
+            The fun part - R&D, is the soul and essence of Team RUDRA. Brainstorming discussions are always welcome for giving birth to new ideas.
           </p>
         </div>
       </div>
