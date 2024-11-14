@@ -449,7 +449,6 @@ const Home = () => {
 </div>
       </div>
 
-     {/* Newsletter Signup Section */}
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="newsletter">
   <h2 className="text-white text-6xl mb-12 font-serif">Subscribe to Our Newsletter</h2>
   <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8">
@@ -457,8 +456,6 @@ const Home = () => {
     <div className="bg-gray-700 p-16 rounded-lg shadow-lg flex items-center justify-center w-[480px] h-[480px]">
       <img src="newsletter.jpeg" alt="Newsletter Icon" className="w-128 h-128 object-contain" />
     </div>
-
-    {/* Newsletter Signup Form Section */}
     <div className="bg-gray-800 p-16 rounded-lg shadow-lg flex flex-col justify-between w-[480px] h-[480px]">
       <div className="space-y-4">
         <p className="text-white text-xl">
