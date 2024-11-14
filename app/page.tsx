@@ -452,12 +452,12 @@ const Home = () => {
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="newsletter">
   <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[500px] max-w-full relative text-center">
     
-    {/* Close Button */}
+    
     <button className="absolute top-4 right-4 text-gray-400 text-2xl font-bold hover:text-white">
       &times;
     </button>
     
-    {/* Image Section */}
+   
     <div className="flex justify-center mb-6">
       <img
         src="newsletter.jpeg"
@@ -466,13 +466,13 @@ const Home = () => {
       />
     </div>
     
-    {/* Text Section */}
+  
     <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
     <p className="text-gray-400 mb-6">
       Get weekly access to our newsletter and stay updated
     </p>
     
-    {/* Input Field and Subscribe Button */}
+   
     <form action="/submit-newsletter" method="POST" className="space-y-4">
       <div className="relative">
         <input
