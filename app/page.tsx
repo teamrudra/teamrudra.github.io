@@ -447,6 +447,7 @@ const Home = () => {
     </div>
   </div>
 </div>
+      </div>
       
 
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="newsletter">
