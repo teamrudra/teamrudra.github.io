@@ -98,6 +98,9 @@ const Home = () => {
       <Link href="#contact" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">CONTACT US</a>
       </Link>
+      <Link href="#newsletter" scroll={true} legacyBehavior>
+              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>NEWSLETTERS</a>
+      </Link>
     </div>
         {/* Hamburger Menu for Mobile */}
         <button 
@@ -445,6 +448,42 @@ const Home = () => {
   </div>
 </div>
       </div>
+
+     {/* Newsletter Signup Section */}
+<div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="newsletter">
+  <h2 className="text-white text-6xl mb-12 font-serif">Subscribe to Our Newsletter</h2>
+  <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8">
+    {/* Image/Icon Section */}
+    <div className="bg-gray-700 p-16 rounded-lg shadow-lg flex items-center justify-center w-[480px] h-[480px]">
+      <img src="newsletter-icon.png" alt="Newsletter Icon" className="w-128 h-128 object-contain" />
+    </div>
+
+    {/* Newsletter Signup Form Section */}
+    <div className="bg-gray-800 p-16 rounded-lg shadow-lg flex flex-col justify-between w-[480px] h-[480px]">
+      <div className="space-y-4">
+        <p className="text-white text-xl">
+          Stay updated with our latest news and updates by subscribing to our newsletter.
+        </p>
+        <form action="/submit-newsletter" method="POST" className="space-y-4">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            className="w-full p-4 rounded-lg bg-gray-900 text-white border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+          <button
+            type="submit"
+            className="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+          >
+            Subscribe Now
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
   );
 };
 export default Home;
