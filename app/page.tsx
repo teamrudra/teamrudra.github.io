@@ -455,7 +455,7 @@ const Home = () => {
   <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8">
     {/* Image/Icon Section */}
     <div className="bg-gray-700 p-16 rounded-lg shadow-lg flex items-center justify-center w-[480px] h-[480px]">
-      <img src="newsletter-icon.png" alt="Newsletter Icon" className="w-128 h-128 object-contain" />
+      <img src="newsletter.jpeg" alt="Newsletter Icon" className="w-128 h-128 object-contain" />
     </div>
 
     {/* Newsletter Signup Form Section */}
