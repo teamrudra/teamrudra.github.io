@@ -447,40 +447,52 @@ const Home = () => {
     </div>
   </div>
 </div>
-      </div>
-      
-
+    </div>
+    {/*newsletter signup */}
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="newsletter">
-  <h2 className="text-white text-6xl mb-12 font-serif">Subscribe to Our Newsletter</h2>
-  <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8">
-    {/* Image/Icon Section */}
-    <div className="bg-gray-700 p-16 rounded-lg shadow-lg flex items-center justify-center w-[480px] h-[480px]">
-      <img src="newsletter.jpeg" alt="Newsletter Icon" className="w-128 h-128 object-contain" />
+  <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[500px] max-w-full relative text-center">
+    
+    {/* Close Button */}
+    <button className="absolute top-4 right-4 text-gray-400 text-2xl font-bold hover:text-white">
+      &times;
+    </button>
+    
+    {/* Image Section */}
+    <div className="flex justify-center mb-6">
+      <img
+        src="newsletter.jpeg"
+        alt="Rover Image"
+        className="w-60 h-60 object-cover rounded-xl"
+      />
     </div>
-    <div className="bg-gray-800 p-16 rounded-lg shadow-lg flex flex-col justify-between w-[480px] h-[480px]">
-      <div className="space-y-4">
-        <p className="text-white text-xl">
-          Stay updated with our latest news and updates by subscribing to our newsletter.
-        </p>
-        <form action="/submit-newsletter" method="POST" className="space-y-4">
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            className="w-full p-4 rounded-lg bg-gray-900 text-white border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-          <button
-            type="submit"
-            className="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
-          >
-            Subscribe Now
-          </button>
-        </form>
+    
+    {/* Text Section */}
+    <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
+    <p className="text-gray-400 mb-6">
+      Get weekly access to our newsletter and stay updated
+    </p>
+    
+    {/* Input Field and Subscribe Button */}
+    <form action="/submit-newsletter" method="POST" className="space-y-4">
+      <div className="relative">
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Mail *"
+          className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
       </div>
-    </div>
+      <button
+        type="submit"
+        className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+      >
+        Subscribe
+      </button>
+    </form>
   </div>
 </div>
+
 
   );
 };
