@@ -447,7 +447,7 @@ const Home = () => {
     </div>
   </div>
 </div>
-    </div>
+  
     {/*newsletter signup */}
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="newsletter">
   <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[500px] max-w-full relative text-center">
