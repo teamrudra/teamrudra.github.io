@@ -479,7 +479,7 @@ const Home = () => {
         <input
           type="email"
           name="email"
-          placeholder="Your Mail *"
+          placeholder="Enter your email here *"
           className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         />
