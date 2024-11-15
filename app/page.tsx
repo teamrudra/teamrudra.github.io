@@ -449,38 +449,64 @@ const Home = () => {
   
     
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="newsletter">
-  <SparklesCore className="absolute  w-full h-full  inset-0 z-10" particleColor="#ffffff" particleDensity={30} />
-  <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[1000px] max-w-full relative text-center">
+  
+  <SparklesCore
+    className="absolute w-full h-full inset-0 z-10"
+    particleColor="#ffffff"
+    particleDensity={30}
+  />
+  
+  
+  <div className="bg-gray-900 p-10 rounded-3xl shadow-xl w-[500px] max-w-full relative text-center">
+
     
-   
-    <div className="flex justify-center mb-6">
+    <div className="flex justify-center mb-8">
       <img
         src="newsletter.jpeg"
         alt="Rover Image"
-        className="w-60 h-60 object-cover rounded-xl"
+        className="w-48 h-48 object-cover rounded-2xl"
       />
     </div>
+
     
-  
-    <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
-    <p className="text-gray-400 mb-6">
+    <h2 className="text-white text-4xl font-bold mb-4">Join Our Newsletter</h2>
+    <p className="text-gray-400 mb-8">
       Get weekly access to our newsletter and stay updated
     </p>
+
     
-   
-    <form action="/submit-newsletter" method="POST" className="space-y-4">
+    <form action="/submit-newsletter" method="POST" className="space-y-5">
+      
       <div className="relative">
+        <span className="absolute inset-y-0 left-3 flex items-center text-gray-500">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M16 12H8m0 0l-3 3m3-3l-3-3m12 3l3 3m-3-3l3-3"
+            />
+          </svg>
+        </span>
         <input
           type="email"
           name="email"
-          placeholder="Enter your email here *"
-          className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Your email here"
+          className="w-full pl-12 p-4 rounded-xl bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600"
           required
         />
       </div>
+
+      
       <button
         type="submit"
-        className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+        className="w-full py-3 bg-gradient-to-br from-blue-700 via-blue-500 to-pink-300 shadow-lg hover:shadow-md"
       >
         Subscribe
       </button>
