@@ -474,7 +474,7 @@ const Home = () => {
       </div>
       <button
         type="submit"
-        className="w-full py-3 bg-gradient-to-br from-blue-700 via-blue-500 to-pink-300 shadow-lg hover:shadow-md"
+        className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
       
       >
         Subscribe
