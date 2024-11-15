@@ -451,9 +451,9 @@ const Home = () => {
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="newsletter">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
   <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[1000px] h-[480px] max-w-full relative flex flex-row items-center">
-    <div className="relative aspect-w-4 aspect-h-3">
-  <img src="newsletter.jpeg" alt="Rover Image" className="w-full h-full object-cover rounded-xl" />
-</div>
+    <div className="flex-1 mr-8">
+      <img src="newsletter.jpeg" alt="Rover Image" className="w-440 h-150 object-cover rounded-xl" />
+    </div>
     <div className="flex-1 text-center">
       <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
       <p className="text-gray-400 mb-6">Get weekly access to our newsletter and stay updated</p>
