@@ -408,7 +408,7 @@ const Home = () => {
 </div>
 
     {/* Contact Us Section */}
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="contact">
+    <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 " id="contact">
      <SparklesCore className="absolute   inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-white text-6xl mb-12 font-serif">Contact Us</h2>
   <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8">
