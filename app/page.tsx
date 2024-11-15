@@ -447,47 +447,6 @@ const Home = () => {
   </div>
 </div>
   
-    
-{/* Contact Us Section */}
-<div className="min-h-screen bg-black flex flex-col items-center justify-center py-4 mt-[-16px] relative" id="contact">
-  <SparklesCore className="absolute  inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
-  <h2 className="text-white text-6xl mb-12 font-serif">Contact Us</h2>
-  <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8">
-    {/* Image/Icon Section */}
-    <div className="bg-gray-700 p-16 rounded-lg shadow-lg flex items-center justify-center w-[480px] h-[480px]">
-      <img src="image.png" alt="Icon or Image" className="w-128 h-128 object-contain" />
-    </div>
-
-    {/* Contact Information Section */}
-    <div className="bg-gray-800 p-16 rounded-lg shadow-lg flex flex-col justify-between w-[480px] h-[480px]">
-      <div className="space-y-4">
-        <p className="text-white text-xl">
-          Email: <a href="mailto:srmmarsroverteam@gmail.com" className="text-blue-500">srmmarsroverteam@gmail.com</a>
-        </p>
-        <p className="text-white text-xl">
-          Address: C-404/405 - Placement Cell, SRM IST, Kattankulathur, Chennai - 603203
-        </p>
-      </div>
-
-      {/* Social Media Links */}
-      <div className="flex flex-col space-y-4 mt-6">
-        <a href="https://www.youtube.com/@RUDRASRMMARSROVER" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
-          <img src="youtube.png" alt="YouTube" className="w-10 h-10" />
-          <span className="text-white text-xl">YouTube</span>
-        </a>
-        <a href="https://www.linkedin.com/company/srmrudra/mycompany/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
-          <img src="linkedin-brands-solid.svg" alt="LinkedIn" className="w-10 h-10" />
-          <span className="text-white text-xl">LinkedIn</span>
-        </a>
-        <a href="https://www.instagram.com/team_rudra/?hl=en" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
-          <img src="square-instagram-brands-solid.svg" alt="Instagram" className="w-10 h-10" />
-          <span className="text-white text-xl">Instagram</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="newsletter">
   <SparklesCore className="absolute  inset-0 z-10" particleColor="#f0f0f0" particleDensity={30} />
