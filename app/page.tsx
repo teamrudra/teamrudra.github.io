@@ -452,7 +452,7 @@ const Home = () => {
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
   <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[1000px] h-[480px] max-w-full relative flex flex-row items-center">
     <div className="flex-1 mr-8">
-      <img src="newsletter.jpeg" alt="Rover Image" className="w-440  object-cover rounded-xl" />
+      <img src="newsletter.jpeg" alt="Rover Image" className="w-[440px] h-full object-cover rounded-xl" />
     </div>
     <div className="flex-1 text-center">
       <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
