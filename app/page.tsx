@@ -98,9 +98,7 @@ const Home = () => {
       <Link href="#contact" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">CONTACT US</a>
       </Link>
-      <Link href="#newsletter" scroll={true} legacyBehavior>
-              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>NEWSLETTERS</a>
-      </Link>
+     
     </div>
         {/* Hamburger Menu for Mobile */}
         <button 
