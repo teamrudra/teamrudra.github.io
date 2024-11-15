@@ -449,7 +449,7 @@ const Home = () => {
   
 
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="newsletter">
-  <SparklesCore className="absolute  inset-0 z-10" particleColor="#f0f0f0" particleDensity={30} />
+  <SparklesCore className="absolute  inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
   <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[1000px] max-w-full relative text-center">
     <div className="flex justify-center mb-6">
       <img
