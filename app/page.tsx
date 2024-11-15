@@ -409,7 +409,7 @@ const Home = () => {
 
     {/* Contact Us Section */}
     <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="contact">
-     <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
+     <SparklesCore className="absolute  w-full h-full  inset-0 z-10" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-white text-6xl mb-12 font-serif">Contact Us</h2>
   <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8">
     {/* Image/Icon Section */}
@@ -449,7 +449,7 @@ const Home = () => {
   
     
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="newsletter">
-  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
+  <SparklesCore className="absolute  w-full h-full  inset-0 z-10" particleColor="#ffffff" particleDensity={30} />
   <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[1000px] max-w-full relative text-center">
     
    
