@@ -472,7 +472,47 @@ const Home = () => {
     </div>
   </div>
 </div>
-      
+  const form = document.querySelector("form");
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const email = form.elements["email"].value;
+  const response = await fetch("const form = document.querySelector("form");
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const email = form.elements["email"].value;
+  const response = await fetch("YOUR_GOOGLE_APPS_SCRIPT_URL", {
+    method: "POST",
+    body: JSON.stringify({ email }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const result = await response.json();
+  if (result.status === "success") {
+    alert("Subscribed successfully!");
+  } else {
+    alert("There was an issue. Try again later.");
+  }
+});
+", {
+    method: "POST",
+    body: JSON.stringify({ email }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const result = await response.json();
+  if (result.status === "success") {
+    alert("Subscribed successfully!");
+  } else {
+    alert("There was an issue. Try again later.");
+  }
+});
+    
   </div>
   
   );
