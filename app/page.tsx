@@ -466,6 +466,7 @@ const Home = () => {
     </div>
   </div>
 </div>
+      </div>
       <script>
   const form = document.querySelector("form");
   form.addEventListener("submit", async (event) => {
@@ -488,7 +489,7 @@ const Home = () => {
     }
   });
 </script>
-</div>
+
   );
 };
 export default Home;
