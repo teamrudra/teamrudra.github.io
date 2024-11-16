@@ -482,7 +482,7 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const email = form.elements["email"].value;
-  const response = await fetch("YOUR_GOOGLE_APPS_SCRIPT_URL", {
+  const response = await fetch("https://script.google.com/macros/s/AKfycbx6TQFdNnrVyGVI-ThpC-3pxaZugmHMUcdDqp-S9c31o5LDkjiXuqr7xBwh5Uf8hYmP/exec", {
     method: "POST",
     body: JSON.stringify({ email }),
     headers: {
