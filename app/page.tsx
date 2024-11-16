@@ -457,12 +457,48 @@ const Home = () => {
     <div className="flex-1 text-center">
       <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
       <p className="text-gray-400 mb-6">Get weekly access to our newsletter and stay updated</p>
-      <form action="https://script.google.com/macros/s/AKfycbx6TQFdNnrVyGVI-ThpC-3pxaZugmHMUcdDqp-S9c31o5LDkjiXuqr7xBwh5Uf8hYmP/exec" method="POST" className="space-y-4">
-        <div className="relative">
-          <input type="email" name="email" placeholder="Enter your email here *" className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
-        </div>
-        <button type="submit" className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">Subscribe</button>
-      </form>
+     <form
+  onSubmit={async (event) => {
+    event.preventDefault();
+    const email = event.target.elements.email.value;
+
+    try {
+      const response = await fetch("YOUR_GOOGLE_APPS_SCRIPT_URL", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      const result = await response.json();
+      if (result.status === "success") {
+        alert("Subscribed successfully!");
+      } else {
+        alert("There was an issue. Try again later.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Failed to subscribe.");
+    }
+  }}
+  className="space-y-4"
+>
+  <div className="relative">
+    <input
+      type="email"
+      name="email"
+      placeholder="Enter your email here *"
+      className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      required
+    />
+  </div>
+  <button
+    type="submit"
+    className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+  >
+    Subscribe
+  </button>
+</form>
+
     </div>
   </div>
 </div>
