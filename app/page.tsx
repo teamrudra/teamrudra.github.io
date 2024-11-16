@@ -511,7 +511,7 @@ const Home = () => {
     </form>
   </div>
 </div>
-
+</div>
       </div>
   
   );
