@@ -360,7 +360,7 @@ const Home = () => {
           },
           {
             src: "./achievement-image9.png",
-            title: "IRC 2024 - Team RUDRA ranked 3rd globally",
+            title: "IRCS 2024 - Team RUDRA ranked 3rd globally",
             date: "Jan 2024"
           }
         ].map((item, index) => (
