@@ -17,6 +17,8 @@ const Home = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
 
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
@@ -29,7 +31,6 @@ const Home = () => {
       document.body.style.overflow = 'auto';
     }
   }, [isMenuOpen]);
-
 
   const previousSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -52,6 +53,30 @@ const Home = () => {
     { src: './vartech.png', alt: 'Var Tech' },
     { src: './protocase.png', alt: 'Protocase' },
   ];
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbx6TQFdNnrVyGVI-ThpC-3pxaZugmHMUcdDqp-S9c31o5LDkjiXuqr7xBwh5Uf8hYmP/exec", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const result = await response.json();
+      if (result.status === "success") {
+        setStatus("Subscribed successfully!");
+      } else {
+        setStatus("There was an issue. Try again later.");
+      }
+    } catch (error) {
+      console.error("Error subscribing:", error);
+      setStatus("There was an issue. Try again later.");
+    }
+  };
 
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
@@ -472,46 +497,7 @@ const Home = () => {
     </div>
   </div>
 </div>
-  const form = document.querySelector("form");
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
 
-  const email = form.elements["email"].value;
-  const response = await fetch("const form = document.querySelector("form");
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  const email = form.elements["email"].value;
-  const response = await fetch("https://script.google.com/macros/s/AKfycbx6TQFdNnrVyGVI-ThpC-3pxaZugmHMUcdDqp-S9c31o5LDkjiXuqr7xBwh5Uf8hYmP/exec", {
-    method: "POST",
-    body: JSON.stringify({ email }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
-  const result = await response.json();
-  if (result.status === "success") {
-    alert("Subscribed successfully!");
-  } else {
-    alert("There was an issue. Try again later.");
-  }
-});
-", {
-    method: "POST",
-    body: JSON.stringify({ email }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
-  const result = await response.json();
-  if (result.status === "success") {
-    alert("Subscribed successfully!");
-  } else {
-    alert("There was an issue. Try again later.");
-  }
-});
     
   </div>
   
