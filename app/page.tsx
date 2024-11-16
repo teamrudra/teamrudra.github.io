@@ -407,47 +407,7 @@ const Home = () => {
   </div>
 </div>
       
-<div class="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="sponsor-us">
-  <h2 class="text-white text-6xl mb-12 font-serif">Support Team Rudra</h2>
-  <div class="bg-gray-800 p-16 rounded-lg shadow-lg flex flex-col items-center w-[1000px] space-y-8">
-    <p class="text-white text-2xl text-center">
-      If you're interested in supporting our Mars Rover project, please fill out the form below, and we'll get in touch!
-    </p>
-    <form action="/submit-sponsor" method="POST" class="w-full space-y-8">
-      <!-- Company/Organization Name -->
-      <div>
-        <label for="company" class="block text-white text-lg mb-2">Company/Organization Name</label>
-        <input
-          type="text"
-          id="company"
-          name="company"
-          placeholder="Enter your organisation name"
-          class="w-full p-4 rounded-lg bg-gray-900 text-white border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required
-        />
-      </div>
-      <!-- Email Address -->
-      <div>
-        <label for="email" class="block text-white text-lg mb-2">Email Address</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email address"
-          class="w-full p-4 rounded-lg bg-gray-900 text-white border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required
-        />
-      </div>
-      <!-- Submit Button -->
-      <button
-        type="submit"
-        class="w-full py-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
-      >
-        Submit
-      </button>
-    </form>
-  </div>
-</div>
+
 
 
 
@@ -506,6 +466,30 @@ const Home = () => {
     <input type="email" name="email" placeholder="Enter your email here *" className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
   </div>
   <button type="submit" className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">Subscribe</button>
+</form>
+
+
+    </div>
+  </div>
+</div>
+
+      <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="sponsor us">
+  <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
+  <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[1000px] h-[480px] max-w-full relative flex flex-row items-center">
+    <div className="flex-1 mr-8">
+      <img src="newsletter.jpeg" alt="Rover Image" className="w-[440px] h-[400px] object-cover rounded-xl" />
+    </div>
+    <div className="flex-1 text-center">
+      <h2 className="text-white text-3xl font-semibold mb-2">Support Team Rudra</h2>
+      <p className="text-gray-400 mb-6">If you're interested in supporting our Mars Rover project, please fill out the form below, and we’ll get in touch!</p>
+    <form action="https://script.google.com/macros/s/AKfycbx6TQFdNnrVyGVI-ThpC-3pxaZugmHMUcdDqp-S9c31o5LDkjiXuqr7xBwh5Uf8hYmP/exec" method="POST" className="space-y-4">
+  <div className="relative">
+    <input type="email" name="email" placeholder="Enter your email here *" className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+  </div>
+      <div className="relative">
+    <input type="text" name="company" placeholder="Enter your organisation name " className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+  </div>
+  <button type="submit" className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">Submit</button>
 </form>
 
 
