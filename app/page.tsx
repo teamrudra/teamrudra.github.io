@@ -406,6 +406,49 @@ const Home = () => {
     ))}
   </div>
 </div>
+      
+<div class="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="sponsor-us">
+  <h2 class="text-white text-6xl mb-12 font-serif">Support Team Rudra</h2>
+  <div class="bg-gray-800 p-16 rounded-lg shadow-lg flex flex-col items-center w-[1000px] space-y-8">
+    <p class="text-white text-2xl text-center">
+      If you're interested in supporting our Mars Rover project, please fill out the form below, and we'll get in touch!
+    </p>
+    <form action="/submit-sponsor" method="POST" class="w-full space-y-8">
+      <!-- Company/Organization Name -->
+      <div>
+        <label for="company" class="block text-white text-lg mb-2">Company/Organization Name</label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          placeholder="Enter your organisation name"
+          class="w-full p-4 rounded-lg bg-gray-900 text-white border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+      </div>
+      <!-- Email Address -->
+      <div>
+        <label for="email" class="block text-white text-lg mb-2">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+          class="w-full p-4 rounded-lg bg-gray-900 text-white border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+      </div>
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="w-full py-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
 
 
     {/* Contact Us Section */}
@@ -468,49 +511,6 @@ const Home = () => {
 
     </div>
   </div>
-</div>
-     
-<div class="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="sponsor-us">
-  <h2 class="text-white text-6xl mb-12 font-serif">Support Team Rudra</h2>
-  <div class="bg-gray-800 p-16 rounded-lg shadow-lg flex flex-col items-center w-[1000px] space-y-8">
-    <p class="text-white text-2xl text-center">
-      If you're interested in supporting our Mars Rover project, please fill out the form below, and we'll get in touch!
-    </p>
-    <form action="/submit-sponsor" method="POST" class="w-full space-y-8">
-      <!-- Company/Organization Name -->
-      <div>
-        <label for="company" class="block text-white text-lg mb-2">Company/Organization Name</label>
-        <input
-          type="text"
-          id="company"
-          name="company"
-          placeholder="Enter your organisation name"
-          class="w-full p-4 rounded-lg bg-gray-900 text-white border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required
-        />
-      </div>
-      <!-- Email Address -->
-      <div>
-        <label for="email" class="block text-white text-lg mb-2">Email Address</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email address"
-          class="w-full p-4 rounded-lg bg-gray-900 text-white border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required
-        />
-      </div>
-      <!-- Submit Button -->
-      <button
-        type="submit"
-        class="w-full py-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
-      >
-        Submit
-      </button>
-    </form>
-  </div>
-</div>
 </div>
       </div>
   
