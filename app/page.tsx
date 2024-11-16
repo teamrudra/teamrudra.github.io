@@ -58,7 +58,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
 
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbz5HSu7Fg4r8_RY3G4AoA8DiknCj7EK8Nj8fZqmxN8i82TivL4Ff77pqkhj7z1e7fQH/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbxE5R6DD4KB8Cwlw9Wj1lSBNNwvR-FVIOeJIAV15wDavn4udC4woRp07BCHmUXiGVh3/exec", {
       method: "POST",
       body: JSON.stringify({ email }),
       headers: {
@@ -486,7 +486,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     <div className="flex-1 text-center">
       <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
       <p className="text-gray-400 mb-6">Get weekly access to our newsletter and stay updated</p>
-    <form action="https://script.google.com/macros/s/AKfycbz5HSu7Fg4r8_RY3G4AoA8DiknCj7EK8Nj8fZqmxN8i82TivL4Ff77pqkhj7z1e7fQH/exec" method="POST" className="space-y-4">
+    <form action="https://script.google.com/macros/s/AKfycbxE5R6DD4KB8Cwlw9Wj1lSBNNwvR-FVIOeJIAV15wDavn4udC4woRp07BCHmUXiGVh3/exec" method="POST" className="space-y-4">
   <div className="relative">
     <input type="email" name="email" placeholder="Enter your email here *" className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
   </div>
