@@ -466,7 +466,31 @@ const Home = () => {
 </div>
 
      
-<div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="sponsor-us">
+
+  
+
+<div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="newsletter">
+  <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
+  <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[1000px] h-[480px] max-w-full relative flex flex-row items-center">
+    <div className="flex-1 mr-8">
+      <img src="newsletter.jpeg" alt="Rover Image" className="w-[440px] h-[400px] object-cover rounded-xl" />
+    </div>
+    <div className="flex-1 text-center">
+      <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
+      <p className="text-gray-400 mb-6">Get weekly access to our newsletter and stay updated</p>
+    <form action="https://script.google.com/macros/s/AKfycbx6TQFdNnrVyGVI-ThpC-3pxaZugmHMUcdDqp-S9c31o5LDkjiXuqr7xBwh5Uf8hYmP/exec" method="POST" className="space-y-4">
+  <div className="relative">
+    <input type="email" name="email" placeholder="Enter your email here *" className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+  </div>
+  <button type="submit" className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">Subscribe</button>
+</form>
+
+
+    </div>
+  </div>
+</div>
+
+      <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="sponsor-us">
   <h2 className="text-white text-6xl mb-12 font-serif">Support Team Rudra</h2>
   <div className="bg-gray-800 p-16 rounded-lg shadow-2xl w-[1000px] flex flex-col items-center space-y-8">
     <p className="text-white text-xl text-center">
@@ -502,29 +526,6 @@ const Home = () => {
         Submit
       </button>
     </form>
-  </div>
-</div>
-
-  
-
-<div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="newsletter">
-  <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
-  <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[1000px] h-[480px] max-w-full relative flex flex-row items-center">
-    <div className="flex-1 mr-8">
-      <img src="newsletter.jpeg" alt="Rover Image" className="w-[440px] h-[400px] object-cover rounded-xl" />
-    </div>
-    <div className="flex-1 text-center">
-      <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
-      <p className="text-gray-400 mb-6">Get weekly access to our newsletter and stay updated</p>
-    <form action="https://script.google.com/macros/s/AKfycbx6TQFdNnrVyGVI-ThpC-3pxaZugmHMUcdDqp-S9c31o5LDkjiXuqr7xBwh5Uf8hYmP/exec" method="POST" className="space-y-4">
-  <div className="relative">
-    <input type="email" name="email" placeholder="Enter your email here *" className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
-  </div>
-  <button type="submit" className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">Subscribe</button>
-</form>
-
-
-    </div>
   </div>
 </div>
       </div>
