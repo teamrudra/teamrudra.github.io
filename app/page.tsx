@@ -407,6 +407,24 @@ const Home = () => {
   </div>
 </div>
 
+      <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-4 mt-[-16px]" id="sponsor-us">
+  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
+  <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mb-12 sm:mb-16 z-20">Sponsor Us</h2>
+  <div className="flex flex-wrap items-center justify-center z-10">
+    {sponsorshipImages.map((sponsor, index) => (
+      <div key={index} className="p-4 sm:p-6">
+        <img
+          src={sponsor.src}
+          alt={sponsor.alt}
+          width={200}
+          height={200}
+          className="w-48 h-auto object-contain"
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
     {/* Contact Us Section */}
     <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 " id="contact">
      <SparklesCore className="absolute   inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
@@ -446,6 +464,47 @@ const Home = () => {
     </div>
   </div>
 </div>
+
+     
+<div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="sponsor-us">
+  <h2 className="text-white text-6xl mb-12 font-serif">Support Team Rudra</h2>
+  <div className="bg-gray-800 p-16 rounded-lg shadow-2xl w-[1000px] flex flex-col items-center space-y-8">
+    <p className="text-white text-xl text-center">
+      If you're interested in supporting our Mars Rover project, please fill out the form below, and we'll get in touch!
+    </p>
+    <form action="/submit-sponsor" method="POST" className="w-full space-y-6">
+      <div className="flex flex-col">
+        <label htmlFor="organization" className="text-white text-lg mb-2">Company/Organization Name</label>
+        <input
+          type="text"
+          id="organization"
+          name="organization"
+          placeholder="Enter your organization name"
+          className="w-full p-4 rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+      </div>
+      <div className="flex flex-col">
+        <label htmlFor="email" className="text-white text-lg mb-2">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+          className="w-full p-4 rounded-lg bg-gray-900 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        className="w-full py-4 bg-blue-500 text-white rounded-lg text-lg hover:bg-blue-600 transition"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
   
 
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="newsletter">
