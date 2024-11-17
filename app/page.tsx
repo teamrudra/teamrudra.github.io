@@ -54,31 +54,30 @@ const Home = () => {
     { src: './protocase.png', alt: 'Protocase' },
   ];
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxE5R6DD4KB8Cwlw9Wj1lSBNNwvR-FVIOeJIAV15wDavn4udC4woRp07BCHmUXiGVh3/exec';
+const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
 
-export default function SubmitForm() {
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); // Prevent default form submission behavior
+  try {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbzaVFUDPT1rTOg9BRgzbdZ_7aX2o8AvLc4wHDhWm_QDZQofvdGCBIh67xr8K7KThx8P/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbz5HSu7Fg4r8_RY3G4AoA8DiknCj7EK8Nj8fZqmxN8i82TivL4Ff77pqkhj7z1e7fQH/exec", {
+      method: "POST",
+      body: JSON.stringify({ email }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-    const form = event.currentTarget; // The form that triggered the event
-    try {
-      const response = await fetch(scriptURL, {
-        method: 'POST',
-        body: new FormData(form),
-      });
-
-      if (response.ok) {
-        alert('Thank you! Your form is submitted successfully.');
-        window.location.reload(); // Reload the page
-      } else {
-        throw new Error('Failed to submit the form.');
-      }
-    } catch (error) {
-      console.error('Error!', (error as Error).message);
+    const result = await response.json();
+    if (result.status === "success") {
+      setStatus("Subscribed successfully!");
+    } else {
+      setStatus("There was an issue. Try again later.");
     }
-  };
-
-
+  } catch (error) {
+    console.error("Error subscribing:", error);
+    setStatus("There was an issue. Try again later.");
+  }
+};
 
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
@@ -94,7 +93,7 @@ export default function SubmitForm() {
        {/* Navbar */}
 <nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
   <div className="px-4 py-2 flex justify-between items-center w-full">
-    
+
     {/* Rudra Logo - Aligned to the left */}
     <Link href="/" legacyBehavior>
       <a className="flex-shrink-0">
@@ -125,7 +124,7 @@ export default function SubmitForm() {
       <Link href="#contact" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">CONTACT US</a>
       </Link>
-     
+
     </div>
         {/* Hamburger Menu for Mobile */}
         <button 
@@ -433,7 +432,7 @@ export default function SubmitForm() {
     ))}
   </div>
 </div>
-      
+
 
 
 
@@ -488,7 +487,8 @@ export default function SubmitForm() {
     <div className="flex-1 text-center">
       <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
       <p className="text-gray-400 mb-6">Get weekly access to our newsletter and stay updated</p>
-    <form action="" method="POST" className="space-y-4">
+    <form action="https://script.google.com/macros/s/AKfycbzaVFUDPT1rTOg9BRgzbdZ_7aX2o8AvLc4wHDhWm_QDZQofvdGCBIh67xr8K7KThx8P/exec" method="POST" className="space-y-4">
+    <form action="https://script.google.com/macros/s/AKfycbz5HSu7Fg4r8_RY3G4AoA8DiknCj7EK8Nj8fZqmxN8i82TivL4Ff77pqkhj7z1e7fQH/exec" method="POST" className="space-y-4">
   <div className="relative">
     <input type="email" name="email" placeholder="Enter your email here *" className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
   </div>
@@ -500,9 +500,9 @@ export default function SubmitForm() {
   </div>
 </div>
 
-    
+
   </div>
-  
+
   );
 };
 export default Home;
