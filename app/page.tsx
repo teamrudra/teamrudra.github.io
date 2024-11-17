@@ -54,30 +54,47 @@ const Home = () => {
     { src: './protocase.png', alt: 'Protocase' },
   ];
 
+ const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbx6TQFdNnrVyGVI-ThpC-3pxaZugmHMUcdDqp-S9c31o5LDkjiXuqr7xBwh5Uf8hYmP/exec", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const result = await response.json();
+      if (result.status === "success") {
+        setStatus("Subscribed successfully!");
+      } else {
+        setStatus("There was an issue. Try again later.");
+      }
+    } catch (error) {
+      console.error("Error subscribing:", error);
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
-
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbzaVFUDPT1rTOg9BRgzbdZ_7aX2o8AvLc4wHDhWm_QDZQofvdGCBIh67xr8K7KThx8P/exec", {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbz5HSu7Fg4r8_RY3G4AoA8DiknCj7EK8Nj8fZqmxN8i82TivL4Ff77pqkhj7z1e7fQH/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbx6TQFdNnrVyGVI-ThpC-3pxaZugmHMUcdDqp-S9c31o5LDkjiXuqr7xBwh5Uf8hYmP/exec", {
       method: "POST",
       body: JSON.stringify({ email }),
       headers: {
         "Content-Type": "application/json",
       },
     });
-
     const result = await response.json();
     if (result.status === "success") {
       setStatus("Subscribed successfully!");
     } else {
       setStatus("There was an issue. Try again later.");
     }
+  };
   } catch (error) {
     console.error("Error subscribing:", error);
     setStatus("There was an issue. Try again later.");
   }
 };
+
 
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
