@@ -59,7 +59,14 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbxE5R6DD4KB8Cwlw9Wj1l
 const handleSubmit = (event: Event) => {
   event.preventDefault(); // Prevent default form submission behavior
 
-  const form = document.forms['submit']; // Access the form by its name
+  // Ensure the form is correctly selected
+  const form = document.querySelector('form[name="submit"]') as HTMLFormElement;
+
+  if (!form) {
+    console.error('Form not found! Ensure your form has the correct name attribute.');
+    return;
+  }
+
   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
     .then(response => alert('Thank you! Your form is submitted successfully.'))
     .then(() => {
@@ -68,13 +75,16 @@ const handleSubmit = (event: Event) => {
     .catch(error => console.error('Error!', error.message));
 };
 
-// Attach event listener to the form when the component is rendered
+// Attach the event listener after the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.forms['submit'];
+  const form = document.querySelector('form[name="submit"]');
   if (form) {
     form.addEventListener('submit', handleSubmit);
+  } else {
+    console.error('Form not found! Ensure your form has the correct name attribute.');
   }
 });
+
 
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
