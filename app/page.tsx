@@ -54,14 +54,27 @@ const Home = () => {
     { src: './protocase.png', alt: 'Protocase' },
   ];
 
-const scriptURL= 'https://script.google.com/macros/s/AKfycbxE5R6DD4KB8Cwlw9Wj1lSBNNwvR-FVIOeJIAV15wDavn4udC4woRp07BCHmUXiGVh3/exec'
-  const form= document.forms['submit' , e => {
-    e.preventDefault()
-    fetch(scriptURL, {method: 'POST", body: new FormData(form)})
-      .then(response => alert("Thank you! Your form is submitted successfully."))
-      .then(() => {windoe.location.reload(); })
-      .catch(error => console.error('Error!", error.message))
-  })
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxE5R6DD4KB8Cwlw9Wj1lSBNNwvR-FVIOeJIAV15wDavn4udC4woRp07BCHmUXiGVh3/exec';
+
+const handleSubmit = (event: Event) => {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  const form = document.forms['submit']; // Access the form by its name
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => alert('Thank you! Your form is submitted successfully.'))
+    .then(() => {
+      window.location.reload(); // Reload the page
+    })
+    .catch(error => console.error('Error!', error.message));
+};
+
+// Attach event listener to the form when the component is rendered
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.forms['submit'];
+  if (form) {
+    form.addEventListener('submit', handleSubmit);
+  }
+});
 
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
