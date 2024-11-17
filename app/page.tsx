@@ -57,21 +57,27 @@ const Home = () => {
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxE5R6DD4KB8Cwlw9Wj1lSBNNwvR-FVIOeJIAV15wDavn4udC4woRp07BCHmUXiGVh3/exec';
 
 export default function SubmitForm() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent default form submission behavior
 
     const form = event.currentTarget; // The form that triggered the event
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => {
-        if (response.ok) {
-          alert('Thank you! Your form is submitted successfully.');
-          window.location.reload(); // Reload the page
-        } else {
-          throw new Error('Failed to submit the form.');
-        }
-      })
-      .catch(error => console.error('Error!', error.message));
+    try {
+      const response = await fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form),
+      });
+
+      if (response.ok) {
+        alert('Thank you! Your form is submitted successfully.');
+        window.location.reload(); // Reload the page
+      } else {
+        throw new Error('Failed to submit the form.');
+      }
+    } catch (error) {
+      console.error('Error!', (error as Error).message);
+    }
   };
+
 
 
   return (
