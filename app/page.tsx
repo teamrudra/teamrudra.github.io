@@ -60,31 +60,24 @@ const handleSubmit = (event: Event) => {
   event.preventDefault(); // Prevent default form submission behavior
 
   // Ensure the form is correctly selected
-  const form = document.querySelector('form[name="submit"]') as HTMLFormElement;
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxE5R6DD4KB8Cwlw9Wj1lSBNNwvR-FVIOeJIAV15wDavn4udC4woRp07BCHmUXiGVh3/exec';
 
-  if (!form) {
-    console.error('Form not found! Ensure your form has the correct name attribute.');
-    return;
-  }
+export default function SubmitForm() {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); // Prevent default form submission behavior
 
-  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    .then(response => alert('Thank you! Your form is submitted successfully.'))
-    .then(() => {
-      window.location.reload(); // Reload the page
-    })
-    .catch(error => console.error('Error!', error.message));
-};
-
-// Attach the event listener after the DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('form[name="submit"]');
-  if (form) {
-    form.addEventListener('submit', handleSubmit);
-  } else {
-    console.error('Form not found! Ensure your form has the correct name attribute.');
-  }
-});
-
+    const form = event.currentTarget; // The form that triggered the event
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        if (response.ok) {
+          alert('Thank you! Your form is submitted successfully.');
+          window.location.reload(); // Reload the page
+        } else {
+          throw new Error('Failed to submit the form.');
+        }
+      })
+      .catch(error => console.error('Error!', error.message));
+  };
 
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
