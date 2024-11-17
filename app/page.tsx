@@ -55,7 +55,7 @@ const Home = () => {
   ];
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec';
-const form = document.getElementById('contact-form');
+const form = document.forms['contact-form'];
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -63,13 +63,14 @@ form.addEventListener('submit', (e) => {
     .then(response => {
       if (response.ok) {
         alert('Thank you! Your form is submitted successfully.');
-        form.reset(); // Optional: Clear form fields
+        form.reset(); // Reset form fields after successful submission
       } else {
-        alert('Submission failed. Please try again.');
+        alert('Failed to submit. Please try again.');
       }
     })
     .catch(error => console.error('Error!', error.message));
 });
+
 
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
