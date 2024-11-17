@@ -54,18 +54,31 @@ const Home = () => {
     { src: './protocase.png', alt: 'Protocase' },
   ];
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec';
-const form = document.forms['contact-form'];
+const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    .then(response => alert("Thank you! your form is submitted successfully."))
-    .then(() => { window.location.reload(); })
-    
-     
-    .catch(error => console.error('Error!', error.message));
-});
+  try {
+    // Only one fetch statement here
+    const response = await fetch("https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec", {
+      method: "POST",
+      body: JSON.stringify({ email }), // Ensure email is defined
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const result = await response.json();
+
+    if (result.status === "success") {
+      setStatus("Subscribed successfully!");
+    } else {
+      setStatus("There was an issue. Try again later.");
+    }
+  } catch (error) {
+    console.error("Error subscribing:", error);
+    setStatus("There was an issue. Try again later.");
+  }
+};
 
 
   return (
