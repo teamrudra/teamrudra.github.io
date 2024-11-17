@@ -58,16 +58,17 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
 
   try {
+    // Only one fetch statement here
     const response = await fetch("https://script.google.com/macros/s/AKfycbzaVFUDPT1rTOg9BRgzbdZ_7aX2o8AvLc4wHDhWm_QDZQofvdGCBIh67xr8K7KThx8P/exec", {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbz5HSu7Fg4r8_RY3G4AoA8DiknCj7EK8Nj8fZqmxN8i82TivL4Ff77pqkhj7z1e7fQH/exec", {
       method: "POST",
-      body: JSON.stringify({ email }),
+      body: JSON.stringify({ email }), // Ensure `email` is defined
       headers: {
         "Content-Type": "application/json",
       },
     });
 
     const result = await response.json();
+
     if (result.status === "success") {
       setStatus("Subscribed successfully!");
     } else {
