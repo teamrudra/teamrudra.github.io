@@ -54,30 +54,26 @@ const Home = () => {
     { src: './protocase.png', alt: 'Protocase' },
   ];
 
-const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-  event.preventDefault();
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxE5R6DD4KB8Cwlw9Wj1lSBNNwvR-FVIOeJIAV15wDavn4udC4woRp07BCHmUXiGVh3/exec';
 
-  try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbz5HSu7Fg4r8_RY3G4AoA8DiknCj7EK8Nj8fZqmxN8i82TivL4Ff77pqkhj7z1e7fQH/exec", {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbxE5R6DD4KB8Cwlw9Wj1lSBNNwvR-FVIOeJIAV15wDavn4udC4woRp07BCHmUXiGVh3/exec", {
-      method: "POST",
-      body: JSON.stringify({ email }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+export default function SubmitForm() {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); // Prevent default form submission behavior
 
-    const result = await response.json();
-    if (result.status === "success") {
-      setStatus("Subscribed successfully!");
-    } else {
-      setStatus("There was an issue. Try again later.");
-    }
-  } catch (error) {
-    console.error("Error subscribing:", error);
-    setStatus("There was an issue. Try again later.");
-  }
-};
+    const form = event.currentTarget; // The form that triggered the event
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        if (response.ok) {
+          alert('Thank you! Your form is submitted successfully.');
+          window.location.reload(); // Reload the page
+        } else {
+          throw new Error('Failed to submit the form.');
+        }
+      })
+      .catch(error => console.error('Error!', error.message));
+  };
+
+
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
     <style jsx>{`
