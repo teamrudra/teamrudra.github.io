@@ -53,26 +53,31 @@ const Home = () => {
     { src: './vartech.png', alt: 'Var Tech' },
     { src: './protocase.png', alt: 'Protocase' },
   ];
-useEffect(() => {
-const scriptURL =
-  'https://script.google.com/macros/s/AKfycbwG9vCMBREFM4suhSiTdVPFu7-F-6JclKyZGGuKjFS-dqaZT6kKXS6r_15kub3YH2R5yw/exec';
-const form = document.forms['news-letter'] as HTMLFormElement | null;
+const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
 
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then((response) => {
-        alert('Thank you! Your form is submitted successfully.');
-      })
-      .then(() => {
-        window.location.reload();
-      })
-      .catch((error) => console.error('Error!', error.message));
-  }); // Properly close the event listener here
-} else {
-  console.error('Form not found!');
-}}
+  try {
+    // Only one fetch statement here
+    const response = await fetch("https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec", {
+      method: "POST",
+      body: JSON.stringify({ email }), // Ensure email is defined
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const result = await response.json();
+
+    if (result.status === "success") {
+      setStatus("Subscribed successfully!");
+    } else {
+      setStatus("There was an issue. Try again later.");
+    }
+  } catch (error) {
+    console.error("Error subscribing:", error);
+    setStatus("There was an issue. Try again later.");
+  }
+};
 
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
