@@ -55,22 +55,29 @@ const Home = () => {
   ];
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwG9vCMBREFM4suhSiTdVPFu7-F-6JclKyZGGuKjFS-dqaZT6kKXS6r_15kub3YH2R5yw/exec';
-const form = document.getElementById(['news-letter'] as HTMLFormElement | null,
+const form = document.getElementById('news-letter') as HTMLFormElement | null; // Correcting syntax and ensuring type assertion
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    .then(response => {
-      if (response.ok) {
-        alert('Thank you! Your form is submitted successfully.');
-        form.reset(); // Reset form fields after successful submission
-      } else {
-        alert('Failed to submit. Please try again.');
-      }
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    fetch(scriptURL, { 
+      method: 'POST', 
+      body: new FormData(form) 
     })
-    .catch(error => console.error('Error!', error.message));
-});
-
+      .then(response => {
+        if (response.ok) {
+          alert('Thank you! Your form is submitted successfully.');
+          form.reset(); // Reset form fields after successful submission
+        } else {
+          alert('Failed to submit. Please try again.');
+        }
+      })
+      .catch(error => console.error('Error!', error.message));
+  });
+} else {
+  console.error('Form with ID "news-letter" not found in the DOM.');
+}
 
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
