@@ -55,7 +55,7 @@ const Home = () => {
   ];
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwG9vCMBREFM4suhSiTdVPFu7-F-6JclKyZGGuKjFS-dqaZT6kKXS6r_15kub3YH2R5yw/exec';
-const form = document.getElementById('news-letter') as HTMLFormElement | null; // Correcting syntax and ensuring type assertion
+var form = null; // Correcting syntax and ensuring type assertion
 
 if (form) {
   form.addEventListener('submit', (e) => {
