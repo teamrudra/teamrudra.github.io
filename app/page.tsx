@@ -55,7 +55,7 @@ const Home = () => {
   ];
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwG9vCMBREFM4suhSiTdVPFu7-F-6JclKyZGGuKjFS-dqaZT6kKXS6r_15kub3YH2R5yw/exec';
-const form = document.forms['newsletter'];
+const form = document.forms['news-letter'];
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -439,7 +439,7 @@ form.addEventListener('submit', (e) => {
       <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
       <p className="text-gray-400 mb-6">Get weekly access to our newsletter and stay updated</p>
       <form 
-        name="newsletter" 
+        name="news-letter" 
         action="https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec" 
         method="POST" 
         className="space-y-4"
