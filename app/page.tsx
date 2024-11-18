@@ -54,20 +54,26 @@ const Home = () => {
     { src: './protocase.png', alt: 'Protocase' },
   ];
 
-const scriptURL =
-  'https://script.google.com/macros/s/AKfycbwG9vCMBREFM4suhSiTdVPFu7-F-6JclKyZGGuKjFS-dqaZT6kKXS6r_15kub3YH2R5yw/exec';
-const form = document.forms['news-letter'] as HTMLFormElement | null;
+  useEffect(() => {
+    const form = document.forms['news-letter'] as HTMLFormElement | null;
 
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => alert("Thank you! your form is submitted successfully."))
-    .then(() => { window.location.reload(); })
-    
-     
-    .catch(error => console.error('Error!', error.message));
-});
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            alert('Thank you! your form is submitted successfully.');
+          })
+          .then(() => {
+            window.location.reload();
+          })
+          .catch((error) => console.error('Error!', error.message));
+      });
+    }
+  }, []); // Add empty dependency array to ensure this runs only once
+
+  const scriptURL =
+    'https://script.google.com/macros/s/AKfycbwG9vCMBREFM4suhSiTdVPFu7-F-6JclKyZGGuKjFS-dqaZT6kKXS6r_15kub3YH2R5yw/exec';
 
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
