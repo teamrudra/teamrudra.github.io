@@ -55,7 +55,7 @@ const Home = () => {
   ];
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwG9vCMBREFM4suhSiTdVPFu7-F-6JclKyZGGuKjFS-dqaZT6kKXS6r_15kub3YH2R5yw/exec';
-const form = document.forms['contact-form'];
+const form = document.forms['newsletter'];
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -428,7 +428,7 @@ form.addEventListener('submit', (e) => {
     ))}
   </div>
 </div>
-
+{/* Newsletter Section */}
       <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="newsletter">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
   <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[1000px] h-[480px] max-w-full relative flex flex-row items-center">
