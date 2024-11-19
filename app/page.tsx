@@ -68,11 +68,11 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
     const result = await response.json();
 
-    // if (result.status === "success") {
-    //   setStatus("Subscribed successfully!");
-    // } else {
-    //   setStatus("There was an issue. Try again later.");
-    // }
+    if (result.status === "success") {
+      setStatus("Subscribed successfully!");
+    } else {
+      setStatus("There was an issue. Try again later.");
+    }
   } catch (error) {
     console.error("Error subscribing:", error);
     setStatus("There was an issue. Try again later.");
