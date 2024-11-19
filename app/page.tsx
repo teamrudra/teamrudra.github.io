@@ -58,7 +58,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
   try {
     // Only one fetch statement here
-    const response = await fetch("https://script.google.com/macros/s/AKfycbzN4S-N1sS1sQhIBedSEIGH9vOVhTuhYS7r_WRI_Q2K5PoRszH_4-5X73qEt6KnolOu/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbyhbo9wenGRM0WSe53HeHRwITfPw4jDWM0S9D4bET3K7gjrwWucws5GPTuLwUOM89Cg/exec", {
       method: "POST",
       body: JSON.stringify({ email }), // Ensure email is defined
       headers: {
@@ -447,7 +447,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       <p className="text-gray-400 mb-6">Get weekly access to our newsletter and stay updated</p>
       <form 
         name="news-letter" 
-        action="https://script.google.com/macros/s/AKfycbzN4S-N1sS1sQhIBedSEIGH9vOVhTuhYS7r_WRI_Q2K5PoRszH_4-5X73qEt6KnolOu/exec" 
+        action="https://script.google.com/macros/s/AKfycbyhbo9wenGRM0WSe53HeHRwITfPw4jDWM0S9D4bET3K7gjrwWucws5GPTuLwUOM89Cg/exec" 
         method="POST" 
         className="space-y-4"
       >
