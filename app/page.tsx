@@ -448,10 +448,9 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       <p className="text-gray-400 mb-6">Get weekly access to our newsletter and stay updated</p>
       <form 
         name="news-letter" 
-          action="https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec" 
+        onSubmit={handleSubmit}
         
         method="POST" 
-         target="_blank"
         className="space-y-4"
       >
         <div className="relative">
