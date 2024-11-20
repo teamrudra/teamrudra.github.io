@@ -53,25 +53,30 @@ const Home = () => {
     { src: './vartech.png', alt: 'Var Tech' },
     { src: './protocase.png', alt: 'Protocase' },
   ];
-const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-  event.preventDefault();
-  try {
-    const form = event.target as HTMLFormElement;
-    const formData = new FormData(form);
-    
-    await fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      mode: 'no-cors' // Add this
-    });
+export default function Page() {  // Add this function wrapper
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
 
-    setStatus("Subscribed successfully!");
-    setEmail('');
-  } catch (error) {
-    console.error("Error subscribing:", error);
-    setStatus("There was an issue. Try again later.");
-  }
-};
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    try {
+      const form = event.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      });
+
+      setStatus("Subscribed successfully!");
+      setEmail('');
+    } catch (error) {
+      console.error("Error subscribing:", error);
+      setStatus("There was an issue. Try again later.");
+    }
+  };
+
 
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
@@ -513,7 +518,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
-      </div>
 
 
 
