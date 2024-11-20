@@ -55,20 +55,22 @@ const Home = () => {
   ];
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
-
   try {
-    // Only one fetch statement here
+    // Create FormData object instead of JSON
+    const formData = new FormData();
+    formData.append('email', email);  // Assuming 'email' matches your sheet header
+
     const response = await fetch("https://script.google.com/macros/s/AKfycbwSOs9hFIeYFKxvlVxeVaTPJMAddydbLQn79R4C7MdKvh9i0pXvg07qdCZuDQi0jbQw/exec", {
       method: "POST",
-      body: JSON.stringify({ email }), // Ensure email is defined
-      headers: {
-        "Content-Type": "application/json",
-      },
+      body: formData,  // Send as FormData
+      // Remove Content-Type header - browser will set it automatically with boundary
+      // headers: {
+      //   "Content-Type": "application/json",
+      // },
     });
-
-    const result = await response.json();
-
-    if (result.status === "success") {
+    
+    // Remove .json() since Apps Script might not return JSON now
+    if (response.ok) {
       setStatus("Subscribed successfully!");
     } else {
       setStatus("There was an issue. Try again later.");
