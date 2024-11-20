@@ -470,7 +470,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
       </div>
-    </div>
 
 
 
@@ -514,7 +513,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
-
+      </div>
 
 
 
