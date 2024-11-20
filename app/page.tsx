@@ -56,25 +56,17 @@ const Home = () => {
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
   try {
-    // Create FormData object instead of JSON
-    const formData = new FormData();
-    formData.append('email', email);  // Assuming 'email' matches your sheet header
-
-    const response = await fetch("https://script.google.com/macros/s/AKfycbwSOs9hFIeYFKxvlVxeVaTPJMAddydbLQn79R4C7MdKvh9i0pXvg07qdCZuDQi0jbQw/exec", {
-      method: "POST",
-      body: formData,  // Send as FormData
-      // Remove Content-Type header - browser will set it automatically with boundary
-      // headers: {
-      //   "Content-Type": "application/json",
-      // },
-    });
+    const form = event.target as HTMLFormElement;
+    const formData = new FormData(form);
     
-    // Remove .json() since Apps Script might not return JSON now
-    if (response.ok) {
-      setStatus("Subscribed successfully!");
-    } else {
-      setStatus("There was an issue. Try again later.");
-    }
+    await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors' // Add this
+    });
+
+    setStatus("Subscribed successfully!");
+    setEmail('');
   } catch (error) {
     console.error("Error subscribing:", error);
     setStatus("There was an issue. Try again later.");
@@ -451,12 +443,16 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         name="news-letter" 
         action="https://script.google.com/macros/s/AKfycbwSOs9hFIeYFKxvlVxeVaTPJMAddydbLQn79R4C7MdKvh9i0pXvg07qdCZuDQi0jbQw/exec" 
         method="POST" 
+        target="hidden_iframe"  {/* Add this */}
+        onSubmit={handleSubmit}
         className="space-y-4"
       >
         <div className="relative">
           <input 
             type="email" 
             name="email" 
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email here *" 
             className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" 
             required 
@@ -469,10 +465,11 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
           Subscribe
         </button>
       </form>
+      {/* Add this hidden iframe */}
+      <iframe name="hidden_iframe" style={{display: 'none'}}></iframe>
     </div>
   </div>
 </div>
-
 
 
 
