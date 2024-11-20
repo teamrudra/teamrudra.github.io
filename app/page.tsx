@@ -442,6 +442,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 </div>
       {/* Rover Renders Section */}
 <div className="min-h-screen bg-black flex flex-col items-center py-16" id="rover-renders">
+   <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-white text-6xl mb-12 font-serif">Rover Renders</h2>
   <div className="grid grid-cols-2 gap-8">
     {/* Image 1 */}
