@@ -440,6 +440,37 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     ))}
   </div>
 </div>
+      {/* Rover Renders Section */}
+<div className="min-h-screen bg-black flex flex-col items-center py-16" id="rover-renders">
+  <h2 className="text-white text-6xl mb-12 font-serif">Rover Renders</h2>
+  <div className="grid grid-cols-2 gap-8">
+    {/* Image 1 */}
+    <img 
+      src="render1.jpg" 
+      alt="Rover Render 1" 
+      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
+    />
+    {/* Image 2 */}
+    <img 
+      src="render2.jpg" 
+      alt="Rover Render 2" 
+      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
+    />
+    {/* Image 3 */}
+    <img 
+      src="render3.jpg" 
+      alt="Rover Render 3" 
+      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
+    />
+    {/* Image 4 */}
+    <img 
+      src="render4.jpg" 
+      alt="Rover Render 4" 
+      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
+    />
+  </div>
+</div>
+
 {/* Newsletter Section */}
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="newsletter">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
