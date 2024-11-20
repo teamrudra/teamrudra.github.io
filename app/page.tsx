@@ -52,8 +52,8 @@ const Home = () => {
     { src: './altium.png', alt: 'Altium' },
     { src: './vartech.png', alt: 'Var Tech' },
     { src: './protocase.png', alt: 'Protocase' },
-     { src: './mathworks-logo-full-color-rgb-reversed.png' , alt: 'Mathworks' }
-     { src: './WhatsApp_Image_2024-11-20_at_6.01.38_PM-removebg-preview.png' , alt: 'Mathworks' }
+    { src: './mathworks-logo-full-color-rgb-reversed.png' , alt: 'Mathworks' }
+    
   ];
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
