@@ -56,6 +56,7 @@ const Home = () => {
   ];
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
+  alert("Submit");
 
   try {
     // Only one fetch statement here
