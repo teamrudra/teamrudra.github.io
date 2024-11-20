@@ -58,10 +58,11 @@ const Home = () => {
   ];
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
-  alert("Submit");
-  const email="priyanshsonthalia23@gmail.com";
+
+
   try {
     // Only one fetch statement here
+      alert("Submit");
     const response = await fetch("https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec", {
       method: "POST",
       body: JSON.stringify({ email }), // Ensure email is defined
