@@ -126,6 +126,9 @@ const Home = () => {
       <Link href="#team" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">TEAM</a>
       </Link>
+        <Link href="#rover-renders" scroll={true} legacyBehavior>
+        <a className="hover:text-gray-300 transition duration-200">ROVER</a>
+      </Link>
       <Link href="#achievements" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">ACHIEVEMENTS</a>
       </Link>
@@ -280,6 +283,43 @@ const Home = () => {
   </div>
   </div>
   </div>
+      {/* Rover Renders Section */}
+<div className="min-h-screen bg-black flex flex-col items-center py-16" id="rover-renders">
+  {/* Background Sparkles */}
+  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
+
+  {/* Title */}
+  <h2 className="text-white text-4xl md:text-5xl lg:text-6xl mb-8 font-serif text-center">Our Rover</h2>
+
+  {/* Image Grid */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4 md:px-8 lg:px-16 w-full">
+    {/* Image 1 */}
+    <img 
+      src="render1.png" 
+      alt="Rover Render 1" 
+      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
+    />
+    {/* Image 2 */}
+    <img 
+      src="render2.png" 
+      alt="Rover Render 2" 
+      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
+    />
+    {/* Image 3 */}
+    <img 
+      src="render3.png" 
+      alt="Rover Render 3" 
+      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
+    />
+    {/* Image 4 */}
+    <img 
+      src="render4.png" 
+      alt="Rover Render 4" 
+      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
+    />
+  </div>
+</div>
+
 {/* Gallery Section */}
 <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-16" id="gallery">
   {/* Sparkles Effect */}
@@ -449,38 +489,7 @@ const Home = () => {
     ))}
   </div>
 </div>
-      {/* Rover Renders Section */}
-<div className="min-h-screen bg-black flex flex-col items-center py-16" id="rover-renders">
-   <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
-  <h2 className="text-white text-6xl mb-12 font-serif">Rover Renders</h2>
-  <div className="grid grid-cols-2 gap-8">
-    {/* Image 1 */}
-    <img 
-      src="render1.png" 
-      alt="Rover Render 1" 
-      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
-    />
-    {/* Image 2 */}
-    <img 
-      src="render2.png" 
-      alt="Rover Render 2" 
-      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
-    />
-    {/* Image 3 */}
-    <img 
-      src="render3.png" 
-      alt="Rover Render 3" 
-      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
-    />
-    {/* Image 4 */}
-    <img 
-      src="render4.png" 
-      alt="Rover Render 4" 
-      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
-    />
-  </div>
-</div>
-
+     
 {/* Newsletter Section */}
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="newsletter">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
