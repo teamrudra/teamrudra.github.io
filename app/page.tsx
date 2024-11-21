@@ -55,39 +55,48 @@ const Home = () => {
     { src: './mathworks-logo-full-color-rgb-reversed.png' , alt: 'Mathworks' },
       { src: './danyalgems.png' , alt: 'Danyal Gems' },
     ];
- const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setStatus('Please enter a valid email address');
+const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    setStatus('Please enter a valid email address');
+    return;
+  }
+
+  try {
+    const formData = new FormData();
+    formData.append('email', email);
+
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec", 
+      {
+        method: "POST",
+        body: formData  // Use FormData instead of JSON
+      }
+    );
+
+    // Check if the response was successful
+    if (!response.ok) {
+      setStatus("There was an issue. Try again later.");
       return;
     }
 
-    try {
-      const formData = new FormData();
-      formData.append('email', email);
+    const result = await response.json(); // Parse the JSON response
 
-const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec", 
-        {
-          method: "POST",
-          body: formData  // Use FormData instead of JSON
-        }
-      );
-
-      if (result.status === "success") {
-        setStatus("Subscribed successfully!");
-        setEmail(''); // Clear email input
-      } else {
-        setStatus(result.message || "There was an issue. Try again later.");
-      }
-    } catch (error) {
-      console.error("Error subscribing:", error);
-      setStatus("There was an issue. Try again later.");
+    if (result.status === "success") {
+      setStatus("Subscribed successfully!");
+      setEmail(''); // Clear email input
+    } else {
+      setStatus(result.message || "There was an issue. Try again later.");
     }
- };
+  } catch (error) {
+    console.error("Error subscribing:", error);
+    setStatus("There was an issue. Try again later.");
+  }
+};
+
 
       
   return (
