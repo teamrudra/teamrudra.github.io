@@ -289,40 +289,53 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
   </div>
   </div>
-      {/* Rover Renders Section */}
-<div className="min-h-screen bg-black flex flex-col items-center py-16" id="rover-renders">
-  {/* Background Sparkles */}
-  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
-
-  {/* Title */}
-  <h2 className="text-white text-4xl md:text-5xl lg:text-6xl mb-8 font-serif text-center">Our Rover</h2>
-
-  {/* Image Grid */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4 md:px-8 lg:px-16 w-full">
-    {/* Image 1 */}
-    <img 
-      src="render1.png" 
-      alt="Rover Render 1" 
-      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
-    />
-    {/* Image 2 */}
-    <img 
-      src="render2.png" 
-      alt="Rover Render 2" 
-      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
-    />
-    {/* Image 3 */}
-    <img 
-      src="render3.png" 
-      alt="Rover Render 3" 
-      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
-    />
-    {/* Image 4 */}
-    <img 
-      src="render4.png" 
-      alt="Rover Render 4" 
-      className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
-    />
+     <div class="min-h-screen bg-black flex flex-col items-center py-16 px-4 md:px-8" id="rover-renders">
+  <h2 class="text-white text-4xl md:text-6xl mb-12 font-serif text-center">Rover Renders</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
+    <!-- Render 1 -->
+    <div class="relative group">
+      <img 
+        src="render1.jpg" 
+        alt="Rover Render 1" 
+        class="w-full h-auto object-contain transition-transform duration-300 hover:scale-105 rounded-lg"
+      />
+      <p class="text-white text-center mt-4 text-sm md:text-md">
+        Description of Rover Render 1
+      </p>
+    </div>
+    <!-- Render 2 -->
+    <div class="relative group">
+      <img 
+        src="render2.jpg" 
+        alt="Rover Render 2" 
+        class="w-full h-auto object-contain transition-transform duration-300 hover:scale-105 rounded-lg"
+      />
+      <p class="text-white text-center mt-4 text-sm md:text-md">
+        Description of Rover Render 2
+      </p>
+    </div>
+    <!-- Render 3 -->
+    <div class="relative group">
+      <img 
+        src="render3.jpg" 
+        alt="Rover Render 3" 
+        class="w-full h-auto object-contain transition-transform duration-300 hover:scale-105 rounded-lg"
+      />
+      <p class="text-white text-center mt-4 text-sm md:text-md">
+        Description of Rover Render 3
+      </p>
+    </div>
+    <!-- Render 4 -->
+    <div class="relative group">
+      <img 
+        src="render4.jpg" 
+        alt="Rover Render 4" 
+        class="w-full h-auto object-contain transition-transform duration-300 hover:scale-105 rounded-lg"
+      />
+      <p class="text-white text-center mt-4 text-sm md:text-md">
+        Description of Rover Render 4
+      </p>
+    </div>
   </div>
 </div>
 
