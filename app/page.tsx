@@ -56,7 +56,7 @@ const Home = () => {
       { src: './danyalgems.png' , alt: 'Danyal Gems' },
     
   ];
- const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     
     // Validate email format
@@ -74,13 +74,14 @@ const Home = () => {
         "https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec", 
         {
           method: "POST",
-          body: formData  // Use FormData instead of JSON
+          body: formData
         }
       );
 
       const result = await response.json();
 
       if (result.status === "success") {
+        alert("Submitted successfully!"); // Added alert
         setStatus("Subscribed successfully!");
         setEmail(''); // Clear email input
       } else {
