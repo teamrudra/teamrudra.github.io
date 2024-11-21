@@ -56,7 +56,7 @@ const Home = () => {
       { src: './danyalgems.png' , alt: 'Danyal Gems' },
     
   ];
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     
     // Validate email format
@@ -67,26 +67,21 @@ const Home = () => {
     }
 
     try {
-      const formData = new FormData();
-      formData.append('email', email);
-
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec", 
         {
           method: "POST",
-          body: formData
+          mode: 'no-cors', 
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: `email=${encodeURIComponent(email)}`
         }
       );
 
-      const result = await response.json();
-
-      if (result.status === "success") {
-        alert("Submitted successfully!"); // Added alert
-        setStatus("Subscribed successfully!");
-        setEmail(''); // Clear email input
-      } else {
-        setStatus(result.message || "There was an issue. Try again later.");
-      }
+      alert("Submitted successfully!");
+      setStatus("Subscribed successfully!");
+      setEmail(''); // Clear email input
     } catch (error) {
       console.error("Error subscribing:", error);
       setStatus("There was an issue. Try again later.");
