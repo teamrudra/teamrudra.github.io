@@ -54,9 +54,8 @@ const Home = () => {
     { src: './protocase.png', alt: 'Protocase' },
     { src: './mathworks-logo-full-color-rgb-reversed.png' , alt: 'Mathworks' },
       { src: './danyalgems.png' , alt: 'Danyal Gems' },
-    
-  ];
-   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    ];
+ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     
     // Validate email format
@@ -67,25 +66,48 @@ const Home = () => {
     }
 
     try {
+      const formData = new FormData();
+      formData.append('email', email);
+
+  try {
+    // Only one fetch statement here
+      alert("Submit");
+    const response = await fetch("https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec", {
+      method: "POST",
+      body: JSON.stringify({ email }), // Ensure email is defined
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec", 
         {
           method: "POST",
-          mode: 'no-cors', 
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: `email=${encodeURIComponent(email)}`
+          body: formData  // Use FormData instead of JSON
         }
       );
 
-      alert("Submitted successfully!");
+    const result = await response.json();
+      const result = await response.json();
+
+    if (result.status === "success") {
       setStatus("Subscribed successfully!");
-      setEmail(''); // Clear email input
+    } else {
+      if (result.status === "success") {
+        setStatus("Subscribed successfully!");
+        setEmail(''); // Clear email input
+      } else {
+        setStatus(result.message || "There was an issue. Try again later.");
+      }
     } catch (error) {
       console.error("Error subscribing:", error);
       setStatus("There was an issue. Try again later.");
     }
+  } catch (error) {
+    console.error("Error subscribing:", error);
+    setStatus("There was an issue. Try again later.");
+  }
+};
   };
 
   return (
