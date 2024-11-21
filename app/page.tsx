@@ -69,17 +69,7 @@ const Home = () => {
       const formData = new FormData();
       formData.append('email', email);
 
-  try {
-    // Only one fetch statement here
-      alert("Submit");
-    const response = await fetch("https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec", {
-      method: "POST",
-      body: JSON.stringify({ email }), // Ensure email is defined
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-      const response = await fetch(
+const response = await fetch(
         "https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec", 
         {
           method: "POST",
@@ -87,12 +77,6 @@ const Home = () => {
         }
       );
 
-    const result = await response.json();
-      const result = await response.json();
-
-    if (result.status === "success") {
-      setStatus("Subscribed successfully!");
-    } else {
       if (result.status === "success") {
         setStatus("Subscribed successfully!");
         setEmail(''); // Clear email input
@@ -103,13 +87,9 @@ const Home = () => {
       console.error("Error subscribing:", error);
       setStatus("There was an issue. Try again later.");
     }
-  } catch (error) {
-    console.error("Error subscribing:", error);
-    setStatus("There was an issue. Try again later.");
-  }
-};
-  };
+ };
 
+      
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
     <style jsx>{`
