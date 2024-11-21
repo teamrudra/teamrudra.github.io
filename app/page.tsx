@@ -56,33 +56,41 @@ const Home = () => {
       { src: './danyalgems.png' , alt: 'Danyal Gems' },
     
   ];
-const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-  event.preventDefault();
+ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setStatus('Please enter a valid email address');
+      return;
+    }
 
+    try {
+      const formData = new FormData();
+      formData.append('email', email);
 
-  try {
-    // Only one fetch statement here
-      alert("Submit");
-    const response = await fetch("https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec", {
-      method: "POST",
-      body: JSON.stringify({ email }), // Ensure email is defined
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbxnxzbOk42QDZCoPQSGhVlczqRwhbd59SAV75T7IaV9Yz13Ud9zhzkToIvSyXrh3mbb5A/exec", 
+        {
+          method: "POST",
+          body: formData  // Use FormData instead of JSON
+        }
+      );
 
-    const result = await response.json();
+      const result = await response.json();
 
-    if (result.status === "success") {
-      setStatus("Subscribed successfully!");
-    } else {
+      if (result.status === "success") {
+        setStatus("Subscribed successfully!");
+        setEmail(''); // Clear email input
+      } else {
+        setStatus(result.message || "There was an issue. Try again later.");
+      }
+    } catch (error) {
+      console.error("Error subscribing:", error);
       setStatus("There was an issue. Try again later.");
     }
-  } catch (error) {
-    console.error("Error subscribing:", error);
-    setStatus("There was an issue. Try again later.");
-  }
-};
+  };
 
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
