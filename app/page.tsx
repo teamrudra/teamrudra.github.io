@@ -58,13 +58,12 @@ const Home = () => {
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
   
-  // Get email from form input
   const emailInput = event.currentTarget.elements.namedItem('email') as HTMLInputElement;
   const email = emailInput.value;
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    setStatus('Please enter a valid email address');
+    alert('Please enter a valid email address');
     return;
   }
 
@@ -81,14 +80,14 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     );
 
     if (!response.ok) {
-      setStatus("There was an issue. Try again later.");
+      alert("There was an issue. Try again later.");
       return;
     }
 
     const result = await response.json();
     if (result.status === "success") {
-       alert("Subscribed successfully!");
-      setEmail('');
+      alert("Subscribed successfully!");
+      emailInput.value = ''; // Clear the input box
     } else {
       alert(result.message || "There was an issue. Try again later.");
     }
