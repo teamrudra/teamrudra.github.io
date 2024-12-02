@@ -85,18 +85,13 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     }
 
     const result = await response.json();
-    if (result.status === "success") {
-      alert("Subscribed successfully!");
-      emailInput.value = ''; // Clear the input box
-    } else {
-      alert(result.message || "There was an issue. Try again later.");
-    }
+    alert("Subscribed successfully!");
+    emailInput.value = ''; // Clear the input box
   } catch (error) {
     console.error("Error subscribing:", error);
     alert("There was an issue. Try again later.");
   }
 };
-      
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
     <style jsx>{`
