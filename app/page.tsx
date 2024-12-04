@@ -506,7 +506,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
     <div className="flex-1 text-center">
       <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
-      <p className="text-gray-400 mb-6">Get weekly access to our newsletter and stay updated</p>
+      <p className="text-gray-400 mb-6">Get monthly access to our newsletter and stay updated</p>
       <form 
         name="news-letter" 
         onSubmit={handleSubmit}
