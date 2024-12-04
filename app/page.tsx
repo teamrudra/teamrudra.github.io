@@ -175,6 +175,9 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
             <Link href="#team" scroll={true} legacyBehavior>
               <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>TEAM</a>
             </Link>
+             <Link href="#rover-renders" scroll={true} legacyBehavior>
+              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>OUR ROVER</a>
+            </Link>
             <Link href="#achievements" scroll={true} legacyBehavior>
               <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>ACHIEVEMENTS</a>
             </Link>
@@ -183,6 +186,9 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
             </Link>
             <Link href="#sponsors" scroll={true} legacyBehavior>
               <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>SPONSORSHIP</a>
+            </Link>
+             <Link href="#newsletter" scroll={true} legacyBehavior>
+              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>NEWSLETTER</a>
             </Link>
             <Link href="#contact" scroll={true} legacyBehavior>
               <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>CONTACT US</a>
