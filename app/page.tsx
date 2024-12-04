@@ -73,7 +73,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     formData.append('email', email);
     
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbw9sp49Ddtke7DZoflVuJYgIFdIGu2PXXI0BVLjYtfWbHvsRntUGiJCy-j_JAa0tgofiw/exec", 
+        process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL as string, // Use the environment variable
       {
         method: "POST",
         body: formData
