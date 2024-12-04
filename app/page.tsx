@@ -286,7 +286,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     {/* Rover Renders Section */}
 <div className="min-h-screen bg-black flex flex-col items-center py-16" id="rover-renders">
   <h2 className="text-white text-4xl md:text-5xl lg:text-6xl mb-12 font-serif text-center">
-    Rover Renders
+     Our Rover
   </h2>
   {/* Grid container */}
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 px-4 md:px-12">
