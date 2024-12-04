@@ -291,25 +291,25 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 px-4 md:px-12">
     {/* Image 1 */}
     <img 
-      src="render1.jpg" 
+      src="render1.png" 
       alt="Rover Render 1" 
       className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
     />
     {/* Image 2 */}
     <img 
-      src="render2.jpg" 
+      src="render2.png" 
       alt="Rover Render 2" 
       className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
     />
     {/* Image 3 */}
     <img 
-      src="render3.jpg" 
+      src="render3.png" 
       alt="Rover Render 3" 
       className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
     />
     {/* Image 4 */}
     <img 
-      src="render4.jpg" 
+      src="render4.png" 
       alt="Rover Render 4" 
       className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
     />
