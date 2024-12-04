@@ -64,7 +64,7 @@ jobs:
 
       - name: Build with Next.js
         env:
-          GOOGLE_SCRIPT_URL: ${{ secrets.GOOGLE_SCRIPT_URL }} # Add the secret as an environment variable
+          NEXT_PUBLIC_GOOGLE_SCRIPT_URL: ${{ secrets.GOOGLE_SCRIPT_URL }} # Add the secret as an environment variable
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact
