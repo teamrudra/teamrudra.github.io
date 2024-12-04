@@ -17,6 +17,8 @@ const Home = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
 
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
@@ -29,7 +31,6 @@ const Home = () => {
       document.body.style.overflow = 'auto';
     }
   }, [isMenuOpen]);
-
 
   const previousSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -50,9 +51,49 @@ const Home = () => {
     { src: './nvidia.png', alt: 'Nvidia' },
     { src: './altium.png', alt: 'Altium' },
     { src: './vartech.png', alt: 'Var Tech' },
-    { src: './protocase.png', alt: 'Protocase' },
-  ];
+    { src: './protocase2.png', alt: 'Protocase' },
+    { src: './mathworks-logo-full-color-rgb-reversed.png' , alt: 'Mathworks' },
+      { src: './danyalgems.png' , alt: 'Danyal Gems' },
+     { src: './hearingon.png' , alt: 'HearingOn' },
+    { src: './pma spares.png' , alt: 'pmaspares' },
+    ];
+const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+  
+  const emailInput = event.currentTarget.elements.namedItem('email') as HTMLInputElement;
+  const email = emailInput.value;
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address');
+    return;
+  }
+
+  try {
+    const formData = new FormData();
+    formData.append('email', email);
+    
+    const response = await fetch(
+        process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL as string, // Use the environment variable
+      {
+        method: "POST",
+        body: formData
+      }
+    );
+
+    if (!response.ok) {
+      alert("There was an issue. Try again later.");
+      return;
+    }
+
+    const result = await response.json();
+    alert("Subscribed successfully!");
+    emailInput.value = ''; // Clear the input box
+  } catch (error) {
+    console.error("Error subscribing:", error);
+    alert("There was an issue. Try again later.");
+  }
+};
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
     <style jsx>{`
@@ -67,7 +108,7 @@ const Home = () => {
        {/* Navbar */}
 <nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
   <div className="px-4 py-2 flex justify-between items-center w-full">
-    
+
     {/* Rudra Logo - Aligned to the left */}
     <Link href="/" legacyBehavior>
       <a className="flex-shrink-0">
@@ -86,6 +127,9 @@ const Home = () => {
       <Link href="#team" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">TEAM</a>
       </Link>
+        <Link href="#rover-renders" scroll={true} legacyBehavior>
+        <a className="hover:text-gray-300 transition duration-200">ROVER</a>
+      </Link>
       <Link href="#achievements" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">ACHIEVEMENTS</a>
       </Link>
@@ -95,9 +139,13 @@ const Home = () => {
       <Link href="#sponsors" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">SPONSORSHIP</a>
       </Link>
+            <Link href="#newsletter" scroll={true} legacyBehavior>
+        <a className="hover:text-gray-300 transition duration-200">NEWSLETTER</a>
+      </Link>
       <Link href="#contact" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">CONTACT US</a>
       </Link>
+
     </div>
         {/* Hamburger Menu for Mobile */}
         <button 
@@ -127,6 +175,9 @@ const Home = () => {
             <Link href="#team" scroll={true} legacyBehavior>
               <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>TEAM</a>
             </Link>
+             <Link href="#rover-renders" scroll={true} legacyBehavior>
+              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>OUR ROVER</a>
+            </Link>
             <Link href="#achievements" scroll={true} legacyBehavior>
               <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>ACHIEVEMENTS</a>
             </Link>
@@ -135,6 +186,9 @@ const Home = () => {
             </Link>
             <Link href="#sponsors" scroll={true} legacyBehavior>
               <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>SPONSORSHIP</a>
+            </Link>
+             <Link href="#newsletter" scroll={true} legacyBehavior>
+              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>NEWSLETTER</a>
             </Link>
             <Link href="#contact" scroll={true} legacyBehavior>
               <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>CONTACT US</a>
@@ -236,6 +290,41 @@ const Home = () => {
   </div>
   </div>
   </div>
+    {/* Rover Renders Section */}
+<div className="min-h-screen bg-black flex flex-col items-center py-16" id="rover-renders">
+  <h2 className="text-white text-4xl md:text-5xl lg:text-6xl mb-12 font-serif text-center">
+     Our Rover
+  </h2>
+  {/* Grid container */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 px-4 md:px-12">
+    {/* Image 1 */}
+    <img 
+      src="render1.png" 
+      alt="Rover Render 1" 
+      className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
+    />
+    {/* Image 2 */}
+    <img 
+      src="render2.png" 
+      alt="Rover Render 2" 
+      className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
+    />
+    {/* Image 3 */}
+    <img 
+      src="render3.png" 
+      alt="Rover Render 3" 
+      className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
+    />
+    {/* Image 4 */}
+    <img 
+      src="render4.png" 
+      alt="Rover Render 4" 
+      className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
+    />
+  </div>
+</div>
+
+
 {/* Gallery Section */}
 <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-16" id="gallery">
   {/* Sparkles Effect */}
@@ -349,7 +438,7 @@ const Home = () => {
           },
           {
             src: "./achievement-image7.png",
-            title: "IRDC - Team RUDRA achieved 3rd as World Rank",
+            title: "IRC - Team RUDRA achieved 3rd as World Rank",
             date: "June 12, 2019"
           },
           {
@@ -359,7 +448,7 @@ const Home = () => {
           },
           {
             src: "./achievement-image9.png",
-            title: "IRC 2024 - Team RUDRA ranked 3rd globally",
+            title: "IRCS 2024 - Team RUDRA ranked 3rd globally",
             date: "Jan 2024"
           }
         ].map((item, index) => (
@@ -406,8 +495,51 @@ const Home = () => {
   </div>
 </div>
 
+
+     
+{/* Newsletter Section */}
+<div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="newsletter">
+  <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
+  <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[1000px] h-[480px] max-w-full relative flex flex-row items-center">
+    <div className="flex-1 mr-8">
+      <img src="newsletter.jpeg" alt="Rover Image" className="w-[440px] h-[400px] object-cover rounded-xl" />
+    </div>
+    <div className="flex-1 text-center">
+      <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
+      <p className="text-gray-400 mb-6">Get weekly access to our newsletter and stay updated</p>
+      <form 
+        name="news-letter" 
+        onSubmit={handleSubmit}
+        
+        method="POST" 
+        className="space-y-4"
+      >
+        <div className="relative">
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Enter your email here *" 
+            className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            required 
+          />
+        </div>
+        <button 
+          type="submit" 
+          className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
     {/* Contact Us Section */}
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="contact">
+    <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 " id="contact">
+     <SparklesCore className="absolute   inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-white text-6xl mb-12 font-serif">Contact Us</h2>
   <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8">
     {/* Image/Icon Section */}
@@ -444,7 +576,16 @@ const Home = () => {
     </div>
   </div>
 </div>
-      </div>
+
+
+
+
+
+
+
+
+  </div>
+
   );
 };
 export default Home;
