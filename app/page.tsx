@@ -54,7 +54,8 @@ const Home = () => {
     { src: './protocase.png', alt: 'Protocase' },
     { src: './mathworks-logo-full-color-rgb-reversed.png' , alt: 'Mathworks' },
       { src: './danyalgems.png' , alt: 'Danyal Gems' },
-     { src: './hearing on.png' , alt: 'HearingOn' },
+     { src: './hearingon.png' , alt: 'HearingOn' },
+    { src: './pmaspares.png' , alt: 'pmaspares' },
     ];
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
