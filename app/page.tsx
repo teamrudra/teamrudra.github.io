@@ -2,6 +2,7 @@
 import { SparklesCore } from '@/components/ui/sparkles';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Script from 'next/script';
 
 const Home = () => {
   const galleryImages = [
@@ -577,12 +578,12 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
-{/* Social Media Section */}
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16" id="social-media">
+  <Script 
+    src="https://static.elfsight.com/platform/platform.js" 
+    strategy="afterInteractive" 
+  />
   <h2 className="text-white text-6xl mb-12 font-serif">Our Instagram</h2>
-  
-  {/* Instagram Feed Script */}
-  <script src="https://static.elfsight.com/platform/platform.js" async></script>
   <div 
     className="elfsight-app-c1765aec-569d-4f7b-b77d-a9ca7d2fd566" 
     data-elfsight-app-lazy
