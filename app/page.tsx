@@ -496,46 +496,39 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
-{/* International Rover Challenge Section */}
-<div className="min-h-screen bg-black flex flex-col items-center py-16" id="irc-section">
-  <h2 className="text-white text-6xl mb-12 font-serif">International Rover Challenge</h2>
-  <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start w-11/12 lg:w-9/12 gap-12">
-    {/* Left Content */}
-    <div className="lg:w-6/12 text-center lg:text-left">
-      <h3 className="text-white text-4xl mb-6">What is IRC?</h3>
+{/* IRC Section */}
+<div className="min-h-screen bg-black flex flex-col items-center py-16 px-6 md:px-12 lg:px-20" id="irc-section">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+    {/* Left Section */}
+    <div className="text-center md:text-left">
+      <h2 className="text-white text-4xl md:text-5xl font-bold mb-6 font-serif">
+        International Rover Challenge
+      </h2>
       <p className="text-gray-400 text-lg leading-7 mb-6">
-        The International Rover Challenge (IRC) is an annual robotics competition designed to push the limits of engineering and innovation. Students from around the world collaborate to build and test Mars rovers capable of performing a variety of tasks on challenging terrains. Join us to explore the future of space exploration.
+        Add a little bit of body text here. Describe the challenge and its significance to robotics and space exploration. Keep it engaging and concise.
       </p>
       <a 
         href="https://www.spaceroboticssociety.org/events/international-rover-challenge/" 
         target="_blank" 
-        rel="noopener noreferrer" 
-        className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300"
+        rel="noopener noreferrer"
+        className="inline-block bg-transparent text-white border border-white px-6 py-2 rounded-lg text-lg hover:bg-white hover:text-black transition-colors duration-300"
       >
         Know More
       </a>
     </div>
-    {/* Right Content */}
-    <div className="lg:w-5/12 flex justify-center">
-      <img 
-        src="irc-rover.jpg" 
-        alt="International Rover Challenge Rover" 
-        className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
-      />
+
+    {/* Right Section */}
+    <div className="text-center">
+      <h2 className="text-white text-4xl md:text-5xl font-bold mb-6 font-serif">
+        History of Mars
+      </h2>
+      <p className="text-gray-400 text-lg leading-7 mb-6">
+        Add a little bit of body text here. Talk about the exploration of Mars, its past missions, and future plans. Keep it informative and inspiring.
+      </p>
     </div>
   </div>
-
-  {/* History of Mars Section */}
-  <div className="mt-16 w-11/12 lg:w-9/12">
-    <h3 className="text-white text-4xl mb-6 text-center lg:text-left">History of Mars</h3>
-    <p className="text-gray-400 text-lg leading-7 mb-6">
-      Mars has long captured humanity’s imagination. From early telescopic observations to groundbreaking missions like NASA’s Perseverance Rover, the red planet has become a symbol of exploration and discovery. Each mission brings us one step closer to uncovering Mars' secrets and preparing for future human exploration.
-    </p>
-    <p className="text-gray-400 text-lg leading-7">
-      From ancient mythology to modern science, Mars has been a source of curiosity and inspiration. Recent missions have uncovered water traces and a glimpse into its fascinating past. The quest to understand Mars’ potential for life continues, paving the way for human colonization in the near future.
-    </p>
-  </div>
 </div>
+
 
 
 
