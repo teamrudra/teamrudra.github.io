@@ -474,61 +474,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
-{/* IRC Section */}
-<div className="min-h-screen bg-black flex flex-col items-center py-16 px-6 md:px-12 lg:px-20" id="irc-section">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    {/* Left Section */}
-    <div className="text-center md:text-left">
-      <h2 className="text-white text-4xl md:text-5xl font-bold leading-snug mb-6 font-serif">
-        International <br />
-        Rover <br />
-        Challenge
-      </h2>
-      <p className="text-gray-400 text-lg leading-7 mb-6">
-        The International Rover Challenge (IRC) is a global competition that brings together student innovators to design, build, and test rovers. This platform pushes the boundaries of engineering and space exploration. Learn more about how IRC fosters groundbreaking innovation.
-      </p>
-      <a 
-        href="https://www.spaceroboticssociety.org/events/international-rover-challenge/" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="inline-block bg-transparent text-white border border-white px-6 py-2 rounded-lg text-lg hover:bg-white hover:text-black transition-colors duration-300"
-      >
-        Know More
-      </a>
-    </div>
-
-    {/* Right Section */}
-    <div className="text-center">
-      <img 
-        src="irc-image-placeholder.jpg" 
-        alt="International Rover Challenge" 
-        className="w-full max-w-sm mx-auto md:mx-0 rounded-lg shadow-lg"
-      />
-    </div>
-  </div>
-
-  {/* Space Between Sections */}
-  <div className="my-16"></div>
-
-  {/* History of Mars Section */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    <div className="text-center md:text-left">
-      <h2 className="text-white text-4xl md:text-5xl font-bold mb-6 font-serif">
-        History of Mars
-      </h2>
-      <p className="text-gray-400 text-lg leading-7 mb-6">
-        Mars has always fascinated humanity, from ancient myths to modern space missions. Learn about the red planet's history, its mysteries, and the ongoing exploration that seeks to uncover its secrets.
-      </p>
-    </div>
-    <div className="text-center">
-      <img 
-        src="mars-image-placeholder.jpg" 
-        alt="History of Mars" 
-        className="w-full max-w-sm mx-auto md:mx-0 rounded-lg shadow-lg"
-      />
-    </div>
-  </div>
-</div>
 
 
 
@@ -551,6 +496,39 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
+{/* IRC Section */}
+<div className="min-h-screen bg-black flex flex-col items-center py-16 px-6 md:px-12 lg:px-20" id="irc-section">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+    {/* Left Section */}
+    <div className="text-center md:text-left">
+      <h2 className="text-white text-4xl md:text-5xl font-bold mb-6 font-serif">
+        International Rover Challenge
+      </h2>
+      <p className="text-gray-400 text-lg leading-7 mb-6">
+       The International Rover Challenge (IRC) is an annual robotics competition designed to push the limits of engineering and innovation. Students from around the world collaborate to build and test Mars rovers capable of performing a variety of tasks on challenging terrains. Join us to explore the future of space exploration.
+      </p>
+      <a 
+        href="https://www.example-irc-website.com" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="inline-block bg-transparent text-white border border-white px-6 py-2 rounded-lg text-lg hover:bg-white hover:text-black transition-colors duration-300"
+      >
+        Know More
+      </a>
+    </div>
+
+    {/* Right Section */}
+    <div className="text-center">
+      <h2 className="text-white text-4xl md:text-5xl font-bold mb-6 font-serif">
+        History of Mars
+      </h2>
+      <p className="text-gray-400 text-lg leading-7 mb-6">
+        Mars has long captured humanity’s imagination. From early telescopic observations to groundbreaking missions like NASA’s Perseverance Rover, the red planet has become a symbol of exploration and discovery. Each mission brings us one step closer to uncovering Mars' secrets and preparing for future human exploration.
+
+      </p>
+    </div>
+  </div>
+</div>
 
 
 
