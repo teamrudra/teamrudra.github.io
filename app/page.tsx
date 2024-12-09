@@ -505,7 +505,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         International Rover Challenge
       </h2>
       <p className="text-gray-400 text-lg leading-7 mb-6">
-        Add a little bit of body text here. Describe the challenge and its significance to robotics and space exploration. Keep it engaging and concise.
+       The International Rover Challenge (IRC) is an annual robotics competition designed to push the limits of engineering and innovation. Students from around the world collaborate to build and test Mars rovers capable of performing a variety of tasks on challenging terrains. Join us to explore the future of space exploration.
       </p>
       <a 
         href="https://www.spaceroboticssociety.org/events/international-rover-challenge/" 
@@ -523,7 +523,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         History of Mars
       </h2>
       <p className="text-gray-400 text-lg leading-7 mb-6">
-        Add a little bit of body text here. Talk about the exploration of Mars, its past missions, and future plans. Keep it informative and inspiring.
+         Mars has long captured humanity’s imagination. From early telescopic observations to groundbreaking missions like NASA’s Perseverance Rover, the red planet has become a symbol of exploration and discovery. Each mission brings us one step closer to uncovering Mars' secrets and preparing for future human exploration.
       </p>
     </div>
   </div>
