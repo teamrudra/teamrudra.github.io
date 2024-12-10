@@ -509,7 +509,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       </p>
       <div className="flex justify-center lg:justify-start gap-4">
         <a
-          href="https://roverchallenge.org/irc/"
+          href="#"
           className="px-6 py-3 bg-white text-black rounded-lg text-lg font-semibold hover:bg-gray-300 transition"
         >
           Learn More
