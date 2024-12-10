@@ -557,11 +557,11 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         }, {
           year: "1924", description: "IRC20 - 3RD."
         }, {
-          year: "2920", description: "Description for 2920."
+          year: "2920", description: "Description."
         }, {
-          year: "2924", description: "Description for 2924."
+          year: "2924", description: "IRC23 - 7TH."
         }, {
-          year: "2956", description: "Description for 2956."
+          year: "2956", description: "IRC24 - 3RD."
         }].map((item, index) => (
           <div
             key={index}
