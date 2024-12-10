@@ -496,36 +496,79 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
-{/* IRC Section */}
-<div className="min-h-screen bg-black flex flex-col items-center py-16 px-6 md:px-12 lg:px-20" id="irc-section">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div className="min-h-screen bg-black text-white font-sans">
+  {/* Main Container */}
+  <div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-1 lg:grid-cols-2 gap-16 relative">
     {/* Left Section */}
-    <div className="text-center md:text-left">
-      <h2 className="text-white text-4xl md:text-5xl font-bold mb-6 font-serif">
-        International Rover Challenge
-      </h2>
-      <p className="text-gray-400 text-lg leading-7 mb-6">
-       The International Rover Challenge (IRC) is an annual robotics competition designed to push the limits of engineering and innovation. Students from around the world collaborate to build and test Mars rovers capable of performing a variety of tasks on challenging terrains. Join us to explore the future of space exploration.
+    <div className="flex flex-col justify-center text-center lg:text-left">
+      <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+        International <br /> Rover <br /> Challenge
+      </h1>
+      <p className="text-gray-400 text-lg leading-relaxed mb-8">
+        A global competition that drives innovation and explores new frontiers in space technology. Discover how student innovators and engineers collaborate to design extraordinary rovers.
       </p>
-      <a 
-        href="https://www.example-irc-website.com" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="inline-block bg-transparent text-white border border-white px-6 py-2 rounded-lg text-lg hover:bg-white hover:text-black transition-colors duration-300"
-      >
-        Know More
-      </a>
+      <div className="flex justify-center lg:justify-start gap-4">
+        <a
+          href="#"
+          className="px-6 py-3 bg-white text-black rounded-lg text-lg font-semibold hover:bg-gray-300 transition"
+        >
+          Learn More
+        </a>
+        <a
+          href="#"
+          className="px-6 py-3 border border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition"
+        >
+          Join Now
+        </a>
+      </div>
     </div>
 
     {/* Right Section */}
-    <div className="text-center">
-      <h2 className="text-white text-4xl md:text-5xl font-bold mb-6 font-serif">
-        History of Mars
-      </h2>
-      <p className="text-gray-400 text-lg leading-7 mb-6">
-        Mars has long captured humanity’s imagination. From early telescopic observations to groundbreaking missions like NASA’s Perseverance Rover, the red planet has become a symbol of exploration and discovery. Each mission brings us one step closer to uncovering Mars' secrets and preparing for future human exploration.
-
+    <div className="flex flex-col justify-center text-center lg:text-left">
+      <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+        History of <br /> Mars
+      </h1>
+      <p className="text-gray-400 text-lg leading-relaxed mb-8">
+        Explore the journey of Mars exploration, from ancient myths to modern-day missions. Learn about groundbreaking discoveries and future possibilities.
       </p>
+    </div>
+
+    {/* Central Rover Image */}
+    <div className="absolute inset-x-0 top-1/3 flex justify-center z-10">
+      <img
+        src="rover-image-placeholder.png"
+        alt="Rover"
+        className="w-2/3 max-w-lg lg:w-1/2"
+      />
+    </div>
+  </div>
+
+  {/* Timeline Section */}
+  <div className="mt-24 bg-gray-900 py-12">
+    <h2 className="text-center text-3xl lg:text-5xl font-bold mb-12">
+      History
+    </h2>
+    <div className="overflow-x-auto">
+      <div className="flex justify-center items-center space-x-12 px-6">
+        {/* Timeline Items */}
+        {[
+          { year: "2225", description: "Description for 2225." },
+          { year: "1924", description: "Description for 1924." },
+          { year: "2920", description: "Description for 2920." },
+          { year: "2924", description: "Description for 2924." },
+          { year: "2956", description: "Description for 2956." },
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center text-center max-w-xs"
+          >
+            <div className="w-12 h-12 bg-white rounded-full flex justify-center items-center text-black font-bold text-lg">
+              {item.year}
+            </div>
+            <p className="mt-4 text-gray-400 text-sm">{item.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 </div>
