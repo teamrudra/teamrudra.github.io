@@ -527,10 +527,10 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     {/* Right Section */}
     <div className="flex flex-col justify-center text-center lg:text-left">
       <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-        History With <br /> IRC
+        History of <br /> Mars
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
-      Our team has consistently excelled in the International Rover Challenge, pushing the boundaries of space robotics. With innovative designs and groundbreaking performances, we've earned recognition as leaders in rover technology.
+        Explore the journey of Mars exploration, from ancient myths to modern-day missions. Learn about groundbreaking discoveries and future possibilities.
       </p>
     </div>
 
