@@ -509,7 +509,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       </p>
       <div className="flex justify-center lg:justify-start gap-4">
         <a
-          href="#"
+          href="https://roverchallenge.org/irc/"
           className="px-6 py-3 bg-white text-black rounded-lg text-lg font-semibold hover:bg-gray-300 transition"
         >
           Learn More
@@ -526,10 +526,10 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     {/* Right Section */}
     <div className="flex flex-col justify-center text-center lg:text-left">
       <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-        History of <br /> Mars
+        History With <br /> IRC
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
-        Explore the journey of Mars exploration, from ancient myths to modern-day missions. Learn about groundbreaking discoveries and future possibilities.
+       Our team has consistently excelled in the International Rover Challenge, pushing the boundaries of space robotics. With innovative designs and groundbreaking performances, we've earned recognition as leaders in rover technology.
       </p>
     </div>
 
@@ -552,11 +552,11 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       <div className="flex justify-center items-center space-x-12 px-6">
         {/* Timeline Items */}
         {[
-          { year: "2225", description: "Description for 2225." },
-          { year: "1924", description: "Description for 1924." },
-          { year: "2920", description: "Description for 2920." },
-          { year: "2924", description: "Description for 2924." },
-          { year: "2956", description: "Description for 2956." },
+          { year: "2019", description: "Description ." },
+          { year: "2020", description: "IRC20 - 3RD." },
+          { year: "2021", description: "Description." },
+          { year: "2023", description: "IRC23 - 7TH." },
+          { year: "2024", description: "IRC24 - 3RD." },
         ].map((item, index) => (
           <div
             key={index}
