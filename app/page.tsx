@@ -505,11 +505,11 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         International <br /> Rover <br /> Challenge
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
-        A global competition that drives innovation and explores new frontiers in space technology. Discover how student innovators and engineers collaborate to design extraordinary rovers.
+        The International Rover Challenge (IRC) is a premier event bringing together students, engineers, and innovators from around the globe to push the boundaries of space exploration technology. Teams design, build, and test advanced rovers that simulate real-world planetary exploration, offering a hands-on experience in tackling the challenges of extraterrestrial exploration. The competition is a true testament to creativity, problem-solving, and teamwork, inspiring the next generation of space pioneers.
       </p>
       <div className="flex justify-center lg:justify-start gap-4">
         <a
-          href="#"
+          href="https://www.spaceroboticssociety.org/events/international-rover-challenge/"
           className="px-6 py-3 bg-white text-black rounded-lg text-lg font-semibold hover:bg-gray-300 transition"
         >
           Learn More
@@ -526,11 +526,10 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     {/* Right Section */}
     <div className="flex flex-col justify-center text-center lg:text-left">
       <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-        History of <br /> Mars
+        History with <br /> IRC
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
-        Explore the journey of Mars exploration, from ancient myths to modern-day missions. Learn about groundbreaking discoveries and future possibilities.
-      </p>
+       Our team has consistently excelled in the International Rover Challenge, pushing the boundaries of space robotics. With innovative designs and groundbreaking performances, we've earned recognition as leaders in rover technology.
     </div>
 
     {/* Central Rover Image */}
@@ -551,13 +550,17 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     <div className="overflow-x-auto">
       <div className="flex justify-center items-center space-x-12 px-6">
         {/* Timeline Items */}
-        {[
-          { year: "2225", description: "Description for 2225." },
-          { year: "1924", description: "Description for 1924." },
-          { year: "2920", description: "Description for 2920." },
-          { year: "2924", description: "Description for 2924." },
-          { year: "2956", description: "Description for 2956." },
-        ].map((item, index) => (
+        {[{
+          year: "2019", description: "Description ."
+        }, {
+          year: "2020", description: "IRC20- 3RD ."
+        }, {
+          year: "2021", description: "Description ."
+        }, {
+          year: "2023", description: "IRC23- 7TH ."
+        }, {
+          year: "2024", description: "IRC24- 3RD."
+        }].map((item, index) => (
           <div
             key={index}
             className="flex flex-col items-center text-center max-w-xs"
@@ -572,7 +575,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
-
 
 
      
