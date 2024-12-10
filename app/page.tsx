@@ -505,7 +505,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         International <br /> Rover <br /> Challenge
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
-        The International Rover Challenge (IRC) is a premier event bringing together students, engineers, and innovators from around the globe to push the boundaries of space exploration technology. Teams design, build, and test advanced rovers that simulate real-world planetary exploration, offering a hands-on experience in tackling the challenges of extraterrestrial exploration. The competition is a true testament to creativity, problem-solving, and teamwork, inspiring the next generation of space pioneers.
+        A global competition that drives innovation and explores new frontiers in space technology. Discover how student innovators and engineers collaborate to design extraordinary rovers.
       </p>
       <div className="flex justify-center lg:justify-start gap-4">
         <a
@@ -529,7 +529,8 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         History with <br /> IRC
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
-       Our team has consistently excelled in the International Rover Challenge, pushing the boundaries of space robotics. With innovative designs and groundbreaking performances, we've earned recognition as leaders in rover technology.
+        Our team has consistently excelled in the International Rover Challenge, pushing the boundaries of space robotics. With innovative designs and groundbreaking performances, we've earned recognition as leaders in rover technology.
+      </p>
     </div>
 
     {/* Central Rover Image */}
@@ -550,17 +551,13 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     <div className="overflow-x-auto">
       <div className="flex justify-center items-center space-x-12 px-6">
         {/* Timeline Items */}
-        {[{
-          year: "2019", description: "Description ."
-        }, {
-          year: "2020", description: "IRC20- 3RD ."
-        }, {
-          year: "2021", description: "Description ."
-        }, {
-          year: "2023", description: "IRC23- 7TH ."
-        }, {
-          year: "2024", description: "IRC24- 3RD."
-        }].map((item, index) => (
+        {[
+          { year: "2019", description: "Description ." },
+          { year: "2020", description: "IRC20 - 3RD." },
+          { year: "2021", description: "Description ." },
+          { year: "2023", description: "Description ." },
+          { year: "2024", description: "Description ." },
+        ].map((item, index) => (
           <div
             key={index}
             className="flex flex-col items-center text-center max-w-xs"
@@ -575,6 +572,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
+
 
 
      
