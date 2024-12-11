@@ -553,15 +553,15 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       <div className="flex justify-center items-center space-x-12 px-6">
         {/* Timeline Items */}
         {[{
-          year: "2225", description: "Description ."
+          year: "2019", description: "Description ."
         }, {
-          year: "1924", description: "IRC20 - 3RD."
+          year: "2020", description: "IRC20 - 3RD."
         }, {
-          year: "2920", description: "Description."
+          year: "2021", description: "Description."
         }, {
-          year: "2924", description: "IRC23 - 7TH."
+          year: "2023", description: "IRC23 - 7TH."
         }, {
-          year: "2956", description: "IRC24 - 3RD."
+          year: "2024", description: "IRC24 - 3RD."
         }].map((item, index) => (
           <div
             key={index}
