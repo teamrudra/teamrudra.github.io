@@ -519,7 +519,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
           href="#"
           className="px-6 py-3 border border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition"
         >
-          Join Now
+          Missions
         </a>
       </div>
     </div>
@@ -537,7 +537,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     {/* Central Rover Image */}
     <div className="absolute inset-x-0 top-1/3 flex justify-center z-10">
       <img
-        src="rover-image-placeholder.png"
+        src="irc section.png"
         alt="Rover"
         className="w-2/3 max-w-lg lg:w-1/2"
       />
