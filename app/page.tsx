@@ -497,11 +497,12 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 </div>
 
 
-<div className="min-h-screen bg-black text-white font-sans">
+<div className="min-h-screen bg-black text-white font-sans"> 
   {/* Main Container */}
-  <div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-1 lg:grid-cols-2 gap-16 relative">
-    {/* Left Section */}
-    <div className="flex flex-col justify-center text-center lg:text-left relative z-20">
+  <div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-1 gap-16">
+    
+    {/* Section 1 - International Rover Challenge */}
+    <div className="flex flex-col justify-center text-center lg:text-left">
       <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
         International <br /> Rover <br /> Challenge
       </h1>
@@ -524,23 +525,23 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       </div>
     </div>
 
-    {/* Right Section */}
-    <div className="flex flex-col justify-center text-center lg:text-left relative z-20">
+    {/* Section 2 - Rover Image */}
+    <div className="flex justify-center my-12">
+      <img
+        src="irc section.png"
+        alt="Rover"
+        className="w-full max-w-md"
+      />
+    </div>
+
+    {/* Section 3 - History With IRC */}
+    <div className="flex flex-col justify-center text-center lg:text-left">
       <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-        History With IRC
+        History With <br /> IRC
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
         Explore the journey of Mars exploration, from ancient myths to modern-day missions. Learn about groundbreaking discoveries and future possibilities.
       </p>
-    </div>
-
-    {/* Central Rover Image */}
-    <div className="absolute inset-0 flex justify-center items-center z-10">
-      <img
-        src="irc section.png"
-        alt="Rover"
-        className="w-3/4 lg:w-1/2"
-      />
     </div>
   </div>
 
@@ -553,7 +554,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       <div className="flex justify-center items-center space-x-12 px-6">
         {/* Timeline Items */}
         {[{
-          year: "2019", description: "Description."
+          year: "2019", description: "Description ."
         }, {
           year: "2020", description: "IRC20 - 3RD."
         }, {
@@ -577,7 +578,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
-
 
 
      
