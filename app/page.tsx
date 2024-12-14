@@ -537,7 +537,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     {/* Section 3 - History With IRC */}
     <div className="flex flex-col justify-start text-center lg:text-left">
       <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-        History <br/> With <br/> IRC
+        History  With <br/> IRC
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
        <br/><br/>Our journey with the International Rover Challenge (IRC) has been remarkable, showcasing our passion for innovation and robotics. From designing advanced rovers to overcoming real-world challenges, we’ve continuously pushed boundaries, learning, evolving, and excelling alongside global teams, strengthening our commitment to space exploration and engineering excellence.
