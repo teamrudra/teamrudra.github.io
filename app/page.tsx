@@ -528,7 +528,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     {/* Section 2 - Rover Image */}
     <div className="flex justify-center items-start">
       <img
-        src="irc_section.png"
+        src="irc section.png"
         alt="Rover"
         className="w-80 lg:w-96"
       />
@@ -540,7 +540,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         History With <br className="lg:hidden" /> IRC
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
-        Explore the journey of Mars exploration, from ancient myths to modern-day missions. Learn about groundbreaking discoveries and future possibilities.
+       Our journey with the International Rover Challenge (IRC) has been remarkable, showcasing our passion for innovation and robotics. From designing advanced rovers to overcoming real-world challenges, we’ve continuously pushed boundaries, learning, evolving, and excelling alongside global teams, strengthening our commitment to space exploration and engineering excellence.
       </p>
     </div>
   </div>
@@ -548,7 +548,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   {/* Timeline Section */}
   <div className="mt-24 bg-gray-900 py-12">
     <h2 className="text-center text-3xl lg:text-5xl font-bold mb-12">
-      History
+      Achievements
     </h2>
     <div className="overflow-x-auto">
       <div className="flex justify-center items-center space-x-12 px-6">
