@@ -497,9 +497,9 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 </div>
 
 
-<div className="min-h-screen bg-black text-white font-sans"> 
+<div className="min-h-screen bg-black text-white font-sans">
   {/* Main Container */}
-  <div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-1 gap-16">
+  <div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-1 lg:grid-cols-3 gap-16">
     
     {/* Section 1 - International Rover Challenge */}
     <div className="flex flex-col justify-center text-center lg:text-left">
@@ -526,11 +526,11 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
 
     {/* Section 2 - Rover Image */}
-    <div className="flex justify-center my-12">
+    <div className="flex justify-center items-center">
       <img
         src="irc section.png"
         alt="Rover"
-        className="w-full max-w-md"
+        className="w-full max-w-xs"
       />
     </div>
 
@@ -578,7 +578,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
-
 
      
 {/* Newsletter Section */}
