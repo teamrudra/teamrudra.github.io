@@ -579,6 +579,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
+
      
 {/* Newsletter Section */}
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="newsletter">
