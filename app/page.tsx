@@ -503,10 +503,10 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     {/* Left Section */}
     <div className="flex flex-col justify-center text-center lg:text-left">
       <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-        INTERNATIONAL <br /> ROVER <br /> CHALLENGE
+        International <br /> Rover <br /> Challenge
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
-        The International Rover Challenge (IRC) is a premier event bringing together students, engineers, and innovators from around the globe to push the boundaries of space exploration technology. Teams design, build, and test advanced rovers that simulate real-world planetary exploration, offering a hands-on experience in tackling the challenges of extraterrestrial exploration.
+        The International Rover Challenge (IRC) is a premier event bringing together students, engineers, and innovators from around the globe to push the boundaries of space exploration technology. Teams design, build, and test advanced rovers that simulate real-world planetary exploration, offering a hands-on experience in tackling the challenges of extraterrestrial exploration. The competition is a true testament to creativity, problem-solving, and teamwork, inspiring the next generation of space pioneers.
       </p>
       <div className="flex justify-center lg:justify-start gap-4">
         <a
@@ -527,7 +527,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     {/* Right Section */}
     <div className="flex flex-col justify-center text-center lg:text-left">
       <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-        HISTORY WITH <br /> IRC
+        History With <br /> IRC
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
         Explore the journey of Mars exploration, from ancient myths to modern-day missions. Learn about groundbreaking discoveries and future possibilities.
@@ -543,8 +543,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       />
     </div>
   </div>
-</div>
-
   {/* Timeline Section */}
   <div className="mt-24 bg-gray-900 py-12">
     <h2 className="text-center text-3xl lg:text-5xl font-bold mb-12">
