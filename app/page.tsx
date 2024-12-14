@@ -497,45 +497,84 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 </div>
 
 
-<div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-1 lg:grid-cols-3 gap-0">
-  
-  {/* Section 1 - International Rover Challenge (Left) */}
-  <div className="flex flex-col justify-center text-center lg:text-left">
-    <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-      International <br /> Rover <br /> Challenge
-    </h1>
-    <p className="text-gray-400 text-lg leading-relaxed mb-8">
-      The International Rover Challenge (IRC) is a premier event bringing together students, engineers, and innovators from around the globe to push the boundaries of space exploration technology. Teams design, build, and test advanced rovers that simulate real-world planetary exploration, offering a hands-on experience in tackling the challenges of extraterrestrial exploration. The competition is a true testament to creativity, problem-solving, and teamwork, inspiring the next generation of space pioneers.
-    </p>
-    <div className="flex justify-center lg:justify-start gap-4">
-      <a href="https://www.spaceroboticssociety.org/events/international-rover-challenge/"
-         className="px-6 py-3 bg-white text-black rounded-lg text-lg font-semibold hover:bg-gray-300 transition">
-        Learn More
-      </a>
-      <a href="#" className="px-6 py-3 border border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition">
-        Missions
-      </a>
+<div className="min-h-screen bg-black text-white font-sans">
+  {/* Main Container */}
+  <div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-3 gap-0 items-start">
+    
+    {/* Section 1 - International Rover Challenge */}
+    <div className="flex flex-col justify-start text-center lg:text-left">
+      <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+        International <br /> Rover <br /> Challenge
+      </h1>
+      <p className="text-gray-400 text-lg leading-relaxed mb-8">
+        The International Rover Challenge (IRC) is a premier event bringing together students, engineers, and innovators from around the globe to push the boundaries of space exploration technology. Teams design, build, and test advanced rovers that simulate real-world planetary exploration, offering a hands-on experience in tackling the challenges of extraterrestrial exploration. The competition is a true testament to creativity, problem-solving, and teamwork, inspiring the next generation of space pioneers.
+      </p>
+      <div className="flex justify-center lg:justify-start gap-4">
+        <a
+          href="https://www.spaceroboticssociety.org/events/international-rover-challenge/"
+          className="px-6 py-3 bg-white text-black rounded-lg text-lg font-semibold hover:bg-gray-300 transition"
+        >
+          Learn More
+        </a>
+        <a
+          href="#"
+          className="px-6 py-3 border border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition"
+        >
+          Missions
+        </a>
+      </div>
+    </div>
+
+    {/* Section 2 - Rover Image */}
+    <div className="flex justify-center items-start">
+      <img
+        src="irc_section.png"
+        alt="Rover"
+        className="w-80 lg:w-96"
+      />
+    </div>
+
+    {/* Section 3 - History With IRC */}
+    <div className="flex flex-col justify-start text-center lg:text-left">
+      <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+        History With <br className="lg:hidden" /> IRC
+      </h1>
+      <p className="text-gray-400 text-lg leading-relaxed mb-8">
+        Explore the journey of Mars exploration, from ancient myths to modern-day missions. Learn about groundbreaking discoveries and future possibilities.
+      </p>
     </div>
   </div>
 
-  {/* Section 2 - Rover Image (Middle) */}
-  <div className="flex justify-center items-center">
-    <img src="irc section.png" alt="Rover" className="w-full max-w-xs" />
+  {/* Timeline Section */}
+  <div className="mt-24 bg-gray-900 py-12">
+    <h2 className="text-center text-3xl lg:text-5xl font-bold mb-12">
+      History
+    </h2>
+    <div className="overflow-x-auto">
+      <div className="flex justify-center items-center space-x-12 px-6">
+        {/* Timeline Items */}
+        {[
+          { year: "2019", description: "Description." },
+          { year: "2020", description: "IRC20 - 3RD." },
+          { year: "2021", description: "Description." },
+          { year: "2023", description: "IRC23 - 7TH." },
+          { year: "2024", description: "IRC24 - 3RD." }
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center text-center max-w-xs"
+          >
+            <div className="w-12 h-12 bg-white rounded-full flex justify-center items-center text-black font-bold text-lg">
+              {item.year}
+            </div>
+            <p className="mt-4 text-gray-400 text-sm">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   </div>
-
-  {/* Section 3 - History With IRC (Right) */}
-  <div className="flex flex-col justify-center text-center lg:text-left">
-    <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-      <span className="block lg:inline">History With</span>
-      <br className="lg:hidden" />
-      <span className="block lg:inline">IRC</span>
-    </h1>
-    <p className="text-gray-400 text-lg leading-relaxed mb-8">
-      Explore the journey of Mars exploration, from ancient myths to modern-day missions. Learn about groundbreaking discoveries and future possibilities.
-    </p>
-  </div>
-
 </div>
+
 
 
      
