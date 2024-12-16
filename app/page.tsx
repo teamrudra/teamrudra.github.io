@@ -575,6 +575,47 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
+<div className="min-h-screen bg-black text-white font-sans py-16 px-6">
+  <h2 className="text-center text-4xl lg:text-5xl font-bold mb-12">
+    Our IRC Missions
+  </h2>
+  
+  {/* Container for Boxes */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {[
+      { id: 1, image: 'mission1.png', title: 'IRC Mission 1', info: 'Details about Mission 1.' },
+      { id: 2, image: 'mission2.png', title: 'IRC Mission 2', info: 'Details about Mission 2.' },
+      { id: 3, image: 'mission3.png', title: 'IRC Mission 3', info: 'Details about Mission 3.' },
+      { id: 4, image: 'mission4.png', title: 'IRC Mission 4', info: 'Details about Mission 4.' },
+      { id: 5, image: 'mission5.png', title: 'IRC Mission 5', info: 'Details about Mission 5.' },
+      { id: 6, image: 'mission6.png', title: 'IRC Mission 6', info: 'Details about Mission 6.' },
+    ].map((mission) => (
+      <div
+        key={mission.id}
+        className="relative group overflow-hidden border border-gray-700 rounded-lg cursor-pointer"
+      >
+        {/* Mission Image */}
+        <img
+          src={mission.image}
+          alt={mission.title}
+          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+
+        {/* Mission Heading */}
+        <div className="absolute inset-0 bg-black bg-opacity-70 flex justify-center items-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+          <h3 className="text-xl font-semibold">{mission.title}</h3>
+        </div>
+
+        {/* Mission Info - Shows on Hover */}
+        <div className="absolute inset-0 bg-black bg-opacity-90 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 text-center">
+          <p className="text-gray-300 text-sm">{mission.info}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
 
 
      
