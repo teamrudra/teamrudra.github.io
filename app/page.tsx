@@ -581,7 +581,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </h2>
   
   {/* Container for Boxes */}
-  <div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-y-8 gap-x-6">
+  <div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-y-8 gap-x-4">
     {[
       { id: 1, image: 'mission1.png', title: 'IRC Mission 1', info: 'Details about Mission 1.' },
       { id: 2, image: 'mission2.png', title: 'IRC Mission 2', info: 'Details about Mission 2.' },
@@ -592,7 +592,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     ].map((mission) => (
       <div
         key={mission.id}
-        className="relative group overflow-hidden border border-gray-700 rounded-lg cursor-pointer mx-auto w-[320px] h-[400px]"
+        className="relative group overflow-hidden border border-gray-700 rounded-lg cursor-pointer mx-auto w-[280px] h-[400px]"
       >
         {/* Mission Image */}
         <img
@@ -614,7 +614,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     ))}
   </div>
 </div>
-
 
 
 
