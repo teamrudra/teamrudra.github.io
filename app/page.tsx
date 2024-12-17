@@ -592,7 +592,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     ].map((mission) => (
       <div
         key={mission.id}
-        className="relative group overflow-hidden border border-gray-700 rounded-lg cursor-pointer mx-auto w-[280px] h-[400px]"
+        className="relative group overflow-hidden border border-gray-700 rounded-lg cursor-pointer mx-auto w-[400px] h-[400px]"
       >
         {/* Mission Image */}
         <img
@@ -614,7 +614,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     ))}
   </div>
 </div>
-
 
 
      
