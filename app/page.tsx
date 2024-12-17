@@ -583,9 +583,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   {/* Container for Boxes */}
   <div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-y-8 gap-x-4">
     {[
-      { id: 1, image: '1.png', title: 'IRC Mission 1', info: '- Stage 1: Instrument Deployment – The rover moves to the instrument panel.
-- Equipped with advanced tools for precision tasks.
-- Tasks: Open drawers, flip switches, and operate joysticks.' },
+      { id: 1, image: '1.png', title: 'Mission 1 : Instrument Deployment And Maintainance Operation', info: 'Details about Mission 1.' },
       { id: 2, image: 'mission2.png', title: 'IRC Mission 2', info: 'Details about Mission 2.' },
       { id: 3, image: 'mission3.png', title: 'IRC Mission 3', info: 'Details about Mission 3.' },
       { id: 4, image: 'mission4.png', title: 'IRC Mission 4', info: 'Details about Mission 4.' },
