@@ -51,12 +51,12 @@ const Home = () => {
     { src: './wheeleez.png', alt: 'Wheeleez', url: 'https://www.wheeleez.com' },
     { src: './nvidia.png', alt: 'Nvidia', url: 'https://www.nvidia.com' },
     { src: './altium.png', alt: 'Altium', url: 'https://www.altium.com' },
-    { src: './vartech.png', alt: 'Var Tech', url: 'https://www.vartech.com' },
+    { src: './vartech.png', alt: 'Var Tech', url: 'https://var-tech.com/' },
     { src: './protocase2.png', alt: 'Protocase', url: 'https://www.protocase.com' },
     { src: './mathworks-logo-full-color-rgb-reversed.png', alt: 'Mathworks', url: 'https://www.mathworks.com' },
-    { src: './danyalgems.png', alt: 'Danyal Gems', url: 'https://www.danyalgems.com' },
-    { src: './hearingon.png', alt: 'HearingOn', url: 'https://www.hearingon.com' },
-    { src: './pma spares.png', alt: 'PMA Spares', url: 'https://www.pmaspares.com' },
+    { src: './danyalgems.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' },
+    { src: './hearingon.png', alt: 'HearingOn', url: 'https://www.baranagarspeechandhearing.com/' },
+    { src: './pma spares.png', alt: 'PMA Spares', url: 'https://g.co/kgs/HDRrzX4' },
 ];
 
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
