@@ -45,19 +45,20 @@ const Home = () => {
     );
   };
 
-  const sponsorshipImages = [
-    { src: './sukrit-infotech.png', alt: 'Sukrit Infotech' },
-    { src: './solidworks.png', alt: 'Solidworks' },
-    { src: './wheeleez.png', alt: 'Wheeleez' },
-    { src: './nvidia.png', alt: 'Nvidia' },
-    { src: './altium.png', alt: 'Altium' },
-    { src: './vartech.png', alt: 'Var Tech' },
-    { src: './protocase2.png', alt: 'Protocase' },
-    { src: './mathworks-logo-full-color-rgb-reversed.png' , alt: 'Mathworks' },
-      { src: './danyalgems.png' , alt: 'Danyal Gems' },
-     { src: './hearingon.png' , alt: 'HearingOn' },
-    { src: './pma spares.png' , alt: 'pmaspares' },
-    ];
+ const sponsorshipImages = [
+    { src: './sukrit-infotech.png', alt: 'Sukrit Infotech', url: 'https://www.sukritinfotech.com' },
+    { src: './solidworks.png', alt: 'Solidworks', url: 'https://www.solidworks.com' },
+    { src: './wheeleez.png', alt: 'Wheeleez', url: 'https://www.wheeleez.com' },
+    { src: './nvidia.png', alt: 'Nvidia', url: 'https://www.nvidia.com' },
+    { src: './altium.png', alt: 'Altium', url: 'https://www.altium.com' },
+    { src: './vartech.png', alt: 'Var Tech', url: 'https://www.vartech.com' },
+    { src: './protocase2.png', alt: 'Protocase', url: 'https://www.protocase.com' },
+    { src: './mathworks-logo-full-color-rgb-reversed.png', alt: 'Mathworks', url: 'https://www.mathworks.com' },
+    { src: './danyalgems.png', alt: 'Danyal Gems', url: 'https://www.danyalgems.com' },
+    { src: './hearingon.png', alt: 'HearingOn', url: 'https://www.hearingon.com' },
+    { src: './pma spares.png', alt: 'PMA Spares', url: 'https://www.pmaspares.com' },
+];
+
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
   
@@ -475,22 +476,23 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 </div>
 
 
+      {/*sponsorship section */}
 
-
-{/* Sponsorship Section */}
 <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-4 mt-[-16px]" id="sponsors">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mb-12 sm:mb-16 z-20">Our Sponsors</h2>
   <div className="flex flex-wrap items-center justify-center z-10">
     {sponsorshipImages.map((sponsor, index) => (
       <div key={index} className="p-4 sm:p-6">
-        <img
-          src={sponsor.src}
-          alt={sponsor.alt}
-          width={200}
-          height={200}
-          className="w-48 h-auto object-contain"
-        />
+        <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+          <img
+            src={sponsor.src}
+            alt={sponsor.alt}
+            width={200}
+            height={200}
+            className="w-48 h-auto object-contain"
+          />
+        </a>
       </div>
     ))}
   </div>
