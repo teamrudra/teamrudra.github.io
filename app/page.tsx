@@ -542,8 +542,8 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         <br className="lg:hidden" />
         <span className="block lg:inline">IRC</span>
       </h1>
-      <p className="text-gray-400 text-Team RUDRA, the official rover team from SRMIST, is a veteran competitor at IRC-25, recognized for its legacy of innovation and technical excellence. With a strong track record in advancing rover design and mission execution, RUDRA upholds the core values of SPROS—driving global space technology development and inspiring future space professionals. leading-relaxed mb-8">
-       
+      <p className="text-gray-400 text-lg leading-relaxed mb-8">
+        Team RUDRA, the official rover team from SRMIST, is a veteran competitor at IRC-25, recognized for its legacy of innovation and technical excellence. With a strong track record in advancing rover design and mission execution, RUDRA upholds the core values of SPROS—driving global space technology development and inspiring future space professionals.
       </p>
     </div>
   </div>
@@ -581,6 +581,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
+
 
 
 <div className="min-h-screen bg-black text-white font-sans py-16 px-6">
