@@ -498,18 +498,17 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
-
 <div className="min-h-screen bg-black text-white font-sans">
   {/* Main Container */}
-  <div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-3 gap-0 items-start">
+  <div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-3 gap-0">
     
     {/* Section 1 - International Rover Challenge */}
-    <div className="flex flex-col justify-start text-center lg:text-left">
+    <div className="flex flex-col justify-center text-center lg:text-left">
       <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
         International <br /> Rover <br /> Challenge
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
-        SPROS's flagship event ,the International Rover Challenge (IRC) is a premier event bringing together students, engineers, and innovators from around the globe to push the boundaries of space exploration technology. Teams design, build, and test advanced rovers that simulate real-world planetary exploration, offering a hands-on experience in tackling the challenges of extraterrestrial exploration. The competition is a true testament to creativity, problem-solving, and teamwork, inspiring the next generation of space pioneers.
+        The International Rover Challenge (IRC) is a premier event bringing together students, engineers, and innovators from around the globe to push the boundaries of space exploration technology. Teams design, build, and test advanced rovers that simulate real-world planetary exploration, offering a hands-on experience in tackling the challenges of extraterrestrial exploration. The competition is a true testament to creativity, problem-solving, and teamwork, inspiring the next generation of space pioneers.
       </p>
       <div className="flex justify-center lg:justify-start gap-4">
         <a
@@ -528,21 +527,23 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
 
     {/* Section 2 - Rover Image */}
-    <div className="flex justify-center items-start">
+    <div className="flex justify-center items-center">
       <img
         src="irc section.png"
         alt="Rover"
-        className="w-80 lg:w-96"
+        className="w-full max-w-xs"
       />
     </div>
 
     {/* Section 3 - History With IRC */}
-    <div className="flex flex-col justify-start text-center lg:text-left">
+    <div className="flex flex-col justify-center text-center lg:text-left">
       <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-        History  With <br/> IRC
+        <span className="block lg:inline">History With</span>
+        <br className="lg:hidden" />
+        <span className="block lg:inline">IRC</span>
       </h1>
-      <p className="text-gray-400 text-lg leading-relaxed mb-8">
-       <br/>Team RUDRA, the official rover team from SRMIST, is a veteran competitor at IRC-25, recognized for its legacy of innovation and technical excellence. With a strong track record in advancing rover design and mission execution, RUDRA upholds the core values of SPROS—driving global space technology development and inspiring future space professionals.
+      <p className="text-gray-400 text-Team RUDRA, the official rover team from SRMIST, is a veteran competitor at IRC-25, recognized for its legacy of innovation and technical excellence. With a strong track record in advancing rover design and mission execution, RUDRA upholds the core values of SPROS—driving global space technology development and inspiring future space professionals. leading-relaxed mb-8">
+       
       </p>
     </div>
   </div>
@@ -550,18 +551,22 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   {/* Timeline Section */}
   <div className="mt-24 bg-gray-900 py-12">
     <h2 className="text-center text-3xl lg:text-5xl font-bold mb-12">
-      Achievements
+      History
     </h2>
     <div className="overflow-x-auto">
       <div className="flex justify-center items-center space-x-12 px-6">
         {/* Timeline Items */}
-        {[
-          { year: "2019", description: "Description." },
-          { year: "2020", description: "IRC20 - 3RD." },
-          { year: "2021", description: "Description." },
-          { year: "2023", description: "IRC23 - 7TH." },
-          { year: "2024", description: "IRC24 - 3RD." }
-        ].map((item, index) => (
+        {[{
+          year: "2019", description: "Description."
+        }, {
+          year: "2020", description: "IRC20 - 3RD."
+        }, {
+          year: "2021", description: "Description."
+        }, {
+          year: "2023", description: "IRC23 - 7TH."
+        }, {
+          year: "2024", description: "IRC24 - 3RD."
+        }].map((item, index) => (
           <div
             key={index}
             className="flex flex-col items-center text-center max-w-xs"
@@ -576,6 +581,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
+
 
 <div className="min-h-screen bg-black text-white font-sans py-16 px-6">
   <h2 className="text-center text-4xl lg:text-5xl font-bold mb-12">
