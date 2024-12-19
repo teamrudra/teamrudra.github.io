@@ -500,9 +500,8 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
 <div className="min-h-screen bg-black text-white font-sans">
   {/* Main Container */}
-  <div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-3 gap-0">
-    
-    {/* Section 1 - International Rover Challenge */}
+  <div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-1 lg:grid-cols-2 gap-16 relative">
+    {/* Left Section */}
     <div className="flex flex-col justify-center text-center lg:text-left">
       <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
         International <br /> Rover <br /> Challenge
@@ -526,28 +525,25 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       </div>
     </div>
 
-    {/* Section 2 - Rover Image */}
-    <div className="flex justify-center items-center">
+    {/* Right Section */}
+    <div className="flex flex-col justify-center text-center lg:text-left">
+      <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+        History With <br /> IRC
+      </h1>
+      <p className="text-gray-400 text-lg leading-relaxed mb-8">
+        Explore the journey of Mars exploration, from ancient myths to modern-day missions. Learn about groundbreaking discoveries and future possibilities.
+      </p>
+    </div>
+
+    {/* Central Rover Image */}
+    <div className="absolute inset-x-0 top-1/3 flex justify-center z-10">
       <img
         src="irc section.png"
         alt="Rover"
-        className="w-full max-w-xs"
+        className="w-2/3 max-w-lg lg:w-1/2"
       />
     </div>
-
-    {/* Section 3 - History With IRC */}
-    <div className="flex flex-col justify-center text-center lg:text-left">
-      <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-        <span className="block lg:inline">History With</span>
-        <br className="lg:hidden" />
-        <span className="block lg:inline">IRC</span>
-      </h1>
-      <p className="text-gray-400 text-lg leading-relaxed mb-8">
-        Team RUDRA, the official rover team from SRMIST, is a veteran competitor at IRC-25, recognized for its legacy of innovation and technical excellence. With a strong track record in advancing rover design and mission execution, RUDRA upholds the core values of SPROS—driving global space technology development and inspiring future space professionals.
-      </p>
-    </div>
   </div>
-
   {/* Timeline Section */}
   <div className="mt-24 bg-gray-900 py-12">
     <h2 className="text-center text-3xl lg:text-5xl font-bold mb-12">
@@ -557,7 +553,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       <div className="flex justify-center items-center space-x-12 px-6">
         {/* Timeline Items */}
         {[{
-          year: "2019", description: "Description."
+          year: "2019", description: "Description ."
         }, {
           year: "2020", description: "IRC20 - 3RD."
         }, {
