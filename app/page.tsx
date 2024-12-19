@@ -509,7 +509,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         International <br /> Rover <br /> Challenge
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
-        The International Rover Challenge (IRC) is a premier event bringing together students, engineers, and innovators from around the globe to push the boundaries of space exploration technology. Teams design, build, and test advanced rovers that simulate real-world planetary exploration, offering a hands-on experience in tackling the challenges of extraterrestrial exploration. The competition is a true testament to creativity, problem-solving, and teamwork, inspiring the next generation of space pioneers.
+        SPROS's flagship event ,the International Rover Challenge (IRC) is a premier event bringing together students, engineers, and innovators from around the globe to push the boundaries of space exploration technology. Teams design, build, and test advanced rovers that simulate real-world planetary exploration, offering a hands-on experience in tackling the challenges of extraterrestrial exploration. The competition is a true testament to creativity, problem-solving, and teamwork, inspiring the next generation of space pioneers.
       </p>
       <div className="flex justify-center lg:justify-start gap-4">
         <a
@@ -542,7 +542,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         History  With <br/> IRC
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
-       <br/><br/>Our journey with the International Rover Challenge (IRC) has been remarkable, showcasing our passion for innovation and robotics. From designing advanced rovers to overcoming real-world challenges, we’ve continuously pushed boundaries, learning, evolving, and excelling alongside global teams, strengthening our commitment to space exploration and engineering excellence.
+       <br/><br/>Team RUDRA, the official rover team from SRMIST, is a veteran competitor at IRC-25, recognized for its legacy of innovation and technical excellence. With a strong track record in advancing rover design and mission execution, RUDRA upholds the core values of SPROS—driving global space technology development and inspiring future space professionals.
       </p>
     </div>
   </div>
