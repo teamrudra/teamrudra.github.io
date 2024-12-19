@@ -542,7 +542,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         History  With <br/> IRC
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
-       <br/><br/>Team RUDRA, the official rover team from SRMIST, is a veteran competitor at IRC-25, recognized for its legacy of innovation and technical excellence. With a strong track record in advancing rover design and mission execution, RUDRA upholds the core values of SPROS—driving global space technology development and inspiring future space professionals.
+       <br/>Team RUDRA, the official rover team from SRMIST, is a veteran competitor at IRC-25, recognized for its legacy of innovation and technical excellence. With a strong track record in advancing rover design and mission execution, RUDRA upholds the core values of SPROS—driving global space technology development and inspiring future space professionals.
       </p>
     </div>
   </div>
