@@ -498,8 +498,13 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
-<div className="min-h-screen bg-black text-white font-sans">
-  <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
+<div className="min-h-screen bg-black text-white font-sans relative">
+   <SparklesCore
+    className="absolute inset-0 z-0"
+    particleColor="#f0f0f0"
+    particleDensity={30}
+  />
+ 
   {/* Main Container */}
   <div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-3 gap-0">
     
@@ -550,7 +555,12 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 
   {/* Timeline Section */}
-  <div className="mt-24 bg-gray-900 py-12">
+  <div className="mt-24 bg-gray-900 py-12 relative">
+    <SparklesCore
+        className="absolute inset-0 z-0"
+        particleColor="#ffffff"
+        particleDensity={40}
+      />
     <h2 className="text-center text-3xl lg:text-5xl font-bold mb-12"> 
       
     </h2>
@@ -739,7 +749,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
 
     {/* Contact Us Section */}
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative " id="contact">
+    <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16  " id="contact">
      <SparklesCore className="absolute   inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-white text-6xl mb-12 font-serif">Contact Us</h2>
   <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8">
