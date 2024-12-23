@@ -678,8 +678,20 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
         {/* Mission Info - Shows on Hover */}
         <div className="absolute inset-0 bg-black bg-opacity-90 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 text-center">
-          {Array.isArray(missio
-
+          {Array.isArray(mission.info) ? (
+            mission.info.map((paragraph, index) => (
+              <p key={index} className="text-gray-300 text-sm mb-2">
+                {paragraph}
+              </p>
+            ))
+          ) : (
+            <p className="text-gray-300 text-sm">{mission.info}</p>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
 
 
 
