@@ -588,7 +588,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 </div>
 
 
-<div className="min-h-screen bg-black text-white font-sans py-16 px-6 relative">
+<div className="min-h-screen bg-black text-white font-sans py-16 px-6 ">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
   <h2 className="text-center text-4xl lg:text-5xl font-bold mb-12">
     Our IRC Missions
