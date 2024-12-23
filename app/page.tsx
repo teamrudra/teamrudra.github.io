@@ -584,13 +584,13 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </h2>
 
   {/* Container for Boxes */}
-  <div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-y-8 gap-x-6">
+  <div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-y-8 gap-x-2">
     {[
       {
         id: 1,
-        image: 'mission1.png',
+        image: '1.png',
         title: 'Mission 1',
-        subtitle: 'Instrument Deployment and Maintenance Operation',
+        subtitle: 'Instrument Deployment And Maintenance Operation',
         info: [
           'Deploy instruments for planetary simulation.',
           'Perform on-site system repairs.',
@@ -601,31 +601,23 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         id: 2,
         image: 'mission2.png',
         title: 'Mission 2',
-        subtitle: 'Navigation and Communication Testing',
-        info: [
-          'Develop navigation algorithms.',
-          'Analyze mission data for optimization.',
-          'Test communication stability in remote conditions.',
-        ],
+        subtitle: 'Navigation Testing and Optimization',
+        info: ['Develop advanced algorithms for efficient navigation.', 'Optimize systems for performance in real-time.'],
       },
       {
         id: 3,
         image: 'mission3.png',
         title: 'Mission 3',
-        subtitle: 'Environmental Surveys and Sample Collection',
-        info: [
-          'Conduct environmental surveys.',
-          'Collect soil samples for analysis.',
-          'Deploy weather sensors.',
-        ],
+        subtitle: 'Environmental Analysis',
+        info: ['Analyze planetary samples for environmental insights.'],
       },
-      { id: 4, image: 'mission4.png', title: 'Mission 4', subtitle: 'Details about Mission 4', info: ['Details about Mission 4.'] },
-      { id: 5, image: 'mission5.png', title: 'Mission 5', subtitle: 'Details about Mission 5', info: ['Details about Mission 5.'] },
-      { id: 6, image: 'mission6.png', title: 'Mission 6', subtitle: 'Details about Mission 6', info: ['Details about Mission 6.'] },
+      { id: 4, image: 'mission4.png', title: 'Mission 4', subtitle: 'Communication Tests', info: ['Details about Mission 4.'] },
+      { id: 5, image: 'mission5.png', title: 'Mission 5', subtitle: 'Energy Optimization', info: ['Details about Mission 5.'] },
+      { id: 6, image: 'mission6.png', title: 'Mission 6', subtitle: 'Resource Management', info: ['Details about Mission 6.'] },
     ].map((mission) => (
       <div
         key={mission.id}
-        className="relative group overflow-hidden border border-gray-700 rounded-lg cursor-pointer mx-auto w-[320px] h-[400px]"
+        className="relative group overflow-hidden border border-gray-700 rounded-lg cursor-pointer mx-auto w-[500px] h-[400px]"
       >
         {/* Mission Image */}
         <img
@@ -636,20 +628,21 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
         {/* Mission Heading */}
         <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-100 group-hover:opacity-0 transition-opacity duration-300 text-center px-2">
-          <h3 className="text-xl font-bold mb-2">
-            <span>{mission.title}</span>
-            <br />
-            <span className="font-normal">{mission.subtitle}</span>
-          </h3>
+          <h3 className="text-xl font-bold mb-1">{mission.title}</h3>
+          {mission.subtitle && <p className="text-sm font-normal">{mission.subtitle}</p>}
         </div>
 
         {/* Mission Info - Shows on Hover */}
         <div className="absolute inset-0 bg-black bg-opacity-90 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 text-center">
-          {mission.info.map((detail, index) => (
-            <p key={index} className="text-gray-300 text-sm mb-2">
-              {detail}
-            </p>
-          ))}
+          {Array.isArray(mission.info) ? (
+            mission.info.map((paragraph, index) => (
+              <p key={index} className="text-gray-300 text-sm mb-2">
+                {paragraph}
+              </p>
+            ))
+          ) : (
+            <p className="text-gray-300 text-sm">{mission.info}</p>
+          )}
         </div>
       </div>
     ))}
