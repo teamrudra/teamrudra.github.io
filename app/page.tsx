@@ -498,12 +498,8 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
-<div className="min-h-screen bg-black text-white font-sans relative">
-   <SparklesCore
-    className="absolute inset-0 z-0"
-    particleColor="#f0f0f0"
-    particleDensity={30}
-  />
+<div className="min-h-screen bg-black text-white font-sans ">
+  
  
   {/* Main Container */}
   <div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-3 gap-0">
@@ -555,12 +551,8 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 
   {/* Timeline Section */}
-  <div className="mt-24 bg-gray-900 py-12 relative">
-    <SparklesCore
-        className="absolute inset-0 z-0"
-        particleColor="#ffffff"
-        particleDensity={40}
-      />
+  <div className="mt-24 bg-gray-900 py-12 ">
+    
     <h2 className="text-center text-3xl lg:text-5xl font-bold mb-12"> 
       
     </h2>
@@ -588,7 +580,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 </div>
 
 
-<div className="min-h-screen bg-black text-white font-sans py-16 px-6 ">
+<div className="min-h-screen bg-black text-white font-sans py-16 px-6 relative">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
   <h2 className="text-center text-4xl lg:text-5xl font-bold mb-12">
     Our IRC Missions
