@@ -586,16 +586,16 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   {/* Container for Boxes */}
   <div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-y-8 gap-x-4">
     {[
-      { id: 1, image: '1.png', title: 'Mission 1 <br/> Instrument Deployment And Maintainance Operation', info: [
+      { id: 1, image: '1.png', title: 'Mission 1' ,  subtitle: 'Instrument Deployment And Maintainance Operation', info: [
           'Deploy instruments for planetary simulation.',
           'Perform on-site system repairs.',
           'Test rover durability in rugged terrain.',
         ], },
-      { id: 2, image: 'mission2.png', title: 'IRC Mission 2', info: 'Details about Mission 2.' },
-      { id: 3, image: 'mission3.png', title: 'IRC Mission 3', info: 'Details about Mission 3.' },
-      { id: 4, image: 'mission4.png', title: 'IRC Mission 4', info: 'Details about Mission 4.' },
-      { id: 5, image: 'mission5.png', title: 'IRC Mission 5', info: 'Details about Mission 5.' },
-      { id: 6, image: 'mission6.png', title: 'IRC Mission 6', info: 'Details about Mission 6.' },
+      { id: 2, image: 'mission2.png', title: 'Mission 2', info: 'Details about Mission 2.' },
+      { id: 3, image: 'mission3.png', title: 'Mission 3', info: 'Details about Mission 3.' },
+      { id: 4, image: 'mission4.png', title: 'Mission 4', info: 'Details about Mission 4.' },
+      { id: 5, image: 'mission5.png', title: 'Mission 5', info: 'Details about Mission 5.' },
+      { id: 6, image: 'mission6.png', title: 'Mission 6', info: 'Details about Mission 6.' },
     ].map((mission) => (
       <div
         key={mission.id}
