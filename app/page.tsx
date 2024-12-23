@@ -577,7 +577,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 </div>
 
 
-
 <div className="min-h-screen bg-black text-white font-sans py-16 px-6">
   <h2 className="text-center text-4xl lg:text-5xl font-bold mb-12">
     Our IRC Missions
@@ -590,10 +589,11 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         id: 1,
         image: '1.png',
         title: 'Mission 1',
-        subtitle: 'Instrument Deployment And Maintenance Operation',
+        subtitle: 'Instrument Deployment And Maintenance Operation (IDMO)',
         info: [
           'The Mission has two stages: Instrument Deployment and Instrument Maintenance.',
-          '⁠In the Instrument Deployment stage, the rover moves to a simulated instrument panel to perform tasks.Equipped with advanced tools, the rover executes precise operations on the panel.',
+          'In the Instrument Deployment stage, the rover moves to a simulated instrument panel to perform tasks.',
+          'Equipped with advanced tools, the rover executes precise operations on the panel.',
           'Tasks include opening drawers, flipping switches, operating a joystick, and more.',
         ],
       },
@@ -601,29 +601,63 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         id: 2,
         image: 'mission2.png',
         title: 'Mission 2',
-        subtitle: 'Project Implementation And Management Assessment',
-        info: ['The PIMA evaluates the rover's design and project success.', 
-              'Teams present the rover's development stages.' , 
-    'It tests team persistence and problem-solving.',
-    'The presentation covers project planning, manufacturing, and testing stages.'],
+        subtitle: 'Project Implementation & Management Assessment (PIMA)',
+        info: [
+          'The PIMA evaluates the rover\'s design and project success.',
+          'Teams present the rover\'s development stages.',
+          'It tests team persistence and problem-solving.',
+          'The presentation covers project planning, manufacturing, and testing stages.',
+        ],
       },
       {
         id: 3,
-        image: '2.png',
+        image: 'mission3.png',
         title: 'Mission 3',
         subtitle: 'Astrobiology Expedition',
         info: [
-    'The task requires the rover to be capable of the following:',
-    '⁠To function as a mobile science laboratory',
-    'To retrieve samples and conduct detailed analyses',
-    'To examine test samples for indicators of life',
-    '⁠To identify and characterize sites based on their potential to support microbial life',
-    'To actively seek signs of extinct or extant life within those designated sites',
-    ],
+          'To function as a mobile science laboratory.',
+          'To retrieve samples and conduct detailed analyses.',
+          'To examine test samples for indicators of life.',
+          'To identify and characterize sites based on their potential to support microbial life.',
+          'To actively seek signs of extinct or extant life within those designated sites.',
+        ],
       },
-      { id: 4, image: '45.png', title: 'Mission 4', subtitle: 'Business Plan Presentation', info: ['Details about Mission 4.'] },
-      { id: 5, image: '4.png', title: 'Mission 5', subtitle: 'Reconaissance And Delivery', info: ['Details about Mission 5.'] },
-      { id: 6, image: '5.png', title: 'Mission 6', subtitle: 'Autonomous Expedition', info: ['Details about Mission 6.'] },
+      {
+        id: 4,
+        image: 'mission4.png',
+        title: 'Mission 4',
+        subtitle: 'Business Plan Presentation',
+        info: [
+          'This task evaluates the team\'s business mindset.',
+          'It encourages forming alliances with corporate and academic communities.',
+          'The goal is to boost project development and advance the rover.',
+          'It helps spread awareness about the potential real-life applications of rovers.',
+        ],
+      },
+      {
+        id: 5,
+        image: 'mission5.png',
+        title: 'Mission 5',
+        subtitle: 'Reconnaissance & Delivery Mission',
+        info: [
+          'The rover is equipped with state-of-the-art sensors and advanced imaging technologies.',
+          'It surveys the area, analyzing topography, geology, and points of interest.',
+          'The rover is expected to deliver collected objects to the base station upon completion of the mission.',
+          'A robotic arm and storage box ensure efficient task execution.',
+        ],
+      },
+      {
+        id: 6,
+        image: 'mission6.png',
+        title: 'Mission 6',
+        subtitle: 'Autonomous Expedition',
+        info: [
+          'The rover navigates autonomously using arrow markers on challenging terrain.',
+          'Remote operation is not permitted during the execution of this mission.',
+          'It follows arrowheads to reach the endpoint.',
+          'The rover logs each arrow\'s GPS coordinates and corresponding directions.',
+        ],
+      },
     ].map((mission) => (
       <div
         key={mission.id}
@@ -644,20 +678,8 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
         {/* Mission Info - Shows on Hover */}
         <div className="absolute inset-0 bg-black bg-opacity-90 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 text-center">
-          {Array.isArray(mission.info) ? (
-            mission.info.map((paragraph, index) => (
-              <p key={index} className="text-gray-300 text-sm mb-2">
-                {paragraph}
-              </p>
-            ))
-          ) : (
-            <p className="text-gray-300 text-sm">{mission.info}</p>
-          )}
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
+          {Array.isArray(missio
+
 
 
 
