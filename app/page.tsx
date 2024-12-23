@@ -601,19 +601,19 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         id: 2,
         image: 'mission2.png',
         title: 'Mission 2',
-        subtitle: 'Navigation Testing and Optimization',
+        subtitle: 'Project Implementation And Management Assessment',
         info: ['Develop advanced algorithms for efficient navigation.', 'Optimize systems for performance in real-time.'],
       },
       {
         id: 3,
-        image: 'mission3.png',
+        image: '2.png',
         title: 'Mission 3',
-        subtitle: 'Environmental Analysis',
+        subtitle: 'Astrobiology Expedition',
         info: ['Analyze planetary samples for environmental insights.'],
       },
-      { id: 4, image: 'mission4.png', title: 'Mission 4', subtitle: 'Communication Tests', info: ['Details about Mission 4.'] },
-      { id: 5, image: 'mission5.png', title: 'Mission 5', subtitle: 'Energy Optimization', info: ['Details about Mission 5.'] },
-      { id: 6, image: 'mission6.png', title: 'Mission 6', subtitle: 'Resource Management', info: ['Details about Mission 6.'] },
+      { id: 4, image: '45.png', title: 'Mission 4', subtitle: 'Business Plan Presentation', info: ['Details about Mission 4.'] },
+      { id: 5, image: '4.png', title: 'Mission 5', subtitle: 'Reconaissance And Delivery', info: ['Details about Mission 5.'] },
+      { id: 6, image: '5.png', title: 'Mission 6', subtitle: 'Autonomous Expedition', info: ['Details about Mission 6.'] },
     ].map((mission) => (
       <div
         key={mission.id}
