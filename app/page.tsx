@@ -578,7 +578,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 </div>
 
 
-<div className="min-h-screen bg-black text-white font-sans py-16 px-6">
+<div className="min-h-screen bg-black text-white font-sans py-16 px-6 relative">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
   <h2 className="text-center text-4xl lg:text-5xl font-bold mb-12">
     Our IRC Missions
@@ -739,7 +739,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
 
     {/* Contact Us Section */}
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 " id="contact">
+    <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative " id="contact">
      <SparklesCore className="absolute   inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-white text-6xl mb-12 font-serif">Contact Us</h2>
   <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8">
