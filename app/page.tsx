@@ -540,7 +540,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
         <span className="block lg:inline">History With</span>
         <br className="lg:hidden" />
-        <span className="block lg:inline">IRC</span>
+        <span className="block lg:inline"> IRC</span>
       </h1>
       <p className="text-gray-400 text-lg leading-relaxed mb-8">
       Team RUDRA, the official rover team from SRMIST, is a veteran competitor at IRC-25, recognized for its legacy of innovation and technical excellence. With a strong track record in advancing rover design and mission execution, RUDRA upholds the core values of SPROS—driving global space technology development and inspiring future space professionals.
@@ -550,7 +550,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
   {/* Timeline Section */}
   <div className="mt-24 bg-gray-900 py-12">
-    <h2 className="text-center text-3xl lg:text-5xl font-bold mb-12">
+    <h2 className="text-center text-3xl lg:text-5xl font-bold mb-12"> IRC Achievements 
       
     </h2>
     <div className="overflow-x-auto">
@@ -592,9 +592,9 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         title: 'Mission 1',
         subtitle: 'Instrument Deployment And Maintenance Operation',
         info: [
-          'Deploy instruments for planetary simulation.',
-          'Perform on-site system repairs.',
-          'Test rover durability in rugged terrain.',
+          'The Mission has two stages: Instrument Deployment and Instrument Maintenance.',
+          '⁠In the Instrument Deployment stage, the rover moves to a simulated instrument panel to perform tasks.Equipped with advanced tools, the rover executes precise operations on the panel.',
+          'Tasks include opening drawers, flipping switches, operating a joystick, and more.',
         ],
       },
       {
@@ -602,14 +602,24 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         image: 'mission2.png',
         title: 'Mission 2',
         subtitle: 'Project Implementation And Management Assessment',
-        info: ['Develop advanced algorithms for efficient navigation.', 'Optimize systems for performance in real-time.'],
+        info: ['The PIMA evaluates the rover's design and project success.', 
+              'Teams present the rover's development stages.' , 
+    'It tests team persistence and problem-solving.',
+    'The presentation covers project planning, manufacturing, and testing stages.'],
       },
       {
         id: 3,
         image: '2.png',
         title: 'Mission 3',
         subtitle: 'Astrobiology Expedition',
-        info: ['Analyze planetary samples for environmental insights.'],
+        info: [
+    'The task requires the rover to be capable of the following:',
+    '⁠To function as a mobile science laboratory',
+    'To retrieve samples and conduct detailed analyses',
+    'To examine test samples for indicators of life',
+    '⁠To identify and characterize sites based on their potential to support microbial life',
+    'To actively seek signs of extinct or extant life within those designated sites',
+    ],
       },
       { id: 4, image: '45.png', title: 'Mission 4', subtitle: 'Business Plan Presentation', info: ['Details about Mission 4.'] },
       { id: 5, image: '4.png', title: 'Mission 5', subtitle: 'Reconaissance And Delivery', info: ['Details about Mission 5.'] },
