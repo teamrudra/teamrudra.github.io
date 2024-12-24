@@ -569,15 +569,10 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
 
     {/* Timeline Section */}
-    <div className="mt-24 bg-gray-900 py-12 relative">
-      {/* Sparkles for Timeline Section */}
-      <SparklesCore
-        className="absolute inset-0 z-0"
-        particleColor="#ffffff"
-        particleDensity={40}
-      />
+    <div className="mt-24 bg-gray-900 py-12 ">
+     
       <h2 className="text-center text-3xl lg:text-5xl font-bold mb-12 relative z-10">
-        Achievements Over the Years
+        
       </h2>
       <div className="overflow-x-auto relative z-10">
         <div className="flex justify-center items-center space-x-12 px-6">
