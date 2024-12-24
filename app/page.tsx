@@ -602,7 +602,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       },
       {
         id: 2,
-        image: '8.png',
+        image: 'mission2.png',
         title: 'Mission 2',
         subtitle: 'Project Implementation & Management Assessment (PIMA)',
         info: [
