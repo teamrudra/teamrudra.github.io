@@ -602,7 +602,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       },
       {
         id: 2,
-        image: 'mission2.png',
+        image: '8.png',
         title: 'Mission 2',
         subtitle: 'Project Implementation & Management Assessment (PIMA)',
         info: [
@@ -614,7 +614,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       },
       {
         id: 3,
-        image: 'mission3.png',
+        image: '2.png',
         title: 'Mission 3',
         subtitle: 'Astrobiology Expedition',
         info: [
@@ -627,7 +627,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       },
       {
         id: 4,
-        image: 'mission4.png',
+        image: '3.png',
         title: 'Mission 4',
         subtitle: 'Business Plan Presentation',
         info: [
@@ -639,7 +639,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       },
       {
         id: 5,
-        image: 'mission5.png',
+        image: 'z.png',
         title: 'Mission 5',
         subtitle: 'Reconnaissance & Delivery Mission',
         info: [
