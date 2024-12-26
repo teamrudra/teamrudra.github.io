@@ -509,13 +509,13 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   {/* Main Content */}
   <div className="relative z-10">
     {/* Main Container */}
-    <div className="container mx-auto px-6 lg:px-20 py-16 grid grid-cols-3 gap-0">
+    <div className="container mx-auto px-6 lg:px-20 py-16 grid sm:grid-cols-1 lg:grid-cols-3 gap-6">
       {/* Section 1 - International Rover Challenge */}
       <div className="flex flex-col justify-center text-center lg:text-left">
-        <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-6">
           International <br /> Rover <br /> Challenge
         </h1>
-        <p className="text-gray-400 text-lg leading-relaxed mb-8">
+        <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8">
           The International Rover Challenge (IRC) is a premier event bringing
           together students, engineers, and innovators from around the globe to
           push the boundaries of space exploration technology. Teams design,
@@ -528,13 +528,13 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         <div className="flex justify-center lg:justify-start gap-4">
           <a
             href="https://www.spaceroboticssociety.org/events/international-rover-challenge/"
-            className="px-6 py-3 bg-white text-black rounded-lg text-lg font-semibold hover:bg-gray-300 transition"
+            className="px-4 py-2 sm:px-6 sm:py-3 bg-white text-black rounded-lg text-sm sm:text-lg font-semibold hover:bg-gray-300 transition"
           >
             Learn More
           </a>
           <a
             href="#"
-            className="px-6 py-3 border border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition"
+            className="px-4 py-2 sm:px-6 sm:py-3 border border-white text-white rounded-lg text-sm sm:text-lg font-semibold hover:bg-white hover:text-black transition"
           >
             Missions
           </a>
@@ -546,18 +546,18 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         <img
           src="irc section.png"
           alt="Rover"
-          className="w-full max-w-xs"
+          className="w-3/4 sm:w-full max-w-xs sm:max-w-md"
         />
       </div>
 
       {/* Section 3 - History With IRC */}
       <div className="flex flex-col justify-center text-center lg:text-left">
-        <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-6">
           <span className="block lg:inline">History With</span>
           <br className="lg:hidden" />
           <span className="block lg:inline"> IRC</span>
         </h1>
-        <p className="text-gray-400 text-lg leading-relaxed mb-8">
+        <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8">
           Team RUDRA, the official rover team from SRMIST, is a veteran
           competitor at IRC-25, recognized for its legacy of innovation and
           technical excellence. With a strong track record in advancing rover
@@ -569,13 +569,12 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
 
     {/* Timeline Section */}
-    <div className="mt-24 bg-gray-900 py-12 ">
-     
-      <h2 className="text-center text-3xl lg:text-5xl font-bold mb-12 relative z-10">
-        
+    <div className="mt-24 bg-gray-900 py-12">
+      <h2 className="text-center text-2xl sm:text-3xl lg:text-5xl font-bold mb-12">
+        Timeline
       </h2>
-      <div className="overflow-x-auto relative z-10">
-        <div className="flex justify-center items-center space-x-12 px-6">
+      <div className="overflow-x-auto">
+        <div className="flex justify-start sm:justify-center items-center space-x-8 sm:space-x-12 px-6">
           {/* Timeline Items */}
           {[
             { year: "2020", description: "IRC20 - 3RD." },
@@ -584,12 +583,14 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
           ].map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center max-w-xs"
+              className="flex flex-col items-center text-center min-w-[100px] sm:max-w-xs"
             >
-              <div className="w-12 h-12 bg-white rounded-full flex justify-center items-center text-black font-bold text-lg">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex justify-center items-center text-black font-bold text-base sm:text-lg">
                 {item.year}
               </div>
-              <p className="mt-4 text-gray-400 text-sm">{item.description}</p>
+              <p className="mt-2 sm:mt-4 text-gray-400 text-xs sm:text-sm">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>
