@@ -1,6 +1,6 @@
 // pages/missions.tsx
-import React from 'react';
-import { SparklesCore } from 'sparkles-react';
+import Link from 'next/link';
+import { SparklesCore } from '@/components/ui/sparkles';
 
 const MissionsPage: React.FC = () => {
   const missions = [
