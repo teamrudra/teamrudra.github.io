@@ -532,14 +532,12 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
           >
             Learn More
           </a>
-           <Link href="/missions">
           <a
-           
+            href="#"
             className="px-4 py-2 sm:px-6 sm:py-3 border border-white text-white rounded-lg text-sm sm:text-lg font-semibold hover:bg-white hover:text-black transition"
           >
             Missions
           </a>
-             </Link>
         </div>
       </div>
 
@@ -600,6 +598,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
+
 
 
 <div   className="min-h-screen bg-black text-white font-sans py-16 px-6 relative">
