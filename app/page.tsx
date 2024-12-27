@@ -525,18 +525,22 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
           to creativity, problem-solving, and teamwork, inspiring the next
           generation of space pioneers.
         </p>
-        <div className="flex justify-center lg:justify-start gap-4">
+        <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+          {/* Learn More Button */}
           <a
             href="https://www.spaceroboticssociety.org/events/international-rover-challenge/"
-            className="px-4 py-2 sm:px-6 sm:py-3 bg-white text-black rounded-lg text-sm sm:text-lg font-semibold hover:bg-gray-300 transition"
+            className="px-6 py-3 bg-white text-black rounded-lg text-sm sm:text-lg font-semibold hover:bg-gray-300 transition"
           >
             Learn More
           </a>
-           <Link href="/missions">
-          <a className="px-4 py-2 sm:px-6 sm:py-3 border border-white text-white rounded-lg text-sm sm:text-lg font-semibold hover:bg-white hover:text-black transition" >
-            Missions
-          </a>
-              </Link>
+          {/* Missions Button */}
+          <Link href="/missions">
+            <a
+              className="px-6 py-3 border border-white text-white rounded-lg text-sm sm:text-lg font-semibold hover:bg-white hover:text-black transition"
+            >
+              Missions
+            </a>
+          </Link>
         </div>
       </div>
 
