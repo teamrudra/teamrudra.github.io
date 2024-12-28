@@ -120,6 +120,7 @@ const MissionsPage: React.FC = () => {
         ))}
       </div>
     </div>
+       </div>
   );
 };
 
