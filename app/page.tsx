@@ -2,6 +2,7 @@
 import { SparklesCore } from '@/components/ui/sparkles';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Script from 'next/script';
 
 const Home = () => {
   const galleryImages = [
@@ -44,19 +45,20 @@ const Home = () => {
     );
   };
 
-  const sponsorshipImages = [
-    { src: './sukrit-infotech.png', alt: 'Sukrit Infotech' },
-    { src: './solidworks.png', alt: 'Solidworks' },
-    { src: './wheeleez.png', alt: 'Wheeleez' },
-    { src: './nvidia.png', alt: 'Nvidia' },
-    { src: './altium.png', alt: 'Altium' },
-    { src: './vartech.png', alt: 'Var Tech' },
-    { src: './protocase2.png', alt: 'Protocase' },
-    { src: './mathworks-logo-full-color-rgb-reversed.png' , alt: 'Mathworks' },
-      { src: './danyalgems.png' , alt: 'Danyal Gems' },
-     { src: './hearingon.png' , alt: 'HearingOn' },
-    { src: './pma spares.png' , alt: 'pmaspares' },
-    ];
+ const sponsorshipImages = [
+    { src: './sukrit-infotech.png', alt: 'Sukrit Infotech', url: 'https://www.sukritinfotech.com' },
+    { src: './solidworks.png', alt: 'Solidworks', url: 'https://www.solidworks.com' },
+    { src: './wheeleez.png', alt: 'Wheeleez', url: 'https://www.wheeleez.com' },
+    { src: './nvidia.png', alt: 'Nvidia', url: 'https://www.nvidia.com' },
+    { src: './altium.png', alt: 'Altium', url: 'https://www.altium.com' },
+    { src: './vartech.png', alt: 'Var Tech', url: 'https://var-tech.com/' },
+    { src: './protocase2.png', alt: 'Protocase', url: 'https://www.protocase.com' },
+    { src: './mathworks-logo-full-color-rgb-reversed.png', alt: 'Mathworks', url: 'https://www.mathworks.com' },
+    { src: './danyalgems.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' },
+    { src: './hearingon.png', alt: 'HearingOn', url: 'https://www.baranagarspeechandhearing.com/' },
+    { src: './pma spares.png', alt: 'PMA Spares', url: 'https://g.co/kgs/HDRrzX4' },
+];
+
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
   
@@ -247,6 +249,111 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
           </p>
         </div>
       </div>
+
+      <div className="min-h-screen bg-black text-white font-sans relative">
+  {/* Sparkles Effect */}
+  <SparklesCore
+    className="absolute inset-0 z-0"
+    particleColor="#f0f0f0"
+    particleDensity={30}
+  />
+
+  {/* Main Content */}
+  <div className="relative z-10">
+    {/* Main Container */}
+    <div className="container mx-auto px-6 lg:px-20 py-16 grid sm:grid-cols-1 lg:grid-cols-3 gap-6">
+      {/* Section 1 - International Rover Challenge */}
+      <div className="flex flex-col justify-center text-center lg:text-left">
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-6">
+          International <br /> Rover <br /> Challenge
+        </h1>
+        <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8">
+          The International Rover Challenge (IRC) is a premier event bringing
+          together students, engineers, and innovators from around the globe to
+          push the boundaries of space exploration technology. Teams design,
+          build, and test advanced rovers that simulate real-world planetary
+          exploration, offering a hands-on experience in tackling the challenges
+          of extraterrestrial exploration. The competition is a true testament
+          to creativity, problem-solving, and teamwork, inspiring the next
+          generation of space pioneers.
+        </p>
+        <div className="flex flex-wrap justify-center lg:justify-start items-center gap-4">
+          {/* Learn More Button */}
+          <a
+            href="https://www.spaceroboticssociety.org/events/international-rover-challenge/"
+            className="px-6 py-3 bg-white text-black rounded-lg text-sm sm:text-lg font-semibold hover:bg-gray-300 transition"
+          >
+            Learn More
+          </a>
+          {/* Missions Button */}
+          <Link href="./mission">
+            <a
+              className="px-6 py-3 border border-white text-white rounded-lg text-sm sm:text-lg font-semibold hover:bg-white hover:text-black transition"
+            >
+              Missions
+            </a>
+          </Link>
+        </div>
+      </div>
+
+      {/* Section 2 - Rover Image */}
+      <div className="flex justify-center items-center">
+        <img
+          src="irc section.png"
+          alt="Rover"
+          className="w-3/4 sm:w-full max-w-xs sm:max-w-md"
+        />
+      </div>
+
+      {/* Section 3 - History With IRC */}
+      <div className="flex flex-col justify-center text-center lg:text-left">
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-6">
+          <span className="block lg:inline">History With</span>
+          <br className="lg:hidden" />
+          <span className="block lg:inline"> IRC</span>
+        </h1>
+        <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8">
+          Team RUDRA, the official rover team from SRMIST, is a veteran
+          competitor at IRC-25, recognized for its legacy of innovation and
+          technical excellence. With a strong track record in advancing rover
+          design and mission execution, RUDRA upholds the core values of
+          SPROS—driving global space technology development and inspiring future
+          space professionals.
+        </p>
+      </div>
+    </div>
+
+    {/* Timeline Section */}
+    <div className="mt-24 bg-gray-900 py-12">
+      <h2 className="text-center text-2xl sm:text-3xl lg:text-5xl font-bold mb-12">
+        Timeline
+      </h2>
+      <div className="overflow-x-auto">
+        <div className="flex justify-start sm:justify-center items-center space-x-8 sm:space-x-12 px-6">
+          {/* Timeline Items */}
+          {[
+            { year: "2020", description: "IRC20 - 3RD." },
+            { year: "2023", description: "IRC23 - 7TH." },
+            { year: "2024", description: "IRC24 - 3RD." },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center text-center min-w-[100px] sm:max-w-xs"
+            >
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex justify-center items-center text-black font-bold text-base sm:text-lg">
+                {item.year}
+              </div>
+              <p className="mt-2 sm:mt-4 text-gray-400 text-xs sm:text-sm">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       {/* Team Members Section */}
       <div className="relative min-h-screen bg-black bg-cover bg-center flex flex-col items-center justify-center py-16" id="team">
@@ -474,26 +581,29 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 </div>
 
 
+      {/*sponsorship section */}
 
-
-{/* Sponsorship Section */}
 <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-4 mt-[-16px]" id="sponsors">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mb-12 sm:mb-16 z-20">Our Sponsors</h2>
   <div className="flex flex-wrap items-center justify-center z-10">
     {sponsorshipImages.map((sponsor, index) => (
       <div key={index} className="p-4 sm:p-6">
-        <img
-          src={sponsor.src}
-          alt={sponsor.alt}
-          width={200}
-          height={200}
-          className="w-48 h-auto object-contain"
-        />
+        <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+          <img
+            src={sponsor.src}
+            alt={sponsor.alt}
+            width={200}
+            height={200}
+            className="w-48 h-auto object-contain"
+          />
+        </a>
       </div>
     ))}
   </div>
 </div>
+
+
 
 
      
@@ -538,7 +648,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
 
     {/* Contact Us Section */}
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 " id="contact">
+    <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16  " id="contact">
      <SparklesCore className="absolute   inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-white text-6xl mb-12 font-serif">Contact Us</h2>
   <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8">
