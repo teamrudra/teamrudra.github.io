@@ -410,18 +410,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       alt="Rover Render 1" 
       className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
     />
-    {/* Image 2 */}
-    <img 
-      src="render2.png" 
-      alt="Rover Render 2" 
-      className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
-    />
-    {/* Image 3 */}
-    <img 
-      src="render3.png" 
-      alt="Rover Render 3" 
-      className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
-    />
+    
     {/* Image 4 */}
     <img 
       src="render4.png" 
