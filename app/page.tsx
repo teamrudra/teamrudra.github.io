@@ -57,6 +57,8 @@ const Home = () => {
     { src: './danyalgems.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' },
     { src: './hearingon.png', alt: 'HearingOn', url: 'https://www.baranagarspeechandhearing.com/' },
     { src: './pma spares.png', alt: 'PMA Spares', url: 'https://g.co/kgs/HDRrzX4' },
+     { src: './lion circuits.png', alt: 'Mathworks', url: 'https://www.lioncircuits.com/' },
+   
 ];
 
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
