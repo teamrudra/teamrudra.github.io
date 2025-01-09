@@ -546,7 +546,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
           },
           {
             src: "./achievement-image9.png",
-            title: "IRCS 2024 - Team RUDRA ranked 3rd globally",
+            title: "IRC 2024 - Team RUDRA ranked 3rd globally",
             date: "Jan 2024"
           }
         ].map((item, index) => (
@@ -607,7 +607,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
     <div className="flex-1 text-center">
       <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
-      <p className="text-gray-400 mb-6">Get weekly access to our newsletter and stay updated</p>
+      <p className="text-gray-400 mb-6">Get monthly access to our newsletter and stay updated</p>
       <form 
         name="news-letter" 
         onSubmit={handleSubmit}
