@@ -599,7 +599,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
   <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[1000px] h-[520px] max-w-full relative flex flex-row items-center">
     <div className="flex-1 mr-8">
-      <img src="sponsortiers.png" alt="Sponsor Image" className="w-[440px] h-[400px] object-cover rounded-xl" />
+      <img src="sponsortier.png" alt="Sponsor Image" className="w-[440px] h-[400px] object-cover rounded-xl" />
     </div>
     <div className="flex-1 text-center">
       <h2 className="text-white text-3xl font-semibold mb-2">Partner with Team Rudra</h2>
