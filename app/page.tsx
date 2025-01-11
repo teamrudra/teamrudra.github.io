@@ -252,6 +252,14 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         </div>
       </div>
 
+       <div className="min-h-screen bg-black text-white font-sans relative">
+  {/* Sparkles Effect */}
+  <SparklesCore
+    className="absolute inset-0 z-0"
+    particleColor="#f0f0f0"
+    particleDensity={30}
+  />
+
       
 
 {/* Main Content */}
