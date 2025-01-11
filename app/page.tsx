@@ -593,27 +593,26 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     ))}
   </div>
 </div>
-
-{/* Responsive Sponsor Us Section */}
-<div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 px-4 sm:px-8 relative" id="sponsor">
+      {/*sponsor us signup */}
+<div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="sponsor">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
-  <div className="bg-gray-900 p-6 sm:p-8 rounded-2xl shadow-lg w-full max-w-6xl relative flex flex-col lg:flex-row items-center">
+  <div className="bg-gray-900 p-6 md:p-8 rounded-2xl shadow-lg w-full max-w-[1000px] relative flex flex-col md:flex-row items-center">
     
     {/* Image Section */}
-    <div className="w-full lg:w-1/2 mb-6 lg:mb-0 lg:mr-8 flex justify-center">
+    <div className="flex-1 mb-6 md:mb-0 md:mr-8">
       <img 
         src="tier2.png" 
         alt="Sponsor Image" 
-        className="w-full max-w-[400px] h-auto object-cover rounded-xl" 
+        className="w-full h-[250px] md:w-[440px] md:h-[400px] object-cover rounded-xl" 
       />
     </div>
 
     {/* Form Section */}
-    <div className="w-full lg:w-1/2 text-center">
-      <h2 className="text-white text-3xl sm:text-4xl font-semibold mb-3">
+    <div className="flex-1 text-center">
+      <h2 className="text-white text-2xl md:text-3xl font-semibold mb-2">
         Partner with Team Rudra
       </h2>
-      <p className="text-gray-400 mb-6 text-sm sm:text-base">
+      <p className="text-gray-400 mb-6 text-sm md:text-base">
         Fuel our journey to success by supporting groundbreaking projects and exploration.
       </p>
       
@@ -621,14 +620,14 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         name="sponsor-form" 
         onSubmit={handleSubmit}
         method="POST" 
-        className="space-y-4"
+        className="space-y-4 w-full"
       >
         <div className="relative">
           <input 
             type="text" 
             name="companyName" 
             placeholder="Enter your company name *" 
-            className="w-full p-3 sm:p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            className="w-full p-3 md:p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" 
             required 
           />
         </div>
@@ -637,13 +636,13 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
             type="email" 
             name="email" 
             placeholder="Enter your email here *" 
-            className="w-full p-3 sm:p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            className="w-full p-3 md:p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" 
             required 
           />
         </div>
         <button 
           type="submit" 
-          className="w-full py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition"
+          className="w-full py-2 md:py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition"
         >
           Contact Us
         </button>
