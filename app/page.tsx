@@ -54,7 +54,7 @@ const Home = () => {
     { src: './vartech.png', alt: 'Var Tech', url: 'https://var-tech.com/' },
     { src: './protocase2.png', alt: 'Protocase', url: 'https://www.protocase.com' },
     { src: './mathworks-logo-full-color-rgb-reversed.png', alt: 'Mathworks', url: 'https://www.mathworks.com' },
-    { src: './danyalgems.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' },
+    { src: './danyal gems logo no-bg.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' },
     { src: './hearingon.png', alt: 'HearingOn', url: 'https://www.baranagarspeechandhearing.com/' },
     { src: './pma spares.png', alt: 'PMA Spares', url: 'https://g.co/kgs/HDRrzX4' },
      { src: './lion circuits (2).png', alt: 'Mathworks', url: 'https://www.lioncircuits.com/' },
@@ -599,7 +599,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
   <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[1000px] h-[520px] max-w-full relative flex flex-row items-center">
     <div className="flex-1 mr-8">
-      <img src="sponsor.jpeg" alt="Sponsor Image" className="w-[440px] h-[400px] object-cover rounded-xl" />
+      <img src="sponsi tiers white text.png" alt="Sponsor Image" className="w-[440px] h-[400px] object-cover rounded-xl" />
     </div>
     <div className="flex-1 text-center">
       <h2 className="text-white text-3xl font-semibold mb-2">Partner with Team Rudra</h2>
