@@ -252,7 +252,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         </div>
       </div>
 
-       <div className="min-h-screen bg-black text-white font-sans relative">
+<div className="min-h-screen bg-black text-white font-sans relative">
   {/* Sparkles Effect */}
   <SparklesCore
     className="absolute inset-0 z-0"
@@ -260,9 +260,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     particleDensity={30}
   />
 
-      
-
-{/* Main Content */}
+  {/* Main Content */}
   <div className="relative z-10">
     {/* Main Container */}
     <div className="container mx-auto px-6 lg:px-20 py-16 grid sm:grid-cols-1 lg:grid-cols-3 gap-6">
@@ -309,7 +307,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         />
       </div>
 
-       {/* Section 3 - University Rover Challenge */}
+      {/* Section 3 - University Rover Challenge */}
       <div className="flex flex-col justify-center text-center lg:text-left">
         <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-6">
           University <br /> Rover <br /> Challenge
@@ -336,37 +334,38 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         </div>
       </div>
 
-
-    {/* Timeline Section */}
-    <div className="mt-24 bg-gray-900 py-12">
-      <h2 className="text-center text-2xl sm:text-3xl lg:text-5xl font-bold mb-12">
-        Timeline
-      </h2>
-      <div className="overflow-x-auto">
-        <div className="flex justify-start sm:justify-center items-center space-x-8 sm:space-x-12 px-6">
-          {/* Timeline Items */}
-          {[
-            { year: "2020", description: "IRC20 - 3RD." },
-            { year: "2023", description: "IRC23 - 7TH." },
-            { year: "2024", description: "IRC24 - 3RD." },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center min-w-[100px] sm:max-w-xs"
-            >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex justify-center items-center text-black font-bold text-base sm:text-lg">
-                {item.year}
+      {/* Timeline Section */}
+      <div className="mt-24 bg-gray-900 py-12">
+        <h2 className="text-center text-2xl sm:text-3xl lg:text-5xl font-bold mb-12">
+          Timeline
+        </h2>
+        <div className="overflow-x-auto">
+          <div className="flex justify-start sm:justify-center items-center space-x-8 sm:space-x-12 px-6">
+            {/* Timeline Items */}
+            {[
+              { year: "2020", description: "IRC20 - 3RD." },
+              { year: "2023", description: "IRC23 - 7TH." },
+              { year: "2024", description: "IRC24 - 3RD." },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center min-w-[100px] sm:max-w-xs"
+              >
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex justify-center items-center text-black font-bold text-base sm:text-lg">
+                  {item.year}
+                </div>
+                <p className="mt-2 sm:mt-4 text-gray-400 text-xs sm:text-sm">
+                  {item.description}
+                </p>
               </div>
-              <p className="mt-2 sm:mt-4 text-gray-400 text-xs sm:text-sm">
-                {item.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 
       {/* Team Members Section */}
