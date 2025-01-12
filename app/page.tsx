@@ -333,39 +333,9 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
           </Link>
         </div>
       </div>
-
-      {/* Timeline Section */}
-      <div className="mt-24 bg-gray-900 py-12">
-        <h2 className="text-center text-2xl sm:text-3xl lg:text-5xl font-bold mb-12">
-          Timeline
-        </h2>
-        <div className="overflow-x-auto">
-          <div className="flex justify-start sm:justify-center items-center space-x-8 sm:space-x-12 px-6">
-            {/* Timeline Items */}
-            {[
-              { year: "2020", description: "IRC20 - 3RD." },
-              { year: "2023", description: "IRC23 - 7TH." },
-              { year: "2024", description: "IRC24 - 3RD." },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center text-center min-w-[100px] sm:max-w-xs"
-              >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex justify-center items-center text-black font-bold text-base sm:text-lg">
-                  {item.year}
-                </div>
-                <p className="mt-2 sm:mt-4 text-gray-400 text-xs sm:text-sm">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
-
 
 
       {/* Team Members Section */}
