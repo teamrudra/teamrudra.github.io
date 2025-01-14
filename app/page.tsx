@@ -380,28 +380,40 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
   </div>
   </div>
-    {/* Rover Renders Section */}
+  {/* Rover Renders Section */}
 <div className="min-h-screen bg-black flex flex-col items-center py-16" id="rover-renders">
   <h2 className="text-white text-4xl md:text-5xl lg:text-6xl mb-12 font-serif text-center">
      Our Rover
   </h2>
-  {/* Grid container */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 px-4 md:px-12">
-    {/* Image 1 */}
-    <img 
-      src="render1.png" 
-      alt="Rover Render 1" 
-      className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
-    />
-    
-    {/* Image 4 */}
-    <img 
-      src="render4.png" 
-      alt="Rover Render 4" 
-      className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
-    />
+
+  {/* Grid container with elegant styling */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 px-4 md:px-12">
+    {/* Image 1 with glass effect */}
+    <div className="relative group overflow-hidden rounded-xl shadow-lg">
+      <img 
+        src="render1.png" 
+        alt="Rover Render 1" 
+        className="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <p className="text-white text-lg font-semibold">Robotic Manipulator & Communication Systems</p>
+      </div>
+    </div>
+
+    {/* Image 2 with glass effect */}
+    <div className="relative group overflow-hidden rounded-xl shadow-lg">
+      <img 
+        src="render4.png" 
+        alt="Rover Render 4" 
+        className="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <p className="text-white text-lg font-semibold">Sample Cache & Bioarm Mechanism</p>
+      </div>
+    </div>
   </div>
 </div>
+
 
 
 {/* Gallery Section */}
