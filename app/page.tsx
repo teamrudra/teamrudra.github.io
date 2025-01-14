@@ -717,43 +717,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
-      
-<div class="bg-gray-900 text-white py-16">
-  <div class="container mx-auto px-6 lg:px-20 grid sm:grid-cols-1 md:grid-cols-2 gap-8">
-    <!-- Vision Section -->
-    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-      <div class="flex items-center mb-4">
-        <img src="/icons/vision-icon.svg" alt="Vision Icon" class="w-10 h-10 mr-3" />
-        <h2 class="text-2xl font-bold">Vision</h2>
-      </div>
-      <p class="text-gray-400 leading-relaxed">
-        To become pioneers in space robotics by designing innovative and sustainable Mars rovers. 
-        We strive to inspire future engineers and scientists through relentless exploration, 
-        groundbreaking technology, and excellence in global competitions.
-      </p>
-    </div>
-
-    <!-- Mission Section -->
-    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-      <div class="flex items-center mb-4">
-        <img src="/icons/mission-icon.svg" alt="Mission Icon" class="w-10 h-10 mr-3" />
-        <h2 class="text-2xl font-bold">Mission</h2>
-      </div>
-      <p class="text-gray-400 leading-relaxed">
-        The mission is to design, build, and deploy cutting-edge Mars rovers capable of tackling 
-        extreme extraterrestrial environments. We aim to foster innovation, teamwork, and 
-        problem-solving while contributing to advancements in space exploration technologies.
-      </p>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
 
   </div>
 
