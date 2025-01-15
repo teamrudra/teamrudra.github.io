@@ -98,6 +98,44 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     alert("There was an issue. Try again later.");
   }
 };
+  const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+  
+  const emailInput = event.currentTarget.elements.namedItem('email') as HTMLInputElement;
+  const email = emailInput.value;
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address');
+    return;
+  }
+
+  try {
+    const formData = new FormData();
+    formData.append('email', email);
+    
+    const response = await fetch(
+        process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL as string, // Use the environment variable
+      {
+        method: "POST",
+        body: formData
+      }
+    );
+
+    if (!response.ok) {
+      alert("There was an issue. Try again later.");
+      return;
+    }
+
+    const result = await response.json();
+    alert("Subscribed successfully!");
+    emailInput.value = ''; // Clear the input box
+  } catch (error) {
+    console.error("Error subscribing:", error);
+    alert("There was an issue. Try again later.");
+  }
+};
+
 
   
 
