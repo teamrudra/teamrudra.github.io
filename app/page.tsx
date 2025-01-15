@@ -20,7 +20,8 @@ const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('');
-
+  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading2, setIsLoading2] = useState(false);
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
   }, []);
@@ -63,60 +64,63 @@ const Home = () => {
 
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
+  setIsLoading(true); // Set loading to true when submission starts
   
   const emailInput = event.currentTarget.elements.namedItem('email') as HTMLInputElement;
   const email = emailInput.value;
-
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     alert('Please enter a valid email address');
+    setIsLoading(false); // Don't forget to reset loading state
     return;
   }
-
   try {
     const formData = new FormData();
     formData.append('email', email);
     
     const response = await fetch(
-        process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL as string, // Use the environment variable
+        process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL as string,
       {
         method: "POST",
         body: formData
       }
     );
-
     if (!response.ok) {
       alert("There was an issue. Try again later.");
       return;
     }
-
     const result = await response.json();
     alert("Subscribed successfully!");
-    emailInput.value = ''; // Clear the input box
+    emailInput.value = '';
   } catch (error) {
     console.error("Error subscribing:", error);
     alert("There was an issue. Try again later.");
+  } finally {
+    setIsLoading(false); // Reset loading state whether request succeeds or fails
   }
 };
-  const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
+
+const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
+  setIsLoading2(true);  // Start loading
    
   const companyInput = event.currentTarget.elements.namedItem('companyName') as HTMLInputElement;
   const emailInput = event.currentTarget.elements.namedItem('email') as HTMLInputElement;
   const email = emailInput.value;
   const companyName = companyInput.value;
-
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
   if (!emailRegex.test(email)) {
     alert('Please enter a valid email address');
+    setIsLoading2(false);  // Reset loading on validation error
     return;
   }
-
-     if (companyName === '') {
+  if (companyName === '') {
     alert('Please enter your company name');
+    setIsLoading2(false);  // Reset loading on validation error
     return;
   }
-
+  
   try {
     const formData = new FormData();
     formData.append('Company Name', companyName);
@@ -129,24 +133,21 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         body: formData
       }
     );
-
     if (!response.ok) {
       alert("There was an issue. Try again later.");
       return;
     }
-
     const result = await response.json();
-    alert("Subscribed successfully!");
+    alert("Thank you for your interest in sponsorship! Our team will contact you shortly.");
     emailInput.value = ''; 
- companyInput.value = '';
-// Clear the input box
+    companyInput.value = '';
   } catch (error) {
     console.error("Error subscribing:", error);
     alert("There was an issue. Try again later.");
+  } finally {
+    setIsLoading2(false);  // Reset loading state whether request succeeds or fails
   }
 };
-
-
   
 
   return (
@@ -691,12 +692,39 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
             required 
           />
         </div>
-        <button 
-          type="submit" 
-          className="w-full py-2 md:py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition"
-        >
-          Contact Us
-        </button>
+       <button 
+  type="submit" 
+  disabled={isLoading2}
+  className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition disabled:bg-blue-400 disabled:cursor-not-allowed"
+>
+  {isLoading2 ? (
+    <span className="flex items-center justify-center">
+      <svg 
+        className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="none" 
+        viewBox="0 0 24 24"
+      >
+        <circle 
+          className="opacity-25" 
+          cx="12" 
+          cy="12" 
+          r="10" 
+          stroke="currentColor" 
+          strokeWidth="4"
+        />
+        <path 
+          className="opacity-75" 
+          fill="currentColor" 
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+        />
+      </svg>
+      Loading...
+    </span>
+  ) : (
+    'Contact Us'
+  )}
+</button>
       </form>
     </div>
   </div>
@@ -732,11 +760,38 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
           />
         </div>
         <button 
-          type="submit" 
-          className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
-        >
-          Subscribe
-        </button>
+  type="submit" 
+  disabled={isLoading}
+  className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition disabled:bg-blue-400 disabled:cursor-not-allowed"
+>
+  {isLoading ? (
+    <span className="flex items-center justify-center">
+      <svg 
+        className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="none" 
+        viewBox="0 0 24 24"
+      >
+        <circle 
+          className="opacity-25" 
+          cx="12" 
+          cy="12" 
+          r="10" 
+          stroke="currentColor" 
+          strokeWidth="4"
+        />
+        <path 
+          className="opacity-75" 
+          fill="currentColor" 
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+        />
+      </svg>
+      Subscribing...
+    </span>
+  ) : (
+    'Subscribe'
+  )}
+</button>
       </form>
     </div>
   </div>
