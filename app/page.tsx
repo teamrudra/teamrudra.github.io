@@ -367,7 +367,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         </h1>
         <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8">
           Team RUDRA, the official rover team from SRMIST, is a veteran
-          competitor at IRC-25, recognized for its legacy of innovation and
+          competitor at IRC, recognized for its legacy of innovation and
           technical excellence. With a strong track record in advancing rover
           design and mission execution, RUDRA upholds the core values of
           SPROS—driving global space technology development and inspiring future
