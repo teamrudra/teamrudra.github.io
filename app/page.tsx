@@ -138,7 +138,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
       return;
     }
     const result = await response.json();
-    alert("Subscribed successfully!");
+    alert("Thank you for your interest in sponsorship! Our team will contact you shortly.");
     emailInput.value = ''; 
     companyInput.value = '';
   } catch (error) {
