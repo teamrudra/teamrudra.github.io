@@ -123,7 +123,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     formData.append('email', email);
     
     const response = await fetch(
-      'https://script.google.com/macros/s/AKfycbwzBfc_OMWLOrNZXIJUUR9Ko5U8ia54BITJWnnkVJNr-HJVNUz6BTgxkOUUJE1jSmwU/exec',
+       process.env.NEXT_PUBLIC_SPONSORSHIP as string,
       {
         method: "POST",
         body: formData
