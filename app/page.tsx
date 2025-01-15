@@ -20,7 +20,7 @@ const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('');
-
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
   }, []);
