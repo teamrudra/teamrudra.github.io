@@ -641,7 +641,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
       <form 
         name="sponsor-form" 
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit2}
         method="POST" 
         className="space-y-4 w-full"
       >
