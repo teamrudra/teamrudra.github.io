@@ -694,10 +694,10 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         </div>
        <button 
   type="submit" 
-  disabled={isLoading}
+  disabled={isLoading2}
   className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition disabled:bg-blue-400 disabled:cursor-not-allowed"
 >
-  {isLoading ? (
+  {isLoading2 ? (
     <span className="flex items-center justify-center">
       <svg 
         className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" 
