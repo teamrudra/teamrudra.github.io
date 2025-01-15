@@ -98,6 +98,62 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     alert("There was an issue. Try again later.");
   }
 };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+
+  // Get the input values
+  const companyInput = form.elements.namedItem('companyName') as HTMLInputElement;
+  const emailInput = form.elements.namedItem('email') as HTMLInputElement;
+
+  const companyName = companyInput.value.trim();
+  const email = emailInput.value.trim();
+
+  // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address');
+    return;
+  }
+
+  // Company Name validation
+  if (companyName === '') {
+    alert('Please enter your company name');
+    return;
+  }
+
+  try {
+    const formData = new FormData();
+    formData.append('Company Name', companyName);
+    formData.append('Email', email);
+
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL as string,
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    if (!response.ok) {
+      alert("There was an issue. Try again later.");
+      return;
+    }
+
+    const result = await response.json();
+    alert("Thank you for partnering with us!");
+
+    // Clear the input fields after successful submission
+    companyInput.value = '';
+    emailInput.value = '';
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("There was an issue. Try again later.");
+  }
+};
+
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
     <style jsx>{`
@@ -577,6 +633,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       {/*sponsor us signup */}
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="sponsor">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
+  
   <div className="bg-gray-900 p-6 md:p-8 rounded-2xl shadow-lg w-full max-w-[1000px] relative flex flex-col md:flex-row items-center">
     
     {/* Image Section */}
@@ -596,7 +653,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       <p className="text-gray-400 mb-6 text-sm md:text-base">
         Fuel our journey to success by supporting groundbreaking projects and exploration.
       </p>
-      
+
       <form 
         name="sponsor-form" 
         onSubmit={handleSubmit}
