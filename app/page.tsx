@@ -54,9 +54,11 @@ const Home = () => {
     { src: './vartech.png', alt: 'Var Tech', url: 'https://var-tech.com/' },
     { src: './protocase2.png', alt: 'Protocase', url: 'https://www.protocase.com' },
     { src: './mathworks-logo-full-color-rgb-reversed.png', alt: 'Mathworks', url: 'https://www.mathworks.com' },
-    { src: './danyalgems.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' },
+    { src: './danyal gems logo no-bg.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' },
     { src: './hearingon.png', alt: 'HearingOn', url: 'https://www.baranagarspeechandhearing.com/' },
     { src: './pma spares.png', alt: 'PMA Spares', url: 'https://g.co/kgs/HDRrzX4' },
+     { src: './lion circuits (2).png', alt: 'Mathworks', url: 'https://www.lioncircuits.com/' },
+   
 ];
 
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -96,6 +98,57 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     alert("There was an issue. Try again later.");
   }
 };
+  const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+   
+  const companyInput = event.currentTarget.elements.namedItem('companyName') as HTMLInputElement;
+  const emailInput = event.currentTarget.elements.namedItem('email') as HTMLInputElement;
+  const email = emailInput.value;
+  const companyName = companyInput.value;
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address');
+    return;
+  }
+
+     if (companyName === '') {
+    alert('Please enter your company name');
+    return;
+  }
+
+  try {
+    const formData = new FormData();
+    formData.append('Company Name', companyName);
+    formData.append('email', email);
+    
+    const response = await fetch(
+       process.env.NEXT_PUBLIC_SPONSORSHIP as string,
+      {
+        method: "POST",
+        body: formData
+      }
+    );
+
+    if (!response.ok) {
+      alert("There was an issue. Try again later.");
+      return;
+    }
+
+    const result = await response.json();
+    alert("Subscribed successfully!");
+    emailInput.value = ''; 
+ companyInput.value = '';
+// Clear the input box
+  } catch (error) {
+    console.error("Error subscribing:", error);
+    alert("There was an issue. Try again later.");
+  }
+};
+
+
+  
+
   return (
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
     <style jsx>{`
@@ -250,7 +303,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         </div>
       </div>
 
-      <div className="min-h-screen bg-black text-white font-sans relative">
+<div className="min-h-screen bg-black text-white font-sans relative">
   {/* Sparkles Effect */}
   <SparklesCore
     className="absolute inset-0 z-0"
@@ -314,7 +367,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         </h1>
         <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8">
           Team RUDRA, the official rover team from SRMIST, is a veteran
-          competitor at IRC-25, recognized for its legacy of innovation and
+          competitor at IRC, recognized for its legacy of innovation and
           technical excellence. With a strong track record in advancing rover
           design and mission execution, RUDRA upholds the core values of
           SPROS—driving global space technology development and inspiring future
@@ -353,7 +406,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
-
 
       {/* Team Members Section */}
       <div className="relative min-h-screen bg-black bg-cover bg-center flex flex-col items-center justify-center py-16" id="team">
@@ -397,7 +449,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
   </div>
   </div>
-    {/* Rover Renders Section */}
+ {/* Rover Renders Section */}
 <div className="min-h-screen bg-black flex flex-col items-center py-16" id="rover-renders">
   <h2 className="text-white text-4xl md:text-5xl lg:text-6xl mb-12 font-serif text-center">
      Our Rover
@@ -410,18 +462,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
       alt="Rover Render 1" 
       className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
     />
-    {/* Image 2 */}
-    <img 
-      src="render2.png" 
-      alt="Rover Render 2" 
-      className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
-    />
-    {/* Image 3 */}
-    <img 
-      src="render3.png" 
-      alt="Rover Render 3" 
-      className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
-    />
+    
     {/* Image 4 */}
     <img 
       src="render4.png" 
@@ -602,7 +643,64 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     ))}
   </div>
 </div>
+      {/*sponsor us signup */}
+<div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="sponsor">
+  <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
+  
+  <div className="bg-gray-900 p-6 md:p-8 rounded-2xl shadow-lg w-full max-w-[1000px] relative flex flex-col md:flex-row items-center">
+    
+    {/* Image Section */}
+    <div className="flex-1 mb-6 md:mb-0 md:mr-8">
+      <img 
+        src="tier2.png" 
+        alt="Sponsor Image" 
+        className="w-full h-[250px] md:w-[440px] md:h-[400px] object-cover rounded-xl" 
+      />
+    </div>
 
+    {/* Form Section */}
+    <div className="flex-1 text-center">
+      <h2 className="text-white text-2xl md:text-3xl font-semibold mb-2">
+        Partner with Team Rudra
+      </h2>
+      <p className="text-gray-400 mb-6 text-sm md:text-base">
+        Fuel our journey to success by supporting groundbreaking projects and exploration.
+      </p>
+
+      <form 
+        name="sponsor-form" 
+        onSubmit={handleSubmit2}
+        method="POST" 
+        className="space-y-4 w-full"
+      >
+        <div className="relative">
+          <input 
+            type="text" 
+            name="companyName" 
+            placeholder="Enter your company name *" 
+            className="w-full p-3 md:p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            required 
+          />
+        </div>
+        <div className="relative">
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Enter your email here *" 
+            className="w-full p-3 md:p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            required 
+          />
+        </div>
+        <button 
+          type="submit" 
+          className="w-full py-2 md:py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition"
+        >
+          Contact Us
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
 
 
 
@@ -645,8 +743,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 </div>
 
 
-
-
     {/* Contact Us Section */}
     <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16  " id="contact">
      <SparklesCore className="absolute   inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
@@ -686,12 +782,6 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
-
-
-
-
-
-
 
 
   </div>
