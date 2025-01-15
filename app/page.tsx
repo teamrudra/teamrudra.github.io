@@ -115,7 +115,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     formData.append('email', email);
     
     const response = await fetch(
-      'https://script.google.com/macros/s/AKfycbygfS77C34RUZOIoacIX9FrLbygmbkfkIHvayo3wISVcP6rfnS1SzWPiLpjIrjxpbP2/exec',
+      'google.com/macros/s/AKfycbxmA5LsPu8gH9C48xDaHs1QLW_D39AIiD0WXAxl6naUI1NM5MHsRpXjmkVrZC_beqPN/exec',
       {
         method: "POST",
         body: formData
