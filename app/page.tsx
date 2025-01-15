@@ -100,9 +100,11 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 };
   const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
-  
+   
+  const companyInput = form.elements.namedItem('companyName') as HTMLInputElement;
   const emailInput = event.currentTarget.elements.namedItem('email') as HTMLInputElement;
   const email = emailInput.value;
+  const companyName = companyInput.value;
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
@@ -110,8 +112,14 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     return;
   }
 
+     if (companyName === '') {
+    alert('Please enter your company name');
+    return;
+  }
+
   try {
     const formData = new FormData();
+    formData.append('Company Name', companyName);
     formData.append('email', email);
     
     const response = await fetch(
@@ -129,7 +137,9 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 
     const result = await response.json();
     alert("Subscribed successfully!");
-    emailInput.value = ''; // Clear the input box
+    emailInput.value = ''; 
+ companyInput.value = '';
+// Clear the input box
   } catch (error) {
     console.error("Error subscribing:", error);
     alert("There was an issue. Try again later.");
