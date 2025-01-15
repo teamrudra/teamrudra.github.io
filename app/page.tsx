@@ -101,7 +101,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
    
-  const companyInput = form.elements.namedItem('companyName') as HTMLInputElement;
+  const companyInput = event.currentTarget.elements.namedItem('companyName') as HTMLInputElement;
   const emailInput = event.currentTarget.elements.namedItem('email') as HTMLInputElement;
   const email = emailInput.value;
   const companyName = companyInput.value;
