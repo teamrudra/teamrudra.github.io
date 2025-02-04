@@ -49,10 +49,9 @@ const Home = () => {
  const sponsorshipImages = [
     { src: './sukrit-infotech.png', alt: 'Sukrit Infotech', url: 'https://www.sukritinfotech.com' },
     { src: './solidworks.png', alt: 'Solidworks', url: 'https://www.solidworks.com' },
-    { src: './wheeleez.png', alt: 'Wheeleez', url: 'https://www.wheeleez.com' },
-    { src: './nvidia.png', alt: 'Nvidia', url: 'https://www.nvidia.com' },
+  
     { src: './altium.png', alt: 'Altium', url: 'https://www.altium.com' },
-    { src: './vartech.png', alt: 'Var Tech', url: 'https://var-tech.com/' },
+    { src: './vartech.png', alt: '', url: 'https://www.notion.com' },
     { src: './protocase2.png', alt: 'Protocase', url: 'https://www.protocase.com' },
     { src: './mathworks-logo-full-color-rgb-reversed.png', alt: 'Mathworks', url: 'https://www.mathworks.com' },
     { src: './danyal gems logo no-bg.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' },
