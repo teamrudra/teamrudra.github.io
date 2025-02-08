@@ -406,15 +406,15 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
-     <div className="relative bg-black text-white py-20 px-10">
-  {/* Full-Screen Background */}
-  <div className="absolute inset-0">
-    <img
-      src="/urc-bg.png" // Replace with your actual background image
-      
-      className="w-full h-full object-cover opacity-30"
-    />
-  </div>
+    import { SparklesCore } from "@/components/SparklesCore";
+
+<div className="relative bg-black text-white py-20 px-10">
+  {/* Sparkles Background */}
+  <SparklesCore
+    className="absolute inset-0 z-0"
+    particleColor="#f0f0f0"
+    particleDensity={30}
+  />
 
   {/* Main Content */}
   <div className="relative z-10 max-w-6xl mx-auto text-center">
@@ -479,8 +479,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
       </div>
     </div>
   </div>
-</div>
-
+</div>;
 
 
 
