@@ -52,7 +52,7 @@ const Home = () => {
   
     { src: './altium.png', alt: 'Altium', url: 'https://www.altium.com' },
     { src: './notions-Photoroom.jpg', alt: 'notion', url: 'https://www.notion.com' },
-    { src: './protocase2.png', alt: 'Protocase', url: 'https://www.protocase.com' },
+    
     { src: './mathworks-logo-full-color-rgb-reversed.png', alt: 'Mathworks', url: 'https://www.mathworks.com' },
     { src: './danyal gems logo no-bg.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' },
     { src: './hearingon.png', alt: 'HearingOn', url: 'https://www.baranagarspeechandhearing.com/' },
