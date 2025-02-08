@@ -411,7 +411,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   <div className="absolute inset-0">
     <img
       src="/urc-bg.png" // Replace with your actual background image
-      alt="URC Background"
+      
       className="w-full h-full object-cover opacity-30"
     />
   </div>
