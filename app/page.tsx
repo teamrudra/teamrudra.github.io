@@ -406,54 +406,81 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
-      <div class="bg-black text-white py-16 px-6">
-    <div class="max-w-5xl mx-auto text-center">
-        <h1 class="text-4xl font-bold uppercase">University Rover Challenge</h1>
+     <div className="relative bg-black text-white py-16 px-8">
+  {/* Background Illustration */}
+  <div className="absolute inset-0">
+    <img
+      src="/urc-bg.png" // Replace with actual background image
+      alt="URC Background"
+      className="w-full h-full object-cover opacity-30"
+    />
+  </div>
+
+  {/* Main Content */}
+  <div className="relative z-10 max-w-5xl mx-auto text-center">
+    {/* Title */}
+    <h2 className="text-4xl font-bold uppercase tracking-wide">
+      University Rover Challenge
+    </h2>
+
+    {/* Rover Illustration */}
+    <div className="flex justify-center my-6">
+      <img
+        src="/rover-image.png" // Replace with actual rover image
+        alt="Mars Rover"
+        className="w-[300px] h-auto"
+      />
     </div>
 
-    <div class="flex flex-col md:flex-row items-center justify-between mt-12 gap-8">
-        <!-- Image Section -->
-        <div class="w-full md:w-1/2 flex justify-center">
-            <img src="your-rover-image.jpg" alt="University Rover Challenge Rover"
-                class="w-full max-w-lg rounded-lg shadow-lg">
-        </div>
+    {/* Content Grid */}
+    <div className="grid md:grid-cols-3 gap-8 mt-8">
+      {/* Section 1 */}
+      <div>
+        <h3 className="text-xl font-semibold">University Rover Challenge</h3>
+        <p className="text-gray-300 text-sm mt-2">
+          The University Rover Challenge (URC) is an international robotics
+          competition where student teams design and build planetary rovers to
+          perform simulated astronaut assistance tasks.
+        </p>
+        <a
+          href="https://urc.marssociety.org/"
+          target="_blank"
+          className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-full text-sm font-medium"
+        >
+          Learn More
+        </a>
+      </div>
 
-        <!-- Content Section -->
-        <div class="w-full md:w-1/2 space-y-8">
-            <!-- University Rover Challenge Info -->
-            <div>
-                <h2 class="text-xl font-semibold">University Rover Challenge</h2>
-                <p class="text-gray-300 text-sm">
-                    The University Rover Challenge (URC) is an annual international robotics competition where student teams design and build Mars rovers to perform tasks in extreme environments, simulating real-world space exploration missions.
-                </p>
-                <a href="https://urc.marssociety.org/" target="_blank"
-                    class="mt-3 inline-block bg-white text-black px-6 py-2 rounded-md font-semibold hover:bg-gray-300">
-                    Learn More
-                </a>
-            </div>
+      {/* Section 2 */}
+      <div>
+        <h3 className="text-xl font-semibold">History with URC</h3>
+        <p className="text-gray-300 text-sm mt-2">
+          Since its inception in 2007, URC has challenged teams worldwide to
+          innovate and push the limits of rover technology. Teams compete in
+          terrain traversal, sample collection, and autonomous navigation.
+        </p>
+      </div>
 
-            <!-- History with URC -->
-            <div>
-                <h2 class="text-xl font-semibold">History with URC</h2>
-                <p class="text-gray-300 text-sm">
-                    Established in 2006, URC has grown to be the premier robotics competition for college students worldwide, pushing the boundaries of innovation in planetary exploration technology.
-                </p>
-            </div>
-
-            <!-- Missions -->
-            <div>
-                <h2 class="text-xl font-semibold">Missions</h2>
-                <p class="text-gray-300 text-sm">
-                    URC missions include autonomous navigation, equipment servicing, scientific discovery, and extreme terrain traversal. Teams must develop rovers capable of handling realistic Mars mission tasks.
-                </p>
-                <a href="https://urc.marssociety.org/missions" target="_blank"
-                    class="mt-3 inline-block bg-white text-black px-6 py-2 rounded-md font-semibold hover:bg-gray-300">
-                    Missions
-                </a>
-            </div>
-        </div>
+      {/* Section 3 */}
+      <div>
+        <h3 className="text-xl font-semibold">Missions</h3>
+        <p className="text-gray-300 text-sm mt-2">
+          Rovers must complete tasks such as autonomous driving, science
+          sampling, and robotic arm manipulation, all designed to mimic real
+          Mars mission scenarios.
+        </p>
+        <a
+          href="https://urc.marssociety.org/rules"
+          target="_blank"
+          className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-full text-sm font-medium"
+        >
+          Missions
+        </a>
+      </div>
     </div>
+  </div>
 </div>
+
 
 
       {/* Team Members Section */}
