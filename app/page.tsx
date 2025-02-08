@@ -406,7 +406,6 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
-    import { SparklesCore } from "@/components/SparklesCore";
 
 <div className="relative bg-black text-white py-20 px-10">
   {/* Sparkles Background */}
