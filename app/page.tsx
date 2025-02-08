@@ -406,46 +406,46 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
-     <div className="relative bg-black text-white py-16 px-8">
-  {/* Background Illustration */}
+     <div className="relative bg-black text-white py-20 px-10">
+  {/* Full-Screen Background */}
   <div className="absolute inset-0">
     <img
-      src="/urc-bg.png" // Replace with actual background image
+      src="/urc-bg.png" // Replace with your actual background image
       alt="URC Background"
       className="w-full h-full object-cover opacity-30"
     />
   </div>
 
   {/* Main Content */}
-  <div className="relative z-10 max-w-5xl mx-auto text-center">
+  <div className="relative z-10 max-w-6xl mx-auto text-center">
     {/* Title */}
-    <h2 className="text-4xl font-bold uppercase tracking-wide">
+    <h2 className="text-5xl font-bold uppercase tracking-wide">
       University Rover Challenge
     </h2>
 
-    {/* Rover Illustration */}
-    <div className="flex justify-center my-6">
+    {/* Large Rover Image */}
+    <div className="flex justify-center my-12">
       <img
         src="irc section.png" // Replace with actual rover image
         alt="Mars Rover"
-        className="w-[300px] h-auto"
+        className="w-full md:w-[80%] lg:w-[70%] xl:w-[60%] h-auto"
       />
     </div>
 
-    {/* Content Grid */}
-    <div className="grid md:grid-cols-3 gap-8 mt-8">
+    {/* Three Sections Grid */}
+    <div className="grid md:grid-cols-3 gap-12 mt-10">
       {/* Section 1 */}
       <div>
-        <h3 className="text-xl font-semibold">University Rover Challenge</h3>
-        <p className="text-gray-300 text-sm mt-2">
+        <h3 className="text-2xl font-semibold">University Rover Challenge</h3>
+        <p className="text-gray-300 text-lg mt-3">
           The University Rover Challenge (URC) is an international robotics
           competition where student teams design and build planetary rovers to
-          perform simulated astronaut assistance tasks.
+          perform astronaut assistance tasks.
         </p>
         <a
           href="https://urc.marssociety.org/"
           target="_blank"
-          className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-full text-sm font-medium"
+          className="inline-block mt-6 px-6 py-3 bg-white text-black rounded-full text-lg font-medium"
         >
           Learn More
         </a>
@@ -453,8 +453,8 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
 
       {/* Section 2 */}
       <div>
-        <h3 className="text-xl font-semibold">History with URC</h3>
-        <p className="text-gray-300 text-sm mt-2">
+        <h3 className="text-2xl font-semibold">History with URC</h3>
+        <p className="text-gray-300 text-lg mt-3">
           Since its inception in 2007, URC has challenged teams worldwide to
           innovate and push the limits of rover technology. Teams compete in
           terrain traversal, sample collection, and autonomous navigation.
@@ -463,8 +463,8 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
 
       {/* Section 3 */}
       <div>
-        <h3 className="text-xl font-semibold">Missions</h3>
-        <p className="text-gray-300 text-sm mt-2">
+        <h3 className="text-2xl font-semibold">Missions</h3>
+        <p className="text-gray-300 text-lg mt-3">
           Rovers must complete tasks such as autonomous driving, science
           sampling, and robotic arm manipulation, all designed to mimic real
           Mars mission scenarios.
@@ -472,7 +472,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         <a
           href="https://urc.marssociety.org/rules"
           target="_blank"
-          className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-full text-sm font-medium"
+          className="inline-block mt-6 px-6 py-3 bg-white text-black rounded-full text-lg font-medium"
         >
           Missions
         </a>
@@ -480,6 +480,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
+
 
 
 
