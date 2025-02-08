@@ -426,7 +426,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     {/* Rover Illustration */}
     <div className="flex justify-center my-6">
       <img
-        src="/rover-image.png" // Replace with actual rover image
+        src="irc section.png" // Replace with actual rover image
         alt="Mars Rover"
         className="w-[300px] h-auto"
       />
