@@ -352,7 +352,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         <img
           src="irc section.png"
           alt="Rover"
-          className="w-full sm:w-full max-w-2xl sm:max-w-3xl"
+          className="w-full sm:w-full max-w-3xl sm:max-w-4xl"
         />
       </div>
 
@@ -373,9 +373,6 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         </p>
       </div>
     </div>
-  </div>
-</div>
-
 
     {/* Timeline Section */}
     <div className="mt-24 bg-gray-900 py-12">
@@ -394,7 +391,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
               key={index}
               className="flex flex-col items-center text-center min-w-[100px] sm:max-w-xs"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex justify-center items-center text-black font-bold text-base sm:text-lg">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-full flex justify-center items-center text-black font-bold text-base sm:text-lg">
                 {item.year}
               </div>
               <p className="mt-2 sm:mt-4 text-gray-400 text-xs sm:text-sm">
