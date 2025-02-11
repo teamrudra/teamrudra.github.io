@@ -358,11 +358,9 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
       <div>
         <h3 className="text-2xl font-semibold">Missions</h3>
         <p className="text-gray-300 text-lg mt-3">
-          Rovers must complete tasks such as autonomous driving, science
-          sampling, and robotic arm manipulation, all designed to mimic real
-          Mars mission scenarios.
+     Rovers must complete tasks such as IDMO, PIMA, Astrobiology Expedition, Autonomous Expedition, Business Plan Presentation, and Delivery Missions, all designed to simulate real Mars mission scenarios.
         </p>
-        <Link href="./irc1">
+        <Link href="./missions">
           <a
             className="inline-block mt-6 px-6 py-3 bg-white text-black rounded-full text-lg font-medium"
           >
@@ -381,9 +379,12 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         <div className="flex justify-start sm:justify-center items-center space-x-8 sm:space-x-12 px-6">
           {/* Timeline Items */}
           {[ 
+            { year: "2017", description: "URC - World Rank: 20" },
+            { year: "2019", description: "URC - World Rank: 11" },
             { year: "2020", description: "IRC20 - 3RD." },
             { year: "2023", description: "IRC23 - 7TH." },
             { year: "2024", description: "IRC24 - 3RD." },
+            { year: "2025", description: "IRC - 5TH" },
           ].map((item, index) => (
             <div
               key={index}
