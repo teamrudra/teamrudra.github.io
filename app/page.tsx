@@ -352,7 +352,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         <img
           src="irc section.png"
           alt="Rover"
-          className="w-3/4 sm:w-full max-w-xs sm:max-w-md"
+          className="w-full sm:w-full max-w-2xl sm:max-w-3xl"
         />
       </div>
 
@@ -373,6 +373,9 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         </p>
       </div>
     </div>
+  </div>
+</div>
+
 
     {/* Timeline Section */}
     <div className="mt-24 bg-gray-900 py-12">
