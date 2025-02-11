@@ -371,17 +371,20 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
 
     {/* Timeline Section */}
- <div className="mt-24 bg-gray-900 py-12">
+ <div className="mt-24 w-screen bg-gray-900 py-12 ">
       <h2 className="text-center text-2xl sm:text-3xl lg:text-5xl font-bold mb-12">
         Timeline
       </h2>
-      <div className="overflow-x-auto">
-        <div className="flex justify-start sm:justify-center items-center space-x-8 sm:space-x-12 px-6">
+      <div className="w-full flex justify-center">
+        <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 px-6 w-full">
           {/* Timeline Items */}
           {[
+            { year: "2017", description: "URC - World Rank: 20" },
+        { year: "2019", description: "URC - World Rank: 11" },
             { year: "2020", description: "IRC20 - 3RD." },
             { year: "2023", description: "IRC23 - 7TH." },
             { year: "2024", description: "IRC24 - 3RD." },
+            { year: "2025", description: "IRC - 5TH." },
           ].map((item, index) => (
             <div
               key={index}
