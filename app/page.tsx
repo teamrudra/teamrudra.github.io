@@ -478,7 +478,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
       </div>
     </div>
   </div>
-</div>;
+</div>
 
 
 
