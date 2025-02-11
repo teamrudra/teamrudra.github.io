@@ -46,21 +46,19 @@ const Home = () => {
     );
   };
 
- const sponsorshipImages = [
+const sponsorshipImages = [
     { src: './sukrit-infotech.png', alt: 'Sukrit Infotech', url: 'https://www.sukritinfotech.com' },
     { src: './solidworks.png', alt: 'Solidworks', url: 'https://www.solidworks.com' },
-  
     { src: './altium.png', alt: 'Altium', url: 'https://www.altium.com' },
     { src: './notions-Photoroom.jpg', alt: 'notion', url: 'https://www.notion.com' },
-    
     { src: './mathworks-logo-full-color-rgb-reversed.png', alt: 'Mathworks', url: 'https://www.mathworks.com' },
-    { src: './danyal gems logo no-bg.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' },
+
+    // Grouping these in the same row
     { src: './hearingon.png', alt: 'HearingOn', url: 'https://www.baranagarspeechandhearing.com/' },
     { src: './pma spares.png', alt: 'PMA Spares', url: 'https://g.co/kgs/HDRrzX4' },
-     { src: './lion circuits (2).png', alt: 'Mathworks', url: 'https://www.lioncircuits.com/' },
-   
+    { src: './lion circuits (2).png', alt: 'Lion Circuits', url: 'https://www.lioncircuits.com/' },
+    { src: './danyal gems logo no-bg.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' }
 ];
-
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
   setIsLoading(true); // Set loading to true when submission starts
@@ -698,30 +696,27 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
 
 
       {/*sponsorship section */}
-
 <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-4 mt-[-16px]" id="sponsors">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mb-12 sm:mb-16 z-20">Our Sponsors</h2>
- <div className="flex flex-wrap items-center justify-center z-10">
-  {sponsorshipImages.map((sponsor, index) => (
-    <div 
-      key={index} 
-      className={`p-4 sm:p-6 ${sponsor.alt === 'Danyal Gems' ? 'w-full flex justify-center' : ''}`}
-    >
-      <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
-        <img
-          src={sponsor.src}
-          alt={sponsor.alt}
-          width={200}
-          height={200}
-          className="w-48 h-auto object-contain"
-        />
-      </a>
-    </div>
-  ))}
+  
+  <div className="flex flex-wrap items-center justify-center z-10 gap-4">
+    {sponsorshipImages.map((sponsor, index) => (
+      <div key={index} className="p-4 sm:p-6 w-48 flex justify-center">
+        <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+          <img
+            src={sponsor.src}
+            alt={sponsor.alt}
+            width={200}
+            height={200}
+            className="w-48 h-auto object-contain"
+          />
+        </a>
+      </div>
+    ))}
+  </div>
 </div>
 
-</div>
       {/*sponsor us signup */}
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="sponsor">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
