@@ -702,21 +702,25 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
 <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-4 mt-[-16px]" id="sponsors">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mb-12 sm:mb-16 z-20">Our Sponsors</h2>
-  <div className="flex flex-wrap items-center justify-center z-10">
-    {sponsorshipImages.map((sponsor, index) => (
-      <div key={index} className="p-4 sm:p-6">
-        <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
-          <img
-            src={sponsor.src}
-            alt={sponsor.alt}
-            width={200}
-            height={200}
-            className="w-48 h-auto object-contain"
-          />
-        </a>
-      </div>
-    ))}
-  </div>
+ <div className="flex flex-wrap items-center justify-center z-10">
+  {sponsorshipImages.map((sponsor, index) => (
+    <div 
+      key={index} 
+      className={`p-4 sm:p-6 ${sponsor.alt === 'Danyal Gems' ? 'w-full flex justify-center' : ''}`}
+    >
+      <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+        <img
+          src={sponsor.src}
+          alt={sponsor.alt}
+          width={200}
+          height={200}
+          className="w-48 h-auto object-contain"
+        />
+      </a>
+    </div>
+  ))}
+</div>
+
 </div>
       {/*sponsor us signup */}
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="sponsor">
