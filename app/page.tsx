@@ -371,13 +371,13 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
 
     {/* Timeline Section */}
-   {/* Timeline Section */}
-<div className="w-full min-h-screen bg-gray-900 py-12 flex flex-col justify-center">
+ {/* Timeline Section */}
+<div className="mt-24 w-full bg-gray-900 py-12">
   <h2 className="text-center text-2xl sm:text-3xl lg:text-5xl font-bold mb-12">
     Timeline
   </h2>
-  <div className="overflow-x-auto">
-    <div className="flex flex-wrap justify-center items-center space-x-8 sm:space-x-12 px-6">
+  <div className="w-full flex justify-center">
+    <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 px-6 max-w-6xl">
       {/* Timeline Items */}
       {[
         { year: "2017", description: "URC - World Rank: 20" },
@@ -389,9 +389,9 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
       ].map((item, index) => (
         <div
           key={index}
-          className="flex flex-col items-center text-center min-w-[100px] sm:max-w-xs p-4"
+          className="flex flex-col items-center text-center w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px]"
         >
-          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex justify-center items-center text-black font-bold text-base sm:text-lg">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex justify-center items-center text-black font-bold text-sm sm:text-lg">
             {item.year}
           </div>
           <p className="mt-2 sm:mt-4 text-gray-400 text-xs sm:text-sm">
@@ -402,6 +402,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
+
 
   </div>
 </div>
