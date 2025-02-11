@@ -301,8 +301,8 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         </div>
       </div>
 
-<div className="min-h-screen bg-black text-white font-sans relative">
-  {/* Sparkles Effect */}
+<div className="relative bg-black text-white py-20 px-10">
+  {/* Sparkles Background */}
   <SparklesCore
     className="absolute inset-0 z-0"
     particleColor="#f0f0f0"
@@ -310,67 +310,65 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   />
 
   {/* Main Content */}
-  <div className="relative z-10">
-    {/* Main Container */}
-    <div className="container mx-auto px-6 lg:px-20 py-16 grid sm:grid-cols-1 lg:grid-cols-3 gap-6">
-      {/* Section 1 - International Rover Challenge */}
-      <div className="flex flex-col justify-center text-center lg:text-left">
-        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-6">
-          International <br /> Rover <br /> Challenge
-        </h1>
-        <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8">
+  <div className="relative z-10 max-w-6xl mx-auto text-center">
+    {/* Title */}
+    <h2 className="text-5xl font-bold uppercase tracking-wide">
+      International Rover Challenge
+    </h2>
+
+    {/* Large Rover Image */}
+    <div className="flex justify-center my-12">
+      <img
+        src="irc_section.png" // Replace with actual rover image
+        alt="Mars Rover"
+        className="w-full md:w-[80%] lg:w-[70%] xl:w-[60%] h-auto"
+      />
+    </div>
+
+    {/* Three Sections Grid */}
+    <div className="grid md:grid-cols-3 gap-12 mt-10">
+      {/* Section 1 */}
+      <div>
+        <h3 className="text-2xl font-semibold">International Rover Challenge</h3>
+        <p className="text-gray-300 text-lg mt-3">
           The International Rover Challenge (IRC) is a premier event bringing
           together students, engineers, and innovators from around the globe to
-          push the boundaries of space exploration technology. Teams design,
-          build, and test advanced rovers that simulate real-world planetary
-          exploration, offering a hands-on experience in tackling the challenges
-          of extraterrestrial exploration. The competition is a true testament
-          to creativity, problem-solving, and teamwork, inspiring the next
-          generation of space pioneers.
+          push the boundaries of space exploration technology.
         </p>
-        <div className="flex flex-wrap justify-center lg:justify-start items-center gap-4">
-          {/* Learn More Button */}
-          <a
-            href="https://www.spaceroboticssociety.org/events/international-rover-challenge/"
-            className="px-6 py-3 bg-white text-black rounded-lg text-sm sm:text-lg font-semibold hover:bg-gray-300 transition"
-          >
-            Learn More
-          </a>
-          {/* Missions Button */}
-          <Link href="./mission">
-            <a
-              className="px-6 py-3 border border-white text-white rounded-lg text-sm sm:text-lg font-semibold hover:bg-white hover:text-black transition"
-            >
-              Missions
-            </a>
-          </Link>
-        </div>
+        <a
+          href="https://www.spaceroboticssociety.org/events/international-rover-challenge/"
+          target="_blank"
+          className="inline-block mt-6 px-6 py-3 bg-white text-black rounded-full text-lg font-medium"
+        >
+          Learn More
+        </a>
       </div>
 
-      {/* Section 2 - Rover Image */}
-      <div className="flex justify-center items-center">
-        <img
-          src="irc section.png"
-          alt="Rover"
-          className="w-full sm:w-full max-w-3xl sm:max-w-4xl"
-        />
-      </div>
-
-      {/* Section 3 - History With IRC */}
-      <div className="flex flex-col justify-center text-center lg:text-left">
-        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-6">
-          <span className="block lg:inline">History With</span>
-          <br className="lg:hidden" />
-          <span className="block lg:inline"> IRC</span>
-        </h1>
-        <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-8">
+      {/* Section 2 */}
+      <div>
+        <h3 className="text-2xl font-semibold">History with IRC</h3>
+        <p className="text-gray-300 text-lg mt-3">
           Team RUDRA, the official rover team from SRMIST, is a veteran
           competitor at IRC, recognized for its legacy of innovation and
-          technical excellence. With a strong track record in advancing rover
-          design and mission execution, RUDRA upholds the core values of
-          SPROS—driving global space technology development and inspiring future
-          space professionals.
+          technical excellence.
         </p>
+      </div>
+
+      {/* Section 3 */}
+      <div>
+        <h3 className="text-2xl font-semibold">Missions</h3>
+        <p className="text-gray-300 text-lg mt-3">
+          Rovers must complete tasks such as autonomous driving, science
+          sampling, and robotic arm manipulation, all designed to mimic real
+          Mars mission scenarios.
+        </p>
+        <Link href="./irc1">
+          <a
+            className="inline-block mt-6 px-6 py-3 bg-white text-black rounded-full text-lg font-medium"
+          >
+            Missions
+          </a>
+        </Link>
       </div>
     </div>
 
@@ -382,7 +380,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
       <div className="overflow-x-auto">
         <div className="flex justify-start sm:justify-center items-center space-x-8 sm:space-x-12 px-6">
           {/* Timeline Items */}
-          {[
+          {[ 
             { year: "2020", description: "IRC20 - 3RD." },
             { year: "2023", description: "IRC23 - 7TH." },
             { year: "2024", description: "IRC24 - 3RD." },
@@ -391,7 +389,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
               key={index}
               className="flex flex-col items-center text-center min-w-[100px] sm:max-w-xs"
             >
-              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-full flex justify-center items-center text-black font-bold text-base sm:text-lg">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex justify-center items-center text-black font-bold text-base sm:text-lg">
                 {item.year}
               </div>
               <p className="mt-2 sm:mt-4 text-gray-400 text-xs sm:text-sm">
@@ -404,6 +402,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
+
 
 <div className="relative bg-black text-white py-20 px-10">
   {/* Sparkles Background */}
