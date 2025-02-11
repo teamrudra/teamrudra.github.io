@@ -319,7 +319,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     {/* Large Rover Image */}
     <div className="flex justify-center my-12">
       <img
-        src="irc_section.png" // Replace with actual rover image
+        src="irc section.png" // Replace with actual rover image
         alt="Mars Rover"
         className="w-full md:w-[80%] lg:w-[70%] xl:w-[60%] h-auto"
       />
@@ -358,9 +358,9 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
       <div>
         <h3 className="text-2xl font-semibold">Missions</h3>
         <p className="text-gray-300 text-lg mt-3">
-     Rovers must complete tasks such as IDMO, PIMA, Astrobiology Expedition, Autonomous Expedition, Business Plan Presentation, and Delivery Missions, all designed to simulate real Mars mission scenarios.
+     Rovers must complete tasks such as IDMO, PIMA, Astrobiology & Autonomous Expedition, Business Plan Presentation, and Delivery Missions, all designed to simulate real Mars mission scenarios.
         </p>
-        <Link href="./missions">
+        <Link href="./mission">
           <a
             className="inline-block mt-6 px-6 py-3 bg-white text-black rounded-full text-lg font-medium"
           >
@@ -371,36 +371,38 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
 
     {/* Timeline Section */}
-    <div className="mt-24 bg-gray-900 py-12">
-      <h2 className="text-center text-2xl sm:text-3xl lg:text-5xl font-bold mb-12">
-        Timeline
-      </h2>
-      <div className="overflow-x-auto">
-        <div className="flex justify-start sm:justify-center items-center space-x-8 sm:space-x-12 px-6">
-          {/* Timeline Items */}
-          {[ 
-            { year: "2017", description: "URC - World Rank: 20" },
-            { year: "2019", description: "URC - World Rank: 11" },
-            { year: "2020", description: "IRC20 - 3RD." },
-            { year: "2023", description: "IRC23 - 7TH." },
-            { year: "2024", description: "IRC24 - 3RD." },
-            { year: "2025", description: "IRC - 5TH" },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center min-w-[100px] sm:max-w-xs"
-            >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex justify-center items-center text-black font-bold text-base sm:text-lg">
-                {item.year}
-              </div>
-              <p className="mt-2 sm:mt-4 text-gray-400 text-xs sm:text-sm">
-                {item.description}
-              </p>
-            </div>
-          ))}
+   {/* Timeline Section */}
+<div className="w-full min-h-screen bg-gray-900 py-12 flex flex-col justify-center">
+  <h2 className="text-center text-2xl sm:text-3xl lg:text-5xl font-bold mb-12">
+    Timeline
+  </h2>
+  <div className="overflow-x-auto">
+    <div className="flex flex-wrap justify-center items-center space-x-8 sm:space-x-12 px-6">
+      {/* Timeline Items */}
+      {[
+        { year: "2017", description: "URC - World Rank: 20" },
+        { year: "2019", description: "URC - World Rank: 11" },
+        { year: "2020", description: "IRC20 - 3RD." },
+        { year: "2023", description: "IRC23 - 7TH." },
+        { year: "2024", description: "IRC24 - 3RD." },
+        { year: "2025", description: "IRC - 5TH." },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="flex flex-col items-center text-center min-w-[100px] sm:max-w-xs p-4"
+        >
+          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full flex justify-center items-center text-black font-bold text-base sm:text-lg">
+            {item.year}
+          </div>
+          <p className="mt-2 sm:mt-4 text-gray-400 text-xs sm:text-sm">
+            {item.description}
+          </p>
         </div>
-      </div>
+      ))}
     </div>
+  </div>
+</div>
+
   </div>
 </div>
 
