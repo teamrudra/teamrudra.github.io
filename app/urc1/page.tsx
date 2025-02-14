@@ -6,31 +6,31 @@ const URCMissionsPage: React.FC = () => {
   const missions = [
     {
       id: 1,
-      image: 'urc1.jpg',
+      image: 'uni1.jpg',
       title: 'Science Mission',
       subtitle: 'Astrobiological Analysis and Sample Collection',
       info: 'The rover performs scientific investigations by collecting and analyzing soil and rock samples to detect biosignatures or evidence of past and present life.',
     },
     {
       id: 2,
-      image: 'urc2.jpg',
+      image: 'uni2.png',
       title: 'Extreme Delivery Mission',
       subtitle: 'Terrain Navigation and Payload Delivery',
       info: 'The rover navigates rough terrain to deliver tools and supplies to astronauts, demonstrating reliability in transport tasks across challenging landscapes.',
     },
     {
       id: 3,
-      image: 'urc3.jpg',
+      image: 'uni3.jpg',
       title: 'Equipment Servicing Mission',
       subtitle: 'Technical Maintenance and Repair',
-      info: 'This task involves using the rover’s robotic arm to manipulate tools, operate machinery, and perform maintenance operations on simulated equipment.',
+      info: 'This task involves using the rover’s robotic arm to manipulate tools, operate machinery, and perform maintenance operations.',
     },
     {
       id: 4,
       image: 'urc4.jpg',
       title: 'Autonomous Navigation Mission',
-      subtitle: 'GPS-Based and Obstacle Avoidance Navigation',
-      info: 'The rover autonomously navigates through GPS waypoints while avoiding obstacles, showcasing its ability to operate independently in rugged environments.',
+      subtitle: 'Obstacle Avoidance Navigation',
+      info: 'The rover autonomously navigates through waypoints while avoiding obstacles, showcasing its ability to operate independently in rugged environments.',
     },
   ];
 

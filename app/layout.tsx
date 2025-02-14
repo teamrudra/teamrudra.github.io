@@ -6,7 +6,7 @@ import 'tailwindcss/tailwind.css';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rudra",
+  title: "Team RUDRA-SRM Mars Rover",
   description: "Welcome to the rudra website",
 };
 
