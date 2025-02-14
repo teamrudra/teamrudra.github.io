@@ -23,14 +23,14 @@ const URCMissionsPage: React.FC = () => {
       image: 'urc3.jpg',
       title: 'Equipment Servicing Mission',
       subtitle: 'Technical Maintenance and Repair',
-      info: 'This task involves using the rover’s robotic arm to manipulate tools, operate machinery, and perform maintenance operations on simulated equipment.',
+      info: 'This task involves using the rover’s robotic arm to manipulate tools, operate machinery, and perform maintenance operations.',
     },
     {
       id: 4,
       image: 'urc4.jpg',
       title: 'Autonomous Navigation Mission',
-      subtitle: 'GPS-Based and Obstacle Avoidance Navigation',
-      info: 'The rover autonomously navigates through GPS waypoints while avoiding obstacles, showcasing its ability to operate independently in rugged environments.',
+      subtitle: 'Obstacle Avoidance Navigation',
+      info: 'The rover autonomously navigates through waypoints while avoiding obstacles, showcasing its ability to operate independently in rugged environments.',
     },
   ];
 
