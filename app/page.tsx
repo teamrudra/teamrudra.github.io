@@ -467,9 +467,9 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-10 text-center z-5">
           {/* Team Members */}
           {[
-            { name: 'Team Lead - Shashwat Ganesh', img: 'team-lead.png', link: 'https://www.linkedin.com/in/sga0xc33d/' },
-            { name: 'Team Co-Lead - Eeshan Nair', img: 'team-manager.png', link: 'https://www.linkedin.com/in/eeshan-nair-496800238/' },
-            { name: 'Technical Director - Rajkumar', img: 'technical-director.png', link: 'https://www.linkedin.com/in/rajkumar-m13/' },
+            { name: 'Team Lead - Ratnesh Mishra', img: 'team-lead.png', link: 'https://www.linkedin.com/in/sga0xc33d/' },
+            { name: 'Team Manager - Danyal Reyaz', img: 'team-manager.png', link: 'https://www.linkedin.com/in/eeshan-nair-496800238/' },
+            { name: 'Technical Director - Pragati Prithvi', img: 'technical-director.png', link: 'https://www.linkedin.com/in/rajkumar-m13/' },
             { name: 'Mechanical Domain', img: 'mechanical-domain.png', link: './mechanical-domain' },
             { name: 'Electronics Domain', img: 'electronics-domain.png', link: './electronics-domain' },
             { name: 'Coding Domain', img: 'coding-domain.png', link: './coding-domain' },
