@@ -62,7 +62,7 @@ const CorporateDomainPage = () => {
          {/* Corporate Team Member 7 */}
         <Link href="https://www.linkedin.com/in/shriya-rao-4773352bb/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./corporate-member5.jpeg" alt="Corporate Team Member 5" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./corporate-member7.jpeg" alt="Corporate Team Member 7" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Shriya Rao</h3>
           </div>
         </Link>
