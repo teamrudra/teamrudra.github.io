@@ -38,7 +38,7 @@ const CorporateDomainPage = () => {
         {/* Corporate Team Member 4 */}
         <Link href="">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./corporate-member4.png" alt="Corporate Team Member 4" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./corporate-member4.jpeg" alt="Corporate Team Member 4" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Bhargavi Singh</h3>
           </div>
         </Link>
@@ -46,7 +46,7 @@ const CorporateDomainPage = () => {
         {/* Corporate Team Member 5 */}
         <Link href="https://www.linkedin.com/in/shivi-gupta-642651301/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./corporate-member5.png" alt="Corporate Team Member 5" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./corporate-member5.jpeg" alt="Corporate Team Member 5" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Shivi Gupta</h3>
           </div>
         </Link>
@@ -54,7 +54,7 @@ const CorporateDomainPage = () => {
         {/* Corporate Team Member 6 */}
         <Link href="https://www.linkedin.com/in/snehal-gupta-44a791222/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./corporate-member6.png" alt="Corporate Team Member 6" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./corporate-member6.jpeg" alt="Corporate Team Member 6" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Snehal gupta</h3>
           </div>
         </Link>
@@ -62,7 +62,7 @@ const CorporateDomainPage = () => {
          {/* Corporate Team Member 7 */}
         <Link href="https://www.linkedin.com/in/shriya-rao-4773352bb/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./corporate-member5.png" alt="Corporate Team Member 5" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./corporate-member5.jpeg" alt="Corporate Team Member 5" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Shriya Rao</h3>
           </div>
         </Link>
