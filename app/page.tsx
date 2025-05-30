@@ -177,9 +177,26 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
       <Link href="#about" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">ABOUT US</a>
       </Link>
-      <Link href="#team" scroll={true} legacyBehavior>
-        <a className="hover:text-gray-300 transition duration-200">TEAM</a>
-      </Link>
+     <div className="relative group">
+  <Link href="#team" scroll={true} legacyBehavior>
+    <a className="hover:text-gray-300 transition duration-200">TEAM</a>
+  </Link>
+  <div className="absolute hidden group-hover:block bg-gray-900 text-white mt-2 rounded shadow-lg z-50">
+    <ul className="py-2 min-w-[150px]">
+      {[...Array(2025 - 2017 + 1)].map((_, index) => {
+        const year = 2017 + index;
+        return (
+          <li key={year}>
+            <Link href={`/team/${year}`} legacyBehavior>
+              <a className="block px-4 py-2 hover:bg-gray-700">{year}</a>
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</div>
+
         <Link href="#rover-renders" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">ROVER</a>
       </Link>
