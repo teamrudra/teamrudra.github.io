@@ -250,6 +250,9 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     <ul className="py-2 min-w-[120px]">
       {[...Array(2025 - 2017 + 1)].map((_, index) => {
         const year = 2017 + index;
+   // For 2017 link to /team/team-2017, else /team/{year}
+        const href = year === 2017 ? `/team/team-2017` : `/team/${year}`;
+
         return (
           <li key={year}>
             <Link href={`/team/${year}`} legacyBehavior>
