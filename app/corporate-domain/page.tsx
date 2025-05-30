@@ -10,9 +10,7 @@ const CorporateDomainPage = () => {
       <h2 className="text-white text-4xl mb-12 z-10 font-serif">Corporate Domain Team</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 text-center z-10">
         
-
-
-        {/* Corporate Team Member 2 */}
+{/* Corporate Team Member 2 */}
         <Link href="https://www.linkedin.com/in/danyal-reyaz/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
             <img src="./corporate-member4.png alt="Corporate Team Member 2" className="w-32 h-32 mx-auto rounded-full" />
