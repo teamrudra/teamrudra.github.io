@@ -468,7 +468,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
           {/* Team Members */}
           {[
             { name: 'Team Lead - Ratnesh Mishra', img: 'mechanical-member5.png', link: 'https://www.linkedin.com/in/ratnesh-mishra-07260424b/' },
-            { name: 'Team Manager - Danyal Reyaz', img: 'danyal.JPG', link: 'https://www.linkedin.com/in/danyal-reyaz/' },
+            { name: 'Team Manager - Danyal Reyaz', img: 'corporate-member4.png', link: 'https://www.linkedin.com/in/danyal-reyaz/' },
             { name: 'Technical Director - Pragati Prithvi', img: 'electronics-member6.png', link: 'https://www.linkedin.com/in/pragati-prithvi/' },
             { name: 'Mechanical Domain', img: 'mechanical-domain.png', link: './mechanical-domain' },
             { name: 'Electronics Domain', img: 'electronics-domain.png', link: './electronics-domain' },
