@@ -216,14 +216,14 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
 
       {/* Team 2024-25 - Scroll on same page */}
       <li>
-        <Link href="#team-2024-25" scroll={true} legacyBehavior>
+        <Link href="#team" scroll={true} legacyBehavior>
           <a className="block px-4 py-2 hover:bg-gray-700 cursor-pointer">2024–25</a>
         </Link>
       </li>
 
       {/* Team 2025-26 - Scroll on same page */}
       <li>
-        <Link href="#team-2025-26" scroll={true} legacyBehavior>
+        <Link href="#team" scroll={true} legacyBehavior>
           <a className="block px-4 py-2 hover:bg-gray-700 cursor-pointer">2025–26</a>
         </Link>
       </li>
