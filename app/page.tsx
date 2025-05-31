@@ -192,7 +192,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
 
   {/* Team 2018 */}
   <li>
-    <Link href="/Team2018" legacyBehavior>
+    <Link href="/Team18" legacyBehavior>
       <a className="block px-4 py-2 hover:bg-gray-700">2018</a>
     </Link>
   </li>
