@@ -4,8 +4,8 @@ import { SparklesCore } from '@/components/ui/sparkles';
 const Team17Page = () => {
   const teamMembers = [
     { name: "Anshuman Dikshit", designation: "Team Lead", image: "/anshuman.png" },
-    { name: "Rishabh Nahata", designation: "Team Manager", image: "/rishabh.png" },
-    { name: "Sanjeet Ray", designation: "Mechanical Lead", image: "/sanjeet.png" },
+    { name: "Rishabh Nahata", designation: "Team Manager", image: "/rishabh.jpg" },
+    { name: "Sanjeet Ray", designation: "Mechanical Lead", image: "/sanjeet.jpg" },
     { name: "Yashasvi Pathak", designation: "Electronics Lead", image: "/yashasvi.png" },
     { name: "Tadeesha Roy", designation: "Coding Lead", image: "/tadeesha.png" },
     { name: "Vijansh Khanna", designation: "Science Lead", image: "/vijansh.png" },
