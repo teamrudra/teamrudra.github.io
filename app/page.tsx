@@ -185,14 +185,14 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
    <ul className="py-2 min-w-[140px]">
   {/* Team 2017 */}
   <li>
-    <Link href="/team/Team2017" legacyBehavior>
+    <Link href="/Team2017" legacyBehavior>
       <a className="block px-4 py-2 hover:bg-gray-700">2017</a>
     </Link>
   </li>
 
   {/* Team 2018 */}
   <li>
-    <Link href="/team/Team2018" legacyBehavior>
+    <Link href="/Team2018" legacyBehavior>
       <a className="block px-4 py-2 hover:bg-gray-700">2018</a>
     </Link>
   </li>
@@ -206,7 +206,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
 
   {/* Team 2020 */}
   <li>
-    <Link href="/team/Team2020" legacyBehavior>
+    <Link href="/Team2020" legacyBehavior>
       <a className="block px-4 py-2 hover:bg-gray-700">2020</a>
     </Link>
   </li>
