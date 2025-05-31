@@ -3,8 +3,8 @@ import { SparklesCore } from '@/components/ui/sparkles';
 
 const Team2019Page = () => {
   const teamMembers = [
-    { name: "Hari Krishna", designation: "Team Lead", image: "hari.png" },
-    { name: "Maanik Narayan", designation: "Team Manager", image: "maanik.png" },
+    { name: "Hari Krishna", designation: "Team Lead", image: "harikrishna.png" },
+    { name: "Maanik Narayan", designation: "Team Manager", image: "maanik.webp" },
     { name: "Krishanu Kumar", designation: "Technical Director", image: "krishanu.png" },
     { name: "Gauravjit Singh Gill", designation: "Mechanical Lead", image: "gauravjit.png" },
     { name: "Rahul R", designation: "Research Lead", image: "rahul.png" },
