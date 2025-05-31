@@ -244,28 +244,41 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
             <Link href="#about" scroll={true} legacyBehavior>
               <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>ABOUT US</a>
             </Link>
-           <div className="group relative">
+          <div className="group relative">
   <Link href="#team" scroll={true} legacyBehavior>
     <a className="hover:text-gray-300 transition duration-200 cursor-pointer">TEAM</a>
   </Link>
   <div className="absolute hidden group-hover:block bg-gray-800 text-white mt-2 rounded shadow-lg z-50">
-    <ul className="py-2 min-w-[120px]">
-      {[...Array(2025 - 2017 + 1)].map((_, index) => {
-        const year = 2017 + index;
-   // For 2017 link to /team/team-2017, else /team/{year}
-        const href = year === 2017 ? `/team/team-2017` : `/team/${year}`;
-
+    <ul className="py-2 min-w-[140px]">
+      {/* Team2017 to Team2020 */}
+      {["Team2017", "Team2018", "Team2019", "Team2020"].map((folder, index) => {
+        const label = folder.replace("Team", ""); // show only the year in dropdown
         return (
-          <li key={year}>
-            <Link href={`/team/${year}`} legacyBehavior>
-              <a className="block px-4 py-2 hover:bg-gray-700">{year}</a>
+          <li key={folder}>
+            <Link href={`/team/${folder}`} legacyBehavior>
+              <a className="block px-4 py-2 hover:bg-gray-700">{label}</a>
             </Link>
           </li>
         );
       })}
+
+      <hr className="border-gray-600 my-1" />
+
+      {/* Custom years like 2024–25 and 2025–26 */}
+      <li>
+        <Link href="/team/2024-25" legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700">2024–25</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/team/2025-26" legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700">2025–26</a>
+        </Link>
+      </li>
     </ul>
   </div>
 </div>
+
 
              <Link href="#rover-renders" scroll={true} legacyBehavior>
               <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>OUR ROVER</a>
