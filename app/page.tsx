@@ -182,52 +182,53 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     <a className="hover:text-gray-300 transition duration-200 cursor-pointer">TEAM</a>
   </Link>
   <div className="absolute hidden group-hover:block bg-gray-800 text-white mt-2 rounded shadow-lg z-50">
-   <ul className="py-2 min-w-[140px]">
-  {/* Team 2017 */}
-  <li>
-    <Link href="/Team2017" legacyBehavior>
-      <a className="block px-4 py-2 hover:bg-gray-700">2017</a>
-    </Link>
-  </li>
+    <ul className="py-2 min-w-[140px]">
 
-  {/* Team 2018 */}
-  <li>
-    <Link href="/Team18" legacyBehavior>
-      <a className="block px-4 py-2 hover:bg-gray-700">2018</a>
-    </Link>
-  </li>
+      {/* Team 2017 */}
+      <li>
+        <Link href="/Team2017" legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700">2017</a>
+        </Link>
+      </li>
 
-  {/* Team 2019 */}
-  <li>
-    <Link href="/Team2019" legacyBehavior>
-      <a className="block px-4 py-2 hover:bg-gray-700">2019</a>
-    </Link>
-  </li>
+      {/* Team 2018 */}
+      <li>
+        <Link href="/Team18" legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700">2018</a>
+        </Link>
+      </li>
 
-  {/* Team 2020 */}
-  <li>
-    <Link href="/Team2020" legacyBehavior>
-      <a className="block px-4 py-2 hover:bg-gray-700">2020</a>
-    </Link>
-  </li>
+      {/* Team 2019 */}
+      <li>
+        <Link href="/Team2019" legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700">2019</a>
+        </Link>
+      </li>
 
-  <hr className="border-gray-600 my-1" />
+      {/* Team 2020 */}
+      <li>
+        <Link href="/Team2020" legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700">2020</a>
+        </Link>
+      </li>
 
-  {/* Team 2024-25 */}
-  <li>
-    <Link href="/team/2024-25" legacyBehavior>
-      <a className="block px-4 py-2 hover:bg-gray-700">2024–25</a>
-    </Link>
-  </li>
+      <hr className="border-gray-600 my-1" />
 
-  {/* Team 2025-26 */}
-  <li>
-    <Link href="/team/2025-26" legacyBehavior>
-      <a className="block px-4 py-2 hover:bg-gray-700">2025–26</a>
-    </Link>
-  </li>
-</ul>
+      {/* Team 2024-25 - Scroll on same page */}
+      <li>
+        <Link href="#team-2024-25" scroll={true} legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700 cursor-pointer">2024–25</a>
+        </Link>
+      </li>
 
+      {/* Team 2025-26 - Scroll on same page */}
+      <li>
+        <Link href="#team-2025-26" scroll={true} legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700 cursor-pointer">2025–26</a>
+        </Link>
+      </li>
+
+    </ul>
   </div>
 </div>
 
