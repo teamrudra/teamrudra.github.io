@@ -34,7 +34,7 @@ const Team17Page = () => {
       {/* Sparkles Effect */}
       <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
 
-      <h2 className="text-white text-4xl mb-12 z-10 font-serif">Team 17 Members</h2>
+      <h2 className="text-white text-4xl mb-12 z-10 font-serif">Team 2017 Members</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 text-center z-10">
         {teamMembers.map((member, index) => (
