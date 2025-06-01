@@ -37,7 +37,7 @@ const Labpage = () => {
         {/* Video - Main Lab */}
         <div className="mt-6 flex justify-center px-4">
           <video controls className="rounded-lg shadow-md w-full max-w-3xl">
-            <source src="/mechlab.mp4" type="video/mp4" />
+            <source src="./mechlab.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
