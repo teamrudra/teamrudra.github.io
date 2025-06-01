@@ -10,20 +10,22 @@ const Labpage = () => {
       <h1 className="text-4xl font-semibold mb-10 z-10 text-center">Research and Resources</h1>
 
       {/* Main Lab Section */}
-      <section className="z-10 mb-16">
+      <section className="z-10 w-full max-w-7xl px-4 mb-16">
         <h2 className="text-2xl font-medium mb-6 text-center">Main Lab</h2>
-        <div className="grid grid-cols-3 gap-4">
-          <img src="/labs/main1.png" alt="Main Lab 1" width="150" height="150" className="rounded-md" />
-          <img src="/labs/main2.png" alt="Main Lab 2" width="150" height="150" className="rounded-md" />
-          <img src="/labs/main3.png" alt="Main Lab 3" width="150" height="150" className="rounded-md" />
-          <img src="/labs/main4.png" alt="Main Lab 4" width="150" height="150" className="rounded-md" />
-          <img src="/labs/main5.png" alt="Main Lab 5" width="150" height="150" className="rounded-md" />
-          <img src="/labs/main6.png" alt="Main Lab 6" width="150" height="150" className="rounded-md" />
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
+          {[1, 2, 3, 4, 5, 6].map((num) => (
+            <img
+              key={num}
+              src={`/labs/main${num}.png`}
+              alt={`Main Lab ${num}`}
+              className="w-full max-w-[150px] h-auto rounded-md object-cover"
+            />
+          ))}
         </div>
 
         {/* Video - Main Lab */}
-        <div className="mt-6 flex justify-center">
-          <video width="640" height="360" controls className="rounded-lg shadow-md">
+        <div className="mt-10 flex justify-center">
+          <video width="100%" height="auto" controls className="w-full max-w-3xl rounded-lg shadow-md">
             <source src="/labs/main-lab-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -31,20 +33,22 @@ const Labpage = () => {
       </section>
 
       {/* Mechanical Lab Section */}
-      <section className="z-10">
+      <section className="z-10 w-full max-w-7xl px-4">
         <h2 className="text-2xl font-medium mb-6 text-center">Mechanical Lab</h2>
-        <div className="grid grid-cols-3 gap-4">
-          <img src="/mech1.jpeg" alt="Mech Lab 1" width="150" height="150" className="rounded-md" />
-          <img src="/mech2.jpeg" alt="Mech Lab 2" width="150" height="150" className="rounded-md" />
-          <img src="/mech3.jpeg" alt="Mech Lab 3" width="150" height="150" className="rounded-md" />
-          <img src="/mech4.jpeg" alt="Mech Lab 4" width="150" height="150" className="rounded-md" />
-          <img src="/mech5.jpeg" alt="Mech Lab 5" width="150" height="150" className="rounded-md" />
-          <img src="/mech6.jpeg" alt="Mech Lab 6" width="150" height="150" className="rounded-md" />
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
+          {[1, 2, 3, 4, 5, 6].map((num) => (
+            <img
+              key={num}
+              src={`/mech${num}.jpeg`}
+              alt={`Mech Lab ${num}`}
+              className="w-full max-w-[150px] h-auto rounded-md object-cover"
+            />
+          ))}
         </div>
 
         {/* Video - Mechanical Lab */}
-        <div className="mt-6 flex justify-center">
-          <video width="640" height="360" controls className="rounded-lg shadow-md">
+        <div className="mt-10 flex justify-center">
+          <video width="100%" height="auto" controls className="w-full max-w-3xl rounded-lg shadow-md">
             <source src="/mechlab.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
