@@ -576,9 +576,9 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-10 text-center z-5">
           {/* Team Members */}
           {[
-            { name: 'Team Lead - Ratnesh Mishra', img: 'mechanical-member5.png', link: 'https://www.linkedin.com/in/ratnesh-mishra-07260424b/' },
-            { name: 'Team Manager - Danyal Reyaz', img: 'corporate-member4.png', link: 'https://www.linkedin.com/in/danyal-reyaz/' },
-            { name: 'Technical Director - Pragati Prithvi', img: 'electronics-member6.png', link: 'https://www.linkedin.com/in/pragati-prithvi/' },
+            { name: 'Team Lead - Shashwat Ganesh', img: 'team-lead.png', link: 'https://www.linkedin.com/in/sga0xc33d/' },
+            { name: 'Team Co-Lead - Eeshan Nair', img: 'team-manager.png', link: 'https://www.linkedin.com/in/eeshan-nair-496800238/' },
+            { name: 'Technical Director - Rajkumar', img: 'technical-director.png', link: 'https://www.linkedin.com/in/rajkumar-m13/' },
             { name: 'Mechanical Domain', img: 'mechanical-domain.png', link: './mechanical-domain' },
             { name: 'Electronics Domain', img: 'electronics-domain.png', link: './electronics-domain' },
             { name: 'Coding Domain', img: 'coding-domain.png', link: './coding-domain' },
@@ -818,6 +818,93 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
+
+{/*sponsor us signup */}
+<div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="sponsor">
+  <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
+  
+  <div className="bg-gray-900 p-6 md:p-8 rounded-2xl shadow-lg w-full max-w-[1000px] relative flex flex-col md:flex-row items-center">
+    
+    {/* Image Section */}
+    <div className="flex-1 mb-6 md:mb-0 md:mr-8">
+      <img 
+        src="tier2.png" 
+        alt="Sponsor Image" 
+        className="w-full h-[250px] md:w-[440px] md:h-[400px] object-cover rounded-xl" 
+      />
+    </div>
+
+    {/* Form Section */}
+    <div className="flex-1 text-center">
+      <h2 className="text-white text-2xl md:text-3xl font-semibold mb-2">
+        Partner with Team Rudra
+      </h2>
+      <p className="text-gray-400 mb-6 text-sm md:text-base">
+        Fuel our journey to success by supporting groundbreaking projects and exploration.
+      </p>
+
+      <form 
+        name="sponsor-form" 
+        onSubmit={handleSubmit2}
+        method="POST" 
+        className="space-y-4 w-full"
+      >
+        <div className="relative">
+          <input 
+            type="text" 
+            name="companyName" 
+            placeholder="Enter your company name *" 
+            className="w-full p-3 md:p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            required 
+          />
+        </div>
+        <div className="relative">
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Enter your email here *" 
+            className="w-full p-3 md:p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            required 
+          />
+        </div>
+       <button 
+  type="submit" 
+  disabled={isLoading2}
+  className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition disabled:bg-blue-400 disabled:cursor-not-allowed"
+>
+  {isLoading2 ? (
+    <span className="flex items-center justify-center">
+      <svg 
+        className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="none" 
+        viewBox="0 0 24 24"
+      >
+        <circle 
+          className="opacity-25" 
+          cx="12" 
+          cy="12" 
+          r="10" 
+          stroke="currentColor" 
+          strokeWidth="4"
+        />
+        <path 
+          className="opacity-75" 
+          fill="currentColor" 
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+        />
+      </svg>
+      Loading...
+    </span>
+  ) : (
+    'Contact Us'
+  )}
+</button>
+      </form>
+    </div>
+  </div>
+</div>
+
       
 
 
