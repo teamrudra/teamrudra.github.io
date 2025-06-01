@@ -236,6 +236,10 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         <Link href="#rover-renders" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">ROVER</a>
       </Link>
+      {/* LAB Page Link */}
+<Link href="/Lab" legacyBehavior>
+  <a className="hover:text-gray-300 transition duration-200">LAB</a>
+</Link>
       <Link href="#achievements" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">ACHIEVEMENTS</a>
       </Link>
