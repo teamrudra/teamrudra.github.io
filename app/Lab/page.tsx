@@ -27,12 +27,12 @@ const Labpage = () => {
       <section className="z-10">
         <h2 className="text-2xl font-medium mb-6 text-center">Mechanical Lab</h2>
         <div className="grid grid-cols-3 gap-4">
-          <Image src="/labs/mech1.png" alt="Mech Lab 1" width={150} height={150} className="rounded-md" />
-          <Image src="/labs/mech2.png" alt="Mech Lab 2" width={150} height={150} className="rounded-md" />
-          <Image src="/labs/mech3.png" alt="Mech Lab 3" width={150} height={150} className="rounded-md" />
-          <Image src="/labs/mech4.png" alt="Mech Lab 4" width={150} height={150} className="rounded-md" />
-          <Image src="/labs/mech5.png" alt="Mech Lab 5" width={150} height={150} className="rounded-md" />
-          <Image src="/labs/mech6.png" alt="Mech Lab 6" width={150} height={150} className="rounded-md" />
+          <Image src="/mech1.png" alt="Mech Lab 1" width={150} height={150} className="rounded-md" />
+          <Image src="/mech2.png" alt="Mech Lab 2" width={150} height={150} className="rounded-md" />
+          <Image src="/mech3.png" alt="Mech Lab 3" width={150} height={150} className="rounded-md" />
+          <Image src="/mech4.png" alt="Mech Lab 4" width={150} height={150} className="rounded-md" />
+          <Image src="/mech5.png" alt="Mech Lab 5" width={150} height={150} className="rounded-md" />
+          <Image src="/mech6.png" alt="Mech Lab 6" width={150} height={150} className="rounded-md" />
         </div>
       </section>
     </div>
