@@ -13,18 +13,18 @@ const Labpage = () => {
       <section className="z-10 mb-16 w-full max-w-6xl">
         <h2 className="text-2xl font-medium mb-6 text-center">Main Lab</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
-          <img src="/labs/main1.png" alt="Main Lab 1" className="rounded-md w-full h-auto object-cover" />
-          <img src="/labs/main2.png" alt="Main Lab 2" className="rounded-md w-full h-auto object-cover" />
-          <img src="/labs/main3.png" alt="Main Lab 3" className="rounded-md w-full h-auto object-cover" />
-          <img src="/labs/main4.png" alt="Main Lab 4" className="rounded-md w-full h-auto object-cover" />
-          <img src="/labs/main5.png" alt="Main Lab 5" className="rounded-md w-full h-auto object-cover" />
-          <img src="/labs/main6.png" alt="Main Lab 6" className="rounded-md w-full h-auto object-cover" />
+          <img src="/main1.jpeg" alt="Main Lab 1" className="rounded-md w-full h-auto object-cover" />
+          <img src="/main2.jpeg" alt="Main Lab 2" className="rounded-md w-full h-auto object-cover" />
+          <img src="./main3.jpeg" alt="Main Lab 3" className="rounded-md w-full h-auto object-cover" />
+          <img src="/main4.jpeg" alt="Main Lab 4" className="rounded-md w-full h-auto object-cover" />
+          <img src="/main5.jpeg" alt="Main Lab 5" className="rounded-md w-full h-auto object-cover" />
+          <img src="/main6.jpg" alt="Main Lab 6" className="rounded-md w-full h-auto object-cover" />
         </div>
 
         {/* Video - Main Lab */}
         <div className="mt-6 flex justify-center px-4">
           <video controls className="rounded-lg shadow-md w-full max-w-3xl">
-            <source src="/labs/main-lab-video.mp4" type="video/mp4" />
+            <source src="/mechlab.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
