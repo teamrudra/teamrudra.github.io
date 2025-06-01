@@ -13,12 +13,12 @@ const Labpage = () => {
       <section className="z-10 mb-16 w-full max-w-6xl">
         <h2 className="text-2xl font-medium mb-6 text-center">Main Lab</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
-          <img src="/main1.jpeg" alt="Main Lab 1" className="rounded-md w-full h-auto object-cover" />
-          <img src="/main2.jpeg" alt="Main Lab 2" className="rounded-md w-full h-auto object-cover" />
+          <img src="./main1.jpeg" alt="Main Lab 1" className="rounded-md w-full h-auto object-cover" />
+          <img src="./main2.jpeg" alt="Main Lab 2" className="rounded-md w-full h-auto object-cover" />
           <img src="./main3.jpeg" alt="Main Lab 3" className="rounded-md w-full h-auto object-cover" />
-          <img src="/main4.jpeg" alt="Main Lab 4" className="rounded-md w-full h-auto object-cover" />
-          <img src="/main5.jpeg" alt="Main Lab 5" className="rounded-md w-full h-auto object-cover" />
-          <img src="/main6.jpg" alt="Main Lab 6" className="rounded-md w-full h-auto object-cover" />
+          <img src="./main4.jpeg" alt="Main Lab 4" className="rounded-md w-full h-auto object-cover" />
+          <img src="./main5.jpeg" alt="Main Lab 5" className="rounded-md w-full h-auto object-cover" />
+          <img src="./main6.jpg" alt="Main Lab 6" className="rounded-md w-full h-auto object-cover" />
         </div>
 
         {/* Video - Main Lab */}
@@ -34,18 +34,18 @@ const Labpage = () => {
       <section className="z-10 w-full max-w-6xl">
         <h2 className="text-2xl font-medium mb-6 text-center">Mechanical Lab</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
-          <img src="/mech1.jpeg" alt="Mech Lab 1" className="rounded-md w-full h-auto object-cover" />
-          <img src="/mech2.jpeg" alt="Mech Lab 2" className="rounded-md w-full h-auto object-cover" />
-          <img src="/mech3.jpeg" alt="Mech Lab 3" className="rounded-md w-full h-auto object-cover" />
-          <img src="/mech4.jpeg" alt="Mech Lab 4" className="rounded-md w-full h-auto object-cover" />
-          <img src="/mech5.jpeg" alt="Mech Lab 5" className="rounded-md w-full h-auto object-cover" />
-          <img src="/mech6.jpeg" alt="Mech Lab 6" className="rounded-md w-full h-auto object-cover" />
+          <img src="./mech1.jpeg" alt="Mech Lab 1" className="rounded-md w-full h-auto object-cover" />
+          <img src="./mech2.jpeg" alt="Mech Lab 2" className="rounded-md w-full h-auto object-cover" />
+          <img src="./mech3.jpeg" alt="Mech Lab 3" className="rounded-md w-full h-auto object-cover" />
+          <img src="./mech4.jpeg" alt="Mech Lab 4" className="rounded-md w-full h-auto object-cover" />
+          <img src="./mech5.jpeg" alt="Mech Lab 5" className="rounded-md w-full h-auto object-cover" />
+          <img src="./mech6.jpeg" alt="Mech Lab 6" className="rounded-md w-full h-auto object-cover" />
         </div>
 
         {/* Video - Mechanical Lab */}
         <div className="mt-6 flex justify-center px-4">
           <video controls className="rounded-lg shadow-md w-full max-w-3xl">
-            <source src="/mechlab.mp4" type="video/mp4" />
+            <source src="./mechlab.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
