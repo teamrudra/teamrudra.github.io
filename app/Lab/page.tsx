@@ -15,14 +15,16 @@ const Labpage = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
           {[
             { src: './main1.jpeg', alt: 'Main Lab 1', caption: 'Main Lab - Area' },
-            { src: './Main2.jpeg', alt: 'Main Lab 2', caption: 'Antenna operation' },
+            { src: './main2.jpeg', alt: 'Main Lab 2', caption: 'Antenna operation' },
             { src: './Main3.jpeg', alt: 'Main Lab 3', caption: 'Miscellaneous Components' },
-            { src: './Main4.jpeg', alt: 'Main Lab 4', caption: 'Printed Circuit Board(PCB)' },
+            { src: './Main4.jpeg', alt: 'Main Lab 4', caption: 'Printed Circuit Board (PCB)' },
             { src: './main5.jpeg', alt: 'Main Lab 5', caption: 'Robotic Manipulator' },
-            { src: './Main6.jpg', alt: 'Main Lab 6', caption: 'Testing Equipment' },
+            { src: './Main6.jpeg', alt: 'Main Lab 6', caption: 'Testing Equipment' },
           ].map(({ src, alt, caption }, i) => (
-            <div key={i} className="aspect-[4/3] overflow-hidden rounded-md relative flex flex-col">
-              <img src={src} alt={alt} className="w-full h-full object-cover rounded-md" />
+            <div key={i} className="flex flex-col items-center">
+              <div className="w-full aspect-[4/3] overflow-hidden rounded-md">
+                <img src={src} alt={alt} className="w-full h-full object-cover rounded-md" />
+              </div>
               <p className="mt-2 text-sm text-center text-gray-300">{caption}</p>
             </div>
           ))}
@@ -42,15 +44,17 @@ const Labpage = () => {
         <h2 className="text-2xl font-medium mb-6 text-center">Mechanical Lab</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
           {[
-            { src: './mech1.jpeg', alt: 'Mech Lab 1', caption: 'Mechanical Lab-Area' },
-            { src: './mech2.jpeg', alt: 'Mech Lab 2', caption: 'Asortment Of Filers And Hacksaw' },
-            { src: './mech3.jpeg', alt: 'Mech Lab 3', caption: 'Tools:Angle Grinder,Hammer' },
+            { src: './mech1.jpeg', alt: 'Mech Lab 1', caption: 'Mechanical Lab - Area' },
+            { src: './mech2.jpeg', alt: 'Mech Lab 2', caption: 'Assortment of Files and Hacksaw' },
+            { src: './mech3.jpeg', alt: 'Mech Lab 3', caption: 'Tools: Angle Grinder, Hammer' },
             { src: './mech4.jpeg', alt: 'Mech Lab 4', caption: 'Drill Press' },
             { src: './mech5.jpeg', alt: 'Mech Lab 5', caption: 'Frames' },
-            { src: './Mech6.jpeg', alt: 'Mech Lab 6', caption: 'DriveTrain' },
+            { src: './Mech6.jpeg', alt: 'Mech Lab 6', caption: 'Drive Train' },
           ].map(({ src, alt, caption }, i) => (
-            <div key={i} className="aspect-[4/3] overflow-hidden rounded-md relative flex flex-col">
-              <img src={src} alt={alt} className="w-full h-full object-cover rounded-md" />
+            <div key={i} className="flex flex-col items-center">
+              <div className="w-full aspect-[4/3] overflow-hidden rounded-md">
+                <img src={src} alt={alt} className="w-full h-full object-cover rounded-md" />
+              </div>
               <p className="mt-2 text-sm text-center text-gray-300">{caption}</p>
             </div>
           ))}
@@ -61,4 +65,5 @@ const Labpage = () => {
 };
 
 export default Labpage;
+
 
