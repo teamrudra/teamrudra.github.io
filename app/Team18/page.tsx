@@ -40,7 +40,7 @@ const Team18Page = () => {
         {teamMembers.map((member, index) => (
           <div key={index} className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
             <img
-              src={`/${member.image}`}
+              src={member.image}
               alt={member.name}
               className="w-32 h-32 mx-auto rounded-full object-cover"
             />
