@@ -3,30 +3,30 @@ import { SparklesCore } from '@/components/ui/sparkles';
 
 const Team17Page = () => {
   const teamMembers = [
-    { name: "Anshuman Dikshit", designation: "Team Lead", image: "./anshuman.jpg" },
+    { name: "Anshuman Dikshit", designation: "Team Lead", image: "./anshu.jpg" },
 { name: "Rishabh Nahata", designation: "Team Manager", image: "./rishabh.jpg" },
 { name: "Sanjeet Ray", designation: "Mechanical Lead", image: "./sanjeet.jpg" },
 { name: "Yashasvi Pathak", designation: "Electronics Lead", image: "./yashasvi.jpg" },
 { name: "Tadeesha Roy", designation: "Coding Lead", image: "./tadeesha.jpg" },
 { name: "Vijansh Khanna", designation: "Science Lead", image: "./vijansh.jpg" },
-{ name: "Chirag Bharani", designation: "Sponsorship Lead", image: "./chirag.jpg" },
-{ name: "Akash Sehgal", designation: "Marketing & PR Lead", image: "./aakash.jpg" },
-{ name: "Abhishek Patel", designation: "Mechanical Team", image: "./abhishekp.jpg" },
-{ name: "Bhavansh Tandon", designation: "Electronics Team", image: "./bhavansh.jpg" },
+{ name: "Chirag Bharani", designation: "Sponsorship Lead", image: "./chirag.jpeg" },
+{ name: "Akash Sehgal", designation: "Marketing & PR Lead", image: "./akash.JPG" },
+{ name: "Abhishek Patel", designation: "Mechanical Team", image: "./abhishek.jpg" },
+{ name: "Bhavansh Tandon", designation: "Electronics Team", image: "./bhavansh.jpeg" },
 { name: "Varun Ramesh", designation: "Mechanical Team", image: "./varun.jpg" },
 { name: "Sonali Sinha Roy", designation: "Mechanical Team", image: "./sonali.jpg" },
-{ name: "Vaibhav Shelke", designation: "Coding Team", image: "./vaibhav.jpg" },
-{ name: "Uthvag", designation: "Science Team", image: "./uthvag.jpg" },
-{ name: "Hari Krishna", designation: "Electronics Team", image: "./hari.jpg" },
-{ name: "Maanik Narayan", designation: "Electronics Team", image: "./maanik.jpg" },
-{ name: "Saawan Saurabh", designation: "Electronics Team", image: "./saawan.jpg" },
-{ name: "Niket Kumar", designation: "Electronics Team", image: "./niket.jpg" },
-{ name: "Krishanu Kumar", designation: "Mechanical Team", image: "./krishanu.jpg" },
+{ name: "Vaibhav Shelke", designation: "Coding Team", image: "./vaibhav.jpeg" },
+{ name: "Uthvag", designation: "Science Team", image: "./uthvag.jpeg" },
+{ name: "Hari Krishna", designation: "Electronics Team", image: "./hari.png" },
+{ name: "Maanik Narayan", designation: "Electronics Team", image: "./mani.JPG" },
+{ name: "Saawan Saurabh", designation: "Electronics Team", image: "./sawan.jpg" },
+{ name: "Niket Kumar", designation: "Electronics Team", image: "./niket.JPG" },
+{ name: "Krishanu Kumar", designation: "Mechanical Team", image: "./krishanu.JPG" },
 { name: "Gauravjit Singh Gill", designation: "Mechanical Team", image: "./gauravjit.jpg" },
 { name: "Rahul R", designation: "Mechanical Team", image: "./rahul.jpg" },
-{ name: "Lochan RN", designation: "Coding Team", image: "./lochan.jpg" },
-{ name: "Kriti Pratap", designation: "Coding Team", image: "./kriti.jpg" },
-{ name: "Arun Baalaaji", designation: "Electronics Team", image: "./arun.jpg" }
+{ name: "Lochan RN", designation: "Coding Team", image: "./lochan.png" },
+{ name: "Kriti Pratap", designation: "Coding Team", image: "./kriti.JPG" },
+{ name: "Arun Baalaaji", designation: "Electronics Team", image: "./varun.jpg" }
 
   ];
 
