@@ -177,12 +177,69 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
       <Link href="#about" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">ABOUT US</a>
       </Link>
-      <Link href="#team" scroll={true} legacyBehavior>
-        <a className="hover:text-gray-300 transition duration-200">TEAM</a>
-      </Link>
+    <div className="group relative">
+  <Link href="#team" scroll={true} legacyBehavior>
+    <a className="hover:text-gray-300 transition duration-200 cursor-pointer">TEAM</a>
+  </Link>
+  <div className="absolute hidden group-hover:block bg-gray-800 text-white mt-2 rounded shadow-lg z-50">
+    <ul className="py-2 min-w-[140px]">
+
+      {/* Team 2017 */}
+      <li>
+        <Link href="/Team2017" legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700">2017</a>
+        </Link>
+      </li>
+
+      {/* Team 2018 */}
+      <li>
+        <Link href="/Team18" legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700">2018</a>
+        </Link>
+      </li>
+
+      {/* Team 2019 */}
+      <li>
+        <Link href="/Team2019" legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700">2019</a>
+        </Link>
+      </li>
+
+      {/* Team 2020 */}
+      <li>
+        <Link href="/Team2020" legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700">2020</a>
+        </Link>
+      </li>
+
+      <hr className="border-gray-600 my-1" />
+
+      {/* Team 2024-25 - Scroll on same page */}
+      <li>
+          <Link href="/Team2024" legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700 cursor-pointer">2024–25</a>
+        </Link>
+      </li>
+
+      {/* Team 2025-26 - Scroll on same page */}
+      <li>
+        <Link href="#team" scroll={true} legacyBehavior>
+          <a className="block px-4 py-2 hover:bg-gray-700 cursor-pointer">2025–26</a>
+        </Link>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+
         <Link href="#rover-renders" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">ROVER</a>
       </Link>
+      {/* LAB Page Link */}
+<Link href="/Lab" legacyBehavior>
+  <a className="hover:text-gray-300 transition duration-200">LAB</a>
+</Link>
       <Link href="#achievements" scroll={true} legacyBehavior>
         <a className="hover:text-gray-300 transition duration-200">ACHIEVEMENTS</a>
       </Link>
@@ -225,9 +282,61 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
             <Link href="#about" scroll={true} legacyBehavior>
               <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>ABOUT US</a>
             </Link>
-            <Link href="#team" scroll={true} legacyBehavior>
-              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>TEAM</a>
-            </Link>
+          <div className="group relative">
+  <Link href="#team" scroll={true} legacyBehavior>
+    <a className="hover:text-gray-300 transition duration-200 cursor-pointer">TEAM</a>
+  </Link>
+  <div className="absolute hidden group-hover:block bg-gray-800 text-white mt-2 rounded shadow-lg z-50">
+   <ul className="py-2 min-w-[140px]">
+  {/* Team 2017 */}
+  <li>
+    <Link href="./Team2017" legacyBehavior>
+      <a className="block px-4 py-2 hover:bg-gray-700">2017</a>
+    </Link>
+  </li>
+
+  {/* Team 2018 */}
+  <li>
+    <Link href="./Team2018" legacyBehavior>
+      <a className="block px-4 py-2 hover:bg-gray-700">2018</a>
+    </Link>
+  </li>
+
+  {/* Team 2019 */}
+  <li>
+    <Link href="./Team2019" legacyBehavior>
+      <a className="block px-4 py-2 hover:bg-gray-700">2019</a>
+    </Link>
+  </li>
+
+  {/* Team 2020 */}
+  <li>
+    <Link href="/team/Team2020" legacyBehavior>
+      <a className="block px-4 py-2 hover:bg-gray-700">2020</a>
+    </Link>
+  </li>
+
+  <hr className="border-gray-600 my-1" />
+
+  {/* Team 2024-25 */}
+  <li>
+    <Link href="/team/2024-25" legacyBehavior>
+      <a className="block px-4 py-2 hover:bg-gray-700">2024–25</a>
+    </Link>
+  </li>
+
+  {/* Team 2025-26 */}
+  <li>
+    <Link href="/team/2025-26" legacyBehavior>
+      <a className="block px-4 py-2 hover:bg-gray-700">2025–26</a>
+    </Link>
+  </li>
+</ul>
+
+  </div>
+</div>
+
+
              <Link href="#rover-renders" scroll={true} legacyBehavior>
               <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>OUR ROVER</a>
             </Link>
@@ -467,9 +576,9 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-10 text-center z-5">
           {/* Team Members */}
           {[
-            { name: 'Team Lead - Shashwat Ganesh', img: 'team-lead.png', link: 'https://www.linkedin.com/in/sga0xc33d/' },
-            { name: 'Team Co-Lead - Eeshan Nair', img: 'team-manager.png', link: 'https://www.linkedin.com/in/eeshan-nair-496800238/' },
-            { name: 'Technical Director - Rajkumar', img: 'technical-director.png', link: 'https://www.linkedin.com/in/rajkumar-m13/' },
+        { name: 'Team Lead - Ratnesh Mishra', img: 'mechanical-member5.png', link: 'https://www.linkedin.com/in/ratnesh-mishra-07260424b/' },
+            { name: 'Team Manager - Danyal Reyaz', img: 'corporate-member4.png', link: 'https://www.linkedin.com/in/danyal-reyaz/' },
+            { name: 'Technical Director - Pragati Prithvi', img: 'electronics-member6.png', link: 'https://www.linkedin.com/in/pragati-prithvi/' },
             { name: 'Mechanical Domain', img: 'mechanical-domain.png', link: './mechanical-domain' },
             { name: 'Electronics Domain', img: 'electronics-domain.png', link: './electronics-domain' },
             { name: 'Coding Domain', img: 'coding-domain.png', link: './coding-domain' },
@@ -709,7 +818,8 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
-      {/*sponsor us signup */}
+
+{/*sponsor us signup */}
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="sponsor">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
   
@@ -795,6 +905,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
+      
 
 
      
