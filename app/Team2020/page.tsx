@@ -4,12 +4,12 @@ import { SparklesCore } from '@/components/ui/sparkles';
 const Team20Page = () => {
   const teamMembers = [
     { name: "Rahul Agarwal", designation: "Team Lead", image: "./rahulag.webp" },
-{ name: "Renish Kumar", designation: "Team Manager", image: "./renish.webp" },
+{ name: "Renish Kumar", designation: "Team Manager", image: "./renish.JPG" },
 { name: "David Chaudhary", designation: "Technical Director", image: "./david.webp" },
 { name: "Chaitanya Joshi", designation: "Mechanical Lead", image: "./chaitanya.webp" },
 { name: "Farhad Bharucha", designation: "Developers Lead", image: "./farhad.webp" },
 { name: "Shri Venkatesh", designation: "Science Lead", image: "./shri.webp" },
-{ name: "Abhishek Reddy", designation: "Head Of Corporate", image: "./abhishekr.webp" },
+{ name: "Abhishek Reddy", designation: "Head Of Corporate", image: "./Abhishek.jpeg" },
 { name: "Saksham Bhadani", designation: "Senior Mechanical Dev", image: "./saksham.webp" },
 { name: "Fenil Bamnoliya", designation: "Senior Mechanical Dev", image: "./fenil.webp" },
 { name: "Hemangi Dudani", designation: "Senior Mechanical Dev", image: "./hemangi.webp" },
