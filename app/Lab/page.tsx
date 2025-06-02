@@ -12,27 +12,21 @@ const Labpage = () => {
       {/* Main Lab Section */}
       <section className="z-10 mb-16 w-full max-w-6xl">
         <h2 className="text-2xl font-medium mb-6 text-center">Main Lab</h2>
-       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
-  <div className="aspect-[4/3] overflow-hidden rounded-md">
-    <img src="./main1.jpeg" alt="Main Lab 1" className="w-full h-full object-cover" />
-  </div>
-  <div className="aspect-[4/3] overflow-hidden rounded-md">
-    <img src="./main2.jpeg" alt="Main Lab 2" className="w-full h-full object-cover" />
-  </div>
-  <div className="aspect-[4/3] overflow-hidden rounded-md">
-    <img src="./main3.jpeg" alt="Main Lab 3" className="w-full h-full object-cover" />
-  </div>
-  <div className="aspect-[4/3] overflow-hidden rounded-md">
-    <img src="./main4.jpeg" alt="Main Lab 4" className="w-full h-full object-cover" />
-  </div>
-  <div className="aspect-[4/3] overflow-hidden rounded-md">
-    <img src="./main5.jpeg" alt="Main Lab 5" className="w-full h-full object-cover" />
-  </div>
-  <div className="aspect-[4/3] overflow-hidden rounded-md">
-    <img src="./main6.jpg" alt="Main Lab 6" className="w-full h-full object-cover" />
-  </div>
-</div>
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
+          {[
+            { src: './main1.jpeg', alt: 'Main Lab 1', caption: 'Main Lab - Area' },
+            { src: './Main2.jpeg', alt: 'Main Lab 2', caption: 'Antenna operation' },
+            { src: './Main3.jpeg', alt: 'Main Lab 3', caption: 'Miscellaneous Components' },
+            { src: './Main4.jpeg', alt: 'Main Lab 4', caption: 'Testing Equipment' },
+            { src: './main5.jpeg', alt: 'Main Lab 5', caption: 'Robotic Manipulator' },
+            { src: './Main6.jpg', alt: 'Main Lab 6', caption: 'Testing Equipment' },
+          ].map(({ src, alt, caption }, i) => (
+            <div key={i} className="aspect-[4/3] overflow-hidden rounded-md relative flex flex-col">
+              <img src={src} alt={alt} className="w-full h-full object-cover rounded-md" />
+              <p className="mt-2 text-sm text-center text-gray-300">{caption}</p>
+            </div>
+          ))}
+        </div>
 
         {/* Video - Main Lab */}
         <div className="mt-6 flex justify-center px-4">
@@ -47,33 +41,19 @@ const Labpage = () => {
       <section className="z-10 w-full max-w-6xl">
         <h2 className="text-2xl font-medium mb-6 text-center">Mechanical Lab</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
-  <div className="aspect-[4/3] overflow-hidden rounded-md">
-    <img src="./mech1.jpeg" alt="Mech Lab 1" className="w-full h-full object-cover" />
-  </div>
-  <div className="aspect-[4/3] overflow-hidden rounded-md">
-    <img src="./mech2.jpeg" alt="Mech Lab 2" className="w-full h-full object-cover" />
-  </div>
-  <div className="aspect-[4/3] overflow-hidden rounded-md">
-    <img src="./mech3.jpeg" alt="Mech Lab 3" className="w-full h-full object-cover" />
-  </div>
-  <div className="aspect-[4/3] overflow-hidden rounded-md">
-    <img src="./mech4.jpeg" alt="Mech Lab 4" className="w-full h-full object-cover" />
-  </div>
-  <div className="aspect-[4/3] overflow-hidden rounded-md">
-    <img src="./mech5.jpeg" alt="Mech Lab 5" className="w-full h-full object-cover" />
-  </div>
-  <div className="aspect-[4/3] overflow-hidden rounded-md">
-    <img src="./mech6.jpeg" alt="Mech Lab 6" className="w-full h-full object-cover" />
-  </div>
-</div>
-
-
-        {/* Video - Mechanical Lab */}
-        <div className="mt-6 flex justify-center px-4">
-          <video controls className="rounded-lg shadow-md w-full max-w-3xl">
-            <source src="./mechlab.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          {[
+            { src: './mech1.jpeg', alt: 'Mech Lab 1', caption: 'Mechanical Lab-Area' },
+            { src: './mech2.jpeg', alt: 'Mech Lab 2', caption: 'Asortment Of Filers And Hacksaw' },
+            { src: './mech3.jpeg', alt: 'Mech Lab 3', caption: 'Tools:Angle Grinder,Hammer' },
+            { src: './mech4.jpeg', alt: 'Mech Lab 4', caption: 'Drill Press' },
+            { src: './mech5.jpeg', alt: 'Mech Lab 5', caption: 'Frames' },
+            { src: './Mech6.jpeg', alt: 'Mech Lab 6', caption: 'DriveTrain' },
+          ].map(({ src, alt, caption }, i) => (
+            <div key={i} className="aspect-[4/3] overflow-hidden rounded-md relative flex flex-col">
+              <img src={src} alt={alt} className="w-full h-full object-cover rounded-md" />
+              <p className="mt-2 text-sm text-center text-gray-300">{caption}</p>
+            </div>
+          ))}
         </div>
       </section>
     </div>
@@ -81,3 +61,4 @@ const Labpage = () => {
 };
 
 export default Labpage;
+
