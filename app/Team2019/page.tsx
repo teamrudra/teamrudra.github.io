@@ -36,7 +36,7 @@ const Team2019Page = () => {
   { name: "Harry Lal", designation: "Developer", image: "./harry.png" }, // ⚠ Not in verified image list
   { name: "Anurup Mohanty", designation: "Astrobiologist", image: "./anurup.png" }, // ⚠ Not in verified image list
   { name: "Vishal", designation: "Geologist", image: "./vishal.png" }, // ⚠ Not in verified image list
-]
+
   ];
 
   return (
