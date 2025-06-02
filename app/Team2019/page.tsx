@@ -11,7 +11,7 @@ const Team2019Page = () => {
   { name: "Lochan RN", designation: "Developer's Lead", image: "./lochan.png" },
   { name: "Niket Kumar", designation: "Electronics Lead", image: "./niket.webp" }, 
   { name: "Kriti Pratap", designation: "Vision & Autonomous Lead", image: "./kriti.JPG" },
-  { name: "Nikil Datta", designation: "Corporate Lead", image: "./nikhil.webp" },
+  { name: "Nikil Datta", designation: "Corporate Lead", image: "./nikil.webp" },
   { name: "Shri Venkatesh", designation: "Science Lead", image: "./shri.webp" },
   { name: "Rahul Agarwal", designation: "Analysis Lead", image: "./rahulag.webp" },
   { name: "David Chaudhary", designation: "Simulation Lead", image: "./david.webp" },
