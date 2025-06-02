@@ -9,7 +9,7 @@ const Team2019Page = () => {
   { name: "Gauravjit Singh Gill", designation: "Mechanical Lead", image: "./gauravjit.jpg" },
   { name: "Rahul R", designation: "Research Lead", image: "./rahul.jpg" },
   { name: "Lochan RN", designation: "Developer's Lead", image: "./lochan.png" },
-  { name: "Niket Kumar", designation: "Electronics Lead", image: "./niket.png" }, // ⚠ Not in verified image list
+  { name: "Niket Kumar", designation: "Electronics Lead", image: "./niket.webp" }, 
   { name: "Kriti Pratap", designation: "Vision & Autonomous Lead", image: "./kriti.JPG" },
   { name: "Nikil Datta", designation: "Corporate Lead", image: "./nikhil.webp" },
   { name: "Shri Venkatesh", designation: "Science Lead", image: "./shri.webp" },
@@ -17,26 +17,25 @@ const Team2019Page = () => {
   { name: "David Chaudhary", designation: "Simulation Lead", image: "./david.webp" },
   { name: "Chaitanya Joshi", designation: "Design Lead", image: "./chaitanya.webp" },
   { name: "Renish Kumar", designation: "Senior Developer", image: "./renish.JPG" },
-  { name: "Farhad Bharucha", designation: "Senior Developer", image: "./farhad.png" }, // ⚠ Not in verified image list
+  { name: "Farhad Bharucha", designation: "Senior Developer", image: "./farhad.webp" }, 
   { name: "Abhishek Reddy", designation: "Senior Developer", image: "./abhishek.jpg" },
-  { name: "Saksham Bhadani", designation: "Mechatroniks", image: "./saksham.png" }, // ⚠ Not in verified image list
-  { name: "Fenil Bamnoliya", designation: "Mechanical Dev", image: "./fenil.png" }, // ⚠ Not in verified image list
-  { name: "Hemangi Dudani", designation: "Mechanical Dev", image: "./hemangi.png" }, // ⚠ Not in verified image list
-  { name: "Ayush Sagar", designation: "Power Electronics Dev", image: "./ayush.png" }, // ⚠ Not in verified image list
-  { name: "Rahamath Ali", designation: "Embedded Dev", image: "./ali.png" }, // ⚠ Not in verified image list
-  { name: "Nitesh Thota", designation: "Communications Dev", image: "./nitesh.png" }, // ⚠ Not in verified image list
-  { name: "Lekha K", designation: "Developer", image: "./lekha.png" }, // ⚠ Not in verified image list
-  { name: "Anguluri Aravind", designation: "Developer", image: "./aravind.png" }, // ⚠ Not in verified image list
-  { name: "Nikita Gupta", designation: "Developer", image: "./nikita.png" }, // ⚠ Not in verified image list
-  { name: "Tuhin Sengupta", designation: "Bio-Science Researcher", image: "./tuhin.png" }, // ⚠ Not in verified image list
-  { name: "Aishnya Shanvi", designation: "Embedded Developer", image: "./aishanya.png" }, // ⚠ Not in verified image list
-  { name: "Antariksh Ray", designation: "Developer", image: "./antariksh.png" }, // ⚠ Not in verified image list
-  { name: "Prateek", designation: "Developer", image: "./prateek.png" }, // ⚠ Not in verified image list
-  { name: "Pawan Wadhwani", designation: "Developer", image: "./pawan.png" }, // ⚠ Not in verified image list
-  { name: "Harry Lal", designation: "Developer", image: "./harry.png" }, // ⚠ Not in verified image list
-  { name: "Anurup Mohanty", designation: "Astrobiologist", image: "./anurup.png" }, // ⚠ Not in verified image list
-  { name: "Vishal", designation: "Geologist", image: "./vishal.png" }, // ⚠ Not in verified image list
-
+  { name: "Saksham Bhadani", designation: "Mechatroniks", image: "./saksham.webp" }, 
+  { name: "Fenil Bamnoliya", designation: "Mechanical Dev", image: "./fenil.jpg" }, 
+  { name: "Hemangi Dudani", designation: "Mechanical Dev", image: "./hemangi.webp" }, 
+  { name: "Ayush Sagar", designation: "Power Electronics Dev", image: "./ayush.webp" }, 
+  { name: "Rahamath Ali", designation: "Embedded Dev", image: "./ali.webp" }, 
+  { name: "Nitesh Thota", designation: "Communications Dev", image: "./nitesh.webp" }, 
+  { name: "Lekha K", designation: "Developer", image: "./lekha.webp" }, 
+  { name: "Anguluri Aravind", designation: "Developer", image: "./aravind.webp" }, 
+  { name: "Nikita Gupta", designation: "Developer", image: "./nikita.webp" }, 
+  { name: "Tuhin Sengupta", designation: "Bio-Science Researcher", image: "./tuhin.webp" }, 
+  { name: "Aishnya Shanvi", designation: "Embedded Developer", image: "./aishanya.webp" }, 
+  { name: "Antariksh Ray", designation: "Developer", image: "./antariksh.webp" }, 
+  { name: "Prateek", designation: "Developer", image: "./prateek.webp" }, 
+  { name: "Pawan Wadhwani", designation: "Developer", image: "./pawan.webp" }, 
+  { name: "Harry Lal", designation: "Developer", image: "./harry.webp" }, 
+  { name: "Anurup Mohanty", designation: "Astrobiologist", image: "./anurup.webp" }, 
+  { name: "Vishal", designation: "Geologist", image: "./vishal.webp" }, 
   ];
 
   return (
@@ -50,7 +49,7 @@ const Team2019Page = () => {
         {teamMembers.map((member, index) => (
           <div key={index} className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
             <img
-              src={`/${member.image}`}
+              src={member.image}
               alt={member.name}
               className="w-32 h-32 mx-auto rounded-full object-cover"
             />
