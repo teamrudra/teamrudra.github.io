@@ -17,7 +17,7 @@ const Labpage = () => {
             { src: './main1.jpeg', alt: 'Main Lab 1', caption: 'Main Lab - Area' },
             { src: './Main2.jpeg', alt: 'Main Lab 2', caption: 'Antenna operation' },
             { src: './Main3.jpeg', alt: 'Main Lab 3', caption: 'Miscellaneous Components' },
-            { src: './Main4.jpeg', alt: 'Main Lab 4', caption: 'Testing Equipment' },
+            { src: './Main4.jpeg', alt: 'Main Lab 4', caption: 'Printed Circuit Board(PCB)' },
             { src: './main5.jpeg', alt: 'Main Lab 5', caption: 'Robotic Manipulator' },
             { src: './Main6.jpg', alt: 'Main Lab 6', caption: 'Testing Equipment' },
           ].map(({ src, alt, caption }, i) => (
