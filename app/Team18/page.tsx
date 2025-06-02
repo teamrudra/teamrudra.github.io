@@ -19,7 +19,7 @@ const Team18Page = () => {
   { name: "Rahul R", designation: "Mechanical Team", image: "./rahul.jpg" },
   { name: "Lochan RN", designation: "Coding Team", image: "./lochan.png" },
   { name: "Kriti Pratap", designation: "Coding Team", image: "./kriti.JPG" },
-  { name: "Nikil Datta", designation: "Corporate Team", image: "./nikhil.webp" },
+  { name: "Nikil Datta", designation: "Corporate Team", image: "./nikil.webp" },
   { name: "Shri Venkatesh", designation: "Science Team", image: "./shri.webp" },
   { name: "Rahul Agarwal", designation: "Mechanical Team", image: "./rahulag.webp" },
   { name: "David Chaudhary", designation: "Mechanical Team", image: "./david.webp" },
