@@ -25,7 +25,7 @@ const Team18Page = () => {
   { name: "David Chaudhary", designation: "Mechanical Team", image: "./david.webp" },
   { name: "Chaitanya Joshi", designation: "Mechanical Team", image: "./chaitanya.webp" },
   { name: "Renish Kumar", designation: "Developer", image: "./renish.JPG" },
-  { name: "Abhishek Reddy", designation: "Developer", image: "./abhishek.jpg" },     
+  { name: "Abhishek Reddy", designation: "Developer", image: "./abhishek.jpg" },
   ];
 
   return (
