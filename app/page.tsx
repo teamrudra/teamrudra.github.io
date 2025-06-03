@@ -563,86 +563,88 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
 
 
       {/* Team Members Section */}
-      <div className="relative min-h-screen bg-black bg-cover bg-center flex flex-col items-center justify-center py-16" id="team">
-        <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
-        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-          <source src="/starsvideo.mov" type="video/mov" />
-          Your browser does not support the video tag.
-        </video>
+     {/* Team Members Section */}
+<div className="relative min-h-screen bg-black bg-cover bg-center flex flex-col items-center justify-center py-16" id="team">
+  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
 
-        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 sm:mb-12 font-serif flex items-center justify-center z-10">
-          Our Team
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-10 text-center z-5">
-          {/* Team Members */}
-          {[
-        { name: 'Team Lead - Ratnesh Mishra', img: 'mechanical-member5.png', link: 'https://www.linkedin.com/in/ratnesh-mishra-07260424b/' },
-            { name: 'Team Manager - Danyal Reyaz', img: 'corporate-member4.png', link: 'https://www.linkedin.com/in/danyal-reyaz/' },
-            { name: 'Technical Director - Pragati Prithvi', img: 'electronics-member6.png', link: 'https://www.linkedin.com/in/pragati-prithvi/' },
-            { name: 'Mechanical Domain', img: 'mechanical-domain.png', link: './mechanical-domain' },
-            { name: 'Electronics Domain', img: 'electronics-domain.png', link: './electronics-domain' },
-            { name: 'Coding Domain', img: 'coding-domain.png', link: './coding-domain' },
-            { name: 'Life Science Domain', img: 'life-science-domain.png', link: './life-science-domain' },
-            { name: 'Corporate Domain', img: 'corporate-domain.png', link: './corporate-domain' },
-          ].map((member, index) => (
-            <a key={member.name} href={member.link}>
-          <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+  <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+    <source src="/starsvideo.mov" type="video/mov" />
+    Your browser does not support the video tag.
+  </video>
 
-                <img src={member.img} alt={member.name} className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-                <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans">{member.name}</h3>
-              </div>
-            </a>
-          ))}
-           {/* Center the last team member */}
- <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
-  {/* 1. Prof. C. Muthamizhchelvan */}
-  <a href="https://www.srmist.edu.in/about-us/administrative-heads/vice-chancellor/" target="_blank" rel="noopener noreferrer">
-    <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-      <img src="./VC.webp" alt="Prof. C. Muthamizhchelvan" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-      <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
-        Prof. C. Muthamizhchelvan<br />
-        Vice Chancellor
-      </h3>
-    </div>
-  </a>
+  <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 sm:mb-12 font-serif flex items-center justify-center z-10">
+    Our Team
+  </h2>
 
-  {/* 2. Dr. S. Ponnusamy */}
-  <a href="https://www.srmist.edu.in/about-us/administrative-heads/registrar/" target="_blank" rel="noopener noreferrer">
-    <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-      <img src="./Registrar.webp" alt="Dr. S. Ponnusamy" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-      <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
-        Dr. S. Ponnusamy<br />
-        Registrar
-      </h3>
-    </div>
-  </a>
+  {/* Core Team Members */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-10 text-center z-10">
+    {[
+      { name: 'Team Lead - Ratnesh Mishra', img: 'mechanical-member5.png', link: 'https://www.linkedin.com/in/ratnesh-mishra-07260424b/' },
+      { name: 'Team Manager - Danyal Reyaz', img: 'corporate-member4.png', link: 'https://www.linkedin.com/in/danyal-reyaz/' },
+      { name: 'Technical Director - Pragati Prithvi', img: 'electronics-member6.png', link: 'https://www.linkedin.com/in/pragati-prithvi/' },
+      { name: 'Mechanical Domain', img: 'mechanical-domain.png', link: './mechanical-domain' },
+      { name: 'Electronics Domain', img: 'electronics-domain.png', link: './electronics-domain' },
+      { name: 'Coding Domain', img: 'coding-domain.png', link: './coding-domain' },
+      { name: 'Life Science Domain', img: 'life-science-domain.png', link: './life-science-domain' },
+      { name: 'Corporate Domain', img: 'corporate-domain.png', link: './corporate-domain' },
+    ].map((member) => (
+      <a key={member.name} href={member.link} target="_blank" rel="noopener noreferrer">
+        <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+          <img src={member.img} alt={member.name} className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
+          <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans">{member.name}</h3>
+        </div>
+      </a>
+    ))}
+  </div>
 
-  {/* 3. Dr. Leenus Jesu Martin M */}
-  <a href="https://www.srmist.edu.in/faculty/dr-m-leenus-jesu-martin/" target="_blank" rel="noopener noreferrer">
-    <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-      <img src="./dean.jpg" alt="Dr. Leenus Jesu Martin M" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-      <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
-        Dr. Leenus Jesu Martin M<br />
-        Dean, Faculty of Engineering and Technology
-      </h3>
-    </div>
-  </a>
+  {/* Admin and Faculty Members */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center mt-10 z-10">
+    {/* 1. Vice Chancellor */}
+    <a href="https://www.srmist.edu.in/about-us/administrative-heads/vice-chancellor/" target="_blank" rel="noopener noreferrer">
+      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+        <img src="./VC.webp" alt="Prof. C. Muthamizhchelvan" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
+        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
+          Prof. C. Muthamizhchelvan<br />
+          Vice Chancellor
+        </h3>
+      </div>
+    </a>
 
-  {/* 4. Faculty Advisor */}
-  <a href="https://www.srmist.edu.in/about-us/administrative-heads/director-alumni-relations/" target="_blank" rel="noopener noreferrer">
-    <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-      <img src="./faculty.png" alt="Dr. A. Rathinam" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-      <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
-        Dr. A. Rathinam<br />
-        Faculty Advisor
-      </h3>
-    </div>
-  </a>
+    {/* 2. Registrar */}
+    <a href="https://www.srmist.edu.in/about-us/administrative-heads/registrar/" target="_blank" rel="noopener noreferrer">
+      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+        <img src="./Registrar.webp" alt="Dr. S. Ponnusamy" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
+        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
+          Dr. S. Ponnusamy<br />
+          Registrar
+        </h3>
+      </div>
+    </a>
+
+    {/* 3. Dean */}
+    <a href="https://www.srmist.edu.in/faculty/dr-m-leenus-jesu-martin/" target="_blank" rel="noopener noreferrer">
+      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+        <img src="./dean.jpg" alt="Dr. Leenus Jesu Martin M" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
+        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
+          Dr. Leenus Jesu Martin M<br />
+          Dean, Faculty of Engineering and Technology
+        </h3>
+      </div>
+    </a>
+
+    {/* 4. Faculty Advisor */}
+    <a href="https://www.srmist.edu.in/about-us/administrative-heads/director-alumni-relations/" target="_blank" rel="noopener noreferrer">
+      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+        <img src="./faculty.png" alt="Dr. A. Rathinam" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
+        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
+          Dr. A. Rathinam<br />
+          Faculty Advisor
+        </h3>
+      </div>
+    </a>
+  </div>
 </div>
 
-
-  
-  </div>
  {/* Rover Renders Section */}
 <div className="min-h-screen bg-black flex flex-col items-center py-16" id="rover-renders">
   <h2 className="text-white text-4xl md:text-5xl lg:text-6xl mb-12 font-serif text-center">
