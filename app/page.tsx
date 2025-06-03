@@ -594,15 +594,54 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
             </a>
           ))}
            {/* Center the last team member */}
-  <div className="col-span-full flex justify-center">
-    <a href="https://www.srmist.edu.in/about-us/administrative-heads/director-alumni-relations/">
+ <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+  {/* 1. Prof. C. Muthamizhchelvan */}
+  <a href="https://www.srmist.edu.in/about-us/administrative-heads/vice-chancellor/" target="_blank" rel="noopener noreferrer">
     <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-        <img src="./faculty.png" alt="Dr. A. Rathinam" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans">Faculty Advisor-Dr. A. Rathinam</h3>
-      </div>
-    </a>
-  </div>
-  </div>
+      <img src="./VC.webp" alt="Prof. C. Muthamizhchelvan" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
+      <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
+        Prof. C. Muthamizhchelvan<br />
+        Vice Chancellor
+      </h3>
+    </div>
+  </a>
+
+  {/* 2. Dr. S. Ponnusamy */}
+  <a href="https://www.srmist.edu.in/about-us/administrative-heads/registrar/" target="_blank" rel="noopener noreferrer">
+    <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+      <img src="./Registrar.webp" alt="Dr. S. Ponnusamy" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
+      <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
+        Dr. S. Ponnusamy<br />
+        Registrar
+      </h3>
+    </div>
+  </a>
+
+  {/* 3. Dr. Leenus Jesu Martin M */}
+  <a href="https://www.srmist.edu.in/faculty/dr-m-leenus-jesu-martin/" target="_blank" rel="noopener noreferrer">
+    <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+      <img src="./dean.jpg" alt="Dr. Leenus Jesu Martin M" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
+      <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
+        Dr. Leenus Jesu Martin M<br />
+        Dean, Faculty of Engineering and Technology
+      </h3>
+    </div>
+  </a>
+
+  {/* 4. Faculty Advisor */}
+  <a href="https://www.srmist.edu.in/about-us/administrative-heads/director-alumni-relations/" target="_blank" rel="noopener noreferrer">
+    <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+      <img src="./faculty.png" alt="Dr. A. Rathinam" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
+      <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
+        Dr. A. Rathinam<br />
+        Faculty Advisor
+      </h3>
+    </div>
+  </a>
+</div>
+
+
+  
   </div>
  {/* Rover Renders Section */}
 <div className="min-h-screen bg-black flex flex-col items-center py-16" id="rover-renders">
