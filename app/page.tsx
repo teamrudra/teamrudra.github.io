@@ -575,7 +575,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
 
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 text-center z-10">
     {/* Vice Chancellor */}
-    <a href="https://www.srmist.edu.in/about-us/administrative-heads/vice-chancellor/" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.srmist.edu.in/about-us/leadership-team/vice-chancellor/" target="_blank" rel="noopener noreferrer">
       <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
         <img src="./VC.webp" alt="Prof. C. Muthamizhchelvan" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
         <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
@@ -586,7 +586,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </a>
 
     {/* Registrar */}
-    <a href="https://www.srmist.edu.in/about-us/administrative-heads/registrar/" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.srmist.edu.in/about-us/leadership-team/registrar/" target="_blank" rel="noopener noreferrer">
       <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
         <img src="./Registrar.webp" alt="Dr. S. Ponnusamy" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
         <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
