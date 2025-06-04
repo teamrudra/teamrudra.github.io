@@ -488,7 +488,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
-
+{/* urc section */}
 <div className="relative bg-black text-white py-20 px-10">
   {/* Sparkles Background */}
   <SparklesCore
@@ -564,6 +564,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
       
 {/* Our Patrons Section */}
 <div className="relative bg-black text-white py-20 px-10">
+   <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
   <h2 className="text-3xl sm:text-4xl md:text-5xl mb-10 font-serif text-center text-white">Our Patrons</h2>
 
   {/* Patron Card 1 */}
