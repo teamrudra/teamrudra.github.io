@@ -602,7 +602,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         <img src="./dean.jpg" alt="Dr. Leenus Jesu Martin M" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
         <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
           Dr. Leenus Jesu Martin M<br />
-          Dean, Faculty of Engineering and Technology
+          Dean, CET
         </h3>
       </div>
     </a>
