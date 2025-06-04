@@ -384,38 +384,39 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     {/* Optional content can be added here */}
   </div>
 </div>
-      {/* About Us Section */}
-      <div className="min-h-screen bg-gray-900 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8" id="about">
-        {/* Left Side: 3D Model */}
-        <div className="w-full lg:w-3/5 flex justify-center items-center border-4 border-gray-300 box-border mb-8 lg:mb-0">
-        <img
-      src="./box-image.png" // Update with the path to your image
-      alt="Rover model" // Update with a description for accessibility
-      className="object-contain max-w-full max-h-full" // Adjust as needed
-    />
-        </div>
 
-        {/* Right Side: Text */}
-        <div className="w-full lg:w-3/5 bg-gray-900 bg-opacity-80 text-white p-4 sm:p-10 font-sans">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 lg:mb-6 font-serif">About Us</h2>
-          <p className="mb-4 sm:mb-6 font-sans">
-            RUDRA is the official team of SRM IST taking part in the University Rover Challenge organized by the Mars Society since 2013. 
-            The annual competition is held at the Mars Desert Research Station (MDRS), Martian Analog Site, near Hanksville, Utah, USA. 
-            The team has been successfully operational for the last 10 years and has maintained its consistency in the competition.
-          </p>
-          <p className="mb-4 sm:mb-6 font-sans">
-            Our Team consists of 25-30 undergraduate students of every year from various engineering streams, working in different domains. 
-            The fun part - R&D, is the soul and essence of Team RUDRA. Brainstorming discussions are always welcome for giving birth to new ideas.
-          </p>
-        </div>
-      </div>
+{/* About Us Section */}
+<div className="min-h-screen bg-gray-900 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8" id="about">
+  {/* Left Side: 3D Model */}
+  <div className="w-full lg:w-3/5 flex justify-center items-center border-4 border-gray-300 box-border mb-8 lg:mb-0">
+    <img
+      src="./box-image.png"
+      alt="Rover model"
+      className="object-contain max-w-full max-h-full"
+    />
+  </div>
+
+  {/* Right Side: Text */}
+  <div className="w-full lg:w-3/5 bg-gray-900 bg-opacity-80 text-white p-4 sm:p-10 font-sans">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 lg:mb-6 font-serif">About Us</h2>
+    <p className="mb-4 sm:mb-6 font-sans">
+      RUDRA is the official team of SRM IST taking part in the University Rover Challenge organized by the Mars Society since 2013.
+      The annual competition is held at the Mars Desert Research Station (MDRS), Martian Analog Site, near Hanksville, Utah, USA.
+      The team has been successfully operational for the last 10 years and has maintained its consistency in the competition.
+    </p>
+    <p className="mb-4 sm:mb-6 font-sans">
+      Our Team consists of 25-30 undergraduate students of every year from various engineering streams, working in different domains.
+      The fun part - R&D, is the soul and essence of Team RUDRA. Brainstorming discussions are always welcome for giving birth to new ideas.
+    </p>
+  </div>
+</div>
 
 {/* Our Patrons Section */}
-<div className="w-full mt-16 bg-gray-900 rounded-xl py-8 px-4 sm:px-8 text-white">
+<div className="w-full mt-0 bg-gray-900 py-8 px-4 sm:px-8 text-white">
   <h2 className="text-3xl sm:text-4xl md:text-5xl mb-10 font-serif text-center text-white">Our Patrons</h2>
 
   {/* Patron Card 1 */}
-  <div className="bg-gray-800 rounded-xl shadow-md p-6 mb-8">
+  <div className="bg-gray-800 shadow-md p-6 mb-8">
     <img src="./VC.webp" alt="Prof. C. Muthamizhchelvan" className="w-full max-w-xs mx-auto rounded-md mb-4" />
     <h3 className="text-2xl font-semibold text-center text-white">Dr. C. Muthamizhchelvan</h3>
     <p className="text-lg text-center text-gray-300 mb-2">Vice Chancellor</p>
@@ -432,8 +433,8 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 
   {/* Patron Card 2 */}
-  <div className="bg-gray-800 rounded-xl shadow-md p-6 mb-8">
-    <img src="./Registrar.webp" alt="Dr. S. Ponnusamy" className="w-full max-w-xs mx-auto rounded-md mb-4" />
+  <div className="bg-gray-800 shadow-md p-6 mb-8">
+    <img src="./registrar.webp" alt="Dr. S. Ponnusamy" className="w-full max-w-xs mx-auto rounded-md mb-4" />
     <h3 className="text-2xl font-semibold text-center text-white">Dr. S. Ponnusamy</h3>
     <p className="text-lg text-center text-gray-300 mb-2">Registrar</p>
     <div className="text-center">
@@ -449,7 +450,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 
   {/* Patron Card 3 */}
-  <div className="bg-gray-800 rounded-xl shadow-md p-6">
+  <div className="bg-gray-800 shadow-md p-6 mb-8">
     <img src="./dean.jpg" alt="Dr. Leenus Jesu Martin M" className="w-full max-w-xs mx-auto rounded-md mb-4" />
     <h3 className="text-2xl font-semibold text-center text-white">Dr. Leenus Jesu Martin M</h3>
     <p className="text-lg text-center text-gray-300 mb-2">Dean, CET</p>
@@ -461,6 +462,23 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
       >
         → Meet our Dean
+      </a>
+    </div>
+  </div>
+
+  {/* Patron Card 4 - Faculty Advisor */}
+  <div className="bg-gray-800 shadow-md p-6">
+    <img src="./faculty.png" alt="Dr. A. Rathinam" className="w-full max-w-xs mx-auto rounded-md mb-4" />
+    <h3 className="text-2xl font-semibold text-center text-white">Dr. A. Rathinam</h3>
+    <p className="text-lg text-center text-gray-300 mb-2">Faculty Advisor</p>
+    <div className="text-center">
+      <a
+        href="https://www.srmist.edu.in/about-us/administrative-heads/director-alumni-relations/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
+      >
+        → Meet our Faculty Advisor
       </a>
     </div>
   </div>
