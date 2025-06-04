@@ -644,17 +644,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     ))}
   </div>
 
-  {/* Center the last team member */}
-  <div className="col-span-full flex justify-center mt-8 z-10">
-    <a href="https://www.srmist.edu.in/about-us/administrative-heads/director-alumni-relations/" target="_blank" rel="noopener noreferrer">
-      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-        <img src="./faculty.png" alt="Dr. A. Rathinam" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
-          Faculty Advisor - Dr. A. Rathinam
-        </h3>
-      </div>
-    </a>
-  </div>
+  
 </div>
 
 
