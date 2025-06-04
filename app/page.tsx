@@ -560,10 +560,57 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
+{/* Our Patrons Section */}
+<div className="relative min-h-screen bg-black bg-cover bg-center flex flex-col items-center justify-center py-16" id="patrons">
+  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
 
+  <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+    <source src="/starsvideo.mov" type="video/mov" />
+    Your browser does not support the video tag.
+  </video>
 
-      {/* Team Members Section */}
-     {/* Team Members Section */}
+  <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 sm:mb-12 font-serif flex items-center justify-center z-10">
+    Our Patrons
+  </h2>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 text-center z-10">
+    {/* Vice Chancellor */}
+    <a href="https://www.srmist.edu.in/about-us/administrative-heads/vice-chancellor/" target="_blank" rel="noopener noreferrer">
+      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+        <img src="./VC.webp" alt="Prof. C. Muthamizhchelvan" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
+        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
+          Prof. C. Muthamizhchelvan<br />
+          Vice Chancellor
+        </h3>
+      </div>
+    </a>
+
+    {/* Registrar */}
+    <a href="https://www.srmist.edu.in/about-us/administrative-heads/registrar/" target="_blank" rel="noopener noreferrer">
+      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+        <img src="./Registrar.webp" alt="Dr. S. Ponnusamy" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
+        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
+          Dr. S. Ponnusamy<br />
+          Registrar
+        </h3>
+      </div>
+    </a>
+
+    {/* Dean */}
+    <a href="https://www.srmist.edu.in/faculty/dr-m-leenus-jesu-martin/" target="_blank" rel="noopener noreferrer">
+      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
+        <img src="./dean.jpg" alt="Dr. Leenus Jesu Martin M" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
+        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
+          Dr. Leenus Jesu Martin M<br />
+          Dean, Faculty of Engineering and Technology
+        </h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+      
+{/* Team Members Section */}
 <div className="relative min-h-screen bg-black bg-cover bg-center flex flex-col items-center justify-center py-16" id="team">
   <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
 
@@ -597,53 +644,19 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     ))}
   </div>
 
-  {/* Admin and Faculty Members */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center mt-10 z-10">
-    {/* 1. Vice Chancellor */}
-    <a href="https://www.srmist.edu.in/about-us/administrative-heads/vice-chancellor/" target="_blank" rel="noopener noreferrer">
-      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-        <img src="./VC.webp" alt="Prof. C. Muthamizhchelvan" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
-          Prof. C. Muthamizhchelvan<br />
-          Vice Chancellor
-        </h3>
-      </div>
-    </a>
-
-    {/* 2. Registrar */}
-    <a href="https://www.srmist.edu.in/about-us/administrative-heads/registrar/" target="_blank" rel="noopener noreferrer">
-      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-        <img src="./Registrar.webp" alt="Dr. S. Ponnusamy" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
-          Dr. S. Ponnusamy<br />
-          Registrar
-        </h3>
-      </div>
-    </a>
-
-    {/* 3. Dean */}
-    <a href="https://www.srmist.edu.in/faculty/dr-m-leenus-jesu-martin/" target="_blank" rel="noopener noreferrer">
-      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-        <img src="./dean.jpg" alt="Dr. Leenus Jesu Martin M" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
-          Dr. Leenus Jesu Martin M<br />
-          Dean, CET
-        </h3>
-      </div>
-    </a>
-
-    {/* 4. Faculty Advisor */}
+  {/* Center the last team member */}
+  <div className="col-span-full flex justify-center mt-8 z-10">
     <a href="https://www.srmist.edu.in/about-us/administrative-heads/director-alumni-relations/" target="_blank" rel="noopener noreferrer">
       <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
         <img src="./faculty.png" alt="Dr. A. Rathinam" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
         <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
-          Dr. A. Rathinam<br />
-          Faculty Advisor
+          Faculty Advisor - Dr. A. Rathinam
         </h3>
       </div>
     </a>
   </div>
 </div>
+
 
  {/* Rover Renders Section */}
 <div className="min-h-screen bg-black flex flex-col items-center py-16" id="rover-renders">
