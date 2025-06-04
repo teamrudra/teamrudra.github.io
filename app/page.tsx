@@ -411,20 +411,20 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
       </div>
 
 {/* Our Patrons Section */}
-<div className="w-full mt-16 bg-gray-100 rounded-xl py-8 px-4 sm:px-8 text-gray-900">
-  <h2 className="text-3xl sm:text-4xl md:text-5xl mb-10 font-serif text-center text-black">Our Patrons</h2>
+<div className="w-full mt-16 bg-gray-900 rounded-xl py-8 px-4 sm:px-8 text-white">
+  <h2 className="text-3xl sm:text-4xl md:text-5xl mb-10 font-serif text-center text-white">Our Patrons</h2>
 
   {/* Patron Card 1 */}
-  <div className="bg-white rounded-xl shadow-md p-6 mb-8">
+  <div className="bg-gray-800 rounded-xl shadow-md p-6 mb-8">
     <img src="./VC.webp" alt="Prof. C. Muthamizhchelvan" className="w-full max-w-xs mx-auto rounded-md mb-4" />
-    <h3 className="text-2xl font-semibold text-center">Dr. C. Muthamizhchelvan</h3>
-    <p className="text-lg text-center mb-2">Vice Chancellor</p>
+    <h3 className="text-2xl font-semibold text-center text-white">Dr. C. Muthamizhchelvan</h3>
+    <p className="text-lg text-center text-gray-300 mb-2">Vice Chancellor</p>
     <div className="text-center">
       <a
         href="https://www.srmist.edu.in/about-us/leadership-team/vice-chancellor/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-600 hover:underline font-medium inline-flex items-center justify-center"
+        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
       >
         → Meet our Vice Chancellor
       </a>
@@ -432,16 +432,16 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 
   {/* Patron Card 2 */}
-  <div className="bg-white rounded-xl shadow-md p-6 mb-8">
+  <div className="bg-gray-800 rounded-xl shadow-md p-6 mb-8">
     <img src="./Registrar.webp" alt="Dr. S. Ponnusamy" className="w-full max-w-xs mx-auto rounded-md mb-4" />
-    <h3 className="text-2xl font-semibold text-center">Dr. S. Ponnusamy</h3>
-    <p className="text-lg text-center mb-2">Registrar</p>
+    <h3 className="text-2xl font-semibold text-center text-white">Dr. S. Ponnusamy</h3>
+    <p className="text-lg text-center text-gray-300 mb-2">Registrar</p>
     <div className="text-center">
       <a
         href="https://www.srmist.edu.in/about-us/leadership-team/registrar/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-600 hover:underline font-medium inline-flex items-center justify-center"
+        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
       >
         → Meet our Registrar
       </a>
@@ -449,22 +449,23 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 
   {/* Patron Card 3 */}
-  <div className="bg-white rounded-xl shadow-md p-6">
+  <div className="bg-gray-800 rounded-xl shadow-md p-6">
     <img src="./dean.jpg" alt="Dr. Leenus Jesu Martin M" className="w-full max-w-xs mx-auto rounded-md mb-4" />
-    <h3 className="text-2xl font-semibold text-center">Dr. Leenus Jesu Martin M</h3>
-    <p className="text-lg text-center mb-2">Dean, CET</p>
+    <h3 className="text-2xl font-semibold text-center text-white">Dr. Leenus Jesu Martin M</h3>
+    <p className="text-lg text-center text-gray-300 mb-2">Dean, CET</p>
     <div className="text-center">
       <a
         href="https://www.srmist.edu.in/faculty/dr-m-leenus-jesu-martin/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-600 hover:underline font-medium inline-flex items-center justify-center"
+        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
       >
         → Meet our Dean
       </a>
     </div>
   </div>
 </div>
+
 
 {/* IRC section */}
 <div className="relative bg-black text-white py-20 px-10">
