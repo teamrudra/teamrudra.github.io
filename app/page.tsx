@@ -434,7 +434,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
 
   {/* Patron Card 2 */}
   <div className="bg-gray-800 shadow-md p-6 mb-8">
-    <img src="./registrar.webp" alt="Dr. S. Ponnusamy" className="w-full max-w-xs mx-auto rounded-md mb-4" />
+    <img src="./registar.webp" alt="Dr. S. Ponnusamy" className="w-full max-w-xs mx-auto rounded-md mb-4" />
     <h3 className="text-2xl font-semibold text-center text-white">Dr. S. Ponnusamy</h3>
     <p className="text-lg text-center text-gray-300 mb-2">Registrar</p>
     <div className="text-center">
