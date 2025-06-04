@@ -410,6 +410,63 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         </div>
       </div>
 
+{/* Our Patrons Section */}
+<div className="w-full mt-16 bg-gray-100 rounded-xl py-8 px-4 sm:px-8 text-gray-900">
+  <h2 className="text-3xl sm:text-4xl md:text-5xl mb-10 font-serif text-center text-black">Our Patrons</h2>
+
+  {/* Patron Card 1 */}
+  <div className="bg-white rounded-xl shadow-md p-6 mb-8">
+    <img src="./VC.webp" alt="Prof. C. Muthamizhchelvan" className="w-full max-w-xs mx-auto rounded-md mb-4" />
+    <h3 className="text-2xl font-semibold text-center">Dr. C. Muthamizhchelvan</h3>
+    <p className="text-lg text-center mb-2">Vice Chancellor</p>
+    <div className="text-center">
+      <a
+        href="https://www.srmist.edu.in/about-us/leadership-team/vice-chancellor/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 hover:underline font-medium inline-flex items-center justify-center"
+      >
+        → Meet our Vice Chancellor
+      </a>
+    </div>
+  </div>
+
+  {/* Patron Card 2 */}
+  <div className="bg-white rounded-xl shadow-md p-6 mb-8">
+    <img src="./Registrar.webp" alt="Dr. S. Ponnusamy" className="w-full max-w-xs mx-auto rounded-md mb-4" />
+    <h3 className="text-2xl font-semibold text-center">Dr. S. Ponnusamy</h3>
+    <p className="text-lg text-center mb-2">Registrar</p>
+    <div className="text-center">
+      <a
+        href="https://www.srmist.edu.in/about-us/leadership-team/registrar/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 hover:underline font-medium inline-flex items-center justify-center"
+      >
+        → Meet our Registrar
+      </a>
+    </div>
+  </div>
+
+  {/* Patron Card 3 */}
+  <div className="bg-white rounded-xl shadow-md p-6">
+    <img src="./dean.jpg" alt="Dr. Leenus Jesu Martin M" className="w-full max-w-xs mx-auto rounded-md mb-4" />
+    <h3 className="text-2xl font-semibold text-center">Dr. Leenus Jesu Martin M</h3>
+    <p className="text-lg text-center mb-2">Dean, CET</p>
+    <div className="text-center">
+      <a
+        href="https://www.srmist.edu.in/faculty/dr-m-leenus-jesu-martin/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 hover:underline font-medium inline-flex items-center justify-center"
+      >
+        → Meet our Dean
+      </a>
+    </div>
+  </div>
+</div>
+
+{/* IRC section */}
 <div className="relative bg-black text-white py-20 px-10">
   {/* Sparkles Background */}
   <SparklesCore
@@ -557,55 +614,6 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
         </a></Link>
       </div>
     </div>
-  </div>
-</div>
-
-{/* Our Patrons Section */}
-<div className="relative min-h-screen bg-black bg-cover bg-center flex flex-col items-center justify-center py-16" id="patrons">
-  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
-
-  <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-    <source src="/starsvideo.mov" type="video/mov" />
-    Your browser does not support the video tag.
-  </video>
-
-  <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 sm:mb-12 font-serif flex items-center justify-center z-10">
-    Our Patrons
-  </h2>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 text-center z-10">
-    {/* Vice Chancellor */}
-    <a href="https://www.srmist.edu.in/about-us/leadership-team/vice-chancellor/" target="_blank" rel="noopener noreferrer">
-      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-        <img src="./VC.webp" alt="Prof. C. Muthamizhchelvan" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
-          Prof. C. Muthamizhchelvan<br />
-          Vice Chancellor
-        </h3>
-      </div>
-    </a>
-
-    {/* Registrar */}
-    <a href="https://www.srmist.edu.in/about-us/leadership-team/registrar/" target="_blank" rel="noopener noreferrer">
-      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-        <img src="./Registrar.webp" alt="Dr. S. Ponnusamy" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
-          Dr. S. Ponnusamy<br />
-          Registrar
-        </h3>
-      </div>
-    </a>
-
-    {/* Dean */}
-    <a href="https://www.srmist.edu.in/faculty/dr-m-leenus-jesu-martin/" target="_blank" rel="noopener noreferrer">
-      <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-        <img src="./dean.jpg" alt="Dr. Leenus Jesu Martin M" className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-        <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans text-center">
-          Dr. Leenus Jesu Martin M<br />
-          Dean, CET
-        </h3>
-      </div>
-    </a>
   </div>
 </div>
 
@@ -862,96 +870,6 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </div>
   </div>
 </div>
-
-{/*sponsor us signup */}
-<div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="sponsor">
-  <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
-  
-  <div className="bg-gray-900 p-6 md:p-8 rounded-2xl shadow-lg w-full max-w-[1000px] relative flex flex-col md:flex-row items-center">
-    
-    {/* Image Section */}
-    <div className="flex-1 mb-6 md:mb-0 md:mr-8">
-      <img 
-        src="tier2.png" 
-        alt="Sponsor Image" 
-        className="w-full h-[250px] md:w-[440px] md:h-[400px] object-cover rounded-xl" 
-      />
-    </div>
-
-    {/* Form Section */}
-    <div className="flex-1 text-center">
-      <h2 className="text-white text-2xl md:text-3xl font-semibold mb-2">
-        Partner with Team Rudra
-      </h2>
-      <p className="text-gray-400 mb-6 text-sm md:text-base">
-        Fuel our journey to success by supporting groundbreaking projects and exploration.
-      </p>
-
-      <form 
-        name="sponsor-form" 
-        onSubmit={handleSubmit2}
-        method="POST" 
-        className="space-y-4 w-full"
-      >
-        <div className="relative">
-          <input 
-            type="text" 
-            name="companyName" 
-            placeholder="Enter your company name *" 
-            className="w-full p-3 md:p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" 
-            required 
-          />
-        </div>
-        <div className="relative">
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="Enter your email here *" 
-            className="w-full p-3 md:p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" 
-            required 
-          />
-        </div>
-       <button 
-  type="submit" 
-  disabled={isLoading2}
-  className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition disabled:bg-blue-400 disabled:cursor-not-allowed"
->
-  {isLoading2 ? (
-    <span className="flex items-center justify-center">
-      <svg 
-        className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" 
-        xmlns="http://www.w3.org/2000/svg" 
-        fill="none" 
-        viewBox="0 0 24 24"
-      >
-        <circle 
-          className="opacity-25" 
-          cx="12" 
-          cy="12" 
-          r="10" 
-          stroke="currentColor" 
-          strokeWidth="4"
-        />
-        <path 
-          className="opacity-75" 
-          fill="currentColor" 
-          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-        />
-      </svg>
-      Loading...
-    </span>
-  ) : (
-    'Contact Us'
-  )}
-</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-      
-
-
      
 {/* Newsletter Section */}
 <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="newsletter">
