@@ -411,80 +411,6 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 </div>
 
-{/* Our Patrons Section */}
-<div className="w-full mt-0 bg-gray-900 py-8 px-4 sm:px-8 text-white">
-  <h2 className="text-3xl sm:text-4xl md:text-5xl mb-10 font-serif text-center text-white">Our Patrons</h2>
-
-  {/* Patron Card 1 */}
-  <div className="bg-gray-800 shadow-md p-6 mb-8">
-    <img src="./VC.webp" alt="Prof. C. Muthamizhchelvan" className="w-full max-w-xs mx-auto rounded-md mb-4" />
-    <h3 className="text-2xl font-semibold text-center text-white">Dr. C. Muthamizhchelvan</h3>
-    <p className="text-lg text-center text-gray-300 mb-2">Vice Chancellor</p>
-    <div className="text-center">
-      <a
-        href="https://www.srmist.edu.in/about-us/leadership-team/vice-chancellor/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
-      >
-        → Meet our Vice Chancellor
-      </a>
-    </div>
-  </div>
-
-  {/* Patron Card 2 */}
-  <div className="bg-gray-800 shadow-md p-6 mb-8">
-    <img src="./registar.webp" alt="Dr. S. Ponnusamy" className="w-full max-w-xs mx-auto rounded-md mb-4" />
-    <h3 className="text-2xl font-semibold text-center text-white">Dr. S. Ponnusamy</h3>
-    <p className="text-lg text-center text-gray-300 mb-2">Registrar</p>
-    <div className="text-center">
-      <a
-        href="https://www.srmist.edu.in/about-us/leadership-team/registrar/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
-      >
-        → Meet our Registrar
-      </a>
-    </div>
-  </div>
-
-  {/* Patron Card 3 */}
-  <div className="bg-gray-800 shadow-md p-6 mb-8">
-    <img src="./dean.jpg" alt="Dr. Leenus Jesu Martin M" className="w-full max-w-xs mx-auto rounded-md mb-4" />
-    <h3 className="text-2xl font-semibold text-center text-white">Dr. Leenus Jesu Martin M</h3>
-    <p className="text-lg text-center text-gray-300 mb-2">Dean, CET</p>
-    <div className="text-center">
-      <a
-        href="https://www.srmist.edu.in/faculty/dr-m-leenus-jesu-martin/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
-      >
-        → Meet our Dean
-      </a>
-    </div>
-  </div>
-
-  {/* Patron Card 4 - Faculty Advisor */}
-  <div className="bg-gray-800 shadow-md p-6">
-    <img src="./faculty.png" alt="Dr. A. Rathinam" className="w-full max-w-xs mx-auto rounded-md mb-4" />
-    <h3 className="text-2xl font-semibold text-center text-white">Dr. A. Rathinam</h3>
-    <p className="text-lg text-center text-gray-300 mb-2">Faculty Advisor</p>
-    <div className="text-center">
-      <a
-        href="https://www.srmist.edu.in/about-us/administrative-heads/director-alumni-relations/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
-      >
-        → Meet our Faculty Advisor
-      </a>
-    </div>
-  </div>
-</div>
-
-
 {/* IRC section */}
 <div className="relative bg-black text-white py-20 px-10">
   {/* Sparkles Background */}
@@ -632,6 +558,79 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
           Missions
         </a></Link>
       </div>
+    </div>
+  </div>
+</div>
+      
+{/* Our Patrons Section */}
+<div className="relative bg-black text-white py-20 px-10">
+  <h2 className="text-3xl sm:text-4xl md:text-5xl mb-10 font-serif text-center text-white">Our Patrons</h2>
+
+  {/* Patron Card 1 */}
+  <div className="bg-gray-800 shadow-md p-6 mb-8 rounded-lg">
+    <img src="./VC.webp" alt="Prof. C. Muthamizhchelvan" className="w-full max-w-xs mx-auto rounded-md mb-4" />
+    <h3 className="text-2xl font-semibold text-center">Dr. C. Muthamizhchelvan</h3>
+    <p className="text-lg text-center text-gray-300 mb-2">Vice Chancellor</p>
+    <div className="text-center">
+      <a
+        href="https://www.srmist.edu.in/about-us/leadership-team/vice-chancellor/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
+      >
+        → Meet our Vice Chancellor
+      </a>
+    </div>
+  </div>
+
+  {/* Patron Card 2 */}
+  <div className="bg-gray-800 shadow-md p-6 mb-8 rounded-lg">
+    <img src="./registar.webp" alt="Dr. S. Ponnusamy" className="w-full max-w-xs mx-auto rounded-md mb-4" />
+    <h3 className="text-2xl font-semibold text-center">Dr. S. Ponnusamy</h3>
+    <p className="text-lg text-center text-gray-300 mb-2">Registrar</p>
+    <div className="text-center">
+      <a
+        href="https://www.srmist.edu.in/about-us/leadership-team/registrar/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
+      >
+        → Meet our Registrar
+      </a>
+    </div>
+  </div>
+
+  {/* Patron Card 3 */}
+  <div className="bg-gray-800 shadow-md p-6 mb-8 rounded-lg">
+    <img src="./dean.jpg" alt="Dr. Leenus Jesu Martin M" className="w-full max-w-xs mx-auto rounded-md mb-4" />
+    <h3 className="text-2xl font-semibold text-center">Dr. Leenus Jesu Martin M</h3>
+    <p className="text-lg text-center text-gray-300 mb-2">Dean, CET</p>
+    <div className="text-center">
+      <a
+        href="https://www.srmist.edu.in/faculty/dr-m-leenus-jesu-martin/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
+      >
+        → Meet our Dean
+      </a>
+    </div>
+  </div>
+
+  {/* Patron Card 4 */}
+  <div className="bg-gray-800 shadow-md p-6 rounded-lg">
+    <img src="./faculty.png" alt="Dr. A. Rathinam" className="w-full max-w-xs mx-auto rounded-md mb-4" />
+    <h3 className="text-2xl font-semibold text-center">Dr. A. Rathinam</h3>
+    <p className="text-lg text-center text-gray-300 mb-2">Faculty Advisor</p>
+    <div className="text-center">
+      <a
+        href="https://www.srmist.edu.in/about-us/administrative-heads/director-alumni-relations/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
+      >
+        → Meet our Faculty Advisor
+      </a>
     </div>
   </div>
 </div>
