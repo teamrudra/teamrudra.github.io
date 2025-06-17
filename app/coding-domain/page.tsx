@@ -59,13 +59,7 @@ const CodingDomainPage = () => {
           </div>
         </Link>
 
-        {/* Coding Team Member 7 – Aryan Garg */}
-        <Link href="#">
-          <div className="bg-gray-800 p-6 w-64 h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300">
-            <img src="./aryan.jpeg" alt="Aryan Garg" className="w-32 h-32 mx-auto rounded-full" />
-            <h3 className="text-white text-xl mt-4">Aryan Garg</h3>
-          </div>
-        </Link>
+        
 
       </div>
     </div>
