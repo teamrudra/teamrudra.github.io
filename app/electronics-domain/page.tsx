@@ -46,37 +46,37 @@ const ElectronicsDomainPage = () => {
           </div>
         </Link>
 
-        <Link href="">
+        <Link href="https://in.linkedin.com/in/aaryan-sarat-491241331">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./electronics-member7.png" alt="Electronics Team Member 7" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./aaryan.jpeg" alt="Electronics Team Member 7" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Aaryan Sarat</h3>
           </div>
         </Link>
 
         <Link href="https://www.linkedin.com/in/vkrishna89/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./electronics-member7.png" alt="Electronics Team Member 7" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./vkrishna.jpeg" alt="Electronics Team Member 7" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">V Krishna</h3>
           </div>
         </Link>
 
         <Link href="">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./electronics-member7.png" alt="Electronics Team Member 7" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./hariharan.jpeg" alt="Electronics Team Member 7" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Hariharan R</h3>
           </div>
         </Link>
 
         <Link href="">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./electronics-member7.png" alt="Electronics Team Member 7" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./mishti.jpeg" alt="Electronics Team Member 7" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Mishti Bansal</h3>
           </div>
         </Link>
 
         <Link href="https://www.linkedin.com/in/abhijeeth-koushal-addenki-800a18277/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./electronics-member7.png" alt="Electronics Team Member 7" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./abhijeet.jpeg" alt="Electronics Team Member 7" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Abhijeet Koushal</h3>
           </div>
         </Link>
