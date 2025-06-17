@@ -13,8 +13,8 @@ const CorporateDomainPage = () => {
 <Link href="https://www.linkedin.com/in/danyal-reyaz/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
             
-            <img src="./danyal.JPG" alt="Corporate Team Member 2" className="w-32 h-32 mx-auto rounded-full" />
-            <h3 className="text-white text-xl mt-4">Danyal Reyaz</h3>
+            <img src="./life-science-member4.png" alt="Corporate Team Member 2" className="w-32 h-32 mx-auto rounded-full" />
+            <h3 className="text-white text-xl mt-4">Team Manager-Danyal Reyaz</h3>
           </div>
         </Link>
 
@@ -28,7 +28,7 @@ const CorporateDomainPage = () => {
                 {/* Corporate Team Member 1 */}
                 <Link href="https://www.linkedin.com/in/ditsa-sarkar-7a0623228/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./corporate-member1.png" alt="Corporate Team Member 1" className="w-32 h-32 mx-auto rounded-full" />
+            <img src=".ditsa.jfif" alt="Corporate Team Member 1" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Ditsa Sarkar</h3>
           </div>
         </Link>
