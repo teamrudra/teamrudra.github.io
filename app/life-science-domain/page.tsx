@@ -40,7 +40,7 @@ const LifeScienceDomainPage = () => {
         {/* Member – Prasith Bhaduri */}
         <Link href="https://www.linkedin.com/in/prasith-bhaduri/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./life-science-member4.png" alt="Prasith Bhaduri" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./prasith.jpeg" alt="Prasith Bhaduri" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Prasith Bhaduri</h3>
           </div>
         </Link>
@@ -48,7 +48,7 @@ const LifeScienceDomainPage = () => {
         {/* Member – Devi Prasath Kumar */}
         <Link href="https://www.linkedin.com/in/devi-prasath-9b0006320/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./life-science-member4.png" alt="Devi Prasath Kumar" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./devi.jpeg" alt="Devi Prasath Kumar" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Devi Prasath Kumar</h3>
           </div>
         </Link>
@@ -56,7 +56,7 @@ const LifeScienceDomainPage = () => {
         {/* Member – Sanika Gadre */}
         <Link href="https://www.linkedin.com/in/sanika-g-b55321287/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./life-science-member4.png" alt="Sanika Gadre" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./sanika.jpeg" alt="Sanika Gadre" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Sanika Gadre</h3>
           </div>
         </Link>
@@ -64,7 +64,7 @@ const LifeScienceDomainPage = () => {
         {/* Member – Dhanushya Ganeshan */}
         <Link href="https://www.linkedin.com/in/dhanushya-ganesan-496a69289/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./life-science-member4.png" alt="Dhanushya Ganeshan" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./dhanushya.jpeg" alt="Dhanushya Ganeshan" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Dhanushya Ganeshan</h3>
           </div>
         </Link>
@@ -72,7 +72,7 @@ const LifeScienceDomainPage = () => {
         {/* Member – Sarvagna */}
         <Link href="https://www.linkedin.com/in/sarvagna06/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./life-science-member4.png" alt="Sarvagna" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./sarvagna.jpeg" alt="Sarvagna" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Sarvagna</h3>
           </div>
         </Link>
@@ -80,7 +80,7 @@ const LifeScienceDomainPage = () => {
         {/* Member – Muskaan Tasheen */}
         <Link href="https://www.linkedin.com/in/muskaan-t-a62731309/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./life-science-member4.png" alt="Muskaan Tasheen" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./muskaan.jpeg" alt="Muskaan Tasheen" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Muskaan Tasheen</h3>
           </div>
         </Link>
