@@ -72,28 +72,28 @@ const MechanicalDomainPage = () => {
 
        <Link href="https://www.linkedin.com/in/deepro-pratim-chatterjee-7674b7325/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./mechanical-member9.png" alt="Mechanical Team Member 9" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./deepro.jpeg" alt="Mechanical Team Member 9" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Deepro Pratim Chatterjee</h3>
           </div>
         </Link>
 
         <Link href="https://www.linkedin.com/in/ayush-kumar-choudhary-01b550315/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./mechanical-member9.png" alt="Mechanical Team Member 9" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./ayush.jpeg" alt="Mechanical Team Member 9" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Ayush Kumar Choudhary</h3>
           </div>
         </Link>
 
         <Link href="https://www.linkedin.com/in/vaishnavbhosale/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./mechanical-member9.png" alt="Mechanical Team Member 9" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./vaishnav.jpeg" alt="Mechanical Team Member 9" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Vaishnav Bhosale</h3>
           </div>
         </Link>
 
         <Link href="https://www.linkedin.com/in/paridhi-gupta-b60bb4237/">
           <div className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 relative z-10">
-            <img src="./mechanical-member9.png" alt="Mechanical Team Member 9" className="w-32 h-32 mx-auto rounded-full" />
+            <img src="./paridhi.jpeg" alt="Mechanical Team Member 9" className="w-32 h-32 mx-auto rounded-full" />
             <h3 className="text-white text-xl mt-4">Paridhi Gupta</h3>
           </div>
         </Link>
