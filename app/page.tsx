@@ -157,7 +157,9 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   }
 };
 
-  {showPopup && (
+   return (
+
+      {showPopup && (
   <div className="fixed inset-0 z-[9999] bg-black bg-opacity-70 flex justify-center items-center">
     <div className="bg-white p-6 rounded-lg w-[90%] max-w-md shadow-lg relative">
       <button
@@ -219,9 +221,8 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
   </div>
 )}
 
-  
 
-  return (
+    
     <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
     <style jsx>{`
       html {
