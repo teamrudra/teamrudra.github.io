@@ -159,67 +159,70 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
 
    return (
 
-      {showPopup && (
-  <div className="fixed inset-0 z-[9999] bg-black bg-opacity-70 flex justify-center items-center">
-    <div className="bg-white p-6 rounded-lg w-[90%] max-w-md shadow-lg relative">
-      <button
-        onClick={() => setShowPopup(false)}
-        className="absolute top-2 right-3 text-xl font-bold text-gray-500 hover:text-black"
-      >
-        &times;
-      </button>
+      return (
+  <div className="overflow-x-hidden">
+    {/* ✅ Place the popup here INSIDE the return */}
+    {showPopup && (
+      <div className="fixed inset-0 z-[9999] bg-black bg-opacity-70 flex justify-center items-center">
+        <div className="bg-white p-6 rounded-lg w-[90%] max-w-md shadow-lg relative">
+          <button
+            onClick={() => setShowPopup(false)}
+            className="absolute top-2 right-3 text-xl font-bold text-gray-500 hover:text-black"
+          >
+            &times;
+          </button>
 
-      {/* Recruitment Poster */}
-      <img
-        src="/recruitment-poster.jpg"
-        alt="Recruitment Poster"
-        className="mb-4 w-full h-auto rounded-md"
-      />
+          <img
+            src="/recruitment-poster.jpg"
+            alt="Recruitment Poster"
+            className="mb-4 w-full h-auto rounded-md"
+          />
 
-      {/* Recruitment Form */}
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          const form = e.target as HTMLFormElement;
-          const formData = new FormData(form);
-          const data = Object.fromEntries(formData.entries());
-          console.log('Recruitment Form Submitted:', data);
-          alert('Thank you for applying! We’ll get back to you soon!');
-          setShowPopup(false);
-        }}
-        className="space-y-4"
-      >
-        <input type="text" name="name" placeholder="Name" required className="w-full p-2 border rounded" />
-        <input type="email" name="email" placeholder="Email" required className="w-full p-2 border rounded" />
-        <input type="tel" name="contact" placeholder="Contact Number" required className="w-full p-2 border rounded" />
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.target as HTMLFormElement;
+              const formData = new FormData(form);
+              const data = Object.fromEntries(formData.entries());
+              console.log('Recruitment Form Submitted:', data);
+              alert('Thank you for applying! We’ll get back to you soon!');
+              setShowPopup(false);
+            }}
+            className="space-y-4"
+          >
+            <input type="text" name="name" placeholder="Name" required className="w-full p-2 border rounded" />
+            <input type="email" name="email" placeholder="Email" required className="w-full p-2 border rounded" />
+            <input type="tel" name="contact" placeholder="Contact Number" required className="w-full p-2 border rounded" />
 
-        <select name="year" required className="w-full p-2 border rounded">
-          <option value="">Select Year</option>
-          <option value="1st Year">1st Year</option>
-          <option value="2nd Year">2nd Year</option>
-        </select>
+            <select name="year" required className="w-full p-2 border rounded">
+              <option value="">Select Year</option>
+              <option value="1st Year">1st Year</option>
+              <option value="2nd Year">2nd Year</option>
+            </select>
 
-        <select name="domain" required className="w-full p-2 border rounded">
-          <option value="">Select Domain</option>
-          <option value="Mechanical">Mechanical</option>
-          <option value="Electronics">Electronics</option>
-          <option value="Life Sciences">Life Sciences</option>
-          <option value="Coding">Coding</option>
-          <option value="Corporate-Creatives">Corporate-Creatives</option>
-          <option value="Web Development">Web Development</option>
-          <option value="Sponsorship & PR">Sponsorship & PR</option>
-        </select>
+            <select name="domain" required className="w-full p-2 border rounded">
+              <option value="">Select Domain</option>
+              <option value="Mechanical">Mechanical</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Life Sciences">Life Sciences</option>
+              <option value="Coding">Coding</option>
+              <option value="Corporate-Creatives">Corporate-Creatives</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Sponsorship & PR">Sponsorship & PR</option>
+            </select>
 
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
-        >
-          Submit
-        </button>
-      </form>
-    </div>
-  </div>
-)}
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    )}
+
+    {/* Your remaining layout below like <nav> ... */}
 
 
     
