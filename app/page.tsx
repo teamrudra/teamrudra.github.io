@@ -196,16 +196,19 @@ return (
               <option value="1st Year">1st Year</option>
               <option value="2nd Year">2nd Year</option>
             </select>
-            <select name="domain" required className="w-full p-2 border rounded">
-              <option value="">Select Domain</option>
-              <option value="Mechanical">Mechanical</option>
-              <option value="Electronics">Electronics</option>
-              <option value="Life Sciences">Life Sciences</option>
-              <option value="Coding">Coding</option>
-              <option value="Corporate-Creatives">Corporate-Creatives</option>
-              <option value="Web Development">Web Development</option>
-              <option value="Sponsorship & PR">Sponsorship & PR</option>
-            </select>
+              <select name="domain" required className="w-full p-2 border rounded">
+  <option value="">Select Domain</option>
+  <option value="Mechanical">Mechanical</option>
+  <option value="Electronics">Electronics</option>
+  <option value="Life Sciences">Life Sciences</option>
+  <option value="Coding">Coding</option>
+  <optgroup label="Corporate">
+    <option value="Corporate - Web Development">Web Development</option>
+    <option value="Corporate - Creatives">Creatives</option>
+    <option value="Corporate - Sponsorship & PR">Sponsorship & PR</option>
+  </optgroup>
+</select>
+
             <button
               type="submit"
               className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
