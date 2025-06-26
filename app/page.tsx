@@ -236,29 +236,6 @@ return (
           </a>
         </Link>
 
-
-    
-   
-    <style jsx>{`
-      html {
-        scroll-behavior: smooth;
-      }
-      @media (max-width: 640px) {
-        #home {
-        }
-      }
-    `}</style>
-       {/* Navbar */}
-<nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
-  <div className="px-4 py-2 flex justify-between items-center w-full">
-
-    {/* Rudra Logo - Aligned to the left */}
-    <Link href="/" legacyBehavior>
-      <a className="flex-shrink-0">
-        <img src="./rudra-logo.png" alt="Rudra logo" width={100} height={50} />
-      </a>
-    </Link>
-
     {/* Desktop Menu - Aligned to the right */}
     <div className="hidden lg:flex space-x-4">
       <Link href="#home" scroll={true} legacyBehavior>
