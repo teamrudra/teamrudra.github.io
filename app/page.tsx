@@ -160,8 +160,10 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
  
 
       return (
+ 
+return (
   <div className="overflow-x-hidden">
-    {/* ✅ Place the popup here INSIDE the return */}
+    {/* ✅ Popup */}
     {showPopup && (
       <div className="fixed inset-0 z-[9999] bg-black bg-opacity-70 flex justify-center items-center">
         <div className="bg-white p-6 rounded-lg w-[90%] max-w-md shadow-lg relative">
@@ -193,13 +195,11 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
             <input type="text" name="name" placeholder="Name" required className="w-full p-2 border rounded" />
             <input type="email" name="email" placeholder="Email" required className="w-full p-2 border rounded" />
             <input type="tel" name="contact" placeholder="Contact Number" required className="w-full p-2 border rounded" />
-
             <select name="year" required className="w-full p-2 border rounded">
               <option value="">Select Year</option>
               <option value="1st Year">1st Year</option>
               <option value="2nd Year">2nd Year</option>
             </select>
-
             <select name="domain" required className="w-full p-2 border rounded">
               <option value="">Select Domain</option>
               <option value="Mechanical">Mechanical</option>
@@ -210,7 +210,6 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
               <option value="Web Development">Web Development</option>
               <option value="Sponsorship & PR">Sponsorship & PR</option>
             </select>
-
             <button
               type="submit"
               className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
@@ -222,11 +221,28 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
       </div>
     )}
 
-    {/* Your remaining layout below like <nav> ... */}
+    {/* ✅ The rest of your layout starts here */}
+    <style jsx>{`
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (max-width: 640px) {
+        #home {}
+      }
+    `}</style>
+
+    {/* Navbar */}
+    <nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
+      <div className="px-4 py-2 flex justify-between items-center w-full">
+        <Link href="/" legacyBehavior>
+          <a className="flex-shrink-0">
+            <img src="./rudra-logo.png" alt="Rudra logo" width={100} height={50} />
+          </a>
+        </Link>
 
 
     
-    <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
+   
     <style jsx>{`
       html {
         scroll-behavior: smooth;
