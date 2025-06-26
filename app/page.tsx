@@ -156,10 +156,6 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     setIsLoading2(false);  // Reset loading state whether request succeeds or fails
   }
 };
-
- 
-
-      return (
  
 return (
   <div className="overflow-x-hidden">
