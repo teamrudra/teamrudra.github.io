@@ -36,13 +36,11 @@ const Home = () => {
 
   const [showPopup, setShowPopup] = useState(false);
 
-useEffect(() => {
-  const alreadyShown = sessionStorage.getItem('recruitmentPopupShown');
-  if (!alreadyShown) {
+ useEffect(() => {
+    // Always show on reload
     setShowPopup(true);
-    sessionStorage.setItem('recruitmentPopupShown', 'true');
-  }
-}, []);
+  }, []);
+
 
 
   const previousSlide = () => {
