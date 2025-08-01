@@ -159,6 +159,35 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
  
 return (
   <div className="overflow-x-hidden">
+
+  {/* Recruitment Popup */}
+  {showPopup && (
+    <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-[9999]">
+      <div className="bg-white p-6 rounded-lg w-[90%] max-w-lg shadow-lg relative">
+        {/* Close Button */}
+        <button
+          onClick={() => setShowPopup(false)}
+          className="absolute top-2 right-3 text-2xl font-bold text-gray-500 hover:text-black"
+        >
+          &times;
+        </button>
+
+        {/* Poster Image */}
+        <a
+          href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" // Replace with your GForm
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/recruitment-poster.jpg" // Change to your poster file path
+            alt="Recruitment Poster"
+            className="rounded-md w-full h-auto cursor-pointer hover:scale-105 transform transition duration-300"
+          />
+        </a>
+      </div>
+    </div>
+  )}
+
    
 
     {/* ✅ The rest of your layout starts here */}
