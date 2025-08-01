@@ -179,7 +179,7 @@ return (
           rel="noopener noreferrer"
         >
           <img
-            src="/recruits.JPG" // Change to your poster file path
+            src="./recruits.JPG" // Change to your poster file path
             alt="Recruitment Poster"
             className="rounded-md w-full h-auto cursor-pointer hover:scale-105 transform transition duration-300"
           />
