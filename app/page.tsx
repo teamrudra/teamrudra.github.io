@@ -377,24 +377,33 @@ return (
     </nav>
 
 
- {/* Hero Section */}
- <div
-        className="relative min-h-screen bg-cover bg-center bg-no-repeat sm:bg-none z-20" // Adjusted z-index
-        style={{
-          backgroundImage: `url('background-image.png')`, // Default background for larger screens
-        }}
-        id="home"
-      >
-  {/* <Navbar /> */}
+{/* Hero Section */}
+<div
+  className="relative min-h-screen bg-cover bg-center bg-no-repeat sm:bg-none z-20"
+  style={{
+    backgroundImage: `url('background-image.png')`,
+  }}
+  id="home"
+>
+  {/* Apply Now Button */}
+  <a
+    href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" // <-- Replace with your form link
+    target="_blank"
+    rel="noopener noreferrer"
+    className="absolute top-6 right-6 bg-red-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-red-700 hover:scale-105 transform transition duration-300 text-lg font-semibold tracking-wide z-[999]"
+  >
+    Apply Now
+  </a>
+
+  {/* Background for small screens */}
   <div
     className="absolute inset-0 flex items-center justify-center sm:bg-cover sm:bg-center sm:bg-no-repeat"
     style={{
-      backgroundImage: `url('/background-image-sm.png')`, // Background for small screens
+      backgroundImage: `url('/background-image-sm.png')`,
     }}
-  >
-    {/* Optional content can be added here */}
-  </div>
+  ></div>
 </div>
+
 
 {/* About Us Section */}
 <div className="min-h-screen bg-gray-900 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8" id="about">
