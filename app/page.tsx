@@ -68,7 +68,7 @@ const sponsorshipImages = [
     { src: './hearingon.png', alt: 'HearingOn', url: 'https://www.baranagarspeechandhearing.com/' },
     { src: './pma spares.png', alt: 'PMA Spares', url: 'https://g.co/kgs/HDRrzX4' },
     { src: './lion circuits (2).png', alt: 'Lion Circuits', url: 'https://www.lioncircuits.com/' },
-    { src: './danyal gems logo no-bg.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' }
+    { src: './danyalgems_newlogo.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' }
 ];
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
