@@ -34,6 +34,15 @@ const Home = () => {
     }
   }, [isMenuOpen]);
 
+  const [showPopup, setShowPopup] = useState(false);
+
+ useEffect(() => {
+    // Always show on reload
+    setShowPopup(true);
+  }, []);
+
+
+
   const previousSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? galleryImages.length - 1 : prevIndex - 1
@@ -57,7 +66,7 @@ const sponsorshipImages = [
     { src: './hearingon.png', alt: 'HearingOn', url: 'https://www.baranagarspeechandhearing.com/' },
     { src: './pma spares.png', alt: 'PMA Spares', url: 'https://g.co/kgs/HDRrzX4' },
     { src: './lion circuits (2).png', alt: 'Lion Circuits', url: 'https://www.lioncircuits.com/' },
-    { src: './danyal gems logo no-bg.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' }
+    { src: './danyalgems_newlogo.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' }
 ];
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
@@ -145,29 +154,58 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     setIsLoading2(false);  // Reset loading state whether request succeeds or fails
   }
 };
-  
+ 
+return (
+  <div className="overflow-x-hidden">
 
-  return (
-    <div className="overflow-x-hidden"> {/* Prevent horizontal overflow */}
+  {/* Recruitment Popup */}
+  {showPopup && (
+    <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-[9999]">
+      <div className="bg-white p-6 rounded-lg w-[90%] max-w-lg shadow-lg relative">
+        {/* Close Button */}
+        <button
+          onClick={() => setShowPopup(false)}
+          className="absolute top-2 right-3 text-2xl font-bold text-gray-500 hover:text-black"
+        >
+          &times;
+        </button>
+
+        {/* Poster Image */}
+        <a
+          href="https://forms.gle/vqcvrCsA8q3FnApC9" // Replace with your GForm
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="./recruitposter.jpeg" // Change to your poster file path
+            alt="Recruitment Poster"
+            className="rounded-md w-full h-auto cursor-pointer hover:scale-105 transform transition duration-300"
+          />
+        </a>
+      </div>
+    </div>
+  )}
+
+   
+
+    {/* ✅ The rest of your layout starts here */}
     <style jsx>{`
       html {
         scroll-behavior: smooth;
       }
       @media (max-width: 640px) {
-        #home {
-        }
+        #home {}
       }
     `}</style>
-       {/* Navbar */}
-<nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
-  <div className="px-4 py-2 flex justify-between items-center w-full">
 
-    {/* Rudra Logo - Aligned to the left */}
-    <Link href="/" legacyBehavior>
-      <a className="flex-shrink-0">
-        <img src="./rudra-logo.png" alt="Rudra logo" width={100} height={50} />
-      </a>
-    </Link>
+    {/* Navbar */}
+    <nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
+      <div className="px-4 py-2 flex justify-between items-center w-full">
+        <Link href="/" legacyBehavior>
+          <a className="flex-shrink-0">
+            <img src="./rudra-logo.png" alt="Rudra logo" width={100} height={50} />
+          </a>
+        </Link>
 
     {/* Desktop Menu - Aligned to the right */}
     <div className="hidden lg:flex space-x-4">
@@ -366,24 +404,33 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
     </nav>
 
 
- {/* Hero Section */}
- <div
-        className="relative min-h-screen bg-cover bg-center bg-no-repeat sm:bg-none z-20" // Adjusted z-index
-        style={{
-          backgroundImage: `url('background-image.png')`, // Default background for larger screens
-        }}
-        id="home"
-      >
-  {/* <Navbar /> */}
+{/* Hero Section */}
+<div
+  className="relative min-h-screen bg-cover bg-center bg-no-repeat sm:bg-none z-20"
+  style={{
+    backgroundImage: `url('background-image.png')`,
+  }}
+  id="home"
+>
+  {/* Apply Now Button */}
+  <a
+    href="https://forms.gle/vqcvrCsA8q3FnApC9" // <-- Replace with your form link
+    target="_blank"
+    rel="noopener noreferrer"
+    className="absolute top-6 right-6 bg-red-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-red-700 hover:scale-105 transform transition duration-300 text-lg font-semibold tracking-wide z-[999]"
+  >
+    Apply Now
+  </a>
+
+  {/* Background for small screens */}
   <div
     className="absolute inset-0 flex items-center justify-center sm:bg-cover sm:bg-center sm:bg-no-repeat"
     style={{
-      backgroundImage: `url('/background-image-sm.png')`, // Background for small screens
+      backgroundImage: `url('/background-image-sm.png')`,
     }}
-  >
-    {/* Optional content can be added here */}
-  </div>
+  ></div>
 </div>
+
 
 {/* About Us Section */}
 <div className="min-h-screen bg-gray-900 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8" id="about">
