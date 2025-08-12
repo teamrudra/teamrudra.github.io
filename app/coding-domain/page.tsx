@@ -27,13 +27,7 @@ const CodingDomainPage = () => {
           </div>
         </Link>
 
-{/*         {/* Coding Team Member 3 – Lakshay Chhabra */}
-        <Link href="https://www.linkedin.com/in/lakshayyy15/">
-          <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300">
-            <img src="./lakshay.jpeg" alt="Lakshay Chhabra" className="w-32 h-32 mx-auto rounded-full" />
-            <h3 className="text-white text-xl mt-4">Lakshay Chhabra</h3>
-          </div>
-        </Link> */}
+
 
         {/* Coding Team Member 4 – Pavithra CP */}
         <Link href="https://www.linkedin.com/in/pavithra-cp/">
