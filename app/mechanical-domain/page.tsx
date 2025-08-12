@@ -53,7 +53,7 @@ const MechanicalDomainPage = () => {
         {/* Team Member - Sujal Shah */}
         <Link href="https://www.linkedin.com/in/sujal-shah-a92a63297/">
           <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center justify-between">
-            <img src="./mechanical-member9.png" alt="Sujal Shah" className="w-32 h-32 rounded-full" />
+            <img src="./mechanical-member-sujal.jpeg" alt="Sujal Shah" className="w-32 h-32 rounded-full" />
             <h3 className="text-white text-xl mt-4 text-center">Sujal Shah</h3>
           </div>
         </Link>
@@ -72,13 +72,7 @@ const MechanicalDomainPage = () => {
           </div>
         </Link>
 
-        {/* Team Member - Ayush Kumar Choudhary */}
-        <Link href="https://www.linkedin.com/in/ayush-kumar-choudhary-01b550315/">
-          <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center justify-between">
-            <img src="./ayush.jpeg" alt="Ayush Kumar Choudhary" className="w-32 h-32 rounded-full" />
-            <h3 className="text-white text-xl mt-4 text-center">Ayush Kumar Choudhary</h3>
-          </div>
-        </Link>
+     
 
         {/* Team Member - Vaishnav Bhosale */}
         <Link href="https://www.linkedin.com/in/vaishnavbhosale/">
