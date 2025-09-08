@@ -158,33 +158,7 @@ const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
 return (
   <div className="overflow-x-hidden">
 
-  {/* Recruitment Popup */}
-  {showPopup && (
-    <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-[9999]">
-      <div className="bg-white p-6 rounded-lg w-[90%] max-w-lg shadow-lg relative">
-        {/* Close Button */}
-        <button
-          onClick={() => setShowPopup(false)}
-          className="absolute top-2 right-3 text-2xl font-bold text-gray-500 hover:text-black"
-        >
-          &times;
-        </button>
-
-        {/* Poster Image */}
-        <a
-          href="https://forms.gle/vqcvrCsA8q3FnApC9" // Replace with your GForm
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="./RUDRA-RECRUITMENT-POSTER1.jpeg" // Change to your poster file path
-            alt="Recruitment Poster"
-            className="rounded-md w-full h-auto cursor-pointer hover:scale-105 transform transition duration-300"
-          />
-        </a>
-      </div>
-    </div>
-  )}
+  
 
    
 
@@ -412,15 +386,7 @@ return (
   }}
   id="home"
 >
-  {/* Apply Now Button */}
-  <a
-    href="https://forms.gle/vqcvrCsA8q3FnApC9" // <-- Replace with your form link
-    target="_blank"
-    rel="noopener noreferrer"
-    className="absolute top-6 right-6 bg-red-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-red-700 hover:scale-105 transform transition duration-300 text-lg font-semibold tracking-wide z-[999]"
-  >
-    Apply Now
-  </a>
+  
 
   {/* Background for small screens */}
   <div
