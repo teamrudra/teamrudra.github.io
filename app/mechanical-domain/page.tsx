@@ -28,14 +28,6 @@ const MechanicalDomainPage = () => {
           </div>
         </Link>
 
-        {/* Team Member - Himanshu Karar */}
-        <Link href="https://www.linkedin.com/in/himanshu-karar-349268157/">
-          <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center justify-between">
-            <img src="./mechanical-member4.png" alt="Himanshu Karar" className="w-32 h-32 rounded-full" />
-            <h3 className="text-white text-xl mt-4 text-center">Mechanical Lead - Himanshu Karar</h3>
-          </div>
-        </Link>
-
         {/* Team Member - Prerna Kumari */}
         <Link href="https://www.linkedin.com/in/prerna-kumari-31aa3325b/">
           <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center justify-between">
