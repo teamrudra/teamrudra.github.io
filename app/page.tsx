@@ -1030,7 +1030,7 @@ return (
           <img src="youtube.png" alt="LinkedIn" className="w-10 h-10" />
           <span className="text-white text-xl">Youtube</span>
         </a>
-        <a href="https://www.linkedin.com/company/srmrudra/mycompany/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
+        <a href="https://www.linkedin.com/company/13210958/admin/dashboard/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
           <img src="linkedin-brands-solid.svg" alt="LinkedIn" className="w-10 h-10" />
           <span className="text-white text-xl">LinkedIn</span>
         </a>
