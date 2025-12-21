@@ -33,20 +33,14 @@ const MissionsPage: React.FC = () => {
       subtitle: 'Business Plan Presentation',
       info: 'This task evaluates the team\'s business mindset, encouraging alliances with corporate and academic communities to boost project development. It spreads awareness about the potential real-life applications of rovers.',
     },
-    {
-      id: 5,
-      image: 'z.png',
-      title: 'Mission 5',
-      subtitle: 'Reconnaissance & Delivery Mission',
-      info: 'The rover is equipped with advanced sensors and imaging technologies to survey the area, analyzing topography, geology, and points of interest. It delivers collected objects to the base station using a robotic arm and storage box for efficient task execution.',
-    },
-    {
-      id: 6,
-      image: 'mission6.png',
-      title: 'Mission 6',
-      subtitle: 'Autonomous Expedition',
-      info: 'The rover navigates autonomously using arrow markers on challenging terrain without remote operation. It follows arrowheads to the endpoint while logging GPS coordinates and corresponding directions.',
-    },
+   {
+  id: 5,
+  image: 'z.png',
+  title: 'Mission 5',
+  subtitle: 'Reconnaissance & Autonomous Delivery Operation',
+  info: 'The rover performs reconnaissance over challenging terrain to locate and document scattered objects using onboard sensors, imaging systems, and GPS logging. It is capable of picking up, storing, and autonomously delivering objects to designated locations using a robotic arm and storage mechanism, ensuring precise navigation and efficient task execution under limited time constraints.',
+},
+
   ];
 
   return (
