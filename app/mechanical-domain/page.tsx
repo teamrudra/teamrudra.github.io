@@ -1,87 +1,70 @@
 import Link from 'next/link';
 import { SparklesCore } from '@/components/ui/sparkles';
 
+const members = [
+  { name: 'Kethan Babu',              role: 'Mechanics Lead',   img: './mechanical-member3.png',        linkedin: '' },
+  { name: 'Ratnesh Mishra',           role: 'Team Lead',         img: './mechanical-member5.png',        linkedin: 'https://www.linkedin.com/in/ratnesh-mishra-07260424b/' },
+  { name: 'Prerna Kumari',            role: 'Mechanical Lead',   img: './mechanical-member6.png',        linkedin: 'https://www.linkedin.com/in/prerna-kumari-31aa3325b/' },
+  { name: 'Rishabh Kothari',          role: 'Mechanical',        img: './mechanical-member7.png',        linkedin: '' },
+  { name: 'Sujal Shah',               role: 'Mechanical',        img: './mechanical-member-sujal.jpeg',  linkedin: 'https://www.linkedin.com/in/sujal-shah-a92a63297/' },
+  { name: 'Kevin Mathew',             role: 'Mechanical',        img: './mechanical-member10.png',       linkedin: '' },
+  { name: 'Deepro Pratim Chatterjee', role: 'Mechanical',        img: './deepro.jpeg',                   linkedin: 'https://www.linkedin.com/in/deepro-pratim-chatterjee-7674b7325/' },
+  { name: 'Vaishnav Bhosale',         role: 'Mechanical',        img: './vaishnav.jpeg',                 linkedin: 'https://www.linkedin.com/in/vaishnavbhosale/' },
+  { name: 'Paridhi Gupta',            role: 'Mechanical',        img: './paridhi.jpeg',                  linkedin: 'https://www.linkedin.com/in/paridhi-gupta-b60bb4237/' },
+];
+
 const MechanicalDomainPage = () => {
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative">
-      
-      {/* Sparkles Effect in background */}
-      <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
-      
-      {/* Page Heading */}
-      <h2 className="text-white text-4xl mb-12 z-10 font-serif">Mechanical Domain Team</h2>
-      
-      {/* Team Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 text-center z-10">
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={20} />
 
-        {/* Team Member - Kethan Babu */}
-        <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center justify-between">
-          <img src="./mechanical-member3.png" alt="Kethan Babu" className="w-32 h-32 rounded-full" />
-          <h3 className="text-white text-xl mt-4 text-center">Mechanics Lead - Kethan Babu</h3>
+      {/* Back button */}
+      <Link href="/" legacyBehavior>
+        <a className="fixed top-6 left-6 z-50 flex items-center gap-2 px-4 py-2 glass rounded-full text-sm text-gray-400 hover:text-white transition-all">
+          ← Home
+        </a>
+      </Link>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-28 pb-24">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <p className="text-[11px] tracking-[0.3em] text-orange-400 uppercase mb-4">Team RUDRA · 2025–26</p>
+          <h1 className="text-4xl md:text-5xl font-serif text-white">Mechanical Domain</h1>
+          <p className="text-gray-500 text-sm mt-3 max-w-md mx-auto">Designing and building the rover's structural systems, drivetrain, and robotic arm.</p>
         </div>
 
-        {/* Team Member - Ratnesh Mishra */}
-        <Link href="https://www.linkedin.com/in/ratnesh-mishra-07260424b/">
-          <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center justify-between">
-            <img src="./mechanical-member5.png" alt="Ratnesh Mishra" className="w-32 h-32 rounded-full" />
-            <h3 className="text-white text-xl mt-4 text-center">Team Lead - Ratnesh Mishra</h3>
-          </div>
-        </Link>
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          {members.map((m, i) => {
+            const inner = (
+              <>
+                <div className="relative mb-4">
+                  <div className="absolute -inset-1 rounded-full bg-orange-500/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <img
+                    src={m.img}
+                    alt={m.name}
+                    className="relative w-24 h-24 rounded-full object-cover ring-2 ring-white/10 group-hover:ring-orange-400/40 transition-all duration-300"
+                  />
+                </div>
+                <h3 className="text-white font-semibold text-sm mb-1">{m.name}</h3>
+                <p className="text-orange-400 text-[11px] tracking-widest">{m.role}</p>
+                {m.linkedin && (
+                  <p className="text-gray-600 text-[10px] mt-2 group-hover:text-gray-400 transition-colors">LinkedIn →</p>
+                )}
+              </>
+            );
 
-        {/* Team Member - Prerna Kumari */}
-        <Link href="https://www.linkedin.com/in/prerna-kumari-31aa3325b/">
-          <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center justify-between">
-            <img src="./mechanical-member6.png" alt="Prerna Kumari" className="w-32 h-32 rounded-full" />
-            <h3 className="text-white text-xl mt-4 text-center">Mechanical Lead - Prerna Kumari</h3>
-          </div>
-        </Link>
+            const cls = 'float-card glass group rounded-2xl p-6 flex flex-col items-center text-center hover:border-orange-400/30 transition-all duration-300';
 
-        {/* Team Member - Rishabh Kothari */}
-        <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center justify-between">
-          <img src="./mechanical-member7.png" alt="Rishabh Kothari" className="w-32 h-32 rounded-full" />
-          <h3 className="text-white text-xl mt-4 text-center">Rishabh Kothari</h3>
+            return m.linkedin ? (
+              <a key={i} href={m.linkedin} target="_blank" rel="noopener noreferrer" className={cls}>
+                {inner}
+              </a>
+            ) : (
+              <div key={i} className={cls}>{inner}</div>
+            );
+          })}
         </div>
-
-        {/* Team Member - Sujal Shah */}
-        <Link href="https://www.linkedin.com/in/sujal-shah-a92a63297/">
-          <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center justify-between">
-            <img src="./mechanical-member-sujal.jpeg" alt="Sujal Shah" className="w-32 h-32 rounded-full" />
-            <h3 className="text-white text-xl mt-4 text-center">Sujal Shah</h3>
-          </div>
-        </Link>
-
-        {/* Team Member - Kevin Mathew */}
-        <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center justify-between">
-          <img src="./mechanical-member10.png" alt="Kevin Mathew" className="w-32 h-32 rounded-full" />
-          <h3 className="text-white text-xl mt-4 text-center">Kevin Mathew</h3>
-        </div>
-
-        {/* Team Member - Deepro Pratim Chatterjee */}
-        <Link href="https://www.linkedin.com/in/deepro-pratim-chatterjee-7674b7325/">
-          <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center justify-between">
-            <img src="./deepro.jpeg" alt="Deepro Pratim Chatterjee" className="w-32 h-32 rounded-full" />
-            <h3 className="text-white text-xl mt-4 text-center">Deepro Pratim Chatterjee</h3>
-          </div>
-        </Link>
-
-     
-
-        {/* Team Member - Vaishnav Bhosale */}
-        <Link href="https://www.linkedin.com/in/vaishnavbhosale/">
-          <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center justify-between">
-            <img src="./vaishnav.jpeg" alt="Vaishnav Bhosale" className="w-32 h-32 rounded-full" />
-            <h3 className="text-white text-xl mt-4 text-center">Vaishnav Bhosale</h3>
-          </div>
-        </Link>
-
-        {/* Team Member - Paridhi Gupta */}
-        <Link href="https://www.linkedin.com/in/paridhi-gupta-b60bb4237/">
-          <div className="bg-gray-800 p-6 w-[300px] h-auto mx-auto rounded-lg hover:bg-gray-700 transition-colors duration-300 flex flex-col items-center justify-between">
-            <img src="./paridhi.jpeg" alt="Paridhi Gupta" className="w-32 h-32 rounded-full" />
-            <h3 className="text-white text-xl mt-4 text-center">Paridhi Gupta</h3>
-          </div>
-        </Link>
-        
       </div>
     </div>
   );

@@ -2,7 +2,6 @@
 import { SparklesCore } from '@/components/ui/sparkles';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Script from 'next/script';
 
 const Home = () => {
   const galleryImages = [
@@ -16,1002 +15,824 @@ const Home = () => {
     './gallery-item8.png',
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isLoading2, setIsLoading2] = useState(false);
+  const [teamDropdownOpen, setTeamDropdownOpen] = useState(false);
+  const [activeComp, setActiveComp] = useState<'irc' | 'urc'>('irc');
+  const [scrolled, setScrolled] = useState(false);
+  const [showHeroBg, setShowHeroBg] = useState(false);
+
   useEffect(() => {
-    document.documentElement.style.scrollBehavior = 'smooth';
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
   }, [isMenuOpen]);
 
-  const [showPopup, setShowPopup] = useState(false);
-
- useEffect(() => {
-    // Always show on reload
-    setShowPopup(true);
-  }, []);
-
-
-
-  const previousSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? galleryImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === galleryImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-const sponsorshipImages = [
+  const sponsorshipImages = [
     { src: './sukrit-infotech.png', alt: 'Sukrit Infotech', url: 'https://www.sukritinfotech.com' },
     { src: './solidworks.png', alt: 'Solidworks', url: 'https://www.solidworks.com' },
     { src: './altium.png', alt: 'Altium', url: 'https://www.altium.com' },
-    { src: './notions-Photoroom.jpg', alt: 'notion', url: 'https://www.notion.com' },
+    { src: './notions-Photoroom.jpg', alt: 'Notion', url: 'https://www.notion.com' },
     { src: './mathworks-logo-full-color-rgb-reversed.png', alt: 'Mathworks', url: 'https://www.mathworks.com' },
-
-    // Grouping these in the same row
     { src: './hearingon.png', alt: 'HearingOn', url: 'https://www.baranagarspeechandhearing.com/' },
     { src: './pma spares.png', alt: 'PMA Spares', url: 'https://g.co/kgs/HDRrzX4' },
     { src: './lion circuits (2).png', alt: 'Lion Circuits', url: 'https://www.lioncircuits.com/' },
-    { src: './danyalgems_newlogo.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' }
-];
-const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-  event.preventDefault();
-  setIsLoading(true); // Set loading to true when submission starts
-  
-  const emailInput = event.currentTarget.elements.namedItem('email') as HTMLInputElement;
-  const email = emailInput.value;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    alert('Please enter a valid email address');
-    setIsLoading(false); // Don't forget to reset loading state
-    return;
-  }
-  try {
-    const formData = new FormData();
-    formData.append('email', email);
-    
-    const response = await fetch(
-        process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL as string,
-      {
-        method: "POST",
-        body: formData
-      }
-    );
-    if (!response.ok) {
-      alert("There was an issue. Try again later.");
-      return;
-    }
-    const result = await response.json();
-    alert("Subscribed successfully!");
-    emailInput.value = '';
-  } catch (error) {
-    console.error("Error subscribing:", error);
-    alert("There was an issue. Try again later.");
-  } finally {
-    setIsLoading(false); // Reset loading state whether request succeeds or fails
-  }
-};
+    { src: './danyalgems_newlogo.png', alt: 'Danyal Gems', url: 'mailto:danyalgems@gmail.com' },
+  ];
 
-const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
-  event.preventDefault();
-  setIsLoading2(true);  // Start loading
-   
-  const companyInput = event.currentTarget.elements.namedItem('companyName') as HTMLInputElement;
-  const emailInput = event.currentTarget.elements.namedItem('email') as HTMLInputElement;
-  const email = emailInput.value;
-  const companyName = companyInput.value;
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
-  if (!emailRegex.test(email)) {
-    alert('Please enter a valid email address');
-    setIsLoading2(false);  // Reset loading on validation error
-    return;
-  }
-  if (companyName === '') {
-    alert('Please enter your company name');
-    setIsLoading2(false);  // Reset loading on validation error
-    return;
-  }
-  
-  try {
-    const formData = new FormData();
-    formData.append('Company Name', companyName);
-    formData.append('email', email);
-    
-    const response = await fetch(
-       process.env.NEXT_PUBLIC_SPONSORSHIP as string,
-      {
-        method: "POST",
-        body: formData
-      }
-    );
-    if (!response.ok) {
-      alert("There was an issue. Try again later.");
-      return;
-    }
-    const result = await response.json();
-    alert("Thank you for your interest in sponsorship! Our team will contact you shortly.");
-    emailInput.value = ''; 
-    companyInput.value = '';
-  } catch (error) {
-    console.error("Error subscribing:", error);
-    alert("There was an issue. Try again later.");
-  } finally {
-    setIsLoading2(false);  // Reset loading state whether request succeeds or fails
-  }
-};
- 
-return (
-  <div className="overflow-x-hidden">
+  const achievements = [
+    { src: './achievement-image1.png', title: 'URC 2013', desc: '5th World · 1st Asia', date: 'May 2013' },
+    { src: './achievement-image2.png', title: 'URC 2014', desc: '5th globally', date: 'June 2014' },
+    { src: './achievement-image3.png', title: 'URC 2015', desc: '12th World · 2nd Asia', date: 'May 2015' },
+    { src: './achievement-image4.png', title: 'URC 2016', desc: '9th overall', date: 'June 2016' },
+    { src: './achievement-image5.png', title: 'URC 2017', desc: '20th World · 4th Asia', date: 'June 2017' },
+    { src: './achievement-image6.png', title: 'URC 2019', desc: '11th in the world', date: 'June 2019' },
+    { src: './achievement-image7.png', title: 'IRC', desc: '3rd World Rank', date: '2019' },
+    { src: './achievement-image8.png', title: 'IRC 2023', desc: '5th globally', date: 'Jan 2023' },
+    { src: './achievement-image9.png', title: 'IRC 2024', desc: '3rd globally', date: 'Jan 2024' },
+  ];
 
-  
+  const navLinks = [
+    { label: 'HOME', href: '#home' },
+    { label: 'ABOUT', href: '#about' },
+    { label: 'ROVER', href: '#rover-renders' },
+    { label: 'LAB', href: '/Lab' },
+    { label: 'ACHIEVEMENTS', href: '#achievements' },
+    { label: 'GALLERY', href: '#gallery' },
+    { label: 'SPONSORS', href: '#sponsors' },
+    { label: 'CONTACT', href: '#contact' },
+  ];
 
-   
+  const teamDropdownLinks = [
+    { label: '2017', href: '/Team2017' },
+    { label: '2018', href: '/Team18' },
+    { label: '2019', href: '/Team2019' },
+    { label: '2020', href: '/Team2020' },
+    { label: '2024–25', href: '/Team2024' },
+    { label: '2025–26', href: '#team' },
+  ];
 
-    {/* ✅ The rest of your layout starts here */}
-    <style jsx>{`
-      html {
-        scroll-behavior: smooth;
-      }
-      @media (max-width: 640px) {
-        #home {}
-      }
-    `}</style>
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsLoading(true);
+    const emailInput = event.currentTarget.elements.namedItem('email') as HTMLInputElement;
+    const email = emailInput.value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) { alert('Please enter a valid email address'); setIsLoading(false); return; }
+    try {
+      const formData = new FormData();
+      formData.append('email', email);
+      const response = await fetch(process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL as string, { method: 'POST', body: formData });
+      if (!response.ok) { alert('There was an issue. Try again later.'); return; }
+      await response.json();
+      alert('Subscribed successfully!');
+      emailInput.value = '';
+    } catch { alert('There was an issue. Try again later.'); }
+    finally { setIsLoading(false); }
+  };
 
-    {/* Navbar */}
-    <nav className="bg-black bg-opacity-60 text-white fixed w-full z-20 transition-transform duration-300">
-      <div className="px-4 py-2 flex justify-between items-center w-full">
-        <Link href="/" legacyBehavior>
-          <a className="flex-shrink-0">
-            <img src="./rudra-logo.png" alt="Rudra logo" width={100} height={50} />
-          </a>
-        </Link>
+  const handleSubmit2 = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsLoading2(true);
+    const companyInput = event.currentTarget.elements.namedItem('companyName') as HTMLInputElement;
+    const emailInput = event.currentTarget.elements.namedItem('email') as HTMLInputElement;
+    const email = emailInput.value;
+    const companyName = companyInput.value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) { alert('Please enter a valid email address'); setIsLoading2(false); return; }
+    if (!companyName) { alert('Please enter your company name'); setIsLoading2(false); return; }
+    try {
+      const formData = new FormData();
+      formData.append('Company Name', companyName);
+      formData.append('email', email);
+      const response = await fetch(process.env.NEXT_PUBLIC_SPONSORSHIP as string, { method: 'POST', body: formData });
+      if (!response.ok) { alert('There was an issue. Try again later.'); return; }
+      await response.json();
+      alert('Thank you! Our team will contact you shortly.');
+      emailInput.value = '';
+      companyInput.value = '';
+    } catch { alert('There was an issue. Try again later.'); }
+    finally { setIsLoading2(false); }
+  };
 
-    {/* Desktop Menu - Aligned to the right */}
-    <div className="hidden lg:flex space-x-4">
-      <Link href="#home" scroll={true} legacyBehavior>
-        <a className="hover:text-gray-300 transition duration-200">HOME</a>
-      </Link>
-      <Link href="#about" scroll={true} legacyBehavior>
-        <a className="hover:text-gray-300 transition duration-200">ABOUT US</a>
-      </Link>
-    <div className="group relative">
-  <Link href="#team" scroll={true} legacyBehavior>
-    <a className="hover:text-gray-300 transition duration-200 cursor-pointer">TEAM</a>
-  </Link>
-  <div className="absolute hidden group-hover:block bg-gray-800 text-white mt-2 rounded shadow-lg z-50">
-    <ul className="py-2 min-w-[140px]">
+  return (
+    <div className="overflow-x-hidden bg-black text-white">
 
-      {/* Team 2017 */}
-      <li>
-        <Link href="/Team2017" legacyBehavior>
-          <a className="block px-4 py-2 hover:bg-gray-700">2017</a>
-        </Link>
-      </li>
+      {/* ══════════════════════════════════════
+          NAVBAR
+      ══════════════════════════════════════ */}
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-black/60 backdrop-blur-2xl border-b border-white/10' : 'bg-transparent'}`}>
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link href="/" legacyBehavior>
+            <a className="flex-shrink-0 opacity-90 hover:opacity-100 transition-opacity">
+              <img src="./rudra-logo.png" alt="Team RUDRA" width={88} height={44} />
+            </a>
+          </Link>
 
-      {/* Team 2018 */}
-      <li>
-        <Link href="/Team18" legacyBehavior>
-          <a className="block px-4 py-2 hover:bg-gray-700">2018</a>
-        </Link>
-      </li>
+          {/* Desktop nav */}
+          <div className="hidden lg:flex items-center gap-7">
+            {navLinks.map((link) => (
+              <Link key={link.label} href={link.href} legacyBehavior>
+                <a className="relative text-[11px] tracking-[0.18em] text-gray-400 hover:text-white transition-colors duration-200 group">
+                  {link.label}
+                  <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-orange-400 transition-all duration-300 group-hover:w-full" />
+                </a>
+              </Link>
+            ))}
 
-      {/* Team 2019 */}
-      <li>
-        <Link href="/Team2019" legacyBehavior>
-          <a className="block px-4 py-2 hover:bg-gray-700">2019</a>
-        </Link>
-      </li>
+            {/* TEAM dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setTeamDropdownOpen(true)}
+              onMouseLeave={() => setTeamDropdownOpen(false)}
+            >
+              <Link href="#team" legacyBehavior>
+                <a className="relative flex items-center gap-1 text-[11px] tracking-[0.18em] text-gray-400 hover:text-white transition-colors duration-200 group">
+                  TEAM
+                  <svg
+                    className={`w-3 h-3 transition-transform duration-200 ${teamDropdownOpen ? 'rotate-180' : ''}`}
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                  <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-orange-400 transition-all duration-300 group-hover:w-full" />
+                </a>
+              </Link>
+              {teamDropdownOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-36 bg-black/80 backdrop-blur-2xl border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+                  {teamDropdownLinks.map((item, i) => (
+                    <div key={item.label}>
+                      {i === 4 && <div className="border-t border-white/10" />}
+                      <Link href={item.href} legacyBehavior>
+                        <a className="block px-4 py-2.5 text-[11px] tracking-widest text-gray-400 hover:text-white hover:bg-white/5 transition-colors">
+                          {item.label}
+                        </a>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
 
-      {/* Team 2020 */}
-      <li>
-        <Link href="/Team2020" legacyBehavior>
-          <a className="block px-4 py-2 hover:bg-gray-700">2020</a>
-        </Link>
-      </li>
+          {/* Hamburger */}
+          <button
+            className="lg:hidden flex flex-col gap-[5px] p-2 z-50 relative"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className={`block h-px w-6 bg-white origin-center transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
+            <span className={`block h-px w-6 bg-white transition-all duration-300 ${isMenuOpen ? 'opacity-0 scale-x-0' : ''}`} />
+            <span className={`block h-px w-6 bg-white origin-center transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
+          </button>
+        </div>
 
-      <hr className="border-gray-600 my-1" />
+        {/* Mobile menu — full-screen fade overlay */}
+        <div className={`lg:hidden fixed inset-0 bg-black/97 backdrop-blur-2xl z-40 flex flex-col items-center justify-center gap-7 transition-all duration-400 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+          {navLinks.map((link) => (
+            <Link key={link.label} href={link.href} legacyBehavior>
+              <a
+                className="text-2xl tracking-[0.25em] font-light text-gray-200 hover:text-orange-400 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            </Link>
+          ))}
+          <div className="flex flex-col items-center gap-3 mt-2">
+            <span className="text-2xl tracking-[0.25em] font-light text-gray-200">TEAM</span>
+            <div className="flex flex-wrap justify-center gap-x-5 gap-y-2">
+              {teamDropdownLinks.map((item) => (
+                <Link key={item.label} href={item.href} legacyBehavior>
+                  <a
+                    className="text-sm tracking-widest text-gray-500 hover:text-orange-400 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </nav>
 
-      {/* Team 2024-25 - Scroll on same page */}
-      <li>
-          <Link href="/Team2024" legacyBehavior>
-          <a className="block px-4 py-2 hover:bg-gray-700 cursor-pointer">2024–25</a>
-        </Link>
-      </li>
+      {/* ══════════════════════════════════════
+          HERO — full-screen with text overlay
+      ══════════════════════════════════════ */}
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center"
+      >
+        {/* Background photo — always present behind text */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('/background-image.png')` }}
+        />
+        {/* Gradient overlays for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black" />
+        <SparklesCore className="absolute inset-0 z-0" background="transparent" particleColor="#ffffff" particleDensity={14} />
 
-      {/* Team 2025-26 - Scroll on same page */}
-      <li>
-        <Link href="#team" scroll={true} legacyBehavior>
-          <a className="block px-4 py-2 hover:bg-gray-700 cursor-pointer">2025–26</a>
-        </Link>
-      </li>
+        {/* Hero content — vertically centered */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 py-32">
+          {/* Live badge */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 glass rounded-full mb-10">
+            <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
+            <span className="text-[10px] tracking-[0.25em] text-gray-300 uppercase">IRC 2024 — 3rd Globally</span>
+          </div>
 
-    </ul>
-  </div>
-</div>
+          <h1 className="text-6xl sm:text-8xl md:text-[110px] font-bold leading-none tracking-tight text-white mb-6">
+            Team<br />
+            <span className="text-orange-400">RUDRA</span>
+          </h1>
 
+          <p className="text-gray-400 text-base md:text-lg max-w-md leading-relaxed mb-4">
+            Engineering Mars rovers. Competing globally since 2013.
+          </p>
+          <p className="text-[11px] tracking-[0.3em] text-gray-600 uppercase mb-10">
+            SRM IST &nbsp;·&nbsp; Kattankulathur
+          </p>
 
-        <Link href="#rover-renders" scroll={true} legacyBehavior>
-        <a className="hover:text-gray-300 transition duration-200">ROVER</a>
-      </Link>
-      {/* LAB Page Link */}
-<Link href="/Lab" legacyBehavior>
-  <a className="hover:text-gray-300 transition duration-200">LAB</a>
-</Link>
-      <Link href="#achievements" scroll={true} legacyBehavior>
-        <a className="hover:text-gray-300 transition duration-200">ACHIEVEMENTS</a>
-      </Link>
-      <Link href="#gallery" scroll={true} legacyBehavior>
-        <a className="hover:text-gray-300 transition duration-200">GALLERY</a>
-      </Link>
-      <Link href="#sponsors" scroll={true} legacyBehavior>
-        <a className="hover:text-gray-300 transition duration-200">SPONSORSHIP</a>
-      </Link>
-            <Link href="#newsletter" scroll={true} legacyBehavior>
-        <a className="hover:text-gray-300 transition duration-200">NEWSLETTER</a>
-      </Link>
-      <Link href="#contact" scroll={true} legacyBehavior>
-        <a className="hover:text-gray-300 transition duration-200">CONTACT US</a>
-      </Link>
+          <div className="flex flex-wrap gap-4 mb-20">
+            <Link href="#about" legacyBehavior>
+              <a className="px-8 py-3.5 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold rounded-full transition-colors tracking-wide">
+                Explore →
+              </a>
+            </Link>
+            <Link href="#team" legacyBehavior>
+              <a className="px-8 py-3.5 glass hover:bg-white/10 text-white text-sm rounded-full transition-all tracking-wide">
+                Meet the Team
+              </a>
+            </Link>
+          </div>
 
-    </div>
-        {/* Hamburger Menu for Mobile */}
-        <button 
-          className="lg:hidden flex items-center ml-auto"  
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          {/* Mini stat row at bottom of content */}
+          <div className="flex flex-wrap gap-8">
+            {[
+              { value: '10+', label: 'Years' },
+              { value: '9+', label: 'Competitions' },
+              { value: '#3', label: 'IRC 2024' },
+              { value: '~30', label: 'Members' },
+            ].map((s) => (
+              <div key={s.label}>
+                <div className="text-2xl font-bold text-orange-400">{s.value}</div>
+                <div className="text-[10px] tracking-[0.2em] text-gray-500 uppercase">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* View Photo button */}
+        <button
+          onClick={() => setShowHeroBg(true)}
+          className="absolute bottom-8 right-6 z-20 flex items-center gap-2 px-3.5 py-2 glass rounded-full text-[11px] text-gray-400 hover:text-white hover:bg-white/10 transition-all tracking-wide"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" />
+            <line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" />
           </svg>
+          View Photo
         </button>
 
-        {/* Mobile Menu */}
-        <div className={`lg:hidden fixed inset-0 bg-black bg-opacity-60 z-40 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
-          <button 
-            className="absolute top-4 right-4 text-white text-3xl" 
-            onClick={() => setIsMenuOpen(false)}
+        {/* Full-screen photo lightbox */}
+        {showHeroBg && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm animate-fade-in-up"
+            onClick={() => setShowHeroBg(false)}
           >
-            &times;
-          </button>
-          <div className="flex flex-col items-center mt-16 space-y-6">
-            <Link href="#home" scroll={true} legacyBehavior>
-              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>HOME</a>
-            </Link>
-            <Link href="#about" scroll={true} legacyBehavior>
-              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>ABOUT US</a>
-            </Link>
-          <div className="group relative">
-  <Link href="#team" scroll={true} legacyBehavior>
-    <a className="hover:text-gray-300 transition duration-200 cursor-pointer">TEAM</a>
-  </Link>
-  <div className="absolute hidden group-hover:block bg-gray-800 text-white mt-2 rounded shadow-lg z-50">
-   <ul className="py-2 min-w-[140px]">
-  {/* Team 2017 */}
-  <li>
-    <Link href="./Team2017" legacyBehavior>
-      <a className="block px-4 py-2 hover:bg-gray-700">2017</a>
-    </Link>
-  </li>
+            <button
+              onClick={() => setShowHeroBg(false)}
+              className="absolute top-5 right-5 flex items-center gap-2 px-3.5 py-2 glass rounded-full text-[11px] text-gray-300 hover:text-white transition-all"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+              Close
+            </button>
+            <img
+              src="/background-image.png"
+              alt="Team RUDRA"
+              className="max-w-full max-h-full object-contain"
+              onClick={e => e.stopPropagation()}
+            />
+          </div>
+        )}
 
-  {/* Team 2018 */}
-  <li>
-    <Link href="./Team2018" legacyBehavior>
-      <a className="block px-4 py-2 hover:bg-gray-700">2018</a>
-    </Link>
-  </li>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center animate-scroll-bounce">
+          <div className="w-px h-10 bg-gradient-to-b from-white/50 to-transparent" />
+        </div>
+      </section>
 
-  {/* Team 2019 */}
-  <li>
-    <Link href="./Team2019" legacyBehavior>
-      <a className="block px-4 py-2 hover:bg-gray-700">2019</a>
-    </Link>
-  </li>
-
-  {/* Team 2020 */}
-  <li>
-    <Link href="/team/Team2020" legacyBehavior>
-      <a className="block px-4 py-2 hover:bg-gray-700">2020</a>
-    </Link>
-  </li>
-
-  <hr className="border-gray-600 my-1" />
-
-  {/* Team 2024-25 */}
-  <li>
-    <Link href="/team/2024-25" legacyBehavior>
-      <a className="block px-4 py-2 hover:bg-gray-700">2024–25</a>
-    </Link>
-  </li>
-
-  {/* Team 2025-26 */}
-  <li>
-    <Link href="/team/2025-26" legacyBehavior>
-      <a className="block px-4 py-2 hover:bg-gray-700">2025–26</a>
-    </Link>
-  </li>
-</ul>
-
-  </div>
-</div>
-
-
-             <Link href="#rover-renders" scroll={true} legacyBehavior>
-              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>OUR ROVER</a>
-            </Link>
-            <Link href="#achievements" scroll={true} legacyBehavior>
-              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>ACHIEVEMENTS</a>
-            </Link>
-            <Link href="#gallery" scroll={true} legacyBehavior>
-              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>GALLERY</a>
-            </Link>
-            <Link href="#sponsors" scroll={true} legacyBehavior>
-              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>SPONSORSHIP</a>
-            </Link>
-             <Link href="#newsletter" scroll={true} legacyBehavior>
-              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>NEWSLETTER</a>
-            </Link>
-            <Link href="#contact" scroll={true} legacyBehavior>
-              <a className="text-white text-2xl" onClick={() => setIsMenuOpen(false)}>CONTACT US</a>
-            </Link>
+      {/* ══════════════════════════════════════
+          ABOUT
+      ══════════════════════════════════════ */}
+      <section id="about" className="py-32 px-6 bg-[#050508]">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_1.1fr] gap-20 items-center">
+          {/* Text */}
+          <div>
+            <p className="text-[11px] tracking-[0.25em] text-orange-400 uppercase mb-6">Who We Are</p>
+            <h2 className="text-5xl md:text-6xl font-serif text-white leading-[1.1] mb-10">
+              Exploring<br />Mars<br />
+              <span className="text-gray-500 italic">from Earth.</span>
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-5 text-[15px]">
+              RUDRA is the official team of SRM IST taking part in the University Rover Challenge organized by the Mars Society since 2013. The annual competition is held at the Mars Desert Research Station (MDRS), Martian Analog Site, near Hanksville, Utah, USA.
+            </p>
+            <p className="text-gray-400 leading-relaxed text-[15px]">
+              Our team consists of 25–30 undergraduate students from various engineering streams. R&D is the soul of Team RUDRA — brainstorming discussions are always welcome.
+            </p>
+          </div>
+          {/* Image */}
+          <div className="relative">
+            <div className="absolute -inset-6 rounded-3xl bg-gradient-to-br from-orange-500/15 via-transparent to-blue-500/10 blur-3xl" />
+            <img
+              src="./box-image.png"
+              alt="Rover model"
+              className="relative w-full rounded-3xl object-contain"
+            />
           </div>
         </div>
+      </section>
 
-        {/* SRM logo */}
-        {/* <a href="https://www.srmist.edu.in/" target="_blank" rel="noopener noreferrer" className="hidden lg:block">
-          <img src="/rudraweb2/srm-logo.png" alt="SRM logo" width={100} height={50} />
-        </a> */}
-      </div>
-    </nav>
+      {/* ══════════════════════════════════════
+          COMPETITIONS — tabbed IRC / URC
+      ══════════════════════════════════════ */}
+      <section className="py-32 px-6 bg-black relative overflow-hidden">
+        <SparklesCore className="absolute inset-0 z-0" particleColor="#e0e0e0" particleDensity={18} />
 
-
-{/* Hero Section */}
-<div
-  className="relative min-h-screen bg-cover bg-center bg-no-repeat sm:bg-none z-20"
-  style={{
-    backgroundImage: `url('background-image.png')`,
-  }}
-  id="home"
->
-  
-
-  {/* Background for small screens */}
-  <div
-    className="absolute inset-0 flex items-center justify-center sm:bg-cover sm:bg-center sm:bg-no-repeat"
-    style={{
-      backgroundImage: `url('/background-image-sm.png')`,
-    }}
-  ></div>
-</div>
-
-
-{/* About Us Section */}
-<div className="min-h-screen bg-gray-900 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-8" id="about">
-  {/* Left Side: 3D Model */}
-  <div className="w-full lg:w-3/5 flex justify-center items-center border-4 border-gray-300 box-border mb-8 lg:mb-0">
-    <img
-      src="./box-image.png"
-      alt="Rover model"
-      className="object-contain max-w-full max-h-full"
-    />
-  </div>
-
-  {/* Right Side: Text */}
-  <div className="w-full lg:w-3/5 bg-gray-900 bg-opacity-80 text-white p-4 sm:p-10 font-sans">
-    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 lg:mb-6 font-serif">About Us</h2>
-    <p className="mb-4 sm:mb-6 font-sans">
-      RUDRA is the official team of SRM IST taking part in the University Rover Challenge organized by the Mars Society since 2013.
-      The annual competition is held at the Mars Desert Research Station (MDRS), Martian Analog Site, near Hanksville, Utah, USA.
-      The team has been successfully operational for the last 10 years and has maintained its consistency in the competition.
-    </p>
-    <p className="mb-4 sm:mb-6 font-sans">
-      Our Team consists of 25-30 undergraduate students of every year from various engineering streams, working in different domains.
-      The fun part - R&D, is the soul and essence of Team RUDRA. Brainstorming discussions are always welcome for giving birth to new ideas.
-    </p>
-  </div>
-</div>
-
-{/* IRC section */}
-<div className="relative bg-black text-white py-20 px-10">
-  {/* Sparkles Background */}
-  <SparklesCore
-    className="absolute inset-0 z-0"
-    particleColor="#f0f0f0"
-    particleDensity={30}
-  />
-
-  {/* Main Content */}
-  <div className="relative z-10 max-w-6xl mx-auto text-center">
-    {/* Title */}
-    <h2 className="text-5xl font-bold uppercase tracking-wide">
-      International Rover Challenge
-    </h2>
-
-    {/* Large Rover Image */}
-    <div className="flex justify-center my-12">
-      <img
-        src="irc section.png" // Replace with actual rover image
-        alt="Mars Rover"
-        className="w-full md:w-[80%] lg:w-[70%] xl:w-[60%] h-auto"
-      />
-    </div>
-
-    {/* Three Sections Grid */}
-    <div className="grid md:grid-cols-3 gap-12 mt-10">
-      {/* Section 1 */}
-      <div>
-        <h3 className="text-2xl font-semibold">International Rover Challenge</h3>
-        <p className="text-gray-300 text-lg mt-3">
-          The International Rover Challenge (IRC) is a premier event bringing
-          together students, engineers, and innovators from around the globe to
-          push the boundaries of space exploration technology.
-        </p>
-        <a
-          href="https://www.spaceroboticssociety.org/events/international-rover-challenge/"
-          target="_blank"
-          className="inline-block mt-6 px-6 py-3 bg-white text-black rounded-full text-lg font-medium"
-        >
-          Learn More
-        </a>
-      </div>
-
-      {/* Section 2 */}
-      <div>
-        <h3 className="text-2xl font-semibold">History with IRC</h3>
-        <p className="text-gray-300 text-lg mt-3">
-          Team RUDRA, the official rover team from SRMIST, is a veteran
-          competitor at IRC, recognized for its legacy of innovation and
-          technical excellence.
-        </p>
-      </div>
-
-      {/* Section 3 */}
-      <div>
-        <h3 className="text-2xl font-semibold">Missions</h3>
-        <p className="text-gray-300 text-lg mt-3">
-     Rovers must complete tasks such as IDMO, PIMA, Astrobiology & Autonomous Expedition, Business Plan Presentation, and Delivery Missions, all designed to simulate real Mars mission scenarios.
-        </p>
-        <Link href="./mission">
-          <a
-            className="inline-block mt-6 px-6 py-3 bg-white text-black rounded-full text-lg font-medium"
-          >
-            Missions
-          </a>
-        </Link>
-      </div>
-    </div>
-
-    {/* Timeline Section */}
-
-
-
-  </div>
-</div>
-
-{/* urc section */}
-<div className="relative bg-black text-white py-20 px-10">
-  {/* Sparkles Background */}
-  <SparklesCore
-    className="absolute inset-0 z-0"
-    particleColor="#f0f0f0"
-    particleDensity={30}
-  />
-
-  {/* Main Content */}
-  <div className="relative z-10 max-w-6xl mx-auto text-center">
-    {/* Title */}
-    <h2 className="text-5xl font-bold uppercase tracking-wide">
-      University Rover Challenge
-    </h2>
-
-    {/* Large Rover Image */}
-    <div className="flex justify-center my-12">
-      <img
-        src="urc1 (2).jpg" // Replace with actual rover image
-        alt="Mars Rover"
-        className="w-full md:w-[80%] lg:w-[70%] xl:w-[60%] h-auto"
-      />
-    </div>
-
-    {/* Three Sections Grid */}
-    <div className="grid md:grid-cols-3 gap-12 mt-10">
-      {/* Section 1 */}
-      <div>
-        <h3 className="text-2xl font-semibold">University Rover Challenge</h3>
-        <p className="text-gray-300 text-lg mt-3">
-          The University Rover Challenge (URC) is an international robotics
-          competition where student teams design and build planetary rovers to
-          perform astronaut assistance tasks.
-        </p>
-        <a
-          href="https://urc.marssociety.org/"
-          target="_blank"
-          className="inline-block mt-6 px-6 py-3 bg-white text-black rounded-full text-lg font-medium"
-        >
-          Learn More
-        </a>
-      </div>
-
-      {/* Section 2 */}
-      <div>
-        <h3 className="text-2xl font-semibold">History with URC</h3>
-        <p className="text-gray-300 text-lg mt-3">
-          Since its inception in 2007, URC has challenged teams worldwide to
-          innovate and push the limits of rover technology. Teams compete in
-          terrain traversal, sample collection, and autonomous navigation.
-        </p>
-      </div>
-
-      {/* Section 3 */}
-      <div>
-        <h3 className="text-2xl font-semibold">Missions</h3>
-        <p className="text-gray-300 text-lg mt-3">
-          Rovers must complete tasks such as autonomous driving, science
-          sampling, and robotic arm manipulation, all designed to mimic real
-          Mars mission scenarios.
-        </p>
-        <Link href="./urc1">
-        <a
-         
-          className="inline-block mt-6 px-6 py-3 bg-white text-black rounded-full text-lg font-medium"
-        >
-          Missions
-        </a></Link>
-      </div>
-    </div>
-  </div>
-</div>
-      
-{/* Our Patrons Section */}
-<div className="relative bg-black text-white py-20 px-10">
-   
-  <h2 className="text-3xl sm:text-4xl md:text-5xl mb-10 font-serif text-center text-white">Our Patrons</h2>
-
-  {/* Patron Card 1 */}
-  <div className="bg-gray-800 shadow-md p-6 mb-8 rounded-lg">
-    <img src="./VC.webp" alt="Prof. C. Muthamizhchelvan" className="w-full max-w-xs mx-auto rounded-md mb-4" />
-    <h3 className="text-2xl font-semibold text-center">Dr. C. Muthamizhchelvan</h3>
-    <p className="text-lg text-center text-gray-300 mb-2">Vice Chancellor</p>
-    <div className="text-center">
-      <a
-        href="https://www.srmist.edu.in/about-us/leadership-team/vice-chancellor/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
-      >
-        → Meet our Vice Chancellor
-      </a>
-    </div>
-  </div>
-
-  {/* Patron Card 2 */}
-  <div className="bg-gray-800 shadow-md p-6 mb-8 rounded-lg">
-    <img src="./registar.webp" alt="Dr. S. Ponnusamy" className="w-full max-w-xs mx-auto rounded-md mb-4" />
-    <h3 className="text-2xl font-semibold text-center">Dr. S. Ponnusamy</h3>
-    <p className="text-lg text-center text-gray-300 mb-2">Registrar</p>
-    <div className="text-center">
-      <a
-        href="https://www.srmist.edu.in/about-us/leadership-team/registrar/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
-      >
-        → Meet our Registrar
-      </a>
-    </div>
-  </div>
-
-  {/* Patron Card 3 */}
-  <div className="bg-gray-800 shadow-md p-6 mb-8 rounded-lg">
-    <img src="./dean.jpg" alt="Dr. Leenus Jesu Martin M" className="w-full max-w-xs mx-auto rounded-md mb-4" />
-    <h3 className="text-2xl font-semibold text-center">Dr. Leenus Jesu Martin M</h3>
-    <p className="text-lg text-center text-gray-300 mb-2">Dean, CET</p>
-    <div className="text-center">
-      <a
-        href="https://www.srmist.edu.in/faculty/dr-m-leenus-jesu-martin/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
-      >
-        → Meet our Dean
-      </a>
-    </div>
-  </div>
-
-  {/* Patron Card 4 */}
-  <div className="bg-gray-800 shadow-md p-6 rounded-lg">
-    <img src="./faculty.png" alt="Dr. A. Rathinam" className="w-full max-w-xs mx-auto rounded-md mb-4" />
-    <h3 className="text-2xl font-semibold text-center">Dr. A. Rathinam</h3>
-    <p className="text-lg text-center text-gray-300 mb-2">Faculty Advisor</p>
-    <div className="text-center">
-      <a
-        href="https://www.srmist.edu.in/about-us/administrative-heads/director-alumni-relations/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium inline-flex items-center justify-center"
-      >
-        → Meet our Faculty Advisor
-      </a>
-    </div>
-  </div>
-</div>
-
-      
-{/* Team Members Section */}
-<div className="relative min-h-screen bg-black bg-cover bg-center flex flex-col items-center justify-center py-16" id="team">
-  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
-
-  <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-    <source src="/starsvideo.mov" type="video/mov" />
-    Your browser does not support the video tag.
-  </video>
-
-  <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 sm:mb-12 font-serif flex items-center justify-center z-10">
-    Our Team
-  </h2>
-
-  {/* Core Team Members */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-10 text-center z-10">
-    {[
-      { name: 'Team Lead - Ratnesh Mishra', img: 'mechanical-member5.png', link: 'https://www.linkedin.com/in/ratnesh-mishra-07260424b/' },
-      { name: 'Team Manager - Danyal Reyaz', img: 'corporate-member4.png', link: 'https://www.linkedin.com/in/danyal-reyaz/' },
-      { name: 'Technical Director - Pragati Prithvi', img: 'electronics-member6.png', link: 'https://www.linkedin.com/in/pragati-prithvi/' },
-      { name: 'Mechanical Domain', img: 'mechanical-domain.png', link: './mechanical-domain' },
-      { name: 'Electronics Domain', img: 'electronics-domain.png', link: './electronics-domain' },
-      { name: 'Coding Domain', img: 'coding-domain.png', link: './coding-domain' },
-      { name: 'Life Science Domain', img: 'life-science-domain.png', link: './life-science-domain' },
-      { name: 'Corporate Domain', img: 'corporate-domain.png', link: './corporate-domain' },
-    ].map((member) => (
-      <a key={member.name} href={member.link} target="_blank" rel="noopener noreferrer">
-        <div className="bg-gray-800 p-4 w-80 rounded-lg hover:bg-gray-700 hover:scale-105 transform transition-transform duration-300">
-          <img src={member.img} alt={member.name} className="w-24 sm:w-32 h-24 sm:h-32 mx-auto rounded-full" />
-          <h3 className="text-white text-sm sm:text-base lg:text-xl mt-2 sm:mt-4 font-sans">{member.name}</h3>
-        </div>
-      </a>
-    ))}
-  </div>
-
-  
-</div>
-
-
- {/* Rover Renders Section */}
-<div className="min-h-screen bg-black flex flex-col items-center py-16" id="rover-renders">
-  <h2 className="text-white text-4xl md:text-5xl lg:text-6xl mb-12 font-serif text-center">
-     Our Rover
-  </h2>
-  {/* Grid container */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 px-4 md:px-12">
-    {/* Image 1 */}
-    <img 
-      src="render1.png" 
-      alt="Rover Render 1" 
-      className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
-    />
-    
-    {/* Image 4 */}
-    <img 
-      src="render4.png" 
-      alt="Rover Render 4" 
-      className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105"
-    />
-  </div>
-</div>
-
-
-{/* Gallery Section */}
-<div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-16" id="gallery">
-  {/* Sparkles Effect */}
-  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
-
-  <h2 className="text-white text-6xl mb-12 font-serif z-10">Gallery</h2>
-  <div className="relative w-full max-w-4xl flex items-center justify-center z-5">
-    {/* Gallery Image Container */}
-    <div
-      id="gallery-container"
-      className="w-full h-[550px] flex overflow-x-auto scroll-smooth snap-x snap-mandatory relative z-0"
-    >
-      {galleryImages.map((image, index) => (
-        <img
-          key={index}
-          src={image}
-          alt={`Gallery Item ${index + 1}`}
-          className="flex-shrink-0 w-full h-full object-cover rounded-lg snap-center"
-        />
-      ))}
-    </div>
-  </div>
-
-  {/* Horizontal Scroller */}
-  <div className="w-full max-w-4xl overflow-x-auto mt-6 z-10">
-    <div className="flex space-x-4">
-      {galleryImages.map((image, index) => (
-        <img
-          key={index}
-          src={image}
-          alt={`Gallery Thumbnail ${index + 1}`}
-          className="flex-shrink-0 w-24 h-24 object-cover rounded-lg cursor-pointer"
-          onClick={() => {
-            const galleryContainer = document.getElementById('gallery-container');
-            if (galleryContainer !== null) galleryContainer.scrollTo({ left: galleryContainer.clientWidth * index, behavior: 'smooth' });
-          }}
-        />
-      ))}
-    </div>
-  </div>
-</div>
-{/* Achievements Section */}
-<div className="relative min-h-screen bg-black py-4 mb-[-16px]" id="achievements">
-  {/* Sparkles Effect */}
-  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
-
-  {/* Section Content */}
-  <h2 className="text-white text-4xl md:text-5xl lg:text-6xl text-center mb-12 font-serif z-10 relative">
-    Achievements
-  </h2>
-
-  <div className="container mx-auto px-4">
-    <div className="relative">
-      {/* Timeline Line */}
-      <div className="absolute left-0 w-full h-1 bg-gray-400 top-1/2 transform -translate-y-1/2 z-0"></div>
-
-      {/* Achievement Cards - Top Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center mb-8 relative z-0">
-        {[
-          {
-            src: "./achievement-image1.png",
-            title: "URC 2013 - Team RUDRA achieved 5th as World Rank and 1st as Asia Rank",
-            date: "May 28, 2013"
-          },
-          {
-            src: "./achievement-image2.png",
-            title: "URC 2014 - Team RUDRA participated and ranked 5th globally",
-            date: "June 15, 2014"
-          },
-          {
-            src: "./achievement-image3.png",
-            title: "URC 2015 - Achieved 12th rank in the World and 2nd among Asian Teams",
-            date: "May 29, 2015"
-          },
-          {
-            src: "./achievement-image4.png",
-            title: "URC 2016 - Team RUDRA secured 9th place overall",
-            date: "June 12, 2016"
-          },
-          {
-            src: "./achievement-image5.png",
-            title: "URC 2017 - Team RUDRA participated and ranked 20th globally and 4th in Asia",
-            date: "June 10, 2017"
-          }
-        ].map((item, index) => (
-          <div key={index} className="relative group overflow-hidden">
-            <div className="w-full h-40 sm:h-48 md:h-56 lg:h-64 bg-white rounded-lg mb-4 transition-transform duration-300 transform group-hover:scale-105">
-              <img
-                src={item.src}
-                alt={`Achievement ${index + 1}`}
-                className="rounded-lg object-cover w-full h-full"
-              />
+        <div className="relative z-10 max-w-6xl mx-auto">
+          {/* Header + tab toggle */}
+          <div className="text-center mb-14">
+            <p className="text-[11px] tracking-[0.25em] text-orange-400 uppercase mb-4">Global Stage</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-10 tracking-tight">Competitions</h2>
+            <div className="inline-flex bg-white/5 border border-white/10 rounded-full p-1 gap-1">
+              <button
+                onClick={() => setActiveComp('irc')}
+                className={`px-7 py-2.5 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${activeComp === 'irc' ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/20' : 'text-gray-400 hover:text-white'}`}
+              >
+                IRC
+              </button>
+              <button
+                onClick={() => setActiveComp('urc')}
+                className={`px-7 py-2.5 rounded-full text-sm font-medium tracking-wide transition-all duration-300 ${activeComp === 'urc' ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/20' : 'text-gray-400 hover:text-white'}`}
+              >
+                URC
+              </button>
             </div>
-            <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white transition-opacity duration-300">
-              <div className="text-center p-4">
-                <p className="text-sm lg:text-base">{item.title}</p>
-                <p className="text-xs lg:text-sm">{item.date}</p>
+          </div>
+
+          {/* IRC */}
+          {activeComp === 'irc' && (
+            <div key="irc" className="animate-fade-in-up">
+              <div className="flex justify-center mb-12">
+                <img
+                  src="irc section.png"
+                  alt="IRC Rover"
+                  className="w-full max-w-2xl rounded-2xl shadow-2xl shadow-orange-900/20"
+                />
+              </div>
+              <div className="grid md:grid-cols-3 gap-5">
+                {[
+                  {
+                    title: 'International Rover Challenge',
+                    body: 'The IRC is a premier event bringing together students, engineers, and innovators from around the globe to push the boundaries of space exploration technology.',
+                    cta: { label: 'Learn More', href: 'https://www.spaceroboticssociety.org/events/international-rover-challenge/', external: true },
+                  },
+                  {
+                    title: 'History with IRC',
+                    body: 'Team RUDRA, the official rover team from SRMIST, is a veteran competitor at IRC — recognized for its legacy of innovation and technical excellence.',
+                  },
+                  {
+                    title: 'Missions',
+                    body: 'Rovers complete tasks such as IDMO, PIMA, Astrobiology & Autonomous Expedition, Business Plan Presentation, and Delivery Missions — all simulating real Mars scenarios.',
+                    cta: { label: 'View Missions', href: './mission', external: false },
+                  },
+                ].map((card) => (
+                  <div
+                    key={card.title}
+                    className="bg-white/5 border border-white/10 rounded-2xl p-7 hover:border-orange-400/30 hover:-translate-y-1 transition-all duration-300"
+                  >
+                    <h3 className="text-white font-semibold mb-3 text-[15px]">{card.title}</h3>
+                    <p className="text-gray-500 text-sm leading-relaxed mb-5">{card.body}</p>
+                    {card.cta && (
+                      card.cta.external
+                        ? <a href={card.cta.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[11px] tracking-widest text-orange-400 hover:text-orange-300 transition-colors">{card.cta.label} →</a>
+                        : <Link href={card.cta.href} legacyBehavior><a className="inline-flex items-center gap-1.5 text-[11px] tracking-widest text-orange-400 hover:text-orange-300 transition-colors">{card.cta.label} →</a></Link>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* URC */}
+          {activeComp === 'urc' && (
+            <div key="urc" className="animate-fade-in-up">
+              <div className="flex justify-center mb-12">
+                <img
+                  src="urc1 (2).jpg"
+                  alt="URC Rover"
+                  className="w-full max-w-2xl rounded-2xl shadow-2xl shadow-blue-900/20"
+                />
+              </div>
+              <div className="grid md:grid-cols-3 gap-5">
+                {[
+                  {
+                    title: 'University Rover Challenge',
+                    body: 'The URC is an international robotics competition where student teams design and build planetary rovers to perform astronaut assistance tasks.',
+                    cta: { label: 'Learn More', href: 'https://urc.marssociety.org/', external: true },
+                  },
+                  {
+                    title: 'History with URC',
+                    body: "Since 2007, URC has challenged teams worldwide to innovate and push the limits of rover technology — competing in terrain traversal, sample collection, and autonomous navigation.",
+                  },
+                  {
+                    title: 'Missions',
+                    body: 'Rovers must complete tasks such as autonomous driving, science sampling, and robotic arm manipulation — all designed to mimic real Mars mission scenarios.',
+                    cta: { label: 'View Missions', href: './urc1', external: false },
+                  },
+                ].map((card) => (
+                  <div
+                    key={card.title}
+                    className="bg-white/5 border border-white/10 rounded-2xl p-7 hover:border-blue-400/30 hover:-translate-y-1 transition-all duration-300"
+                  >
+                    <h3 className="text-white font-semibold mb-3 text-[15px]">{card.title}</h3>
+                    <p className="text-gray-500 text-sm leading-relaxed mb-5">{card.body}</p>
+                    {card.cta && (
+                      card.cta.external
+                        ? <a href={card.cta.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[11px] tracking-widest text-blue-400 hover:text-blue-300 transition-colors">{card.cta.label} →</a>
+                        : <Link href={card.cta.href} legacyBehavior><a className="inline-flex items-center gap-1.5 text-[11px] tracking-widest text-blue-400 hover:text-blue-300 transition-colors">{card.cta.label} →</a></Link>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          PATRONS
+      ══════════════════════════════════════ */}
+      <section className="py-32 px-6 bg-[#050508]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[11px] tracking-[0.25em] text-orange-400 uppercase mb-4">Guidance</p>
+            <h2 className="text-4xl md:text-5xl font-serif text-white">Our Patrons</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { img: './VC.webp', name: 'Dr. C. Muthamizhchelvan', role: 'Vice Chancellor', href: 'https://www.srmist.edu.in/about-us/leadership-team/vice-chancellor/' },
+              { img: './registar.webp', name: 'Dr. S. Ponnusamy', role: 'Registrar', href: 'https://www.srmist.edu.in/about-us/leadership-team/registrar/' },
+              { img: './dean.jpg', name: 'Dr. Leenus Jesu Martin M', role: 'Dean, CET', href: 'https://www.srmist.edu.in/faculty/dr-m-leenus-jesu-martin/' },
+              { img: './faculty.png', name: 'Dr. A. Rathinam', role: 'Faculty Advisor', href: 'https://www.srmist.edu.in/about-us/administrative-heads/director-alumni-relations/' },
+            ].map((p) => (
+              <a
+                key={p.name}
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="float-card glass group rounded-2xl p-8 flex flex-col items-center text-center"
+              >
+                <div className="relative mb-5">
+                  <div className="absolute -inset-2 rounded-full bg-orange-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <img src={p.img} alt={p.name} className="relative w-36 h-36 rounded-full object-cover ring-2 ring-white/10 group-hover:ring-orange-400/40 transition-all duration-300" />
+                </div>
+                <h3 className="text-white text-base font-semibold mb-1">{p.name}</h3>
+                <p className="text-orange-400 text-xs tracking-widest uppercase">{p.role}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          TEAM — bento grid
+      ══════════════════════════════════════ */}
+      <section id="team" className="py-32 px-6 bg-black relative overflow-hidden">
+        <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={18} />
+        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover opacity-[0.15]">
+          <source src="/starsvideo.mov" type="video/mov" />
+        </video>
+
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[11px] tracking-[0.25em] text-orange-400 uppercase mb-4">2025–26</p>
+            <h2 className="text-4xl md:text-5xl font-serif text-white">Our Team</h2>
+          </div>
+
+          {/* Core leadership — bento */}
+          <p className="text-[10px] tracking-[0.3em] text-gray-600 uppercase mb-5">Core Leadership</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            {/* Team Lead — spans 2 cols, horizontal card */}
+            <a
+              href="https://www.linkedin.com/in/ratnesh-mishra-07260424b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="float-card glass sm:col-span-2 group rounded-2xl p-8 flex items-center gap-7"
+            >
+              <img src="mechanical-member5.png" alt="Ratnesh Mishra" className="w-28 h-28 rounded-full object-cover ring-2 ring-white/10 group-hover:ring-orange-400/30 transition-all duration-300 flex-shrink-0" />
+              <div>
+                <span className="text-[10px] tracking-[0.25em] text-orange-400 uppercase">Team Lead</span>
+                <h3 className="text-white text-lg font-semibold mt-0.5">Ratnesh Mishra</h3>
+                <p className="text-gray-500 text-xs mt-1">LinkedIn →</p>
+              </div>
+            </a>
+
+            {/* Manager */}
+            <a
+              href="https://www.linkedin.com/in/danyal-reyaz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="float-card glass group rounded-2xl p-7 flex flex-col items-center text-center"
+            >
+              <img src="corporate-member4.png" alt="Danyal Reyaz" className="w-24 h-24 rounded-full object-cover ring-2 ring-white/10 group-hover:ring-orange-400/30 transition-all duration-300 mb-4" />
+              <span className="text-[10px] tracking-[0.25em] text-orange-400 uppercase">Team Manager</span>
+              <h3 className="text-white text-sm font-semibold mt-0.5">Danyal Reyaz</h3>
+            </a>
+
+            {/* Tech Director */}
+            <a
+              href="https://www.linkedin.com/in/pragati-prithvi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="float-card glass group rounded-2xl p-7 flex flex-col items-center text-center"
+            >
+              <img src="electronics-member6.png" alt="Pragati Prithvi" className="w-24 h-24 rounded-full object-cover ring-2 ring-white/10 group-hover:ring-orange-400/30 transition-all duration-300 mb-4" />
+              <span className="text-[10px] tracking-[0.25em] text-orange-400 uppercase">Technical Director</span>
+              <h3 className="text-white text-sm font-semibold mt-0.5">Pragati Prithvi</h3>
+            </a>
+          </div>
+
+          {/* Domains */}
+          <p className="text-[10px] tracking-[0.3em] text-gray-600 uppercase mb-5 mt-8">Domains</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {[
+              { name: 'Mechanical',   desc: 'Design, fabrication & robotics',      img: 'mechanical-domain.png',    href: './mechanical-domain',    accent: 'text-orange-400',  glow: 'group-hover:ring-orange-400/40',  bar: 'bg-orange-400' },
+              { name: 'Electronics',  desc: 'Power, sensors & embedded systems',   img: 'electronics-domain.png',   href: './electronics-domain',   accent: 'text-blue-400',    glow: 'group-hover:ring-blue-400/40',    bar: 'bg-blue-400' },
+              { name: 'Coding',       desc: 'Autonomy, vision & software',         img: 'coding-domain.png',        href: './coding-domain',        accent: 'text-violet-400',  glow: 'group-hover:ring-violet-400/40',  bar: 'bg-violet-400' },
+              { name: 'Life Science', desc: 'Astrobiology & field research',       img: 'life-science-domain.png',  href: './life-science-domain',  accent: 'text-emerald-400', glow: 'group-hover:ring-emerald-400/40', bar: 'bg-emerald-400' },
+              { name: 'Corporate',    desc: 'Outreach, media & sponsorships',      img: 'corporate-domain.png',     href: './corporate-domain',     accent: 'text-amber-400',   glow: 'group-hover:ring-amber-400/40',   bar: 'bg-amber-400' },
+            ].map((d) => (
+              <a
+                key={d.name}
+                href={d.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="float-card glass group rounded-2xl p-6 flex flex-col items-center text-center"
+              >
+                <div className={`w-1 h-8 ${d.bar} rounded-full mb-5 opacity-60 group-hover:opacity-100 group-hover:h-10 transition-all duration-300`} />
+                <img src={d.img} alt={d.name} className={`w-20 h-20 rounded-full object-cover ring-2 ring-white/10 ${d.glow} transition-all duration-300 mb-4`} />
+                <p className={`${d.accent} text-xs font-semibold tracking-widest uppercase mb-1`}>{d.name}</p>
+                <p className="text-gray-500 text-[11px] leading-relaxed">{d.desc}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          ROVER
+      ══════════════════════════════════════ */}
+      <section id="rover-renders" className="py-32 px-6 bg-[#050508]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[11px] tracking-[0.25em] text-orange-400 uppercase mb-4">Engineering</p>
+            <h2 className="text-4xl md:text-5xl font-serif text-white">Our Rover</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {['render1.png', 'render4.png'].map((src, i) => (
+              <div
+                key={i}
+                className="group overflow-hidden rounded-2xl border border-white/10 hover:border-orange-400/25 transition-all duration-300"
+              >
+                <img
+                  src={src}
+                  alt={`Rover render ${i + 1}`}
+                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          GALLERY — masonry grid
+      ══════════════════════════════════════ */}
+      <section id="gallery" className="py-32 px-6 bg-black relative overflow-hidden">
+        <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={15} />
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[11px] tracking-[0.25em] text-orange-400 uppercase mb-4">Moments</p>
+            <h2 className="text-4xl md:text-5xl font-serif text-white">Gallery</h2>
+          </div>
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 [column-gap:1rem]">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className="break-inside-avoid mb-4 overflow-hidden rounded-xl border border-white/8 hover:border-orange-400/25 group transition-all duration-300"
+              >
+                <img
+                  src={image}
+                  alt={`Gallery ${index + 1}`}
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          ACHIEVEMENTS — horizontal scroll cards
+      ══════════════════════════════════════ */}
+      <section id="achievements" className="py-32 bg-[#050508] relative overflow-hidden">
+        <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={15} />
+        <div className="relative z-10">
+          <div className="text-center mb-16 px-6">
+            <p className="text-[11px] tracking-[0.25em] text-orange-400 uppercase mb-4">Legacy</p>
+            <h2 className="text-4xl md:text-5xl font-serif text-white">Achievements</h2>
+          </div>
+          <div className="overflow-x-auto hide-scrollbar">
+            <div className="flex gap-5 px-6 pb-4" style={{ width: 'max-content' }}>
+              {achievements.map((item, i) => (
+                <div
+                  key={i}
+                  className="w-60 flex-shrink-0 bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-orange-400/30 hover:-translate-y-1 transition-all duration-300 group"
+                >
+                  <div className="h-44 overflow-hidden">
+                    <img
+                      src={item.src}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <p className="text-orange-400 text-xs font-semibold tracking-wide mb-1">{item.title}</p>
+                    <p className="text-white text-sm font-medium mb-1">{item.desc}</p>
+                    <p className="text-gray-600 text-[11px]">{item.date}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          SPONSORS — marquee
+      ══════════════════════════════════════ */}
+      <section id="sponsors" className="py-32 px-6 bg-black relative overflow-hidden">
+        <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={12} />
+        <div className="relative z-10 max-w-5xl mx-auto text-center mb-16">
+          <p className="text-[11px] tracking-[0.25em] text-orange-400 uppercase mb-4">Partners</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-white">Our Sponsors</h2>
+        </div>
+        {/* Marquee track */}
+        <div className="relative z-10 overflow-hidden">
+          <div className="flex items-center animate-marquee gap-16">
+            {[...sponsorshipImages, ...sponsorshipImages].map((sponsor, i) => (
+              <a
+                key={i}
+                href={sponsor.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-400"
+              >
+                <img
+                  src={sponsor.src}
+                  alt={sponsor.alt}
+                  className="h-10 w-auto object-contain max-w-[130px]"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          NEWSLETTER + CONTACT — side by side
+      ══════════════════════════════════════ */}
+      <section className="py-32 px-6 bg-[#050508] relative overflow-hidden" id="newsletter">
+        <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={12} />
+        <div className="relative z-10 max-w-6xl mx-auto grid lg:grid-cols-2 gap-6">
+
+          {/* Newsletter card */}
+          <div className="bg-white/4 border border-white/10 rounded-3xl overflow-hidden">
+            <div className="grid sm:grid-cols-2 h-full">
+              <div className="relative min-h-[200px]">
+                <img src="newsletter.jpeg" alt="Newsletter" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#050508]/60" />
+              </div>
+              <div className="p-8 flex flex-col justify-center">
+                <p className="text-[11px] tracking-[0.25em] text-orange-400 uppercase mb-3">Stay Updated</p>
+                <h3 className="text-xl font-semibold text-white mb-2">Newsletter</h3>
+                <p className="text-gray-500 text-sm mb-6">Monthly updates on missions, competitions, and team progress.</p>
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    required
+                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-orange-400/50 transition-colors"
+                  />
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="w-full py-3 rounded-xl bg-orange-500 hover:bg-orange-600 disabled:opacity-50 text-white text-sm font-semibold tracking-wide transition-colors flex items-center justify-center gap-2"
+                  >
+                    {isLoading ? (
+                      <>
+                        <svg className="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                        </svg>
+                        Subscribing…
+                      </>
+                    ) : 'Subscribe'}
+                  </button>
+                </form>
               </div>
             </div>
           </div>
-        ))}
-      </div>
 
-      {/* Achievement Cards - Bottom Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center relative z-0">
-        {[
-          {
-            src: "./achievement-image6.png",
-            title: "URC 2019 - Team RUDRA secured 11th place in the world",
-            date: "June 18, 2018"
-          },
-          {
-            src: "./achievement-image7.png",
-            title: "IRC - Team RUDRA achieved 3rd as World Rank",
-            date: "June 12, 2019"
-          },
-          {
-            src: "./achievement-image8.png",
-            title: "IRC 2023 - Team RUDRA ranked 5th globally",
-            date: "Jan 2023"
-          },
-          {
-            src: "./achievement-image9.png",
-            title: "IRC 2024 - Team RUDRA ranked 3rd globally",
-            date: "Jan 2024"
-          }
-        ].map((item, index) => (
-          <div key={index} className="relative group overflow-hidden">
-            <div className="w-full h-40 sm:h-48 md:h-56 lg:h-64 bg-white rounded-lg mb-4 transition-transform duration-300 transform group-hover:scale-105">
-              <img
-                src={item.src}
-                alt={`Achievement ${index + 6}`}
-                className="rounded-lg object-cover w-full h-full"
-              />
-            </div>
-            <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white transition-opacity duration-300">
-              <div className="text-center p-4">
-                <p className="text-sm lg:text-base">{item.title}</p>
-                <p className="text-xs lg:text-sm">{item.date}</p>
+          {/* Contact card */}
+          <div id="contact" className="bg-white/4 border border-white/10 rounded-3xl p-8 md:p-10 flex flex-col justify-between">
+            <div>
+              <p className="text-[11px] tracking-[0.25em] text-orange-400 uppercase mb-4">Get In Touch</p>
+              <h3 className="text-2xl font-serif text-white mb-8">Contact Us</h3>
+              <div className="space-y-5">
+                <div>
+                  <p className="text-[10px] tracking-[0.2em] text-gray-600 uppercase mb-1">Email</p>
+                  <a href="mailto:srmmarsroverteam@gmail.com" className="text-blue-400 hover:text-blue-300 text-sm transition-colors">
+                    srmmarsroverteam@gmail.com
+                  </a>
+                </div>
+                <div>
+                  <p className="text-[10px] tracking-[0.2em] text-gray-600 uppercase mb-1">Address</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    C-404/405 — Placement Cell, SRM IST,<br />Kattankulathur, Chennai – 603203
+                  </p>
+                </div>
               </div>
             </div>
+            <div className="mt-8 space-y-3">
+              <p className="text-[10px] tracking-[0.2em] text-gray-600 uppercase mb-4">Follow Us</p>
+              {[
+                { icon: 'youtube.png', label: 'YouTube', href: 'https://www.youtube.com/@RUDRASRMMARSROVER' },
+                { icon: 'linkedin-brands-solid.svg', label: 'LinkedIn', href: 'https://www.linkedin.com/company/13210958/admin/dashboard/' },
+                { icon: 'square-instagram-brands-solid.svg', label: 'Instagram', href: 'https://www.instagram.com/team_rudra/?hl=en' },
+              ].map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
+                >
+                  <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/5 border border-white/10 group-hover:border-orange-400/30 transition-all">
+                    <img src={s.icon} alt={s.label} className="w-4 h-4 object-contain invert opacity-70" />
+                  </span>
+                  <span className="text-sm">{s.label}</span>
+                </a>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</div>
 
-
-      {/*sponsorship section */}
-<div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-4 mt-[-16px]" id="sponsors">
-  <SparklesCore className="absolute inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
-  <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mb-12 sm:mb-16 z-20">Our Sponsors</h2>
-
-  <div className="flex flex-col items-center z-10">
-    {/* First Row */}
-    <div className="flex flex-wrap justify-center">
-      {sponsorshipImages.slice(0, 5).map((sponsor, index) => (
-        <div key={index} className="p-4 sm:p-6">
-          <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
-            <img
-              src={sponsor.src}
-              alt={sponsor.alt}
-              width={200}
-              height={200}
-              className="w-48 h-auto object-contain"
-            />
-          </a>
         </div>
-      ))}
-    </div>
+      </section>
 
-    {/* Second Row */}
-    <div className="flex flex-wrap justify-center w-full mt-4">
-      {sponsorshipImages.slice(5).map((sponsor, index) => (
-        <div key={index} className="p-4 sm:p-6">
-          <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
-            <img
-              src={sponsor.src}
-              alt={sponsor.alt}
-              width={200}
-              height={200}
-              className="w-48 h-auto object-contain"
-            />
-          </a>
+      {/* ══════════════════════════════════════
+          FOOTER
+      ══════════════════════════════════════ */}
+      <footer className="bg-black border-t border-white/8 py-8 px-6">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <img src="./rudra-logo.png" alt="RUDRA" width={64} height={32} className="opacity-40" />
+          <p className="text-gray-700 text-[11px] tracking-widest">© 2025–26 Team RUDRA · SRM IST</p>
+          <div className="flex gap-5">
+            {[
+              { href: '#home', label: 'Home' },
+              { href: '#about', label: 'About' },
+              { href: '#contact', label: 'Contact' },
+            ].map((l) => (
+              <Link key={l.label} href={l.href} legacyBehavior>
+                <a className="text-gray-700 hover:text-gray-400 text-[11px] tracking-widest transition-colors">{l.label}</a>
+              </Link>
+            ))}
+          </div>
         </div>
-      ))}
+      </footer>
+
     </div>
-  </div>
-</div>
-     
-{/* Newsletter Section */}
-<div className="min-h-screen bg-black flex flex-col items-center justify-center py-16 relative" id="newsletter">
-  <SparklesCore className="absolute inset-0 z-0" particleColor="#f0f0f0" particleDensity={30} />
-  <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[1000px] h-[480px] max-w-full relative flex flex-row items-center">
-    <div className="flex-1 mr-8">
-      <img src="newsletter.jpeg" alt="Rover Image" className="w-[440px] h-[400px] object-cover rounded-xl" />
-    </div>
-    <div className="flex-1 text-center">
-      <h2 className="text-white text-3xl font-semibold mb-2">Join Our Newsletter</h2>
-      <p className="text-gray-400 mb-6">Get monthly access to our newsletter and stay updated</p>
-      <form 
-        name="news-letter" 
-        onSubmit={handleSubmit}
-        
-        method="POST" 
-        className="space-y-4"
-      >
-        <div className="relative">
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="Enter your email here *" 
-            className="w-full p-4 rounded-lg bg-gray-800 text-white border border-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500" 
-            required 
-          />
-        </div>
-        <button 
-  type="submit" 
-  disabled={isLoading}
-  className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition disabled:bg-blue-400 disabled:cursor-not-allowed"
->
-  {isLoading ? (
-    <span className="flex items-center justify-center">
-      <svg 
-        className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" 
-        xmlns="http://www.w3.org/2000/svg" 
-        fill="none" 
-        viewBox="0 0 24 24"
-      >
-        <circle 
-          className="opacity-25" 
-          cx="12" 
-          cy="12" 
-          r="10" 
-          stroke="currentColor" 
-          strokeWidth="4"
-        />
-        <path 
-          className="opacity-75" 
-          fill="currentColor" 
-          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-        />
-      </svg>
-      Subscribing...
-    </span>
-  ) : (
-    'Subscribe'
-  )}
-</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-     
-
-   {/* Contact Us Section */}
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center py-16  " id="contact">
-     <SparklesCore className="absolute   inset-0 z-0" particleColor="#ffffff" particleDensity={30} />
-  <h2 className="text-white text-6xl mb-12 font-serif">Contact Us</h2>
-  <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8">
-    {/* Image/Icon Section */}
-    <div className="bg-gray-700 p-16 rounded-lg shadow-lg flex items-center justify-center w-[480px] h-[480px]">
-      <img src="image.png" alt="Icon or Image" className="w-128 h-128 object-contain" />
-    </div>
-
-    {/* Contact Information Section */}
-    <div className="bg-gray-800 p-16 rounded-lg shadow-lg flex flex-col justify-between w-[480px] h-[480px]">
-      <div className="space-y-4">
-        <p className="text-white text-xl">
-          Email: <a href="mailto:srmmarsroverteam@gmail.com" className="text-blue-500">srmmarsroverteam@gmail.com</a>
-        </p>
-        <p className="text-white text-xl">
-          Address: C-404/405 - Placement Cell, SRM IST, Kattankulathur, Chennai - 603203
-        </p>
-      </div>
-
-      {/* Social Media Links */}
-      <div className="flex flex-col space-y-4 mt-6">
-        <a href="https://www.youtube.com/@RUDRASRMMARSROVER" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
-          <img src="youtube.png" alt="LinkedIn" className="w-10 h-10" />
-          <span className="text-white text-xl">Youtube</span>
-        </a>
-        <a href="https://www.linkedin.com/company/13210958/admin/dashboard/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
-          <img src="linkedin-brands-solid.svg" alt="LinkedIn" className="w-10 h-10" />
-          <span className="text-white text-xl">LinkedIn</span>
-        </a>
-        <a href="https://www.instagram.com/team_rudra/?hl=en" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
-          <img src="square-instagram-brands-solid.svg" alt="Instagram" className="w-10 h-10" />
-          <span className="text-white text-xl">Instagram</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  </div>
-
   );
 };
+
 export default Home;
