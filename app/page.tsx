@@ -86,7 +86,7 @@ const Home = () => {
     { label: '2019', href: '/Team2019' },
     { label: '2020', href: '/Team2020' },
     { label: '2024–25', href: '/Team2024' },  
-    { label: '2025–26', href: '/Team2025' }
+    { label: '2025–26', href: '/Team2025' },
     { label: '2026–27', href: '#team' },
   ];
 
