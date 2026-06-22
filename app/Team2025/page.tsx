@@ -12,6 +12,30 @@ const sections: {
   }[];
 }[] = [
   {
+  label: 'Core Leadership',
+  color: 'text-red-400',
+  members: [
+    {
+      name: 'Ratnesh Mishra',
+      designation: 'Team Lead',
+      image: './mechanical-member5.png',
+      linkedin: 'https://www.linkedin.com/in/ratnesh-mishra-07260424b/',
+    },
+    {
+      name: 'Danyal Reyaz',
+      designation: 'Team Manager',
+      image: './life-science-member4.png',
+      linkedin: 'https://www.linkedin.com/in/danyal-reyaz/',
+    },
+    {
+      name: 'Pragati Prithvi',
+      designation: 'Technical Director',
+      image: './electronics-member6.png',
+      linkedin: 'https://www.linkedin.com/in/pragati-prithvi/',
+    },
+  ],
+},
+  {
     label: 'Coding',
     color: 'text-violet-400',
     members: [
@@ -87,26 +111,28 @@ const sections: {
 ];
 
 const accentBorder: Record<string, string> = {
+  'text-red-400': 'hover:border-red-400/30',
   'text-violet-400': 'hover:border-violet-400/30',
-  'text-amber-400':  'hover:border-amber-400/30',
-  'text-blue-400':   'hover:border-blue-400/30',
-  'text-emerald-400':'hover:border-emerald-400/30',
+  'text-amber-400': 'hover:border-amber-400/30',
+  'text-blue-400': 'hover:border-blue-400/30',
+  'text-emerald-400': 'hover:border-emerald-400/30',
   'text-orange-400': 'hover:border-orange-400/30',
 };
-
 const glowColor: Record<string, string> = {
+  'text-red-400': 'bg-red-500/20',
   'text-violet-400': 'bg-violet-500/20',
-  'text-amber-400':  'bg-amber-500/20',
-  'text-blue-400':   'bg-blue-500/20',
-  'text-emerald-400':'bg-emerald-500/20',
+  'text-amber-400': 'bg-amber-500/20',
+  'text-blue-400': 'bg-blue-500/20',
+  'text-emerald-400': 'bg-emerald-500/20',
   'text-orange-400': 'bg-orange-500/20',
 };
 
 const ringColor: Record<string, string> = {
+  'text-red-400': 'group-hover:ring-red-400/40',
   'text-violet-400': 'group-hover:ring-violet-400/40',
-  'text-amber-400':  'group-hover:ring-amber-400/40',
-  'text-blue-400':   'group-hover:ring-blue-400/40',
-  'text-emerald-400':'group-hover:ring-emerald-400/40',
+  'text-amber-400': 'group-hover:ring-amber-400/40',
+  'text-blue-400': 'group-hover:ring-blue-400/40',
+  'text-emerald-400': 'group-hover:ring-emerald-400/40',
   'text-orange-400': 'group-hover:ring-orange-400/40',
 };
 
