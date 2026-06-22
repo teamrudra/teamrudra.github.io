@@ -150,7 +150,7 @@ const Team25Page = () => (
       <div className="text-center mb-20">
         <p className="text-[11px] tracking-[0.3em] text-orange-400 uppercase mb-4">Team RUDRA · Alumni</p>
         <h1 className="text-4xl md:text-5xl font-serif text-white">Team 2025–26</h1>
-        <p className="text-gray-500 text-sm mt-3 max-w-lg mx-auto">The complete team across all domains for the 2024–25 season.</p>
+        <p className="text-gray-500 text-sm mt-3 max-w-lg mx-auto">The complete team across all domains for the 2025–26 season.</p>
       </div>
 
       <div className="space-y-20">
@@ -162,7 +162,13 @@ const Team25Page = () => (
               <div className={`h-px flex-1 bg-white/8`} />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <div
+  className={
+    section.label === 'Core Leadership'
+      ? 'grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto'
+      : 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'
+  }
+>
               {section.members.map((m, i) => {
                 const inner = (
                   <>
