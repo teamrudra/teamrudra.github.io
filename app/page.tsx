@@ -85,8 +85,9 @@ const Home = () => {
     { label: '2018', href: '/Team18' },
     { label: '2019', href: '/Team2019' },
     { label: '2020', href: '/Team2020' },
-    { label: '2024–25', href: '/Team2024' },
-    { label: '2025–26', href: '#team' },
+    { label: '2024–25', href: '/Team2024' },  
+    { label: '2025–26', href: '/Team2025' }
+    { label: '2026–27', href: '#team' },
   ];
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -535,7 +536,7 @@ const Home = () => {
 
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-[11px] tracking-[0.25em] text-orange-400 uppercase mb-4">2025–26</p>
+            <p className="text-[11px] tracking-[0.25em] text-orange-400 uppercase mb-4">2026–27</p>
             <h2 className="text-4xl md:text-5xl font-serif text-white">Our Team</h2>
           </div>
 
@@ -544,41 +545,41 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
             {/* Team Lead — spans 2 cols, horizontal card */}
             <a
-              href="https://www.linkedin.com/in/ratnesh-mishra-07260424b/"
+              href="https://www.linkedin.com/in/yasharth-gupta-53749a255/"
               target="_blank"
               rel="noopener noreferrer"
               className="float-card glass sm:col-span-2 group rounded-2xl p-8 flex items-center gap-7"
             >
-              <img src="mechanical-member5.png" alt="Ratnesh Mishra" className="w-28 h-28 rounded-full object-cover ring-2 ring-white/10 group-hover:ring-orange-400/30 transition-all duration-300 flex-shrink-0" />
+              <img src="coding-member4.png" alt="Yasharth Gupta" className="w-28 h-28 rounded-full object-cover ring-2 ring-white/10 group-hover:ring-orange-400/30 transition-all duration-300 flex-shrink-0" />
               <div>
                 <span className="text-[10px] tracking-[0.25em] text-orange-400 uppercase">Team Lead</span>
-                <h3 className="text-white text-lg font-semibold mt-0.5">Ratnesh Mishra</h3>
+                <h3 className="text-white text-lg font-semibold mt-0.5">Yasharth Gupta</h3>
                 <p className="text-gray-500 text-xs mt-1">LinkedIn →</p>
               </div>
             </a>
 
             {/* Manager */}
             <a
-              href="https://www.linkedin.com/in/danyal-reyaz/"
+              href="https://www.linkedin.com/in/ditsa-sarkar-7a0623228/"
               target="_blank"
               rel="noopener noreferrer"
               className="float-card glass group rounded-2xl p-7 flex flex-col items-center text-center"
             >
-              <img src="corporate-member4.png" alt="Danyal Reyaz" className="w-24 h-24 rounded-full object-cover ring-2 ring-white/10 group-hover:ring-orange-400/30 transition-all duration-300 mb-4" />
+              <img src="ditsa.jfif" alt="Ditsa Sarkar" className="w-24 h-24 rounded-full object-cover ring-2 ring-white/10 group-hover:ring-orange-400/30 transition-all duration-300 mb-4" />
               <span className="text-[10px] tracking-[0.25em] text-orange-400 uppercase">Team Manager</span>
-              <h3 className="text-white text-sm font-semibold mt-0.5">Danyal Reyaz</h3>
+              <h3 className="text-white text-sm font-semibold mt-0.5">Ditsa Sarkar</h3>
             </a>
 
             {/* Tech Director */}
             <a
-              href="https://www.linkedin.com/in/pragati-prithvi/"
+              href="https://www.linkedin.com/in/sujal-shah-a92a63297/"
               target="_blank"
               rel="noopener noreferrer"
               className="float-card glass group rounded-2xl p-7 flex flex-col items-center text-center"
             >
-              <img src="electronics-member6.png" alt="Pragati Prithvi" className="w-24 h-24 rounded-full object-cover ring-2 ring-white/10 group-hover:ring-orange-400/30 transition-all duration-300 mb-4" />
+              <img src="mechanical-member-sujal.jpeg" alt="Sujal Shah" className="w-24 h-24 rounded-full object-cover ring-2 ring-white/10 group-hover:ring-orange-400/30 transition-all duration-300 mb-4" />
               <span className="text-[10px] tracking-[0.25em] text-orange-400 uppercase">Technical Director</span>
-              <h3 className="text-white text-sm font-semibold mt-0.5">Pragati Prithvi</h3>
+              <h3 className="text-white text-sm font-semibold mt-0.5">Sujal Shah</h3>
             </a>
           </div>
 
@@ -852,7 +853,7 @@ const Home = () => {
       <footer className="bg-black border-t border-white/8 py-8 px-6">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <img src="./rudra-logo.png" alt="RUDRA" width={64} height={32} className="opacity-40" />
-          <p className="text-gray-700 text-[11px] tracking-widest">© 2025–26 Team RUDRA · SRM IST</p>
+          <p className="text-gray-700 text-[11px] tracking-widest">© 2026–27 Team RUDRA · SRM IST</p>
           <div className="flex gap-5">
             {[
               { href: '#home', label: 'Home' },
