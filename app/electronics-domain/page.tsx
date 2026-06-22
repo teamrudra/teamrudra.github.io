@@ -7,7 +7,7 @@ const members = [
 { name: 'Aaryan Sarat',      role: 'Electronics Member',  img: './aaryan.jpeg',             linkedin: 'https://in.linkedin.com/in/aaryan-sarat-491241331' },
 { name: 'V Krishna',         role: 'Electronics Member',  img: './vkrishna.jpeg',           linkedin: 'https://www.linkedin.com/in/vkrishna89/' },
 { name: 'Abhijeet Koushal',  role: 'Electronics Member',  img: './abhijeet.jpeg',           linkedin: 'https://www.linkedin.com/in/abhijeeth-koushal-addenki-800a18277/' },
-{ name: 'Bhagya S Nath',     role: 'Electronics Member',  img: './Bhagya S Nath.jpg' },
+{ name: 'Bhagya S Nath',     role: 'Electronics Member',  img: '' },
 { name: 'P Hari Ram Nikhil', role: 'Electronics Member',  img: './P Hari Ram Nikhil.jpg' },
 { name: 'Sarthak V K',       role: 'Electronics Member',  img: './Sarthak V K.jpg' },
 { name: 'Shriya Rao',        role: 'Electronics Member',  img: './Shriya Rao.jpeg', linkedin: 'https://www.linkedin.com/in/shriya-rao-4773352bb/' },
