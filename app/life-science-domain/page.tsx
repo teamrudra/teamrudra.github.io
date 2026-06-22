@@ -2,15 +2,14 @@ import Link from 'next/link';
 import { SparklesCore } from '@/components/ui/sparkles';
 
 const members = [
-  { name: 'Danyal Reyaz',      role: 'Team Manager',      img: './life-science-member4.png', linkedin: 'https://www.linkedin.com/in/danyal-reyaz/' },
-  { name: 'Neelesh S',         role: 'Life Science Lead',  img: './life-science-member5.png', linkedin: '' },
-  { name: 'Tanmayaa C S',      role: 'Life Science Lead',  img: './life-science-member6.png', linkedin: '' },
-  { name: 'Prasith Bhaduri',   role: 'Life Science',       img: './prasith.jpeg',             linkedin: 'https://www.linkedin.com/in/prasith-bhaduri/' },
-  { name: 'Devi Prasath Kumar',role: 'Life Science',       img: './devi.jpeg',                linkedin: 'https://www.linkedin.com/in/devi-prasath-9b0006320/' },
-  { name: 'Sanika Gadre',      role: 'Life Science',       img: './sanika.jpeg',              linkedin: 'https://www.linkedin.com/in/sanika-g-b55321287/' },
-  { name: 'Dhanushya Ganeshan',role: 'Life Science',       img: './dhanushya.jpeg',           linkedin: 'https://www.linkedin.com/in/dhanushya-ganesan-496a69289/' },
-  { name: 'Sarvagna',          role: 'Life Science',       img: './sarvagna.jpeg',            linkedin: 'https://www.linkedin.com/in/sarvagna06/' },
-  { name: 'Muskaan Tasheen',   role: 'Life Science',       img: './muskaan.jpeg',             linkedin: 'https://www.linkedin.com/in/muskaan-t-a62731309/' },
+{ name: 'Prasith Bhaduri',       role: 'Life Science', img: './prasith.jpeg',                linkedin: 'https://www.linkedin.com/in/prasith-bhaduri/' },
+{ name: 'Devi Prasath Kumar',    role: 'Life Science', img: './devi.jpeg',                   linkedin: 'https://www.linkedin.com/in/devi-prasath-9b0006320/' },
+{ name: 'Sanika Gadre',          role: 'Life Science', img: './sanika.jpeg',                 linkedin: 'https://www.linkedin.com/in/sanika-g-b55321287/' },
+{ name: 'Dhanushya Ganeshan',    role: 'Life Science', img: './dhanushya.jpeg',              linkedin: 'https://www.linkedin.com/in/dhanushya-ganesan-496a69289/' },
+{ name: 'Sarvagna',              role: 'Life Science', img: './sarvagna.jpeg',               linkedin: 'https://www.linkedin.com/in/sarvagna06/' },
+{ name: 'Muskaan Tasheen',       role: 'Life Science', img: './muskaan.jpeg',                linkedin: 'https://www.linkedin.com/in/muskaan-t-a62731309/' },
+{ name: 'Lemuela Iniyaazh Thomas', role: 'Life Science', img: './Lemuela Iniyaazh Thomas.jpg' },
+{ name: 'Pollock Deb',           role: 'Life Science', img: './Pollock Deb.jpg' },
 ];
 
 const LifeScienceDomainPage = () => {
