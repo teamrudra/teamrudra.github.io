@@ -3,11 +3,11 @@ import { SparklesCore } from '@/components/ui/sparkles';
 
 const members = [
   { name: 'Yasharth Gupta', designation: 'Team Lead', image: '/coding-member4.png', linkedin: 'https://www.linkedin.com/in/yasharth-gupta-53749a255/' },
-  { name: 'Anupama Pandey', designation: 'Coding Member', image: '/anupama-pandey.jpg' },
-  { name: 'Dhanush Poduval', designation: 'Coding Member', image: '/dhanush-poduval.jpg' },
-  { name: 'Jayin Shresth', designation: 'Coding Member', image: '/jayin-shresth.jpg' },
-  { name: 'Ravichandran Jaganathan', designation: 'Coding Member', image: '/ravichandran-jaganathan.jpeg' },
-  { name: 'Swetank Kumar', designation: 'Coding Member', image: '/swetank-kumar.jpg' },
+  { name: 'Anupama Pandey', designation: 'Coding Member', image: '/Anupama Pandey.jpg' },
+  { name: 'Dhanush Poduval', designation: 'Coding Member', image: '/Dhanush Poduval.jpg' },
+  { name: 'Jayin Shresth', designation: 'Coding Member', image: '/Jayin Shresth.jpg' },
+  { name: 'Ravichandran Jaganathan', designation: 'Coding Member', image: '/Ravichandran Jaganathan.jpeg' },
+  { name: 'Swetank Kumar', designation: 'Coding Member', image: '/Swetank Kumar.jpg' },
 ];
 
 const CodingDomainPage = () => {
