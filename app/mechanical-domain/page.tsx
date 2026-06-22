@@ -2,15 +2,9 @@ import Link from 'next/link';
 import { SparklesCore } from '@/components/ui/sparkles';
 
 const members = [
-  { name: 'Kethan Babu',              role: 'Mechanics Lead',   img: './mechanical-member3.png',        linkedin: '' },
-  { name: 'Ratnesh Mishra',           role: 'Team Lead',         img: './mechanical-member5.png',        linkedin: 'https://www.linkedin.com/in/ratnesh-mishra-07260424b/' },
-  { name: 'Prerna Kumari',            role: 'Mechanical Lead',   img: './mechanical-member6.png',        linkedin: 'https://www.linkedin.com/in/prerna-kumari-31aa3325b/' },
-  { name: 'Rishabh Kothari',          role: 'Mechanical',        img: './mechanical-member7.png',        linkedin: '' },
-  { name: 'Sujal Shah',               role: 'Mechanical',        img: './mechanical-member-sujal.jpeg',  linkedin: 'https://www.linkedin.com/in/sujal-shah-a92a63297/' },
-  { name: 'Kevin Mathew',             role: 'Mechanical',        img: './mechanical-member10.png',       linkedin: '' },
-  { name: 'Deepro Pratim Chatterjee', role: 'Mechanical',        img: './deepro.jpeg',                   linkedin: 'https://www.linkedin.com/in/deepro-pratim-chatterjee-7674b7325/' },
-  { name: 'Vaishnav Bhosale',         role: 'Mechanical',        img: './vaishnav.jpeg',                 linkedin: 'https://www.linkedin.com/in/vaishnavbhosale/' },
-  { name: 'Paridhi Gupta',            role: 'Mechanical',        img: './paridhi.jpeg',                  linkedin: 'https://www.linkedin.com/in/paridhi-gupta-b60bb4237/' },
+  { name: 'Sujal Shah',               role: 'Technical Director',        img: './mechanical-member-sujal.jpeg',  linkedin: 'https://www.linkedin.com/in/sujal-shah-a92a63297/' },
+  { name: 'Vaishnav Bhosale',         role: 'Mechanical Lead',        img: './vaishnav.jpeg',                 linkedin: 'https://www.linkedin.com/in/vaishnavbhosale/' },
+  { name: 'Vibodh Sharma',            role: 'Mechanical Member',        img: './Vibodh Sharma.JPG',                  linkedin: 'https://www.linkedin.com/in/vibodh-sharma-283671278/' },
 ];
 
 const MechanicalDomainPage = () => {
