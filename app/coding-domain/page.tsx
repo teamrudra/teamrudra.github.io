@@ -2,11 +2,12 @@ import Link from 'next/link';
 import { SparklesCore } from '@/components/ui/sparkles';
 
 const members = [
-  { name: 'Ayush Daga',    role: 'Coding Member', img: './coding-member5.png', linkedin: 'https://www.linkedin.com/in/ayush-daga-341045226/' },
-  { name: 'Yasharth Gupta',role: 'Coding Member', img: './coding-member4.png', linkedin: 'https://www.linkedin.com/in/yasharth-gupta-53749a255/' },
-  { name: 'Pavithra CP',   role: 'Coding Member', img: './pavithra.jpeg',       linkedin: 'https://www.linkedin.com/in/pavithra-cp/' },
-  { name: 'Nikhil CP',     role: 'Coding Member', img: './nikhil.jpeg',         linkedin: 'https://www.linkedin.com/in/nikhilcp05/' },
-  { name: 'Rajrupa Das',   role: 'Coding Member', img: './rajrupa.jpeg',        linkedin: 'https://www.linkedin.com/in/rajrupa-das-8b9597324/' },
+  { name: 'Yasharth Gupta', designation: 'Team Lead', image: './coding-member4.png', linkedin: 'https://www.linkedin.com/in/yasharth-gupta-53749a255/' },
+    { name: 'Anupama Pandey', designation: 'Coding Member', image: './anupama-pandey.jpg' },
+    { name: 'Dhanush Poduval', designation: 'Coding Member', image: './dhanush-poduval.jpg' },
+    { name: 'Jayin Shresth', designation: 'Coding Member', image: './jayin-shresth.jpg' },
+    { name: 'Ravichandran Jaganathan', designation: 'Coding Member', image: './ravichandran-jaganathan.jpeg' },
+    { name: 'Swetank Kumar', designation: 'Coding Member', image: './swetank-kumar.jpg' },
 ];
 
 const CodingDomainPage = () => {
