@@ -25,7 +25,7 @@ const LifeScienceDomainPage = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-28 pb-24">
         <div className="text-center mb-16">
-          <p className="text-[11px] tracking-[0.3em] text-emerald-400 uppercase mb-4">Team RUDRA · 2025–26</p>
+          <p className="text-[11px] tracking-[0.3em] text-emerald-400 uppercase mb-4">Team RUDRA · 2026–27</p>
           <h1 className="text-4xl md:text-5xl font-serif text-white">Life Science Domain</h1>
           <p className="text-gray-500 text-sm mt-3 max-w-md mx-auto">Astrobiology, soil analysis, and scientific research that forms the core of our Mars mission experiments.</p>
         </div>
