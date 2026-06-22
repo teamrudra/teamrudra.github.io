@@ -587,11 +587,11 @@ const Home = () => {
           <p className="text-[10px] tracking-[0.3em] text-gray-600 uppercase mb-5 mt-8">Domains</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {[
-              { name: 'Mechanical',   desc: 'Design, fabrication & robotics',      img: 'mechanical-domain.png',    href: './mechanical-domain',    accent: 'text-orange-400',  glow: 'group-hover:ring-orange-400/40',  bar: 'bg-orange-400' },
-              { name: 'Electronics',  desc: 'Power, sensors & embedded systems',   img: 'electronics-domain.png',   href: './electronics-domain',   accent: 'text-blue-400',    glow: 'group-hover:ring-blue-400/40',    bar: 'bg-blue-400' },
-              { name: 'Coding',       desc: 'Autonomy, vision & software',         img: 'coding-domain.png',        href: './coding-domain',        accent: 'text-violet-400',  glow: 'group-hover:ring-violet-400/40',  bar: 'bg-violet-400' },
-              { name: 'Life Science', desc: 'Astrobiology & field research',       img: 'life-science-domain.png',  href: './life-science-domain',  accent: 'text-emerald-400', glow: 'group-hover:ring-emerald-400/40', bar: 'bg-emerald-400' },
-              { name: 'Corporate',    desc: 'Outreach, media & sponsorships',      img: 'corporate-domain.png',     href: './corporate-domain',     accent: 'text-amber-400',   glow: 'group-hover:ring-amber-400/40',   bar: 'bg-amber-400' },
+              { name: 'Mechanical',   desc: 'Design, fabrication & robotics',      img: 'MechCover.JPG',    href: './mechanical-domain',    accent: 'text-orange-400',  glow: 'group-hover:ring-orange-400/40',  bar: 'bg-orange-400' },
+              { name: 'Electronics',  desc: 'Power, sensors & embedded systems',   img: 'ElecCover.JPG',   href: './electronics-domain',   accent: 'text-blue-400',    glow: 'group-hover:ring-blue-400/40',    bar: 'bg-blue-400' },
+              { name: 'Coding',       desc: 'Autonomy, vision & software',         img: 'CodingCover.JPG',        href: './coding-domain',        accent: 'text-violet-400',  glow: 'group-hover:ring-violet-400/40',  bar: 'bg-violet-400' },
+              { name: 'Life Science', desc: 'Astrobiology & field research',       img: 'lifeScienceCover.JPG',  href: './life-science-domain',  accent: 'text-emerald-400', glow: 'group-hover:ring-emerald-400/40', bar: 'bg-emerald-400' },
+              { name: 'Corporate',    desc: 'Outreach, media & sponsorships',      img: 'CorpCover.JPG',     href: './corporate-domain',     accent: 'text-amber-400',   glow: 'group-hover:ring-amber-400/40',   bar: 'bg-amber-400' },
             ].map((d) => (
               <a
                 key={d.name}
