@@ -2,13 +2,13 @@ import Link from 'next/link';
 import { SparklesCore } from '@/components/ui/sparkles';
 
 const members = [
-  { name: 'Danyal Reyaz', role: 'Team Manager',    img: './life-science-member4.png',  linkedin: 'https://www.linkedin.com/in/danyal-reyaz/' },
-  { name: 'Nidhan SKN',   role: 'Creatives Lead',  img: './corporate-member6.png',     linkedin: 'https://www.linkedin.com/in/nidhan-santa-kumar-n/' },
-  { name: 'Ditsa Sarkar', role: 'Corporate',        img: './ditsa.jfif',                linkedin: 'https://www.linkedin.com/in/ditsa-sarkar-7a0623228/' },
-  { name: 'Bhargavi Singh',role: 'Corporate',       img: './corporate-member4.jpeg',    linkedin: '' },
-  { name: 'Shivi Gupta',  role: 'Corporate',        img: './corporate-member5.jpeg',    linkedin: 'https://www.linkedin.com/in/shivi-gupta-642651301/' },
+  { name: 'Ditsa Sarkar', role: 'Team Manager',        img: './ditsa.jfif',                linkedin: 'https://www.linkedin.com/in/ditsa-sarkar-7a0623228/' },
+  { name: 'Bhargavi Singh',role: 'Corporate Lead',       img: './corporate-member4.jpeg',    linkedin: 'https://www.linkedin.com/in/bhargavi-singh-671745286/' },
+  { name: 'Shivi Gupta',  role: 'Web-Dev Lead',        img: './corporate-member5.jpeg',    linkedin: 'https://www.linkedin.com/in/shivi-gupta-642651301/' },
   { name: 'Snehal Gupta', role: 'Corporate',        img: './corporate-member6.jpeg',    linkedin: 'https://www.linkedin.com/in/snehal-gupta-44a791222/' },
   { name: 'Shriya Rao',   role: 'Corporate',        img: './corporate-member7.jpeg',    linkedin: 'https://www.linkedin.com/in/shriya-rao-4773352bb/' },
+  { name: 'Gayatri Vinod',   role: 'Corporate',        img: './Gayatri Vinod.jpeg',    linkedin: 'https://www.linkedin.com/in/gayatri-vinod-768133394/' },
+  { name: 'Teesta Bhattacharya',   role: 'Corporate',        img: './Teesta Bhattacharya.jpg',    linkedin: 'https://www.linkedin.com/in/teesta-bhattacharya/' },
 ];
 
 const CorporateDomainPage = () => {
