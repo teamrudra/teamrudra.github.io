@@ -2,15 +2,15 @@ import Link from 'next/link';
 import { SparklesCore } from '@/components/ui/sparkles';
 
 const members = [
-  { name: 'Pragati Prithvi',      role: 'Technical Director',    img: './electronics-member6.png',  linkedin: 'https://www.linkedin.com/in/pragati-prithvi/' },
-  { name: 'Sonakshi Srivastava',  role: 'Electronics Lead',       img: './electronics-member5.png',  linkedin: 'https://www.linkedin.com/in/srivastava-sonakshi/' },
-  { name: 'Kaustubh Guha',        role: 'Electronics',            img: './electronics-member4.png',  linkedin: 'https://www.linkedin.com/in/kaustub-guha/' },
-  { name: 'Sidhant Chakrabarti',  role: 'Electronics',            img: './electronics-member7.png',  linkedin: 'https://www.linkedin.com/in/sidhant1226/' },
-  { name: 'Aaryan Sarat',         role: 'Electronics',            img: './aaryan.jpeg',              linkedin: 'https://in.linkedin.com/in/aaryan-sarat-491241331' },
-  { name: 'V Krishna',            role: 'Electronics',            img: './vkrishna.jpeg',            linkedin: 'https://www.linkedin.com/in/vkrishna89/' },
-  { name: 'Hariharan R',          role: 'Electronics',            img: './hariharan.jpeg',           linkedin: '' },
-  { name: 'Mishti Bansal',        role: 'Electronics',            img: './mishti.jpeg',              linkedin: '' },
-  { name: 'Abhijeet Koushal',     role: 'Electronics',            img: './abhijeet.jpeg',            linkedin: 'https://www.linkedin.com/in/abhijeeth-koushal-addenki-800a18277/' },
+{ name: 'Hariharan R',       role: 'Electronics Lead',    img: './hariharan.jpeg' },
+{ name: 'Kaustubh Guha',     role: 'Electronics Co-Lead', img: './electronics-member4.png', linkedin: 'https://www.linkedin.com/in/kaustub-guha/' },
+{ name: 'Aaryan Sarat',      role: 'Electronics Member',  img: './aaryan.jpeg',             linkedin: 'https://in.linkedin.com/in/aaryan-sarat-491241331' },
+{ name: 'V Krishna',         role: 'Electronics Member',  img: './vkrishna.jpeg',           linkedin: 'https://www.linkedin.com/in/vkrishna89/' },
+{ name: 'Abhijeet Koushal',  role: 'Electronics Member',  img: './abhijeet.jpeg',           linkedin: 'https://www.linkedin.com/in/abhijeeth-koushal-addenki-800a18277/' },
+{ name: 'Bhagya S Nath',     role: 'Electronics Member',  img: './Bhagya S Nath.jpg' },
+{ name: 'P Hari Ram Nikhil', role: 'Electronics Member',  img: './P Hari Ram Nikhil.jpg' },
+{ name: 'Sarthak V K',       role: 'Electronics Member',  img: './Sarthak V K.jpg' },
+{ name: 'Shriya Rao',        role: 'Electronics Member',  img: './Shriya Rao.jpeg', linkedin: 'https://www.linkedin.com/in/shriya-rao-4773352bb/' },
 ];
 
 const ElectronicsDomainPage = () => {
